@@ -13,7 +13,7 @@ variables:
 
 # When to deploy
 .rules:
-  - if: '$CI_COMMIT_BRANCH != "main"'
+  - if: '$CI_COMMIT_BRANCH == "main"'
     when: always
 
 # Deploy to webteam k8s cluster

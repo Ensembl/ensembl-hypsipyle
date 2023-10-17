@@ -4,6 +4,7 @@ import os
 import json
 import operator
 from functools import reduce
+from common.file_model.variant_allele import VariantAllele
 
 def reduce_allele_length(allele_list: List):
     allele_length = -1
@@ -11,6 +12,7 @@ def reduce_allele_length(allele_list: List):
         if len(allele.value) > allele_length:
             allele_length = len(allele.value)
     return allele_length
+
 
 
 class Variant ():
@@ -145,104 +147,44 @@ class Variant ():
             }
         }
     
+    
+    
     def get_alleles(self) -> List:
         variant_allele_list = []
-        info_map = self.traverse_csq_info()
-
-        frequency_map = {}
-        if "FREQ" in self.info:
-            frequency_map = self.format_frequency(",".join(map(str,self.info["FREQ"])).split("|"))
+        
 
         for index,alt in enumerate(self.alts):
             if index+1 <= len(self.alts):
-                variant_allele = self.create_variant_allele(info_map, frequency_map, index+1,  alt.value)
+                variant_allele = VariantAllele(index+1,  alt.value, self)
                 variant_allele_list.append(variant_allele)
-        reference_allele = self.create_variant_allele(info_map, frequency_map, 0, self.ref)
+        reference_allele = VariantAllele(0, self.ref, self)
         variant_allele_list.append(reference_allele)
-        self.set_frequency_flags(variant_allele_list)
+        # self.set_frequency_flags(variant_allele_list)
         return variant_allele_list
 
-    def create_variant_allele(self, info_map: Mapping, frequency_map: List, allele_index: str, alt: str) -> Mapping:
+    def create_variant_allele(self, alt: str) -> Mapping:
         """
         The function currently does not include parent-child resolvers.
         Ideally, each field should be a function called upon demand and does lazy loading
         This needs to be rewritten similar to Variant
         """
         name = f"{self.chromosome}:{self.position}:{self.ref}:{alt}"
-        min_alt = self.minimise_allele(alt)
+        # min_alt = self.minimise_allele(alt)
         return {
             "name": name,
             "allele_sequence": alt,
             "reference_sequence": self.ref,
-            "alternative_names": self.get_alternative_names(),
-            "type": "VariantAllele",
-            "allele_type": self.get_allele_type(alt),
-            "slice": self.get_slice(alt),
-            "phenotype_assertions": info_map[min_alt]["phenotype_assertions"] if min_alt in info_map else [],
-            "predicted_molecular_consequences": info_map[min_alt]["predicted_molecular_consequences"] if min_alt in info_map else [],
-            "prediction_results": info_map[min_alt]["prediction_results"] if min_alt in info_map else [],
-            "population_frequencies": self.get_population_allele_frequencies(frequency_map, allele_index)
+            "type": "VariantAllele"
+            # "alternative_names": self.get_alternative_names(),
+            # "allele_type": self.get_allele_type(alt),
+            # "slice": self.get_slice(alt),
+            # "phenotype_assertions": info_map[min_alt]["phenotype_assertions"] if min_alt in info_map else [],
+            # "predicted_molecular_consequences": info_map[min_alt]["predicted_molecular_consequences"] if min_alt in info_map else [],
+            # "prediction_results": info_map[min_alt]["prediction_results"] if min_alt in info_map else [],
+            # "population_frequencies": self.get_population_allele_frequencies(frequency_map, allele_index)
         }
 
-    def format_frequency(self, raw_frequency_list: List) -> Mapping:
-        freq_map = {}
-        for freq in raw_frequency_list:
-            key = freq.split(":")[0]
-            freq_list = freq.split(":")[1].split(",")
-            freq_map[key] = freq_list
-        return freq_map
     
-    def get_population_allele_frequencies(self, population_map: Mapping, allele_index: int) -> List:
-        population_allele_frequencies = []
-        for key, pop_list in population_map.items():
-            ## Adding only GnomAD population
-            if key == "GnomAD":
-                if pop_list[allele_index] not in ["None", "."]:
-                    population_allele_frequencies.append({
-                        "population": key,
-                        "allele_frequency": pop_list[allele_index],
-                        "is_minor_allele": False,
-                        "is_hpmaf": False
-                    })
-        return population_allele_frequencies
-
-    def set_frequency_flags(self, allele_list: List):
-        """
-        Calculates minor allele frequency by iterating through each allele 
-        Assumption: Considers that population is only gnomAD (genomes) for now
-        Sets the maf as hpmaf as gnomAD is the only population at the moment
-        """
-        maf_frequency = -1
-        maf_index = -1
-        highest_frequency = -1
-        highest_frequency_index = -1
-        highest_maf_frequency = -1
-        highest_maf_frequency_index = -1
-        maf_map = {}
-        for allele_index, allele in enumerate(allele_list):
-            if(len(allele["population_frequencies"]) > 0):
-                pop = allele["population_frequencies"][0]
-                pop_allele_frequency = float(pop["allele_frequency"])
-                if ( pop_allele_frequency > maf_frequency and pop_allele_frequency < highest_frequency ):
-                    maf_frequency = pop_allele_frequency
-                    maf_index = allele_index
-                elif ( pop_allele_frequency > highest_frequency ):
-                    maf_frequency = highest_frequency
-                    maf_index = highest_frequency_index
-                    highest_frequency = pop_allele_frequency
-                    highest_frequency_index = allele_index
-
-        if maf_frequency>=0:
-            allele_list[maf_index]["population_frequencies"][0]["is_minor_allele"]  = True
-            allele_list[maf_index]["population_frequencies"][0]["is_hpmaf"]  = True    
-
-    def get_info_key_index(self, key: str, info_id: str ="CSQ") -> int:
-        info_field = self.header.get_info_field_info(info_id).description
-        csq_list = info_field.split("Format: ")[1].split("|")
-        for index, value in enumerate(csq_list):
-            if value == key:
-                return index
-            
     def get_most_severe_consequence(self) -> Mapping:
         consequence_index = self.get_info_key_index("Consequence")
         consequence_map = {}
@@ -260,199 +202,14 @@ class Variant ():
                         "tool": "Ensembl VEP",
                         "qualifier": "most severe consequence"
                     }
-        } 
-        
-    def minimise_allele(self, alt: str):
-        """
-        VCF file has the representation without anchoring bases
-        for prediction scores in INFO column. This function is useful
-        in matching the SPDI format in VCF with the allele in memory
-        """
-        minimised_allele = alt
-        if len(alt) > len(self.ref):
-            minimised_allele = alt[1:] 
-        elif len(alt) < len(self.ref):
-            minimised_allele = "-"
-        return minimised_allele
+        }  
 
-    def traverse_csq_info(self) -> Mapping:
-        """
-        This function is to traverse the CSQ record and extract columns
-        corresponding to Consequence, SIFT, PolyPhen, CADD
-        """
-        allele_index = self.get_info_key_index("Allele")
-        phenotypes_index = self.get_info_key_index("VAR_SYNONYMS")
-        feature_type_index = self.get_info_key_index("Feature_type")
-        feature_index = self.get_info_key_index("Feature")
-        sift_index = self.get_info_key_index("SIFT")
-        polyphen_index = self.get_info_key_index("PolyPhen")
-        consequence_index = self.get_info_key_index("Consequence")
-        spdi_index = self.get_info_key_index("SPDI")
-        cadd_index = self.get_info_key_index("CADD_PHRED")
-        gerp_index = self.get_info_key_index("Conservation")
-        info_map = {}
-        for csq_record in self.info["CSQ"]:
-            csq_record_list = csq_record.split("|")
-            phenotype = None
-            if re.search("--OMIM",csq_record_list[phenotypes_index]):
-                phenotype = csq_record_list[phenotypes_index].split("--")[1]
-            if csq_record_list[allele_index] in info_map.keys():
-                if phenotype:
-                    info_map[csq_record_list[allele_index]]["phenotype_assertions"].append(self.create_allele_phenotype_assertion(csq_record_list[feature_index], csq_record_list[feature_type_index], phenotype ))
-                info_map[csq_record_list[allele_index]]["predicted_molecular_consequences"].append(self.create_allele_predicted_molecular_consequence(csq_record_list[spdi_index], 
-                                                                                                                                               csq_record_list[feature_index], 
-                                                                                                                                               csq_record_list[feature_type_index], 
-                                                                                                                                               csq_record_list[consequence_index],
-                                                                                                                                               csq_record_list[sift_index], 
-                                                                                                                                               csq_record_list[polyphen_index]
-                                                                                                                                   ))
-                current_prediction_results = info_map[csq_record_list[allele_index]]["prediction_results"]
-                info_map[csq_record_list[allele_index]]["prediction_results"] += self.create_allele_prediction_results(current_prediction_results, 
-                                                                                                                                               csq_record_list[spdi_index], 
-                                                                                                                                               csq_record_list[cadd_index],
-                                                                                                                                               csq_record_list[gerp_index]
-                                                                                                                                               )
-                
-            else:
-                info_map[csq_record_list[allele_index]] = {"phenotype_assertions": [], "predicted_molecular_consequences": [], "prediction_results": []} 
-                if phenotype:
-                    info_map[csq_record_list[allele_index]]["phenotype_assertions"].append(self.create_allele_phenotype_assertion(csq_record_list[feature_index], csq_record_list[feature_type_index], phenotype))
-                info_map[csq_record_list[allele_index]]["predicted_molecular_consequences"].append(self.create_allele_predicted_molecular_consequence(csq_record_list[spdi_index], 
-                                                                                                                                               csq_record_list[feature_index], 
-                                                                                                                                               csq_record_list[feature_type_index], 
-                                                                                                                                               csq_record_list[consequence_index],
-                                                                                                                                               csq_record_list[sift_index], 
-                                                                                                                                               csq_record_list[polyphen_index]
-                                                                                                                                               ))
-                info_map[csq_record_list[allele_index]]["prediction_results"] += self.create_allele_prediction_results([], csq_record_list[spdi_index],
-                                                                                                                                               csq_record_list[cadd_index],
-                                                                                                                                               csq_record_list[gerp_index]
-                                                                                                                                               )
-
-        return info_map
     
-    def create_allele_phenotype_assertion(self, feature: str, feature_type: str , phenotype: str) -> Mapping:
-        return {
-            "feature": feature,
-            "feature_type": {
-                "accession_id": feature_type                
-            } ,
-            "phenotype": {
-                "name": phenotype
-            },
-            "evidence": []
-
-        }
+    def get_info_key_index(self, key: str, info_id: str ="CSQ") -> int:
+            info_field = self.header.get_info_field_info(info_id).description
+            csq_list = info_field.split("Format: ")[1].split("|")
+            for index, value in enumerate(csq_list):
+                if value == key:
+                    return index   
     
-    def format_sift_polyphen_output(self, output: str) -> tuple:
-        try:
-            (result, score) = re.split(r"[()]", output)[:2]
-        except:
-            return (None, None)
 
-        if result not in [
-            'probably damaging',
-            'possibly damaging',
-            'benign',
-            'unknown',
-            'tolerated',
-            'deleterious',
-            'tolerated - low confidence',
-            'deleterious - low confidence',
-        ]:
-            result = None
-
-        try:
-            score = float(score)
-        except:
-            # need to log something here
-            score = None
-
-        return (result, score)
-
-
-    def create_allele_predicted_molecular_consequence(self, allele: str, feature: str, feature_type: str, consequences: str, sift_score: str, polyphen_score: str) -> Mapping:
-        """
-        This needs to be designed better, currently all the scores come as args
-        Steve suggested that we add prediction results per Gene instead of transcript
-        """
-        consequences_list = []
-        for cons in consequences.split("&"):
-            consequences_list.append(
-                {
-                    "accession_id": cons
-                }
-            )
-
-        prediction_results = []
-        if sift_score:
-            (result, score) = self.format_sift_polyphen_output(sift_score)
-            if result is not None and score is not None:
-                sift_prediction_result = {
-                        "result": result,
-                        "score": score,
-                        "analysis_method": {
-                            "tool": "SIFT",
-                            "qualifier": "SIFT"
-                        }
-                    }
-                prediction_results.append(sift_prediction_result)
-        if polyphen_score:
-            (result, score) = self.format_sift_polyphen_output(polyphen_score)
-            if result is not None and score is not None:
-                polyphen_prediction_result = {
-                        "result": result,
-                        "score": score,
-                        "analysis_method": {
-                            "tool": "PolyPhen",
-                            "qualifier": "PolyPhen"
-                        }
-                    }
-                prediction_results.append(polyphen_prediction_result)
-
-        
-        return {
-            "allele_name": allele,
-            "feature_stable_id": feature,
-            "feature_type": {
-                "accession_id": feature_type                
-            } ,
-            "consequences": consequences_list,
-            "prediction_results": prediction_results
-        }
-    
-    def prediction_result_already_exists(self, current_prediction_results: Mapping, tool: str) -> bool:
-        for prediction_result in current_prediction_results:
-            if prediction_result["analysis_method"]["tool"] == tool:
-                return True
-
-        return False
-
-    def create_allele_prediction_results(self, current_prediction_results: Mapping, allele: str, cadd_score: str, gerp_score: str) -> list:
-        """
-        This needs to be designed better, currently all the scores come as args
-        """
-        prediction_results = []
-        if cadd_score:
-            if not self.prediction_result_already_exists(current_prediction_results, "CADD"):
-                cadd_prediction_result = {
-                        "result": cadd_score ,
-                        "analysis_method": {
-                            "tool": "CADD",
-                            "qualifier": "CADD"
-                        }
-
-                }
-                prediction_results.append(cadd_prediction_result)
-        if gerp_score:
-            if not self.prediction_result_already_exists(current_prediction_results, "GERP"):
-                gerp_prediction_result = {
-                        "result": gerp_score ,
-                        "analysis_method": {
-                            "tool": "GERP",
-                            "qualifier": "GERP"
-                        }
-                    }
-                prediction_results.append(gerp_prediction_result)
-        
-        return prediction_results

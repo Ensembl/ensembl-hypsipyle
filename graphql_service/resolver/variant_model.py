@@ -88,11 +88,68 @@ def prediction_results(variant: Dict, info: GraphQLResolveInfo) -> Dict:
 
 
 @VARIANT_TYPE.field("alleles")
-def alleles(variant: Dict, info: GraphQLResolveInfo) -> Dict:
+def resolve_alleles_from_variant(variant: Dict, info: GraphQLResolveInfo) -> Dict:
     """
     Load alleles for variant
     """
     return variant.get_alleles()
+
+@VARIANT_ALLELE_TYPE.field("name")
+def resolve_name_from_variant_allele(variant_allele: Dict, info: GraphQLResolveInfo) -> Dict:
+    """
+    Load name for variant allele
+    """
+    return variant_allele.name
+
+@VARIANT_ALLELE_TYPE.field("alternative_names")
+def resolve_alternative_names_from_variant_allele(variant_allele: Dict, info: GraphQLResolveInfo) -> Dict:
+    """
+    Load alternative names for variant allele
+    """
+    return variant_allele.get_alternative_names()
+
+@VARIANT_ALLELE_TYPE.field("slice")
+def resolve_slice_from_variant_allele(variant_allele: Dict, info: GraphQLResolveInfo) -> Dict:
+    """
+    Load slice for variant allele
+    """
+    return variant_allele.get_slice()
+
+@VARIANT_ALLELE_TYPE.field("allele_type")
+def resolve_allele_type_from_variant_allele(variant_allele: Dict, info: GraphQLResolveInfo) -> Dict:
+    """
+    Load allele type for variant allele
+    """
+    return variant_allele.get_allele_type()
+
+@VARIANT_ALLELE_TYPE.field("phenotype_assertions")
+def resolve_phenotype_assertions_from_variant_allele(variant_allele: Dict, info: GraphQLResolveInfo) -> Dict:
+    """
+    Load phenotype assertions for variant allele
+    """
+    return variant_allele.get_phenotype_assertions()
+
+@VARIANT_ALLELE_TYPE.field("predicted_molecular_consequences")
+def resolve_predicted_molecular_consequences_from_variant_allele(variant_allele: Dict, info: GraphQLResolveInfo) -> Dict:
+    """
+    Load predicted molecular consequences for variant allele
+    """
+    return variant_allele.get_predicted_molecular_consequences()
+
+@VARIANT_ALLELE_TYPE.field("prediction_results")
+def resolve_prediction_results_from_variant_allele(variant_allele: Dict, info: GraphQLResolveInfo) -> Dict:
+    """
+    Load prediction results for variant allele
+    """
+    return variant_allele.get_prediction_results()
+
+@VARIANT_ALLELE_TYPE.field("population_frequencies")
+def resolve_population_frequencies_from_variant_allele(variant_allele: Dict, info: GraphQLResolveInfo) -> Dict:
+    """
+    Load population frequencies for variant allele
+    """
+    return variant_allele.get_population_allele_frequencies()
+
 
 @QUERY_TYPE.field("version")
 def resolve_api(

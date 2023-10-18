@@ -46,9 +46,9 @@ Run a container with the image (`--publish` below is exposing the container's po
 
 
 ## Containerisation for prod
-Build the image using `./Dockerfile`:
+Build the image using `./Dockerfile.prod`:
 
-`docker build -t $NAME:$VERSION  .`
+`docker build -t $NAME:$VERSION  -f ./Dockerfile.prod .`
 
 Run a container with the image (`--publish` below is exposing the container's ports to the host network):
 

@@ -48,11 +48,7 @@ class Variant ():
                 source_release = ""
 
         except:
-            source_id = "test"
-            source_name = "test"
-            source_description = "test db of human variants"
-            source_url = "https://www.ncbi.nlm.nih.gov/test/variation/"
-            source_release = ""
+            return None 
 
         return {
             "accession_id": self.name,
@@ -161,29 +157,6 @@ class Variant ():
         variant_allele_list.append(reference_allele)
         # self.set_frequency_flags(variant_allele_list)
         return variant_allele_list
-
-    def create_variant_allele(self, alt: str) -> Mapping:
-        """
-        The function currently does not include parent-child resolvers.
-        Ideally, each field should be a function called upon demand and does lazy loading
-        This needs to be rewritten similar to Variant
-        """
-        name = f"{self.chromosome}:{self.position}:{self.ref}:{alt}"
-        # min_alt = self.minimise_allele(alt)
-        return {
-            "name": name,
-            "allele_sequence": alt,
-            "reference_sequence": self.ref,
-            "type": "VariantAllele"
-            # "alternative_names": self.get_alternative_names(),
-            # "allele_type": self.get_allele_type(alt),
-            # "slice": self.get_slice(alt),
-            # "phenotype_assertions": info_map[min_alt]["phenotype_assertions"] if min_alt in info_map else [],
-            # "predicted_molecular_consequences": info_map[min_alt]["predicted_molecular_consequences"] if min_alt in info_map else [],
-            # "prediction_results": info_map[min_alt]["prediction_results"] if min_alt in info_map else [],
-            # "population_frequencies": self.get_population_allele_frequencies(frequency_map, allele_index)
-        }
-
     
     def get_most_severe_consequence(self) -> Mapping:
         consequence_index = self.get_info_key_index("Consequence")
@@ -212,4 +185,33 @@ class Variant ():
                 if value == key:
                     return index   
     
+    def set_frequency_flags(self, allele_list: List):
+        """
+        Calculates minor allele frequency by iterating through each allele 
+        Assumption: Considers that population is only gnomAD (genomes) for now
+        Sets the maf as hpmaf as gnomAD is the only population at the moment
+        """
+        maf_frequency = -1
+        maf_index = -1
+        highest_frequency = -1
+        highest_frequency_index = -1
+        highest_maf_frequency = -1
+        highest_maf_frequency_index = -1
+        maf_map = {}
+        for allele_index, allele in enumerate(allele_list):
+            if(len(allele["population_frequencies"]) > 0):
+                pop = allele["population_frequencies"][0]
+                pop_allele_frequency = float(pop["allele_frequency"])
+                if ( pop_allele_frequency > maf_frequency and pop_allele_frequency < highest_frequency ):
+                    maf_frequency = pop_allele_frequency
+                    maf_index = allele_index
+                elif ( pop_allele_frequency > highest_frequency ):
+                    maf_frequency = highest_frequency
+                    maf_index = highest_frequency_index
+                    highest_frequency = pop_allele_frequency
+                    highest_frequency_index = allele_index
+
+        if maf_frequency>=0:
+            allele_list[maf_index]["population_frequencies"][0]["is_minor_allele"]  = True
+            allele_list[maf_index]["population_frequencies"][0]["is_hpmaf"]  = True  
 

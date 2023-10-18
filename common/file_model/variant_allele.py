@@ -98,9 +98,6 @@ class VariantAllele():
         return info_map
     
     def create_allele_prediction_results(self, current_prediction_results: Mapping, allele: str, cadd_score: str, gerp_score: str) -> list:
-        """
-        This needs to be designed better, currently all the scores come as args
-        """
         prediction_results = []
         if cadd_score:
             if not self.prediction_result_already_exists(current_prediction_results, "CADD"):
@@ -134,10 +131,6 @@ class VariantAllele():
         return False
     
     def create_allele_predicted_molecular_consequence(self, allele: str, feature: str, feature_type: str, consequences: str, sift_score: str, polyphen_score: str) -> Mapping:
-        """
-        This needs to be designed better, currently all the scores come as args
-        Steve suggested that we add prediction results per Gene instead of transcript
-        """
         consequences_list = []
         for cons in consequences.split("&"):
             consequences_list.append(
@@ -223,8 +216,6 @@ class VariantAllele():
         }
     
     
-    
-    
     def minimise_allele(self, alt: str):
         """
         VCF file has the representation without anchoring bases
@@ -263,32 +254,4 @@ class VariantAllele():
                     })
         return population_allele_frequencies
 
-    def set_frequency_flags(self, allele_list: List):
-        """
-        Calculates minor allele frequency by iterating through each allele 
-        Assumption: Considers that population is only gnomAD (genomes) for now
-        Sets the maf as hpmaf as gnomAD is the only population at the moment
-        """
-        maf_frequency = -1
-        maf_index = -1
-        highest_frequency = -1
-        highest_frequency_index = -1
-        highest_maf_frequency = -1
-        highest_maf_frequency_index = -1
-        maf_map = {}
-        for allele_index, allele in enumerate(allele_list):
-            if(len(allele["population_frequencies"]) > 0):
-                pop = allele["population_frequencies"][0]
-                pop_allele_frequency = float(pop["allele_frequency"])
-                if ( pop_allele_frequency > maf_frequency and pop_allele_frequency < highest_frequency ):
-                    maf_frequency = pop_allele_frequency
-                    maf_index = allele_index
-                elif ( pop_allele_frequency > highest_frequency ):
-                    maf_frequency = highest_frequency
-                    maf_index = highest_frequency_index
-                    highest_frequency = pop_allele_frequency
-                    highest_frequency_index = allele_index
-
-        if maf_frequency>=0:
-            allele_list[maf_index]["population_frequencies"][0]["is_minor_allele"]  = True
-            allele_list[maf_index]["population_frequencies"][0]["is_hpmaf"]  = True    
+  

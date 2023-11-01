@@ -58,7 +58,7 @@ if DEBUG_MODE:
 
     # Apollo Tracing extension will display information about which resolvers are used and their duration
     # https://ariadnegraphql.org/docs/apollo-tracing
-    EXTENSIONS.append(ApolloTracingExtension)
+    EXTENSIONS.append(ApolloTracingExtension(trace_default_resolver=True))
 
 FILE_CLIENT = FileClient(os.environ)
 CONTEXT_PROVIDER = prepare_context_provider(

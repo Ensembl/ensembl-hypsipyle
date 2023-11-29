@@ -26,6 +26,7 @@ class Variant ():
         self.ref = record.REF
         self.info = record.INFO
         self.type = "Variant"
+        self.vep_version = re.search("v\d+", self.header.get_lines("VEP")[0].value).group()
     
     def get_alternative_names(self) -> List:
         return []
@@ -65,7 +66,7 @@ class Variant ():
                 source_name = "Ensembl"
                 source_description = "Ensembl"
                 source_url = "https://beta.ensembl.org"
-                source_url_id = "https://beta.ensembl.org"
+                source_url_id = "https://beta.ensembl.org/"
                 source_release = "110" # to be fetched from the file
                 variant_id = f"{self.chromosome}:{self.position}:{self.name}"
             
@@ -77,7 +78,7 @@ class Variant ():
         return {
             "accession_id": self.name,
             "name": self.name,
-            "description": "",
+            "description": f"{source_description}",
             "assignment_method": {
                                 "type": "DIRECT",
                                 "description": "A reference made by an external resource of annotation to an Ensembl feature that Ensembl imports without modification"
@@ -175,15 +176,14 @@ class Variant ():
     
     def get_alleles(self) -> List:
         variant_allele_list = []
-        
 
+        
         for index,alt in enumerate(self.alts):
             if index+1 <= len(self.alts):
                 variant_allele = VariantAllele(index+1,  alt.value, self)
                 variant_allele_list.append(variant_allele)
         reference_allele = VariantAllele(0, self.ref, self)
         variant_allele_list.append(reference_allele)
-        # self.set_frequency_flags(variant_allele_list)
         return variant_allele_list
     
     def get_most_severe_consequence(self) -> Mapping:
@@ -203,8 +203,36 @@ class Variant ():
                         "tool": "Ensembl VEP",
                         "qualifier": "most severe consequence"
                     }
-        }  
+        } 
 
+    def get_gerp_score(self) -> Mapping:
+        csq_record = self.info["CSQ"]
+        csq_record_list = csq_record[0].split("|")
+        if self.get_info_key_index("Conservation") is not None:
+            gerp_index = self.get_info_key_index("Conservation") 
+            gerp_prediction_result = {
+                    "result": csq_record_list[gerp_index]  ,
+                    "analysis_method": {
+                        "tool": "GERP",
+                        "qualifier": "GERP"
+                    }
+                } if csq_record_list[gerp_index] else {}
+            return gerp_prediction_result
+    
+    def get_ancestral_allele(self) -> Mapping:
+        csq_record = self.info["CSQ"]
+        csq_record_list = csq_record[0].split("|")
+        if self.get_info_key_index("AA") is not None:
+            aa_index = self.get_info_key_index("AA")
+            aa_prediction_result = {
+                    "result": csq_record_list[aa_index] ,
+                    "analysis_method": {
+                        "tool": "AncestralAllele",
+                        "qualifier": "",
+                        "version": "110" #self.vep_version
+                    }
+                } if csq_record_list[aa_index] and csq_record_list[aa_index]!="."  else {}
+            return aa_prediction_result
     
     def get_info_key_index(self, key: str, info_id: str ="CSQ") -> int:
             info_field = self.header.get_info_field_info(info_id).description
@@ -242,5 +270,4 @@ class Variant ():
         if maf_frequency>=0:
             allele_list[maf_index]["population_frequencies"][0]["is_minor_allele"]  = True
             allele_list[maf_index]["population_frequencies"][0]["is_hpmaf"]  = True  
-
 

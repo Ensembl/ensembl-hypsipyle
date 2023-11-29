@@ -83,6 +83,10 @@ def prediction_results(variant: Dict, info: GraphQLResolveInfo) -> Dict:
     """
     prediction_results = []
     prediction_results.append(variant.get_most_severe_consequence())
+    if (variant.get_gerp_score()):
+        prediction_results.append(variant.get_gerp_score()) 
+    if (variant.get_ancestral_allele()):
+        prediction_results.append(variant.get_ancestral_allele()) 
     return prediction_results
 
 

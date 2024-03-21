@@ -13,6 +13,7 @@
 """
 
 from typing import Any, Mapping, List, Union, Tuple
+from common.file_model.utils import minimise_allele
 import re
 import os
 import json
@@ -44,20 +45,20 @@ class VariantAllele():
         return self.variant.get_slice(self.alt)
     
     def get_phenotype_assertions(self):
-        min_alt = self.minimise_allele(self.alt)
+        min_alt = minimise_allele(self.alt, self.reference_sequence)
         return self.info_map[min_alt]["phenotype_assertions"] if min_alt in self.info_map else []
 
     def get_predicted_molecular_consequences(self):
         ## compute info_map only for these methods, first check if non-empty and compute only then
-        min_alt = self.minimise_allele(self.alt)
+        min_alt = minimise_allele(self.alt, self.reference_sequence)
         return self.info_map[min_alt]["predicted_molecular_consequences"] if min_alt in self.info_map else []
     
     def get_prediction_results(self):
-        min_alt = self.minimise_allele(self.alt)
+        min_alt = minimise_allele(self.alt, self.reference_sequence)
         return self.info_map[min_alt]["prediction_results"] if min_alt in self.info_map else []
     
     def get_population_allele_frequencies(self):
-        min_alt = self.minimise_allele(self.alt)
+        min_alt = minimise_allele(self.alt, self.reference_sequence)
         population_map = self.variant.set_frequency_flags()
         return population_map[min_alt].values() if min_alt in population_map else []
 
@@ -209,7 +210,7 @@ class VariantAllele():
                     
                 else:
                     # TODO: Handle when strand is reverse
-                    ref_cdna_sequence = self.minimise_allele(self.reference_sequence)
+                    ref_cdna_sequence = minimise_allele(self.reference_sequence, self.reference_sequence)
                     alt_cdna_sequence = csq_record[prediction_index_map["allele"]]
                 ref_cdna_sequence = ref_cdna_sequence if ref_cdna_sequence else "-"
                 alt_cdna_sequence = alt_cdna_sequence if alt_cdna_sequence else "-"
@@ -330,14 +331,5 @@ class VariantAllele():
             }
 
     
-    def minimise_allele(self, alt: str) -> str:
-        """
-        VCF file has the representation without anchoring bases
-        for prediction scores in INFO column. This function is useful
-        in matching the SPDI format in VCF with the allele in memory
-        """
-        minimised_allele_string = alt
-        if self.reference_sequence[0] == alt[0]:
-            minimised_allele_string = alt[1:] if len(alt) > 1 else "-"
-        return minimised_allele_string
+    
     

@@ -2,6 +2,7 @@ type Query {
   version: Version
   variant(by_id: IdInput): Variant
   populations(genome_id: String!): [Population]
+  statistics(by_id: IdInput): VariantStatistics
 }
 
 input IdInput {

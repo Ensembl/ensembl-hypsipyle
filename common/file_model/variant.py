@@ -19,6 +19,7 @@ import json
 import operator
 from functools import reduce
 from common.file_model.variant_allele import VariantAllele
+from common.file_model.utils import minimise_allele
 
 def reduce_allele_length(allele_list: List):
     allele_length = -1
@@ -412,6 +413,28 @@ class Variant ():
                 elif hpmaf_pop[0] < hpmaf_frequency:
                     break
         return pop_frequency_map
+    
+    def get_statistics(self)-> Mapping:
+        alleles = [self.alts[0].value]
+        n_transcript_csq = self.info["NTCSQ"] if "NTCSQ" in self.info else None
+        n_genes_overlapped = self.info["NGENE"] if "NGENE" in self.info else None
+        n_regulatory_csq = self.info["NRCSQ"] if "NRCSQ" in self.info else None
+        n_variant_pheno = [{"allele_name": minimise_allele(i,self.ref), "number": j}  for i,j in zip(alleles, self.info["NVPHN"])] if "NVPHN" in self.info else None
+        n_gene_pheno = [{"allele_name": minimise_allele(i,self.ref), "number": j}  for i,j in zip(alleles, self.info["NGPHN"])] if "NGPHN" in self.info else None
+        n_citations = self.info["NCITE"] if "NCITE" in self.info else None
+        rep_pop_allele_frequency = [{"allele_name": minimise_allele(i, self.ref), "number": j}  for i,j in zip(alleles, self.info["RAF"])] if "RAF" in self.info else None
+        if rep_pop_allele_frequency:
+            rep_pop_allele_frequency.append({"allele_name": self.ref, "number": 1-sum(self.info["RAF"])})
+
+        return {
+            "NTCSQ": n_transcript_csq,
+            "NGENE": n_genes_overlapped,
+            "NRCSQ": n_regulatory_csq,
+            "NVPHN": n_variant_pheno,
+            "NGPHN": n_gene_pheno,
+            "NCITE": n_citations,
+            "RAF": rep_pop_allele_frequency
+        }
     
 
 

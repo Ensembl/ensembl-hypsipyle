@@ -1,0 +1,21 @@
+type VariantStatistics {
+  """
+  """
+  NTCSQ: Int
+  NGENE: Int
+  NRCSQ: Int
+  NVPHN: [VariantAlleleStatisticsInt]
+  NGPHN: [VariantAlleleStatisticsInt]
+  NCITE: Int
+  RAF: [VariantAlleleStatisticsFloat]
+}
+
+type VariantAlleleStatisticsInt {
+    allele_name: String!
+    number: Int!
+}
+
+type VariantAlleleStatisticsFloat {
+    allele_name: String!
+    number: Float!
+}

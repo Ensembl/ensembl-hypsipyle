@@ -171,7 +171,7 @@ def resolve_populations(_: None, info: GraphQLResolveInfo, genome_id: str = None
             population_metadata = json.load(pop_file)
     return population_metadata.get(genome_id,[]) 
 
-@QUERY_TYPE.field("statistics")
+@QUERY_TYPE.field("variant_statistics")
 async def resolve_statistics(
         _,
         info: GraphQLResolveInfo,

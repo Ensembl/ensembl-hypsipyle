@@ -1,0 +1,25 @@
+query stats_example {
+  variant_statistics(
+    by_id: {genome_id: "a7335667-93e7-11ec-a39d-005056b38ce3", variant_id: "1:230702369:rs11568046"}
+  ) {
+    
+    NTCSQ
+    NCITE
+    NGENE
+    NVPHN
+    {
+      allele_name
+      number
+    }
+    NGPHN
+    {
+      allele_name
+      number
+    }
+    RAF {
+      allele_name
+      number
+    }
+    
+  }
+}

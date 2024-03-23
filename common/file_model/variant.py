@@ -415,7 +415,7 @@ class Variant ():
         return pop_frequency_map
     
     def get_statistics(self)-> Mapping:
-        alleles = [self.alts[0].value]
+        alleles = [i.value for i in self.alts]
         n_transcript_csq = self.info["NTCSQ"] if "NTCSQ" in self.info else None
         n_genes_overlapped = self.info["NGENE"] if "NGENE" in self.info else None
         n_regulatory_csq = self.info["NRCSQ"] if "NRCSQ" in self.info else None

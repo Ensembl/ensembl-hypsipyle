@@ -1,0 +1,33 @@
+{
+    "data": {
+      "variant_statistics": {
+        "NTCSQ": 8,
+        "NCITE": 2,
+        "NGENE": 1,
+        "NVPHN": [
+          {
+            "allele_name": "G",
+            "number": 1
+          },
+          {
+            "allele_name": "T",
+            "number": 1
+          }
+        ],
+        "NGPHN": [
+          {
+            "allele_name": "G",
+            "number": 5
+          },
+          {
+            "allele_name": "T",
+            "number": 5
+          }
+        ],
+        "RAF": null
+      }
+    },
+    "extensions": {
+      "execution_time_in_seconds": 0.1
+    }
+  }

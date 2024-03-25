@@ -186,9 +186,9 @@ async def resolve_statistics(
     }
     file_client = info.context["file_client"]
     variant = file_client.get_variant_record(by_id["genome_id"], by_id["variant_id"])
-    result = variant.get_statistics()
-    if not result:
+    if not variant:
         raise VariantNotFoundError(by_id["variant_id"])
+    result  = variant.get_statistics()
     return result
 
 

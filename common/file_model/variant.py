@@ -422,9 +422,9 @@ class Variant ():
         n_variant_pheno = [{"allele_name": minimise_allele(i,self.ref), "number": j}  for i,j in zip(alleles, self.info["NVPHN"])] if "NVPHN" in self.info else None
         n_gene_pheno = [{"allele_name": minimise_allele(i,self.ref), "number": j}  for i,j in zip(alleles, self.info["NGPHN"])] if "NGPHN" in self.info else None
         n_citations = self.info["NCITE"] if "NCITE" in self.info else None
-        rep_pop_allele_frequency = [{"allele_name": minimise_allele(i, self.ref), "number": j}  for i,j in zip(alleles, self.info["RAF"])] if "RAF" in self.info else None
+        rep_pop_allele_frequency = [{"allele_name": minimise_allele(i, self.ref), "number": j} for i,j in zip(alleles, self.info["RAF"]) if j] if "RAF" in self.info else None
         if rep_pop_allele_frequency:
-            rep_pop_allele_frequency.append({"allele_name": self.ref, "number": 1-sum(self.info["RAF"])})
+            rep_pop_allele_frequency.append({"allele_name": self.ref, "number": 1-sum(filter(None,self.info["RAF"]))})
 
         return {
             "NTCSQ": n_transcript_csq,

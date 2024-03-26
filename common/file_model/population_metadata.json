@@ -2,6 +2,337 @@
     "a7335667-93e7-11ec-a39d-005056b38ce3":
     [
         {
+            "name": "gnomADg:ALL",
+            "description": "All gnomAD genomes individuals v3.1.2",
+            "type": "regional",
+            "is_global": true,
+            "display_group_name": "gnomAD genomes v3.1.2",
+            "super_population":null,
+            "sub_populations": [
+                {
+                    "name": "gnomADg:afr"
+                },
+                {
+                    "name": "gnomADg:ami"
+                },
+                {
+                    "name": "gnomADg:amr"
+                },
+                {
+                    "name": "gnomADg:asj"
+                },
+                {
+                    "name": "gnomADg:eas"
+                },
+                {
+                    "name": "gnomADg:fin"
+                },
+                {
+                    "name": "gnomADg:mid"
+                },
+                {
+                    "name": "gnomADg:nfe"
+                },
+                {
+                    "name": "gnomADg:oth"
+                },
+                {
+                    "name": "gnomADg:sas"
+                }
+            
+            ]   
+        },
+        {
+            "name": "gnomADg:afr",
+            "description": "African/African American",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v3.1.2",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADg:ami",
+            "description": "Amish",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v3.1.2",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADg:amr",
+            "description": "Latino",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v3.1.2",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADg:asj",
+            "description": "Ashkenazi Jewish",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v3.1.2",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADg:eas",
+            "description": "East Asian",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v3.1.2",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADg:fin",
+            "description": "Finnish",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v3.1.2",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+                
+        },
+        {
+            "name": "gnomADg:mid",
+            "description": "Middle Eastern",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v3.1.2",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]       
+        },
+        {
+            "name": "gnomADg:nfe",
+            "description": "Non-Finnish European",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v3.1.2",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]       
+        },
+        {
+            "name": "gnomADg:oth",
+            "description": "Other",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v3.1.2",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]       
+        },
+        {
+            "name": "gnomADg:sas",
+            "description": "South Asian",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v3.1.2",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]       
+        },
+        {
+                
+            "name": "gnomADe:ALL",
+            "description": "All gnomAD exomes individuals r2.1.1",
+            "type": "regional",
+            "is_global": true,
+            "display_group_name": "gnomAD exomes r2.1.1",
+            "super_population":null,
+            "sub_populations": [
+                {
+                    "name": "gnomADe:afr"
+                },
+                {
+                    "name": "gnomADe:amr"
+                },
+                {
+                    "name": "gnomADe:asj"
+                },
+                {
+                    "name": "gnomADe:eas"
+                },
+                {
+                    "name": "gnomADg:fin"
+                },
+                {
+                    "name": "gnomADe:nfe"
+                },
+                {
+                    "name": "gnomADe:oth"
+                },
+                {
+                    "name": "gnomADe:sas"
+                }
+            
+            ]   
+        },
+        {
+            "name": "gnomADe:afr",
+            "description": "African/African American",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD exomes r2.1.1",
+            "super_population":
+            {
+                "name": "gnomADe:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADe:amr",
+            "description": "Latino",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD exomes r2.1.1",
+            "super_population":
+            {
+                "name": "gnomADe:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADe:asj",
+            "description": "Ashkenazi Jewish",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD exomes r2.1.1",
+            "super_population":
+            {
+                "name": "gnomADe:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADe:eas",
+            "description": "East Asian",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD exomes r2.1.1",
+            "super_population":
+            {
+                "name": "gnomADe:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADe:fin",
+            "description": "Finnish",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD exomes r2.1.1",
+            "super_population":
+            {
+                "name": "gnomADe:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+                
+        },
+        {
+            "name": "gnomADe:nfe",
+            "description": "Non-Finnish European",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD exomes r2.1.1",
+            "super_population":
+            {
+                "name": "gnomADe:ALL"
+            },
+            "sub_populations": [
+            
+            ]       
+        },
+        {
+            "name": "gnomADe:oth",
+            "description": "Other",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD exomes r2.1.1",
+            "super_population":
+            {
+                "name": "gnomADe:ALL"
+            },
+            "sub_populations": [
+            
+            ]       
+        },
+        {
+            "name": "gnomADe:sas",
+            "description": "South Asian",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD exomes r2.1.1",
+            "super_population":
+            {
+                "name": "gnomADe:ALL"
+            },
+            "sub_populations": [
+            
+            ]       
+        },
+        {
         "name": "1000GENOMES:phase_3:ALL",
         "description": "All phase 3 individuals",
         "type": "regional",
@@ -514,336 +845,6 @@
         "sub_populations": [
         
         ]
-        },
-        {
-        "name": "gnomADg:ALL",
-        "description": "All gnomAD genomes individuals v3.1.2",
-        "type": "regional",
-        "is_global": true,
-        "display_group_name": "gnomAD genomes v3.1.2",
-        "super_population":null,
-        "sub_populations": [
-            {
-                "name": "gnomADg:afr"
-            },
-            {
-                "name": "gnomADg:ami"
-            },
-            {
-                "name": "gnomADg:amr"
-            },
-            {
-                "name": "gnomADg:asj"
-            },
-            {
-                "name": "gnomADg:eas"
-            },
-            {
-                "name": "gnomADg:fin"
-            },
-            {
-                "name": "gnomADg:mid"
-            },
-            {
-                "name": "gnomADg:nfe"
-            },
-            {
-                "name": "gnomADg:oth"
-            },
-            {
-                "name": "gnomADg:sas"
-            }
-        
-        ]   
-        },
-        {
-        "name": "gnomADg:afr",
-        "description": "African/African American",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "gnomAD genomes v3.1.2",
-        "super_population":
-        {
-            "name": "gnomADg:ALL"
-        },
-        "sub_populations": [
-        
-        ]
-        },
-        {
-        "name": "gnomADg:ami",
-        "description": "Amish",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "gnomAD genomes v3.1.2",
-        "super_population":
-        {
-            "name": "gnomADg:ALL"
-        },
-        "sub_populations": [
-        
-        ]
-        },
-        {
-        "name": "gnomADg:amr",
-        "description": "Latino",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "gnomAD genomes v3.1.2",
-        "super_population":
-        {
-            "name": "gnomADg:ALL"
-        },
-        "sub_populations": [
-        
-        ]
-        },
-        {
-        "name": "gnomADg:asj",
-        "description": "Ashkenazi Jewish",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "gnomAD genomes v3.1.2",
-        "super_population":
-        {
-            "name": "gnomADg:ALL"
-        },
-        "sub_populations": [
-        
-        ]
-        },
-        {
-        "name": "gnomADg:eas",
-        "description": "East Asian",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "gnomAD genomes v3.1.2",
-        "super_population":
-        {
-            "name": "gnomADg:ALL"
-        },
-        "sub_populations": [
-        
-        ]
-        },
-        {
-        "name": "gnomADg:fin",
-        "description": "Finnish",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "gnomAD genomes v3.1.2",
-        "super_population":
-        {
-            "name": "gnomADg:ALL"
-        },
-        "sub_populations": [
-        
-        ]
-            
-        },
-        {
-        "name": "gnomADg:mid",
-        "description": "Middle Eastern",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "gnomAD genomes v3.1.2",
-        "super_population":
-        {
-            "name": "gnomADg:ALL"
-        },
-        "sub_populations": [
-        
-        ]       
-        },
-        {
-        "name": "gnomADg:nfe",
-        "description": "Non-Finnish European",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "gnomAD genomes v3.1.2",
-        "super_population":
-        {
-            "name": "gnomADg:ALL"
-        },
-        "sub_populations": [
-        
-        ]       
-        },
-        {
-        "name": "gnomADg:oth",
-        "description": "Other",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "gnomAD genomes v3.1.2",
-        "super_population":
-        {
-            "name": "gnomADg:ALL"
-        },
-        "sub_populations": [
-        
-        ]       
-        },
-        {
-        "name": "gnomADg:sas",
-        "description": "South Asian",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "gnomAD genomes v3.1.2",
-        "super_population":
-        {
-            "name": "gnomADg:ALL"
-        },
-        "sub_populations": [
-        
-        ]       
-        },
-        {
-            "name": "gnomADe:ALL",
-            "description": "All gnomAD exomes individuals r2.1.1",
-            "type": "regional",
-            "is_global": true,
-            "display_group_name": "gnomAD exomes r2.1.1",
-            "super_population":null,
-            "sub_populations": [
-                {
-                    "name": "gnomADe:afr"
-                },
-                {
-                    "name": "gnomADe:amr"
-                },
-                {
-                    "name": "gnomADe:asj"
-                },
-                {
-                    "name": "gnomADe:eas"
-                },
-                {
-                    "name": "gnomADg:fin"
-                },
-                {
-                    "name": "gnomADe:nfe"
-                },
-                {
-                    "name": "gnomADe:oth"
-                },
-                {
-                    "name": "gnomADe:sas"
-                }
-            
-            ]   
-            },
-            {
-            "name": "gnomADe:afr",
-            "description": "African/African American",
-            "type": "regional",
-            "is_global": false,
-            "display_group_name": "gnomAD exomes r2.1.1",
-            "super_population":
-            {
-                "name": "gnomADe:ALL"
-            },
-            "sub_populations": [
-            
-            ]
-            },
-            {
-            "name": "gnomADe:amr",
-            "description": "Latino",
-            "type": "regional",
-            "is_global": false,
-            "display_group_name": "gnomAD exomes r2.1.1",
-            "super_population":
-            {
-                "name": "gnomADe:ALL"
-            },
-            "sub_populations": [
-            
-            ]
-            },
-            {
-            "name": "gnomADe:asj",
-            "description": "Ashkenazi Jewish",
-            "type": "regional",
-            "is_global": false,
-            "display_group_name": "gnomAD exomes r2.1.1",
-            "super_population":
-            {
-                "name": "gnomADe:ALL"
-            },
-            "sub_populations": [
-            
-            ]
-            },
-            {
-            "name": "gnomADe:eas",
-            "description": "East Asian",
-            "type": "regional",
-            "is_global": false,
-            "display_group_name": "gnomAD exomes r2.1.1",
-            "super_population":
-            {
-                "name": "gnomADe:ALL"
-            },
-            "sub_populations": [
-            
-            ]
-            },
-            {
-            "name": "gnomADe:fin",
-            "description": "Finnish",
-            "type": "regional",
-            "is_global": false,
-            "display_group_name": "gnomAD exomes r2.1.1",
-            "super_population":
-            {
-                "name": "gnomADe:ALL"
-            },
-            "sub_populations": [
-            
-            ]
-                
-            },
-            {
-            "name": "gnomADe:nfe",
-            "description": "Non-Finnish European",
-            "type": "regional",
-            "is_global": false,
-            "display_group_name": "gnomAD exomes r2.1.1",
-            "super_population":
-            {
-                "name": "gnomADe:ALL"
-            },
-            "sub_populations": [
-            
-            ]       
-            },
-            {
-            "name": "gnomADe:oth",
-            "description": "Other",
-            "type": "regional",
-            "is_global": false,
-            "display_group_name": "gnomAD exomes r2.1.1",
-            "super_population":
-            {
-                "name": "gnomADe:ALL"
-            },
-            "sub_populations": [
-            
-            ]       
-            },
-            {
-            "name": "gnomADe:sas",
-            "description": "South Asian",
-            "type": "regional",
-            "is_global": false,
-            "display_group_name": "gnomAD exomes r2.1.1",
-            "super_population":
-            {
-                "name": "gnomADe:ALL"
-            },
-            "sub_populations": [
-            
-            ]       
-            }
+        }
     ]
 }

@@ -19,6 +19,7 @@ import json
 import operator
 from functools import reduce
 from common.file_model.variant_allele import VariantAllele
+from common.file_model.utils import minimise_allele
 
 def reduce_allele_length(allele_list: List):
     allele_length = -1
@@ -366,12 +367,12 @@ class Variant ():
             if not len(by_population):
                 continue
             ## Add population frequency for reference allele
-            ref_allele = self.ref
-            allele_frequency_ref = 1 - sum(list(zip(*by_population))[0])
+            ref_allele =  minimise_allele(self.ref,self.ref)
+            allele_frequency_ref = 1 - float('%.3g' % sum(list(zip(*by_population))[0]))
             if allele_frequency_ref <= 1 and allele_frequency_ref >= 0:
                 population_frequency_ref = {
                                                 "population_name": pop_name,
-                                                "allele_frequency": float('%.3g' % float(allele_frequency_ref)) ,
+                                                "allele_frequency": allele_frequency_ref ,
                                                 "allele_count": None,
                                                 "allele_number": None,
                                                 "is_minor_allele": False,
@@ -412,6 +413,28 @@ class Variant ():
                 elif hpmaf_pop[0] < hpmaf_frequency:
                     break
         return pop_frequency_map
+    
+    def get_statistics(self)-> Mapping:
+        alleles = [i.value for i in self.alts]
+        n_transcript_csq = self.info["NTCSQ"] if "NTCSQ" in self.info else None
+        n_genes_overlapped = self.info["NGENE"] if "NGENE" in self.info else None
+        n_regulatory_csq = self.info["NRCSQ"] if "NRCSQ" in self.info else None
+        n_variant_pheno = [{"allele_name": minimise_allele(i,self.ref), "number": j}  for i,j in zip(alleles, self.info["NVPHN"])] if "NVPHN" in self.info else None
+        n_gene_pheno = [{"allele_name": minimise_allele(i,self.ref), "number": j}  for i,j in zip(alleles, self.info["NGPHN"])] if "NGPHN" in self.info else None
+        n_citations = self.info["NCITE"] if "NCITE" in self.info else None
+        rep_pop_allele_frequency = [{"allele_name": minimise_allele(i, self.ref), "number": float('%.3g' % float(j))} for i,j in zip(alleles, self.info["RAF"]) if j] if "RAF" in self.info else None
+        if rep_pop_allele_frequency:
+            rep_pop_allele_frequency.append({"allele_name": self.ref, "number":  float(1-float('%.3g' % sum(filter(None,self.info["RAF"]))))})
+
+        return {
+            "count_transcript_consequences": n_transcript_csq,
+            "count_overlapped_genes": n_genes_overlapped,
+            "count_regulatory_consequences": n_regulatory_csq,
+            "count_variant_phenotypes": n_variant_pheno,
+            "count_gene_phenotypes": n_gene_pheno,
+            "count_citations": n_citations,
+            "representative_population_allele_frequency": rep_pop_allele_frequency
+        }
     
 
 

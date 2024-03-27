@@ -1,12 +1,17 @@
 {
-   "1000_genomes": [
-   {"name": "1000GENOMES:phase_3:ALL", "frequencies": {"af": "AF"}}, 
-   {"name": "1000GENOMES:phase_3:AFR", "frequencies": {"af": "AFR_AF"}},
-   {"name": "1000GENOMES:phase_3:AMR", "frequencies": {"af": "AMR_AF"}},
-   {"name": "1000GENOMES:phase_3:EAS", "frequencies": {"af": "EAS_AF"}},
-   {"name": "1000GENOMES:phase_3:EUR", "frequencies": {"af": "EUR_AF"}},
-   {"name": "1000GENOMES:phase_3:SAS", "frequencies": {"af": "SAS_AF" }}
-   ],
+    "gnomAD_genomes": [
+        {"name": "gnomADg:ALL", "frequencies": {"af": "gnomAD_genomes_AF", "ac": "gnomAD_genomes_AC", "an": "gnomAD_genomes_AN"}},
+        {"name": "gnomADg:afr", "frequencies": {"af": "gnomAD_genomes_AF_afr", "ac": "gnomAD_genomes_AC_afr", "an": "gnomAD_genomes_AN_afr"}},
+        {"name": "gnomADg:ami", "frequencies": {"af": "gnomAD_genomes_AF_ami", "ac": "gnomAD_genomes_AC_ami", "an": "gnomAD_genomes_AN_ami"}},
+        {"name": "gnomADg:amr", "frequencies": {"af": "gnomAD_genomes_AF_amr", "ac": "gnomAD_genomes_AC_amr", "an": "gnomAD_genomes_AN_amr"}},
+        {"name": "gnomADg:asj", "frequencies": {"af": "gnomAD_genomes_AF_asj", "ac": "gnomAD_genomes_AC_asj", "an": "gnomAD_genomes_AN_asj"}},
+        {"name": "gnomADg:eas", "frequencies": {"af": "gnomAD_genomes_AF_eas", "ac": "gnomAD_genomes_AC_eas", "an": "gnomAD_genomes_AN_eas"}},
+        {"name": "gnomADg:fin", "frequencies": {"af": "gnomAD_genomes_AF_fin", "ac": "gnomAD_genomes_AC_fin", "an": "gnomAD_genomes_AN_fin"}},
+        {"name": "gnomADg:mid", "frequencies": {"af": "gnomAD_genomes_AF_mid", "ac": "gnomAD_genomes_AC_mid", "an": "gnomAD_genomes_AN_mid"}},
+        {"name": "gnomADg:nfe", "frequencies": {"af": "gnomAD_genomes_AF_nfe", "ac": "gnomAD_genomes_AC_nfe", "an": "gnomAD_genomes_AN_nfe"}},
+        {"name": "gnomADg:oth", "frequencies": {"af": "gnomAD_genomes_AF_oth", "ac": "gnomAD_genomes_AC_oth", "an": "gnomAD_genomes_AN_oth"}},
+        {"name": "gnomADg:sas", "frequencies": {"af": "gnomAD_genomes_AF_sas", "ac": "gnomAD_genomes_AC_sas", "an": "gnomAD_genomes_AN_sas"}}
+        ],
    "gnomAD_exomes": [
     {"name": "gnomADe:ALL", "frequencies": {"af": "gnomAD_exomes_AF", "ac": "gnomAD_exomes_AC", "an": "gnomAD_exomes_AN"}},
     {"name": "gnomADe:afr", "frequencies": {"af": "gnomAD_exomes_AF_afr", "ac": "gnomAD_exomes_AC_afr", "an": "gnomAD_exomes_AN_afr"}},
@@ -18,17 +23,12 @@
     {"name": "gnomADe:oth", "frequencies": {"af": "gnomAD_exomes_AF_oth", "ac": "gnomAD_exomes_AC_oth", "an": "gnomAD_exomes_AN_oth"}},
     {"name": "gnomADe:sas", "frequencies": {"af": "gnomAD_exomes_AF_sas", "ac": "gnomAD_exomes_AC_sas", "an": "gnomAD_exomes_AN_sas"}}
    ],
-    "gnomAD_genomes": [
-    {"name": "gnomADg:ALL", "frequencies": {"af": "gnomAD_genomes_AF", "ac": "gnomAD_genomes_AC", "an": "gnomAD_genomes_AN"}},
-    {"name": "gnomADg:afr", "frequencies": {"af": "gnomAD_genomes_AF_afr", "ac": "gnomAD_genomes_AC_afr", "an": "gnomAD_genomes_AN_afr"}},
-    {"name": "gnomADg:ami", "frequencies": {"af": "gnomAD_genomes_AF_ami", "ac": "gnomAD_genomes_AC_ami", "an": "gnomAD_genomes_AN_ami"}},
-    {"name": "gnomADg:amr", "frequencies": {"af": "gnomAD_genomes_AF_amr", "ac": "gnomAD_genomes_AC_amr", "an": "gnomAD_genomes_AN_amr"}},
-    {"name": "gnomADg:asj", "frequencies": {"af": "gnomAD_genomes_AF_asj", "ac": "gnomAD_genomes_AC_asj", "an": "gnomAD_genomes_AN_asj"}},
-    {"name": "gnomADg:eas", "frequencies": {"af": "gnomAD_genomes_AF_eas", "ac": "gnomAD_genomes_AC_eas", "an": "gnomAD_genomes_AN_eas"}},
-    {"name": "gnomADg:fin", "frequencies": {"af": "gnomAD_genomes_AF_fin", "ac": "gnomAD_genomes_AC_fin", "an": "gnomAD_genomes_AN_fin"}},
-    {"name": "gnomADg:mid", "frequencies": {"af": "gnomAD_genomes_AF_mid", "ac": "gnomAD_genomes_AC_mid", "an": "gnomAD_genomes_AN_mid"}},
-    {"name": "gnomADg:nfe", "frequencies": {"af": "gnomAD_genomes_AF_nfe", "ac": "gnomAD_genomes_AC_nfe", "an": "gnomAD_genomes_AN_nfe"}},
-    {"name": "gnomADg:oth", "frequencies": {"af": "gnomAD_genomes_AF_oth", "ac": "gnomAD_genomes_AC_oth", "an": "gnomAD_genomes_AN_oth"}},
-    {"name": "gnomADg:sas", "frequencies": {"af": "gnomAD_genomes_AF_sas", "ac": "gnomAD_genomes_AC_sas", "an": "gnomAD_genomes_AN_sas"}}
-    ]
+    "1000_genomes": [
+        {"name": "1000GENOMES:phase_3:ALL", "frequencies": {"af": "AF"}}, 
+        {"name": "1000GENOMES:phase_3:AFR", "frequencies": {"af": "AFR_AF"}},
+        {"name": "1000GENOMES:phase_3:AMR", "frequencies": {"af": "AMR_AF"}},
+        {"name": "1000GENOMES:phase_3:EAS", "frequencies": {"af": "EAS_AF"}},
+        {"name": "1000GENOMES:phase_3:EUR", "frequencies": {"af": "EUR_AF"}},
+        {"name": "1000GENOMES:phase_3:SAS", "frequencies": {"af": "SAS_AF" }}
+        ]
 }

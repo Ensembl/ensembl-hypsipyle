@@ -3,20 +3,22 @@ query stats_example {
     by_id: {genome_id: "a7335667-93e7-11ec-a39d-005056b38ce3", variant_id: "1:230702369:rs11568046"}
   ) {
     
-    NTCSQ
-    NCITE
-    NGENE
-    NVPHN
+        
+  count_transcript_consequences,
+  count_overlapped_genes,
+  count_regulatory_consequences,
+  count_variant_phenotypes
     {
       allele_name
       number
-    }
-    NGPHN
+    },
+    count_gene_phenotypes
     {
       allele_name
       number
-    }
-    RAF {
+    },
+    count_citations
+    representative_population_allele_frequency {
       allele_name
       number
     }

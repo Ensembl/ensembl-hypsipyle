@@ -427,13 +427,13 @@ class Variant ():
             rep_pop_allele_frequency.append({"allele_name": self.ref, "number":  float(1-float('%.3g' % sum(filter(None,self.info["RAF"]))))})
 
         return {
-            "NTCSQ": n_transcript_csq,
-            "NGENE": n_genes_overlapped,
-            "NRCSQ": n_regulatory_csq,
-            "NVPHN": n_variant_pheno,
-            "NGPHN": n_gene_pheno,
-            "NCITE": n_citations,
-            "RAF": rep_pop_allele_frequency
+            "count_transcript_consequences": n_transcript_csq,
+            "count_overlapped_genes": n_genes_overlapped,
+            "count_regulatory_consequences": n_regulatory_csq,
+            "count_variant_phenotypes": n_variant_pheno,
+            "count_gene_phenotypes": n_gene_pheno,
+            "count_citations": n_citations,
+            "representative_population_allele_frequency": rep_pop_allele_frequency
         }
     
 

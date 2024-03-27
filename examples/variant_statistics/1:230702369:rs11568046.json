@@ -1,33 +1,34 @@
 {
-    "data": {
-      "variant_statistics": {
-        "NTCSQ": 8,
-        "NCITE": 2,
-        "NGENE": 1,
-        "NVPHN": [
-          {
-            "allele_name": "G",
-            "number": 1
-          },
-          {
-            "allele_name": "T",
-            "number": 1
-          }
-        ],
-        "NGPHN": [
-          {
-            "allele_name": "G",
-            "number": 5
-          },
-          {
-            "allele_name": "T",
-            "number": 5
-          }
-        ],
-        "RAF": null
-      }
-    },
-    "extensions": {
-      "execution_time_in_seconds": 0.1
+  "data": {
+    "variant_statistics": {
+      "count_transcript_consequences": 8,
+      "count_overlapped_genes": 1,
+      "count_regulatory_consequences": null,
+      "count_variant_phenotypes": [
+        {
+          "allele_name": "G",
+          "number": 1
+        },
+        {
+          "allele_name": "T",
+          "number": 1
+        }
+      ],
+      "count_gene_phenotypes": [
+        {
+          "allele_name": "G",
+          "number": 5
+        },
+        {
+          "allele_name": "T",
+          "number": 5
+        }
+      ],
+      "count_citations": 2,
+      "representative_population_allele_frequency": null
     }
+  },
+  "extensions": {
+    "execution_time_in_seconds": 0.08
   }
+}

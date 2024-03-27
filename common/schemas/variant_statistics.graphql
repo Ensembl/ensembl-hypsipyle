@@ -1,13 +1,13 @@
 type VariantStatistics {
   """
   """
-  NTCSQ: Int
-  NGENE: Int
-  NRCSQ: Int
-  NVPHN: [VariantAlleleStatisticsInt]
-  NGPHN: [VariantAlleleStatisticsInt]
-  NCITE: Int
-  RAF: [VariantAlleleStatisticsFloat]
+  count_transcript_consequences: Int
+  count_overlapped_genes: Int
+  count_regulatory_consequences: Int
+  count_variant_phenotypes: [VariantAlleleStatisticsInt]
+  count_gene_phenotypes: [VariantAlleleStatisticsInt]
+  count_citations: Int
+  representative_population_allele_frequency: [VariantAlleleStatisticsFloat]
 }
 
 type VariantAlleleStatisticsInt {

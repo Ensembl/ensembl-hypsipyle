@@ -368,11 +368,11 @@ class Variant ():
                 continue
             ## Add population frequency for reference allele
             ref_allele =  minimise_allele(self.ref,self.ref)
-            allele_frequency_ref = 1 - sum(list(zip(*by_population))[0])
+            allele_frequency_ref = 1 - float('%.3g' % sum(list(zip(*by_population))[0]))
             if allele_frequency_ref <= 1 and allele_frequency_ref >= 0:
                 population_frequency_ref = {
                                                 "population_name": pop_name,
-                                                "allele_frequency": float('%.3g' % float(allele_frequency_ref)) ,
+                                                "allele_frequency": allele_frequency_ref ,
                                                 "allele_count": None,
                                                 "allele_number": None,
                                                 "is_minor_allele": False,
@@ -424,7 +424,7 @@ class Variant ():
         n_citations = self.info["NCITE"] if "NCITE" in self.info else None
         rep_pop_allele_frequency = [{"allele_name": minimise_allele(i, self.ref), "number": float('%.3g' % float(j))} for i,j in zip(alleles, self.info["RAF"]) if j] if "RAF" in self.info else None
         if rep_pop_allele_frequency:
-            rep_pop_allele_frequency.append({"allele_name": self.ref, "number": float('%.3g' % float(1-sum(filter(None,self.info["RAF"]))))})
+            rep_pop_allele_frequency.append({"allele_name": self.ref, "number":  float(1-float('%.3g' % sum(filter(None,self.info["RAF"]))))})
 
         return {
             "NTCSQ": n_transcript_csq,

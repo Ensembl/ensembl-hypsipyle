@@ -330,7 +330,7 @@ class Variant ():
                                 if allele_frequency is not None:
                                     population_frequency = {
                                                     "population_name": sub_pop["name"],
-                                                    "allele_frequency": float('%.3g' % float(allele_frequency)),
+                                                    "allele_frequency": float(allele_frequency),
                                                     "allele_count": allele_count,
                                                     "allele_number": allele_number,
                                                     "is_minor_allele": False,
@@ -368,7 +368,7 @@ class Variant ():
                 continue
             ## Add population frequency for reference allele
             ref_allele =  minimise_allele(self.ref,self.ref)
-            allele_frequency_ref = 1 - float('%.3g' % sum(list(zip(*by_population))[0]))
+            allele_frequency_ref = 1 - float(sum(list(zip(*by_population))[0]))
             if allele_frequency_ref <= 1 and allele_frequency_ref >= 0:
                 population_frequency_ref = {
                                                 "population_name": pop_name,

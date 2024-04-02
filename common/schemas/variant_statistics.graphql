@@ -8,7 +8,7 @@ type VariantStatistics {
   counts_variant_phenotypes: [VariantAlleleStatisticsInt]!
   counts_gene_phenotypes: [VariantAlleleStatisticsInt]!
   count_citations: Int!
-  representative_population_allele_frequency: [VariantAlleleStatisticsFloat]!
+  representative_population_allele_frequencies: [VariantAlleleStatisticsFloat]!
 }
 
 type VariantAlleleStatisticsInt {

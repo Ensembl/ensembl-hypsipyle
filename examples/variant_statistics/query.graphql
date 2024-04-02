@@ -18,7 +18,7 @@ query stats_example {
       number
     },
     count_citations
-    representative_population_allele_frequency {
+    representative_population_allele_frequencies {
       allele_name
       number
     }

@@ -424,9 +424,9 @@ class Variant ():
         n_variant_pheno = [{"allele_name": minimise_allele(i,self.ref), "number": j}  for i,j in zip(alleles, var_pheno_array)] 
         n_gene_pheno = [{"allele_name": minimise_allele(i,self.ref), "number": j}  for i,j in zip(alleles, gene_pheno_array)] 
         n_citations = self.info["NCITE"] if "NCITE" in self.info else 0
-        rep_pop_allele_frequency = [{"allele_name": minimise_allele(i, self.ref), "number": float(j)} for i,j in zip(alleles, self.info["RAF"]) if j] if "RAF" in self.info else []
-        if rep_pop_allele_frequency:
-            rep_pop_allele_frequency.append({"allele_name": self.ref, "number":  1-float(sum(filter(None,self.info["RAF"])))})
+        rep_pop_allele_frequencies = [{"allele_name": minimise_allele(i, self.ref), "number": float(j)} for i,j in zip(alleles, self.info["RAF"]) if j] if "RAF" in self.info else []
+        if rep_pop_allele_frequencies:
+            rep_pop_allele_frequencies.append({"allele_name": self.ref, "number":  1-float(sum(filter(None,self.info["RAF"])))})
 
         return {
             "count_transcript_consequences": n_transcript_csq,
@@ -435,7 +435,7 @@ class Variant ():
             "counts_variant_phenotypes": n_variant_pheno,
             "counts_gene_phenotypes": n_gene_pheno,
             "count_citations": n_citations,
-            "representative_population_allele_frequency": rep_pop_allele_frequency
+            "representative_population_allele_frequencies": rep_pop_allele_frequencies
         }
     
 

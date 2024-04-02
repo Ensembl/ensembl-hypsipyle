@@ -1,13 +1,14 @@
 type VariantStatistics {
   """
+  Variant Statistics
   """
-  count_transcript_consequences: Int
-  count_overlapped_genes: Int
-  count_regulatory_consequences: Int
-  count_variant_phenotypes: [VariantAlleleStatisticsInt]
-  count_gene_phenotypes: [VariantAlleleStatisticsInt]
-  count_citations: Int
-  representative_population_allele_frequency: [VariantAlleleStatisticsFloat]
+  count_transcript_consequences: Int!
+  count_overlapped_genes: Int!
+  count_regulatory_consequences: Int!
+  counts_variant_phenotypes: [VariantAlleleStatisticsInt]!
+  counts_gene_phenotypes: [VariantAlleleStatisticsInt]!
+  count_citations: Int!
+  representative_population_allele_frequency: [VariantAlleleStatisticsFloat]!
 }
 
 type VariantAlleleStatisticsInt {

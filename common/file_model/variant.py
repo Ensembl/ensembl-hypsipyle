@@ -416,22 +416,24 @@ class Variant ():
     
     def get_statistics(self)-> Mapping:
         alleles = [i.value for i in self.alts]
-        n_transcript_csq = self.info["NTCSQ"] if "NTCSQ" in self.info else None
-        n_genes_overlapped = self.info["NGENE"] if "NGENE" in self.info else None
-        n_regulatory_csq = self.info["NRCSQ"] if "NRCSQ" in self.info else None
-        n_variant_pheno = [{"allele_name": minimise_allele(i,self.ref), "number": j}  for i,j in zip(alleles, self.info["NVPHN"])] if "NVPHN" in self.info else None
-        n_gene_pheno = [{"allele_name": minimise_allele(i,self.ref), "number": j}  for i,j in zip(alleles, self.info["NGPHN"])] if "NGPHN" in self.info else None
-        n_citations = self.info["NCITE"] if "NCITE" in self.info else None
-        rep_pop_allele_frequency = [{"allele_name": minimise_allele(i, self.ref), "number": float('%.3g' % float(j))} for i,j in zip(alleles, self.info["RAF"]) if j] if "RAF" in self.info else None
+        n_transcript_csq = self.info["NTCSQ"] if "NTCSQ" in self.info else 0
+        n_genes_overlapped = self.info["NGENE"] if "NGENE" in self.info else 0
+        n_regulatory_csq = self.info["NRCSQ"] if "NRCSQ" in self.info else 0
+        var_pheno_array = self.info["NVPHN"] if "NVPHN" in self.info else [0] * len(alleles)
+        gene_pheno_array = self.info["NGPHN"] if "NGPHN" in self.info else [0] * len(alleles)
+        n_variant_pheno = [{"allele_name": minimise_allele(i,self.ref), "number": j}  for i,j in zip(alleles, var_pheno_array)] 
+        n_gene_pheno = [{"allele_name": minimise_allele(i,self.ref), "number": j}  for i,j in zip(alleles, gene_pheno_array)] 
+        n_citations = self.info["NCITE"] if "NCITE" in self.info else 0
+        rep_pop_allele_frequency = [{"allele_name": minimise_allele(i, self.ref), "number": float(j)} for i,j in zip(alleles, self.info["RAF"]) if j] if "RAF" in self.info else []
         if rep_pop_allele_frequency:
-            rep_pop_allele_frequency.append({"allele_name": self.ref, "number":  float(1-float('%.3g' % sum(filter(None,self.info["RAF"]))))})
+            rep_pop_allele_frequency.append({"allele_name": self.ref, "number":  1-float(sum(filter(None,self.info["RAF"])))})
 
         return {
             "count_transcript_consequences": n_transcript_csq,
             "count_overlapped_genes": n_genes_overlapped,
             "count_regulatory_consequences": n_regulatory_csq,
-            "count_variant_phenotypes": n_variant_pheno,
-            "count_gene_phenotypes": n_gene_pheno,
+            "counts_variant_phenotypes": n_variant_pheno,
+            "counts_gene_phenotypes": n_gene_pheno,
             "count_citations": n_citations,
             "representative_population_allele_frequency": rep_pop_allele_frequency
         }

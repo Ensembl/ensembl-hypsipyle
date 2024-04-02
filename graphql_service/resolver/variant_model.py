@@ -190,5 +190,3 @@ async def resolve_statistics(
         raise VariantNotFoundError(by_id["variant_id"])
     result  = variant.get_statistics()
     return result
-
-

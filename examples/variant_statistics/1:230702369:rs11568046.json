@@ -4,7 +4,7 @@
       "count_transcript_consequences": 8,
       "count_overlapped_genes": 1,
       "count_regulatory_consequences": null,
-      "count_variant_phenotypes": [
+      "counts_variant_phenotypes": [
         {
           "allele_name": "G",
           "number": 1
@@ -14,7 +14,7 @@
           "number": 1
         }
       ],
-      "count_gene_phenotypes": [
+      "counts_gene_phenotypes": [
         {
           "allele_name": "G",
           "number": 5

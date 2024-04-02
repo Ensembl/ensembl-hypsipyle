@@ -7,12 +7,12 @@ query stats_example {
   count_transcript_consequences,
   count_overlapped_genes,
   count_regulatory_consequences,
-  count_variant_phenotypes
+  counts_variant_phenotypes
     {
       allele_name
       number
     },
-    count_gene_phenotypes
+    counts_gene_phenotypes
     {
       allele_name
       number

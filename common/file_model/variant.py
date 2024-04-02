@@ -396,7 +396,7 @@ class Variant ():
                         maf_frequency, maf_allele, maf_population = pop
                         pop_frequency_map[maf_allele][maf_population]["is_minor_allele"] = True
                         hpmaf.append([maf_frequency,maf_allele,maf_population])
-                    elif maf_frequency and pop[0] == maf_frequency and maf_allele != allele.ref:
+                    elif maf_frequency and pop[0] == maf_frequency and maf_allele != ref_allele:
                         pop_frequency_map[maf_allele][maf_population]["is_minor_allele"] = True
                         hpmaf.append([maf_frequency,maf_allele,maf_population])
                     elif maf_frequency and pop[0] < maf_frequency:

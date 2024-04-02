@@ -3,7 +3,7 @@
     "variant_statistics": {
       "count_transcript_consequences": 8,
       "count_overlapped_genes": 1,
-      "count_regulatory_consequences": null,
+      "count_regulatory_consequences": 0,
       "counts_variant_phenotypes": [
         {
           "allele_name": "G",
@@ -25,7 +25,7 @@
         }
       ],
       "count_citations": 2,
-      "representative_population_allele_frequency": null
+      "representative_population_allele_frequency": []
     }
   },
   "extensions": {

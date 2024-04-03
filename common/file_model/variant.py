@@ -416,25 +416,29 @@ class Variant ():
     
     def get_statistics(self)-> Mapping:
         alleles = [i.value for i in self.alts]
-        n_transcript_csq = self.info["NTCSQ"] if "NTCSQ" in self.info else 0
-        n_genes_overlapped = self.info["NGENE"] if "NGENE" in self.info else 0
-        n_regulatory_csq = self.info["NRCSQ"] if "NRCSQ" in self.info else 0
+        transcript_csq_array = [self.info["NTCSQ"]] * len(alleles) if "NTCSQ" in self.info else [0] * len(alleles)
+        genes_overlapped_array = [self.info["NGENE"]] * len(alleles) if "NGENE" in self.info else [0] * len(alleles)
+        regulatory_csq_array = [self.info["NRCSQ"]] * len(alleles) if "NRCSQ" in self.info else [0] * len(alleles)
+        citations_array = [self.info["NCITE"]] * len(alleles) if "NCITE" in self.info else [0] * len(alleles)
         var_pheno_array = self.info["NVPHN"] if "NVPHN" in self.info else [0] * len(alleles)
         gene_pheno_array = self.info["NGPHN"] if "NGPHN" in self.info else [0] * len(alleles)
+        n_transcript_csq = [{"allele_name": minimise_allele(i,self.ref), "number": j}  for i,j in zip(alleles, transcript_csq_array)]
+        n_genes_overlapped =  [{"allele_name": minimise_allele(i,self.ref), "number": j}  for i,j in zip(alleles, genes_overlapped_array)]
+        n_regulatory_csq = [{"allele_name": minimise_allele(i,self.ref), "number": j}  for i,j in zip(alleles, regulatory_csq_array)]
+        n_citations = [{"allele_name": minimise_allele(i,self.ref), "number": j}  for i,j in zip(alleles, citations_array)]
         n_variant_pheno = [{"allele_name": minimise_allele(i,self.ref), "number": j}  for i,j in zip(alleles, var_pheno_array)] 
-        n_gene_pheno = [{"allele_name": minimise_allele(i,self.ref), "number": j}  for i,j in zip(alleles, gene_pheno_array)] 
-        n_citations = self.info["NCITE"] if "NCITE" in self.info else 0
+        n_gene_pheno = [{"allele_name": minimise_allele(i,self.ref), "number": j}  for i,j in zip(alleles, gene_pheno_array)]       
         rep_pop_allele_frequencies = [{"allele_name": minimise_allele(i, self.ref), "number": float(j)} for i,j in zip(alleles, self.info["RAF"]) if j] if "RAF" in self.info else []
         if rep_pop_allele_frequencies:
             rep_pop_allele_frequencies.append({"allele_name": self.ref, "number":  1-float(sum(filter(None,self.info["RAF"])))})
 
         return {
-            "count_transcript_consequences": n_transcript_csq,
-            "count_overlapped_genes": n_genes_overlapped,
-            "count_regulatory_consequences": n_regulatory_csq,
+            "counts_transcript_consequences": n_transcript_csq,
+            "counts_overlapped_genes": n_genes_overlapped,
+            "counts_regulatory_consequences": n_regulatory_csq,
             "counts_variant_phenotypes": n_variant_pheno,
             "counts_gene_phenotypes": n_gene_pheno,
-            "count_citations": n_citations,
+            "counts_citations": n_citations,
             "representative_population_allele_frequencies": rep_pop_allele_frequencies
         }
     

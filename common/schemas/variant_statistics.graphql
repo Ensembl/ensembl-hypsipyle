@@ -2,12 +2,12 @@ type VariantStatistics {
   """
   Variant Statistics
   """
-  count_transcript_consequences: Int!
-  count_overlapped_genes: Int!
-  count_regulatory_consequences: Int!
+  counts_transcript_consequences: [VariantAlleleStatisticsInt]!
+  counts_overlapped_genes: [VariantAlleleStatisticsInt]!
+  counts_regulatory_consequences: [VariantAlleleStatisticsInt]!
   counts_variant_phenotypes: [VariantAlleleStatisticsInt]!
   counts_gene_phenotypes: [VariantAlleleStatisticsInt]!
-  count_citations: Int!
+  counts_citations: [VariantAlleleStatisticsInt]!
   representative_population_allele_frequencies: [VariantAlleleStatisticsFloat]!
 }
 

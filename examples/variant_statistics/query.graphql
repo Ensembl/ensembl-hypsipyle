@@ -1,24 +1,38 @@
 query stats_example {
   variant_statistics(
     by_id: {genome_id: "a7335667-93e7-11ec-a39d-005056b38ce3", variant_id: "1:230702369:rs11568046"}
-  ) {
-    
-        
-  count_transcript_consequences,
-  count_overlapped_genes,
-  count_regulatory_consequences,
+  ) {     
+  counts_transcript_consequences
+    {
+      allele_name
+      number
+    },
+  counts_overlapped_genes
+    {
+      allele_name
+      number
+    },
+  counts_regulatory_consequences
+    {
+      allele_name
+      number
+    },
   counts_variant_phenotypes
     {
       allele_name
       number
     },
-    counts_gene_phenotypes
+  counts_gene_phenotypes
     {
       allele_name
       number
     },
-    count_citations
-    representative_population_allele_frequencies {
+  counts_citations
+    {
+      allele_name
+      number
+    },
+  representative_population_allele_frequencies {
       allele_name
       number
     }

@@ -1,9 +1,46 @@
 {
   "data": {
     "variant_statistics": {
-      "count_transcript_consequences": 8,
-      "count_overlapped_genes": 1,
-      "count_regulatory_consequences": 0,
+      "counts_transcript_consequences": [
+        {
+          "allele_name": "G",
+          "number": 8
+        },
+        {
+          "allele_name": "T",
+          "number": 8
+        }
+      ],
+      "counts_overlapped_genes": [
+        {
+          "allele_name": "G",
+          "number": 1
+        },
+        {
+          "allele_name": "T",
+          "number": 1
+        }
+      ],
+      "counts_regulatory_consequences": [
+        {
+          "allele_name": "G",
+          "number": 0
+        },
+        {
+          "allele_name": "T",
+          "number": 0
+        }
+      ],
+      "counts_citations": [
+        {
+          "allele_name": "G",
+          "number": 2
+        },
+        {
+          "allele_name": "T",
+          "number": 2
+        }
+      ],
       "counts_variant_phenotypes": [
         {
           "allele_name": "G",
@@ -24,11 +61,10 @@
           "number": 5
         }
       ],
-      "count_citations": 2,
       "representative_population_allele_frequencies": []
     }
   },
   "extensions": {
-    "execution_time_in_seconds": 0.08
+    "execution_time_in_seconds": 0.07
   }
 }

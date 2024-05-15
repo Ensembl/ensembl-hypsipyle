@@ -42,4 +42,3 @@ async def test_variant_id():
         executable_schema, query_data, context_value=context
     )
     assert success
-    print(result)

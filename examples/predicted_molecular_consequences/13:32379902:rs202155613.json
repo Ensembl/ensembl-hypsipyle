@@ -13,7 +13,7 @@
           "predicted_molecular_consequences": [
             {
               "allele_name": "A",
-              "stable_id": "ENST00000380152",
+              "stable_id": "ENST00000380152.8",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -25,7 +25,7 @@
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "protein_coding",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [
                 {
                   "score": 0,
@@ -74,7 +74,7 @@
             },
             {
               "allele_name": "A",
-              "stable_id": "ENST00000470094",
+              "stable_id": "ENST00000470094.2",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -89,7 +89,7 @@
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [],
               "cdna_location": {
                 "start": 9305,
@@ -115,7 +115,7 @@
             },
             {
               "allele_name": "A",
-              "stable_id": "ENST00000528762",
+              "stable_id": "ENST00000528762.2",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -130,12 +130,13 @@
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [],
               "cdna_location": {
                 "start": 9369,
                 "end": 9369,
-                "ref_sequence": "C",
+                "length": 1,
+                "ref_sequence": "-",
                 "alt_sequence": "A"
               },
               "cds_location": null,
@@ -143,7 +144,7 @@
             },
             {
               "allele_name": "A",
-              "stable_id": "ENST00000530893",
+              "stable_id": "ENST00000530893.7",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -155,7 +156,7 @@
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "protein_coding",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [],
               "cdna_location": {
                 "start": 9304,
@@ -181,7 +182,7 @@
             },
             {
               "allele_name": "A",
-              "stable_id": "ENST00000544455",
+              "stable_id": "ENST00000544455.6",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -193,7 +194,7 @@
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "protein_coding",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [
                 {
                   "score": 0,
@@ -242,7 +243,7 @@
             },
             {
               "allele_name": "A",
-              "stable_id": "ENST00000614259",
+              "stable_id": "ENST00000614259.2",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -257,13 +258,13 @@
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [],
               "cdna_location": {
                 "start": 9114,
                 "end": 9114,
                 "length": 1,
-                "ref_sequence": "C",
+                "ref_sequence": "-",
                 "alt_sequence": "A"
               },
               "cds_location": null,
@@ -271,7 +272,7 @@
             },
             {
               "allele_name": "A",
-              "stable_id": "ENST00000665585",
+              "stable_id": "ENST00000665585.2",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -286,13 +287,13 @@
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [],
               "cdna_location": {
                 "start": 9618,
                 "end": 9618,
                 "length": 1,
-                "ref_sequence": "C",
+                "ref_sequence": "-",
                 "alt_sequence": "A"
               },
               "cds_location": null,
@@ -300,7 +301,7 @@
             },
             {
               "allele_name": "A",
-              "stable_id": "ENST00000666593",
+              "stable_id": "ENST00000666593.2",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -315,7 +316,7 @@
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [],
               "cdna_location": {
                 "start": 9305,
@@ -341,7 +342,7 @@
             },
             {
               "allele_name": "A",
-              "stable_id": "ENST00000680887",
+              "stable_id": "ENST00000680887.1",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -353,7 +354,7 @@
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "protein_coding",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [
                 {
                   "score": 0,
@@ -402,7 +403,7 @@
             },
             {
               "allele_name": "A",
-              "stable_id": "ENST00000700202",
+              "stable_id": "ENST00000700202.2",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -414,7 +415,7 @@
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "protein_coding",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [],
               "cdna_location": {
                 "start": 9254,
@@ -440,7 +441,7 @@
             },
             {
               "allele_name": "A",
-              "stable_id": "ENST00000700203",
+              "stable_id": "ENST00000700203.1",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -452,13 +453,13 @@
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "retained_intron",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [],
               "cdna_location": {
                 "start": 1233,
                 "end": 1233,
                 "length": 1,
-                "ref_sequence": "C",
+                "ref_sequence": "-",
                 "alt_sequence": "A"
               },
               "cds_location": null,
@@ -471,7 +472,7 @@
           "predicted_molecular_consequences": [
             {
               "allele_name": "G",
-              "stable_id": "ENST00000380152",
+              "stable_id": "ENST00000380152.8",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -483,7 +484,7 @@
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "protein_coding",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [
                 {
                   "score": 0,
@@ -532,7 +533,7 @@
             },
             {
               "allele_name": "G",
-              "stable_id": "ENST00000470094",
+              "stable_id": "ENST00000470094.2",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -547,7 +548,7 @@
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [],
               "cdna_location": {
                 "start": 9305,
@@ -573,7 +574,7 @@
             },
             {
               "allele_name": "G",
-              "stable_id": "ENST00000528762",
+              "stable_id": "ENST00000528762.2",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -588,13 +589,13 @@
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [],
               "cdna_location": {
                 "start": 9369,
                 "end": 9369,
                 "length": 1,
-                "ref_sequence": "C",
+                "ref_sequence": "-",
                 "alt_sequence": "G"
               },
               "cds_location": null,
@@ -602,7 +603,7 @@
             },
             {
               "allele_name": "G",
-              "stable_id": "ENST00000530893",
+              "stable_id": "ENST00000530893.7",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -614,7 +615,7 @@
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "protein_coding",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [],
               "cdna_location": {
                 "start": 9304,
@@ -640,7 +641,7 @@
             },
             {
               "allele_name": "G",
-              "stable_id": "ENST00000544455",
+              "stable_id": "ENST00000544455.6",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -652,7 +653,7 @@
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "protein_coding",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [
                 {
                   "score": 0,
@@ -701,7 +702,7 @@
             },
             {
               "allele_name": "G",
-              "stable_id": "ENST00000614259",
+              "stable_id": "ENST00000614259.2",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -716,13 +717,13 @@
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [],
               "cdna_location": {
                 "start": 9114,
                 "end": 9114,
                 "length": 1,
-                "ref_sequence": "C",
+                "ref_sequence": "-",
                 "alt_sequence": "G"
               },
               "cds_location": null,
@@ -730,7 +731,7 @@
             },
             {
               "allele_name": "G",
-              "stable_id": "ENST00000665585",
+              "stable_id": "ENST00000665585.2",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -745,13 +746,13 @@
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [],
               "cdna_location": {
                 "start": 9618,
                 "end": 9618,
                 "length": 1,
-                "ref_sequence": "C",
+                "ref_sequence": "-",
                 "alt_sequence": "G"
               },
               "cds_location": null,
@@ -759,7 +760,7 @@
             },
             {
               "allele_name": "G",
-              "stable_id": "ENST00000666593",
+              "stable_id": "ENST00000666593.2",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -774,7 +775,7 @@
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [],
               "cdna_location": {
                 "start": 9305,
@@ -800,7 +801,7 @@
             },
             {
               "allele_name": "G",
-              "stable_id": "ENST00000680887",
+              "stable_id": "ENST00000680887.1",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -812,7 +813,7 @@
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "protein_coding",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [
                 {
                   "score": 0,
@@ -861,7 +862,7 @@
             },
             {
               "allele_name": "G",
-              "stable_id": "ENST00000700202",
+              "stable_id": "ENST00000700202.2",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -873,7 +874,7 @@
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "protein_coding",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [],
               "cdna_location": {
                 "start": 9254,
@@ -899,7 +900,7 @@
             },
             {
               "allele_name": "G",
-              "stable_id": "ENST00000700203",
+              "stable_id": "ENST00000700203.1",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -911,13 +912,13 @@
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "retained_intron",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [],
               "cdna_location": {
                 "start": 1233,
                 "end": 1233,
                 "length": 1,
-                "ref_sequence": "C",
+                "ref_sequence": "-",
                 "alt_sequence": "G"
               },
               "cds_location": null,
@@ -930,7 +931,7 @@
           "predicted_molecular_consequences": [
             {
               "allele_name": "T",
-              "stable_id": "ENST00000380152",
+              "stable_id": "ENST00000380152.8",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -942,7 +943,7 @@
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "protein_coding",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [],
               "cdna_location": {
                 "start": 9305,
@@ -968,7 +969,7 @@
             },
             {
               "allele_name": "T",
-              "stable_id": "ENST00000470094",
+              "stable_id": "ENST00000470094.2",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -983,7 +984,7 @@
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [],
               "cdna_location": {
                 "start": 9305,
@@ -1009,7 +1010,7 @@
             },
             {
               "allele_name": "T",
-              "stable_id": "ENST00000528762",
+              "stable_id": "ENST00000528762.2",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -1024,13 +1025,13 @@
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [],
               "cdna_location": {
                 "start": 9369,
                 "end": 9369,
                 "length": 1,
-                "ref_sequence": "C",
+                "ref_sequence": "-",
                 "alt_sequence": "T"
               },
               "cds_location": null,
@@ -1038,7 +1039,7 @@
             },
             {
               "allele_name": "T",
-              "stable_id": "ENST00000530893",
+              "stable_id": "ENST00000530893.7",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -1050,7 +1051,7 @@
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "protein_coding",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [],
               "cdna_location": {
                 "start": 9304,
@@ -1076,7 +1077,7 @@
             },
             {
               "allele_name": "T",
-              "stable_id": "ENST00000544455",
+              "stable_id": "ENST00000544455.6",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -1088,7 +1089,7 @@
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "protein_coding",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [],
               "cdna_location": {
                 "start": 9205,
@@ -1114,7 +1115,7 @@
             },
             {
               "allele_name": "T",
-              "stable_id": "ENST00000614259",
+              "stable_id": "ENST00000614259.2",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -1129,13 +1130,13 @@
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [],
               "cdna_location": {
                 "start": 9114,
                 "end": 9114,
                 "length": 1,
-                "ref_sequence": "C",
+                "ref_sequence": "-",
                 "alt_sequence": "T"
               },
               "cds_location": null,
@@ -1143,7 +1144,7 @@
             },
             {
               "allele_name": "T",
-              "stable_id": "ENST00000665585",
+              "stable_id": "ENST00000665585.2",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -1158,13 +1159,13 @@
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [],
               "cdna_location": {
                 "start": 9618,
                 "end": 9618,
                 "length": 1,
-                "ref_sequence": "C",
+                "ref_sequence": "-",
                 "alt_sequence": "T"
               },
               "cds_location": null,
@@ -1172,7 +1173,7 @@
             },
             {
               "allele_name": "T",
-              "stable_id": "ENST00000666593",
+              "stable_id": "ENST00000666593.2",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -1187,7 +1188,7 @@
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [],
               "cdna_location": {
                 "start": 9305,
@@ -1213,7 +1214,7 @@
             },
             {
               "allele_name": "T",
-              "stable_id": "ENST00000680887",
+              "stable_id": "ENST00000680887.1",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -1225,7 +1226,7 @@
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "protein_coding",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [],
               "cdna_location": {
                 "start": 9231,
@@ -1251,7 +1252,7 @@
             },
             {
               "allele_name": "T",
-              "stable_id": "ENST00000700202",
+              "stable_id": "ENST00000700202.2",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -1263,7 +1264,7 @@
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "protein_coding",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [],
               "cdna_location": {
                 "start": 9254,
@@ -1289,7 +1290,7 @@
             },
             {
               "allele_name": "T",
-              "stable_id": "ENST00000700203",
+              "stable_id": "ENST00000700203.1",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -1301,13 +1302,13 @@
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "retained_intron",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [],
               "cdna_location": {
                 "start": 1233,
                 "end": 1233,
                 "length": 1,
-                "ref_sequence": "C",
+                "ref_sequence": "-",
                 "alt_sequence": "T"
               },
               "cds_location": null,
@@ -1323,6 +1324,6 @@
     }
   },
   "extensions": {
-    "execution_time_in_seconds": 0.13
+    "execution_time_in_seconds": 0.12
   }
 }

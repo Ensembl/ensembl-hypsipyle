@@ -2,6 +2,250 @@
   "data": {
     "populations": [
       {
+        "name": "gnomADg:ALL",
+        "description": "All gnomAD genomes individuals v3.1.2",
+        "is_global": true,
+        "super_population": null,
+        "sub_populations": [
+          {
+            "name": "gnomADg:afr"
+          },
+          {
+            "name": "gnomADg:ami"
+          },
+          {
+            "name": "gnomADg:amr"
+          },
+          {
+            "name": "gnomADg:asj"
+          },
+          {
+            "name": "gnomADg:eas"
+          },
+          {
+            "name": "gnomADg:fin"
+          },
+          {
+            "name": "gnomADg:mid"
+          },
+          {
+            "name": "gnomADg:nfe"
+          },
+          {
+            "name": "gnomADg:remaining"
+          },
+          {
+            "name": "gnomADg:sas"
+          }
+        ]
+      },
+      {
+        "name": "gnomADg:afr",
+        "description": "African/African American",
+        "is_global": false,
+        "super_population": {
+          "name": "gnomADg:ALL"
+        },
+        "sub_populations": []
+      },
+      {
+        "name": "gnomADg:ami",
+        "description": "Amish",
+        "is_global": false,
+        "super_population": {
+          "name": "gnomADg:ALL"
+        },
+        "sub_populations": []
+      },
+      {
+        "name": "gnomADg:amr",
+        "description": "Latino",
+        "is_global": false,
+        "super_population": {
+          "name": "gnomADg:ALL"
+        },
+        "sub_populations": []
+      },
+      {
+        "name": "gnomADg:asj",
+        "description": "Ashkenazi Jewish",
+        "is_global": false,
+        "super_population": {
+          "name": "gnomADg:ALL"
+        },
+        "sub_populations": []
+      },
+      {
+        "name": "gnomADg:eas",
+        "description": "East Asian",
+        "is_global": false,
+        "super_population": {
+          "name": "gnomADg:ALL"
+        },
+        "sub_populations": []
+      },
+      {
+        "name": "gnomADg:fin",
+        "description": "Finnish",
+        "is_global": false,
+        "super_population": {
+          "name": "gnomADg:ALL"
+        },
+        "sub_populations": []
+      },
+      {
+        "name": "gnomADg:mid",
+        "description": "Middle Eastern",
+        "is_global": false,
+        "super_population": {
+          "name": "gnomADg:ALL"
+        },
+        "sub_populations": []
+      },
+      {
+        "name": "gnomADg:nfe",
+        "description": "Non-Finnish European",
+        "is_global": false,
+        "super_population": {
+          "name": "gnomADg:ALL"
+        },
+        "sub_populations": []
+      },
+      {
+        "name": "gnomADg:remaining",
+        "description": "Remaining",
+        "is_global": false,
+        "super_population": {
+          "name": "gnomADg:ALL"
+        },
+        "sub_populations": []
+      },
+      {
+        "name": "gnomADg:sas",
+        "description": "South Asian",
+        "is_global": false,
+        "super_population": {
+          "name": "gnomADg:ALL"
+        },
+        "sub_populations": []
+      },
+      {
+        "name": "gnomADe:ALL",
+        "description": "All gnomAD exomes individuals r2.1.1",
+        "is_global": true,
+        "super_population": null,
+        "sub_populations": [
+          {
+            "name": "gnomADe:afr"
+          },
+          {
+            "name": "gnomADe:amr"
+          },
+          {
+            "name": "gnomADe:asj"
+          },
+          {
+            "name": "gnomADe:eas"
+          },
+          {
+            "name": "gnomADe:fin"
+          },
+          {
+            "name": "gnomADe:mid"
+          },
+          {
+            "name": "gnomADe:nfe"
+          },
+          {
+            "name": "gnomADe:remaining"
+          },
+          {
+            "name": "gnomADe:sas"
+          }
+        ]
+      },
+      {
+        "name": "gnomADe:afr",
+        "description": "African/African American",
+        "is_global": false,
+        "super_population": {
+          "name": "gnomADe:ALL"
+        },
+        "sub_populations": []
+      },
+      {
+        "name": "gnomADe:amr",
+        "description": "Latino",
+        "is_global": false,
+        "super_population": {
+          "name": "gnomADe:ALL"
+        },
+        "sub_populations": []
+      },
+      {
+        "name": "gnomADe:asj",
+        "description": "Ashkenazi Jewish",
+        "is_global": false,
+        "super_population": {
+          "name": "gnomADe:ALL"
+        },
+        "sub_populations": []
+      },
+      {
+        "name": "gnomADe:eas",
+        "description": "East Asian",
+        "is_global": false,
+        "super_population": {
+          "name": "gnomADe:ALL"
+        },
+        "sub_populations": []
+      },
+      {
+        "name": "gnomADe:fin",
+        "description": "Finnish",
+        "is_global": false,
+        "super_population": {
+          "name": "gnomADe:ALL"
+        },
+        "sub_populations": []
+      },
+      {
+        "name": "gnomADe:nfe",
+        "description": "Non-Finnish European",
+        "is_global": false,
+        "super_population": {
+          "name": "gnomADe:ALL"
+        },
+        "sub_populations": []
+      },
+      {
+        "name": "gnomADe:mid",
+        "description": "Middle Eastern",
+        "is_global": false,
+        "super_population": {
+          "name": "gnomADe:ALL"
+        },
+        "sub_populations": []
+      },
+      {
+        "name": "gnomADe:remaining",
+        "description": "Remaining",
+        "is_global": false,
+        "super_population": {
+          "name": "gnomADe:ALL"
+        },
+        "sub_populations": []
+      },
+      {
+        "name": "gnomADe:sas",
+        "description": "South Asian",
+        "is_global": false,
+        "super_population": {
+          "name": "gnomADe:ALL"
+        },
+        "sub_populations": []
+      },
+      {
         "name": "1000GENOMES:phase_3:ALL",
         "description": "All phase 3 individuals",
         "is_global": true,
@@ -214,7 +458,7 @@
       },
       {
         "name": "1000GENOMES:phase_3:MXL",
-        "description": "Colombian in Medellin, Colombia",
+        "description": "Mexican Ancestry in Los Angeles, California",
         "is_global": false,
         "super_population": {
           "name": "1000GENOMES:phase_3:AMR"
@@ -373,242 +617,10 @@
           "name": "1000GENOMES:phase_3:SAS"
         },
         "sub_populations": []
-      },
-      {
-        "name": "gnomADg:ALL",
-        "description": "All gnomAD genomes individuals v3.1.2",
-        "is_global": true,
-        "super_population": null,
-        "sub_populations": [
-          {
-            "name": "gnomADg:afr"
-          },
-          {
-            "name": "gnomADg:ami"
-          },
-          {
-            "name": "gnomADg:amr"
-          },
-          {
-            "name": "gnomADg:asj"
-          },
-          {
-            "name": "gnomADg:eas"
-          },
-          {
-            "name": "gnomADg:fin"
-          },
-          {
-            "name": "gnomADg:mid"
-          },
-          {
-            "name": "gnomADg:nfe"
-          },
-          {
-            "name": "gnomADg:oth"
-          },
-          {
-            "name": "gnomADg:sas"
-          }
-        ]
-      },
-      {
-        "name": "gnomADg:afr",
-        "description": "African/African American",
-        "is_global": false,
-        "super_population": {
-          "name": "gnomADg:ALL"
-        },
-        "sub_populations": []
-      },
-      {
-        "name": "gnomADg:ami",
-        "description": "Amish",
-        "is_global": false,
-        "super_population": {
-          "name": "gnomADg:ALL"
-        },
-        "sub_populations": []
-      },
-      {
-        "name": "gnomADg:amr",
-        "description": "Latino",
-        "is_global": false,
-        "super_population": {
-          "name": "gnomADg:ALL"
-        },
-        "sub_populations": []
-      },
-      {
-        "name": "gnomADg:asj",
-        "description": "Ashkenazi Jewish",
-        "is_global": false,
-        "super_population": {
-          "name": "gnomADg:ALL"
-        },
-        "sub_populations": []
-      },
-      {
-        "name": "gnomADg:eas",
-        "description": "East Asian",
-        "is_global": false,
-        "super_population": {
-          "name": "gnomADg:ALL"
-        },
-        "sub_populations": []
-      },
-      {
-        "name": "gnomADg:fin",
-        "description": "Finnish",
-        "is_global": false,
-        "super_population": {
-          "name": "gnomADg:ALL"
-        },
-        "sub_populations": []
-      },
-      {
-        "name": "gnomADg:mid",
-        "description": "Middle Eastern",
-        "is_global": false,
-        "super_population": {
-          "name": "gnomADg:ALL"
-        },
-        "sub_populations": []
-      },
-      {
-        "name": "gnomADg:nfe",
-        "description": "Non-Finnish European",
-        "is_global": false,
-        "super_population": {
-          "name": "gnomADg:ALL"
-        },
-        "sub_populations": []
-      },
-      {
-        "name": "gnomADg:oth",
-        "description": "Other",
-        "is_global": false,
-        "super_population": {
-          "name": "gnomADg:ALL"
-        },
-        "sub_populations": []
-      },
-      {
-        "name": "gnomADg:sas",
-        "description": "South Asian",
-        "is_global": false,
-        "super_population": {
-          "name": "gnomADg:ALL"
-        },
-        "sub_populations": []
-      },
-      {
-        "name": "gnomADe:ALL",
-        "description": "All gnomAD exomes individuals r2.1.1",
-        "is_global": true,
-        "super_population": null,
-        "sub_populations": [
-          {
-            "name": "gnomADe:afr"
-          },
-          {
-            "name": "gnomADe:amr"
-          },
-          {
-            "name": "gnomADe:asj"
-          },
-          {
-            "name": "gnomADe:eas"
-          },
-          {
-            "name": "gnomADg:fin"
-          },
-          {
-            "name": "gnomADe:nfe"
-          },
-          {
-            "name": "gnomADe:oth"
-          },
-          {
-            "name": "gnomADe:sas"
-          }
-        ]
-      },
-      {
-        "name": "gnomADe:afr",
-        "description": "African/African American",
-        "is_global": false,
-        "super_population": {
-          "name": "gnomADe:ALL"
-        },
-        "sub_populations": []
-      },
-      {
-        "name": "gnomADe:amr",
-        "description": "Latino",
-        "is_global": false,
-        "super_population": {
-          "name": "gnomADe:ALL"
-        },
-        "sub_populations": []
-      },
-      {
-        "name": "gnomADe:asj",
-        "description": "Ashkenazi Jewish",
-        "is_global": false,
-        "super_population": {
-          "name": "gnomADe:ALL"
-        },
-        "sub_populations": []
-      },
-      {
-        "name": "gnomADe:eas",
-        "description": "East Asian",
-        "is_global": false,
-        "super_population": {
-          "name": "gnomADe:ALL"
-        },
-        "sub_populations": []
-      },
-      {
-        "name": "gnomADe:fin",
-        "description": "Finnish",
-        "is_global": false,
-        "super_population": {
-          "name": "gnomADe:ALL"
-        },
-        "sub_populations": []
-      },
-      {
-        "name": "gnomADe:nfe",
-        "description": "Non-Finnish European",
-        "is_global": false,
-        "super_population": {
-          "name": "gnomADe:ALL"
-        },
-        "sub_populations": []
-      },
-      {
-        "name": "gnomADe:oth",
-        "description": "Other",
-        "is_global": false,
-        "super_population": {
-          "name": "gnomADe:ALL"
-        },
-        "sub_populations": []
-      },
-      {
-        "name": "gnomADe:sas",
-        "description": "South Asian",
-        "is_global": false,
-        "super_population": {
-          "name": "gnomADe:ALL"
-        },
-        "sub_populations": []
       }
     ]
   },
   "extensions": {
-    "execution_time_in_seconds": 0.07
+    "execution_time_in_seconds": 0.05
   }
 }

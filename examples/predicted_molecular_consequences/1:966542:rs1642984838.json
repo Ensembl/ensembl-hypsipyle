@@ -1,176 +1,176 @@
 {
-    "data": {
-      "variant": {
-        "name": "rs1642984838",
-        "allele_type": {
-          "accession_id": "substitution",
-          "value": "substitution",
-          "url": "http://sequenceontology.org/browser/current_release/term/SO:1000002"
-        },
-        "alleles": [
-          {
-            "name": "1:966542:GC:AA",
-            "predicted_molecular_consequences": [
-              {
-                "allele_name": "AA",
-                "stable_id": "ENST00000379407",
-                "feature_type": {
-                  "value": "Transcript"
-                },
-                "consequences": [
-                  {
-                    "value": "missense_variant"
-                  }
-                ],
-                "gene_symbol": "PLEKHN1",
-                "gene_stable_id": "ENSG00000187583",
-                "transcript_biotype": "protein_coding",
-                "protein_stable_id": "protein_id_placeholder",
-                "prediction_results": [
-                  {
-                    "score": 0.03,
-                    "result": null,
-                    "classification": {
-                      "label": "deleterious",
-                      "definition": ""
-                    },
-                    "analysis_method": {
-                      "tool": "SIFT"
-                    }
-                  }
-                ],
-                "cdna_location": {
-                  "start": 41,
-                  "end": 42,
-                  "length": 2,
-                  "ref_sequence": "GC",
-                  "alt_sequence": "AA"
-                },
-                "cds_location": {
-                  "start": 11,
-                  "end": 12,
-                  "length": 2,
-                  "ref_sequence": "aGC",
-                  "alt_sequence": "aAA"
-                },
-                "protein_location": {
-                  "start": 4,
-                  "end": 4,
-                  "length": 1,
-                  "ref_sequence": "S",
-                  "alt_sequence": "K"
-                }
+  "data": {
+    "variant": {
+      "name": "rs1642984838",
+      "allele_type": {
+        "accession_id": "substitution",
+        "value": "substitution",
+        "url": "http://sequenceontology.org/browser/current_release/term/SO:1000002"
+      },
+      "alleles": [
+        {
+          "name": "1:966542:GC:AA",
+          "predicted_molecular_consequences": [
+            {
+              "allele_name": "AA",
+              "stable_id": "ENST00000379407.7",
+              "feature_type": {
+                "value": "Transcript"
               },
-              {
-                "allele_name": "AA",
-                "stable_id": "ENST00000379409",
-                "feature_type": {
-                  "value": "Transcript"
-                },
-                "consequences": [
-                  {
-                    "value": "missense_variant"
-                  }
-                ],
-                "gene_symbol": "PLEKHN1",
-                "gene_stable_id": "ENSG00000187583",
-                "transcript_biotype": "protein_coding",
-                "protein_stable_id": "protein_id_placeholder",
-                "prediction_results": [
-                  {
-                    "score": 0.07,
-                    "result": null,
-                    "classification": {
-                      "label": "tolerated",
-                      "definition": ""
-                    },
-                    "analysis_method": {
-                      "tool": "SIFT"
-                    }
-                  }
-                ],
-                "cdna_location": {
-                  "start": 41,
-                  "end": 42,
-                  "length": 2,
-                  "ref_sequence": "GC",
-                  "alt_sequence": "AA"
-                },
-                "cds_location": {
-                  "start": 11,
-                  "end": 12,
-                  "length": 2,
-                  "ref_sequence": "aGC",
-                  "alt_sequence": "aAA"
-                },
-                "protein_location": {
-                  "start": 4,
-                  "end": 4,
-                  "length": 1,
-                  "ref_sequence": "S",
-                  "alt_sequence": "K"
+              "consequences": [
+                {
+                  "value": "missense_variant"
                 }
+              ],
+              "gene_symbol": "PLEKHN1",
+              "gene_stable_id": "ENSG00000187583",
+              "transcript_biotype": "protein_coding",
+              "protein_stable_id": null,
+              "prediction_results": [
+                {
+                  "score": 0.03,
+                  "result": null,
+                  "classification": {
+                    "label": "deleterious",
+                    "definition": ""
+                  },
+                  "analysis_method": {
+                    "tool": "SIFT"
+                  }
+                }
+              ],
+              "cdna_location": {
+                "start": 41,
+                "end": 42,
+                "length": 2,
+                "ref_sequence": "GC",
+                "alt_sequence": "AA"
               },
-              {
-                "allele_name": "AA",
-                "stable_id": "ENST00000379410",
-                "feature_type": {
-                  "value": "Transcript"
-                },
-                "consequences": [
-                  {
-                    "value": "missense_variant"
-                  }
-                ],
-                "gene_symbol": "PLEKHN1",
-                "gene_stable_id": "ENSG00000187583",
-                "transcript_biotype": "protein_coding",
-                "protein_stable_id": "protein_id_placeholder",
-                "prediction_results": [
-                  {
-                    "score": 0.07,
-                    "result": null,
-                    "classification": {
-                      "label": "tolerated",
-                      "definition": ""
-                    },
-                    "analysis_method": {
-                      "tool": "SIFT"
-                    }
-                  }
-                ],
-                "cdna_location": {
-                  "start": 61,
-                  "end": 62,
-                  "length": 2,
-                  "ref_sequence": "GC",
-                  "alt_sequence": "AA"
-                },
-                "cds_location": {
-                  "start": 11,
-                  "end": 12,
-                  "length": 2,
-                  "ref_sequence": "aGC",
-                  "alt_sequence": "aAA"
-                },
-                "protein_location": {
-                  "start": 4,
-                  "end": 4,
-                  "length": 1,
-                  "ref_sequence": "S",
-                  "alt_sequence": "K"
-                }
+              "cds_location": {
+                "start": 11,
+                "end": 12,
+                "length": 2,
+                "ref_sequence": "aGC",
+                "alt_sequence": "aAA"
+              },
+              "protein_location": {
+                "start": 4,
+                "end": 4,
+                "length": 1,
+                "ref_sequence": "S",
+                "alt_sequence": "K"
               }
-            ]
-          },
-          {
-            "name": "1:966542:GC:GC",
-            "predicted_molecular_consequences": []
-          }
-        ]
-      }
-    },
-    "extensions": {
-      "execution_time_in_seconds": 0.07
+            },
+            {
+              "allele_name": "AA",
+              "stable_id": "ENST00000379409.6",
+              "feature_type": {
+                "value": "Transcript"
+              },
+              "consequences": [
+                {
+                  "value": "missense_variant"
+                }
+              ],
+              "gene_symbol": "PLEKHN1",
+              "gene_stable_id": "ENSG00000187583",
+              "transcript_biotype": "protein_coding",
+              "protein_stable_id": null,
+              "prediction_results": [
+                {
+                  "score": 0.07,
+                  "result": null,
+                  "classification": {
+                    "label": "tolerated",
+                    "definition": ""
+                  },
+                  "analysis_method": {
+                    "tool": "SIFT"
+                  }
+                }
+              ],
+              "cdna_location": {
+                "start": 41,
+                "end": 42,
+                "length": 2,
+                "ref_sequence": "GC",
+                "alt_sequence": "AA"
+              },
+              "cds_location": {
+                "start": 11,
+                "end": 12,
+                "length": 2,
+                "ref_sequence": "aGC",
+                "alt_sequence": "aAA"
+              },
+              "protein_location": {
+                "start": 4,
+                "end": 4,
+                "length": 1,
+                "ref_sequence": "S",
+                "alt_sequence": "K"
+              }
+            },
+            {
+              "allele_name": "AA",
+              "stable_id": "ENST00000379410.8",
+              "feature_type": {
+                "value": "Transcript"
+              },
+              "consequences": [
+                {
+                  "value": "missense_variant"
+                }
+              ],
+              "gene_symbol": "PLEKHN1",
+              "gene_stable_id": "ENSG00000187583",
+              "transcript_biotype": "protein_coding",
+              "protein_stable_id": null,
+              "prediction_results": [
+                {
+                  "score": 0.07,
+                  "result": null,
+                  "classification": {
+                    "label": "tolerated",
+                    "definition": ""
+                  },
+                  "analysis_method": {
+                    "tool": "SIFT"
+                  }
+                }
+              ],
+              "cdna_location": {
+                "start": 61,
+                "end": 62,
+                "length": 2,
+                "ref_sequence": "GC",
+                "alt_sequence": "AA"
+              },
+              "cds_location": {
+                "start": 11,
+                "end": 12,
+                "length": 2,
+                "ref_sequence": "aGC",
+                "alt_sequence": "aAA"
+              },
+              "protein_location": {
+                "start": 4,
+                "end": 4,
+                "length": 1,
+                "ref_sequence": "S",
+                "alt_sequence": "K"
+              }
+            }
+          ]
+        },
+        {
+          "name": "1:966542:GC:GC",
+          "predicted_molecular_consequences": []
+        }
+      ]
     }
+  },
+  "extensions": {
+    "execution_time_in_seconds": 0.06
   }
+}

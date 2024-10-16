@@ -1,64 +1,64 @@
 {
-    "data": {
-      "variant": {
-        "name": "rs1163254557",
-        "allele_type": {
-          "accession_id": "insertion",
-          "value": "insertion",
-          "url": "http://sequenceontology.org/browser/current_release/term/SO:0000667"
-        },
-        "alleles": [
-          {
-            "name": "1:69456:C:CCTACA",
-            "predicted_molecular_consequences": [
-              {
-                "allele_name": "CTACA",
-                "stable_id": "ENST00000641515",
-                "feature_type": {
-                  "value": "Transcript"
-                },
-                "consequences": [
-                  {
-                    "value": "frameshift_variant"
-                  }
-                ],
-                "gene_symbol": "OR4F5",
-                "gene_stable_id": "ENSG00000186092",
-                "transcript_biotype": "protein_coding",
-                "protein_stable_id": "protein_id_placeholder",
-                "prediction_results": [],
-                "cdna_location": {
-                  "start": 489,
-                  "end": 490,
-                  "length": 0,
-                  "ref_sequence": "-",
-                  "alt_sequence": "CTACA"
-                },
-                "cds_location": {
-                  "start": 429,
-                  "end": 430,
-                  "length": 0,
-                  "ref_sequence": "-",
-                  "alt_sequence": "CTACA"
-                },
-                "protein_location": {
-                  "start": 143,
-                  "end": 144,
-                  "length": 0,
-                  "ref_sequence": "-",
-                  "alt_sequence": "LX"
+  "data": {
+    "variant": {
+      "name": "rs1163254557",
+      "allele_type": {
+        "accession_id": "insertion",
+        "value": "insertion",
+        "url": "http://sequenceontology.org/browser/current_release/term/SO:0000667"
+      },
+      "alleles": [
+        {
+          "name": "1:69456:C:CCTACA",
+          "predicted_molecular_consequences": [
+            {
+              "allele_name": "CTACA",
+              "stable_id": "ENST00000641515.2",
+              "feature_type": {
+                "value": "Transcript"
+              },
+              "consequences": [
+                {
+                  "value": "frameshift_variant"
                 }
+              ],
+              "gene_symbol": "OR4F5",
+              "gene_stable_id": "ENSG00000186092",
+              "transcript_biotype": "protein_coding",
+              "protein_stable_id": null,
+              "prediction_results": [],
+              "cdna_location": {
+                "start": 489,
+                "end": 490,
+                "length": 0,
+                "ref_sequence": "-",
+                "alt_sequence": "CTACA"
+              },
+              "cds_location": {
+                "start": 429,
+                "end": 430,
+                "length": 0,
+                "ref_sequence": "-",
+                "alt_sequence": "CTACA"
+              },
+              "protein_location": {
+                "start": 143,
+                "end": 144,
+                "length": 0,
+                "ref_sequence": "-",
+                "alt_sequence": "LX"
               }
-            ]
-          },
-          {
-            "name": "1:69456:C:C",
-            "predicted_molecular_consequences": []
-          }
-        ]
-      }
-    },
-    "extensions": {
-      "execution_time_in_seconds": 0.06
+            }
+          ]
+        },
+        {
+          "name": "1:69456:C:C",
+          "predicted_molecular_consequences": []
+        }
+      ]
     }
+  },
+  "extensions": {
+    "execution_time_in_seconds": 0.06
   }
+}

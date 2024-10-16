@@ -1,64 +1,64 @@
 {
-    "data": {
-      "variant": {
-        "name": "rs1350212330",
-        "allele_type": {
-          "accession_id": "deletion",
-          "value": "deletion",
-          "url": "http://sequenceontology.org/browser/current_release/term/SO:0000159"
-        },
-        "alleles": [
-          {
-            "name": "1:69469:ACAATT:A",
-            "predicted_molecular_consequences": [
-              {
-                "allele_name": "-",
-                "stable_id": "ENST00000641515",
-                "feature_type": {
-                  "value": "Transcript"
-                },
-                "consequences": [
-                  {
-                    "value": "frameshift_variant"
-                  }
-                ],
-                "gene_symbol": "OR4F5",
-                "gene_stable_id": "ENSG00000186092",
-                "transcript_biotype": "protein_coding",
-                "protein_stable_id": "protein_id_placeholder",
-                "prediction_results": [],
-                "cdna_location": {
-                  "start": 503,
-                  "end": 507,
-                  "length": 5,
-                  "ref_sequence": "CAATT",
-                  "alt_sequence": "-"
-                },
-                "cds_location": {
-                  "start": 443,
-                  "end": 447,
-                  "length": 5,
-                  "ref_sequence": "aCAATT",
-                  "alt_sequence": "a"
-                },
-                "protein_location": {
-                  "start": 148,
-                  "end": 149,
-                  "length": 2,
-                  "ref_sequence": "TI",
-                  "alt_sequence": "X"
+  "data": {
+    "variant": {
+      "name": "rs1350212330",
+      "allele_type": {
+        "accession_id": "deletion",
+        "value": "deletion",
+        "url": "http://sequenceontology.org/browser/current_release/term/SO:0000159"
+      },
+      "alleles": [
+        {
+          "name": "1:69469:ACAATT:A",
+          "predicted_molecular_consequences": [
+            {
+              "allele_name": "-",
+              "stable_id": "ENST00000641515.2",
+              "feature_type": {
+                "value": "Transcript"
+              },
+              "consequences": [
+                {
+                  "value": "frameshift_variant"
                 }
+              ],
+              "gene_symbol": "OR4F5",
+              "gene_stable_id": "ENSG00000186092",
+              "transcript_biotype": "protein_coding",
+              "protein_stable_id": null,
+              "prediction_results": [],
+              "cdna_location": {
+                "start": 503,
+                "end": 507,
+                "length": 5,
+                "ref_sequence": "CAATT",
+                "alt_sequence": "-"
+              },
+              "cds_location": {
+                "start": 443,
+                "end": 447,
+                "length": 5,
+                "ref_sequence": "aCAATT",
+                "alt_sequence": "a"
+              },
+              "protein_location": {
+                "start": 148,
+                "end": 149,
+                "length": 2,
+                "ref_sequence": "TI",
+                "alt_sequence": "X"
               }
-            ]
-          },
-          {
-            "name": "1:69469:ACAATT:ACAATT",
-            "predicted_molecular_consequences": []
-          }
-        ]
-      }
-    },
-    "extensions": {
-      "execution_time_in_seconds": 0.08
+            }
+          ]
+        },
+        {
+          "name": "1:69469:ACAATT:ACAATT",
+          "predicted_molecular_consequences": []
+        }
+      ]
     }
+  },
+  "extensions": {
+    "execution_time_in_seconds": 0.06
   }
+}

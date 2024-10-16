@@ -1,179 +1,179 @@
 {
-    "data": {
-      "variant": {
-        "name": "rs1239584546",
-        "allele_type": {
-          "accession_id": "insertion",
-          "value": "insertion",
-          "url": "http://sequenceontology.org/browser/current_release/term/SO:0000667"
-        },
-        "alleles": [
-          {
-            "name": "1:686625:A:AG",
-            "predicted_molecular_consequences": [
-              {
-                "allele_name": "G",
-                "stable_id": "ENST00000332831",
-                "feature_type": {
-                  "value": "Transcript"
-                },
-                "consequences": [
-                  {
-                    "value": "frameshift_variant"
-                  }
-                ],
-                "gene_symbol": "OR4F16",
-                "gene_stable_id": "ENSG00000284662",
-                "transcript_biotype": "protein_coding",
-                "protein_stable_id": "protein_id_placeholder",
-                "prediction_results": [],
-                "cdna_location": {
-                  "start": 29,
-                  "end": 30,
-                  "length": 0,
-                  "ref_sequence": "-",
-                  "alt_sequence": "C"
-                },
-                "cds_location": {
-                  "start": 29,
-                  "end": 30,
-                  "length": 0,
-                  "ref_sequence": "tct",
-                  "alt_sequence": "tcCt"
-                },
-                "protein_location": {
-                  "start": 10,
-                  "end": 10,
-                  "length": 0,
-                  "ref_sequence": "S",
-                  "alt_sequence": "SX"
+  "data": {
+    "variant": {
+      "name": "rs1239584546",
+      "allele_type": {
+        "accession_id": "insertion",
+        "value": "insertion",
+        "url": "http://sequenceontology.org/browser/current_release/term/SO:0000667"
+      },
+      "alleles": [
+        {
+          "name": "1:686625:A:AG",
+          "predicted_molecular_consequences": [
+            {
+              "allele_name": "G",
+              "stable_id": "ENST00000332831.5",
+              "feature_type": {
+                "value": "Transcript"
+              },
+              "consequences": [
+                {
+                  "value": "frameshift_variant"
                 }
+              ],
+              "gene_symbol": "OR4F16",
+              "gene_stable_id": "ENSG00000284662",
+              "transcript_biotype": "protein_coding",
+              "protein_stable_id": null,
+              "prediction_results": [],
+              "cdna_location": {
+                "start": 29,
+                "end": 30,
+                "length": 0,
+                "ref_sequence": "-",
+                "alt_sequence": "C"
               },
-              {
-                "allele_name": "G",
-                "stable_id": "ENST00000419394",
-                "feature_type": {
-                  "value": "Transcript"
-                },
-                "consequences": [
-                  {
-                    "value": "intron_variant"
-                  },
-                  {
-                    "value": "non_coding_transcript_variant"
-                  }
-                ],
-                "gene_symbol": "",
-                "gene_stable_id": "ENSG00000230021",
-                "transcript_biotype": "processed_transcript",
-                "protein_stable_id": "protein_id_placeholder",
-                "prediction_results": [],
-                "cdna_location": null,
-                "cds_location": null,
-                "protein_location": null
+              "cds_location": {
+                "start": 29,
+                "end": 30,
+                "length": 0,
+                "ref_sequence": "tct",
+                "alt_sequence": "tcCt"
               },
-              {
-                "allele_name": "G",
-                "stable_id": "ENST00000440200",
-                "feature_type": {
-                  "value": "Transcript"
-                },
-                "consequences": [
-                  {
-                    "value": "intron_variant"
-                  },
-                  {
-                    "value": "non_coding_transcript_variant"
-                  }
-                ],
-                "gene_symbol": "",
-                "gene_stable_id": "ENSG00000230021",
-                "transcript_biotype": "processed_transcript",
-                "protein_stable_id": "protein_id_placeholder",
-                "prediction_results": [],
-                "cdna_location": null,
-                "cds_location": null,
-                "protein_location": null
-              },
-              {
-                "allele_name": "G",
-                "stable_id": "ENST00000634337",
-                "feature_type": {
-                  "value": "Transcript"
-                },
-                "consequences": [
-                  {
-                    "value": "intron_variant"
-                  },
-                  {
-                    "value": "non_coding_transcript_variant"
-                  }
-                ],
-                "gene_symbol": "",
-                "gene_stable_id": "ENSG00000230021",
-                "transcript_biotype": "processed_transcript",
-                "protein_stable_id": "protein_id_placeholder",
-                "prediction_results": [],
-                "cdna_location": null,
-                "cds_location": null,
-                "protein_location": null
-              },
-              {
-                "allele_name": "G",
-                "stable_id": "ENST00000635509",
-                "feature_type": {
-                  "value": "Transcript"
-                },
-                "consequences": [
-                  {
-                    "value": "intron_variant"
-                  },
-                  {
-                    "value": "non_coding_transcript_variant"
-                  }
-                ],
-                "gene_symbol": "",
-                "gene_stable_id": "ENSG00000230021",
-                "transcript_biotype": "processed_transcript",
-                "protein_stable_id": "protein_id_placeholder",
-                "prediction_results": [],
-                "cdna_location": null,
-                "cds_location": null,
-                "protein_location": null
-              },
-              {
-                "allele_name": "G",
-                "stable_id": "ENST00000648019",
-                "feature_type": {
-                  "value": "Transcript"
-                },
-                "consequences": [
-                  {
-                    "value": "intron_variant"
-                  },
-                  {
-                    "value": "non_coding_transcript_variant"
-                  }
-                ],
-                "gene_symbol": "",
-                "gene_stable_id": "ENSG00000230021",
-                "transcript_biotype": "processed_transcript",
-                "protein_stable_id": "protein_id_placeholder",
-                "prediction_results": [],
-                "cdna_location": null,
-                "cds_location": null,
-                "protein_location": null
+              "protein_location": {
+                "start": 10,
+                "end": 10,
+                "length": 0,
+                "ref_sequence": "S",
+                "alt_sequence": "SX"
               }
-            ]
-          },
-          {
-            "name": "1:686625:A:A",
-            "predicted_molecular_consequences": []
-          }
-        ]
-      }
-    },
-    "extensions": {
-      "execution_time_in_seconds": 0.06
+            },
+            {
+              "allele_name": "G",
+              "stable_id": "ENST00000419394.2",
+              "feature_type": {
+                "value": "Transcript"
+              },
+              "consequences": [
+                {
+                  "value": "intron_variant"
+                },
+                {
+                  "value": "non_coding_transcript_variant"
+                }
+              ],
+              "gene_symbol": "",
+              "gene_stable_id": "ENSG00000230021",
+              "transcript_biotype": "processed_transcript",
+              "protein_stable_id": null,
+              "prediction_results": [],
+              "cdna_location": null,
+              "cds_location": null,
+              "protein_location": null
+            },
+            {
+              "allele_name": "G",
+              "stable_id": "ENST00000440200.5",
+              "feature_type": {
+                "value": "Transcript"
+              },
+              "consequences": [
+                {
+                  "value": "intron_variant"
+                },
+                {
+                  "value": "non_coding_transcript_variant"
+                }
+              ],
+              "gene_symbol": "",
+              "gene_stable_id": "ENSG00000230021",
+              "transcript_biotype": "processed_transcript",
+              "protein_stable_id": null,
+              "prediction_results": [],
+              "cdna_location": null,
+              "cds_location": null,
+              "protein_location": null
+            },
+            {
+              "allele_name": "G",
+              "stable_id": "ENST00000634337.2",
+              "feature_type": {
+                "value": "Transcript"
+              },
+              "consequences": [
+                {
+                  "value": "intron_variant"
+                },
+                {
+                  "value": "non_coding_transcript_variant"
+                }
+              ],
+              "gene_symbol": "",
+              "gene_stable_id": "ENSG00000230021",
+              "transcript_biotype": "processed_transcript",
+              "protein_stable_id": null,
+              "prediction_results": [],
+              "cdna_location": null,
+              "cds_location": null,
+              "protein_location": null
+            },
+            {
+              "allele_name": "G",
+              "stable_id": "ENST00000635509.2",
+              "feature_type": {
+                "value": "Transcript"
+              },
+              "consequences": [
+                {
+                  "value": "intron_variant"
+                },
+                {
+                  "value": "non_coding_transcript_variant"
+                }
+              ],
+              "gene_symbol": "",
+              "gene_stable_id": "ENSG00000230021",
+              "transcript_biotype": "processed_transcript",
+              "protein_stable_id": null,
+              "prediction_results": [],
+              "cdna_location": null,
+              "cds_location": null,
+              "protein_location": null
+            },
+            {
+              "allele_name": "G",
+              "stable_id": "ENST00000648019.1",
+              "feature_type": {
+                "value": "Transcript"
+              },
+              "consequences": [
+                {
+                  "value": "intron_variant"
+                },
+                {
+                  "value": "non_coding_transcript_variant"
+                }
+              ],
+              "gene_symbol": "",
+              "gene_stable_id": "ENSG00000230021",
+              "transcript_biotype": "processed_transcript",
+              "protein_stable_id": null,
+              "prediction_results": [],
+              "cdna_location": null,
+              "cds_location": null,
+              "protein_location": null
+            }
+          ]
+        },
+        {
+          "name": "1:686625:A:A",
+          "predicted_molecular_consequences": []
+        }
+      ]
     }
+  },
+  "extensions": {
+    "execution_time_in_seconds": 0.06
   }
+}

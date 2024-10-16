@@ -11,6 +11,174 @@
           "name": "13:32379902:C:G",
           "population_frequencies": [
             {
+              "population_name": "gnomADg:ALL",
+              "allele_frequency": 0.0000131285,
+              "allele_number": 152340,
+              "allele_count": 2,
+              "is_hpmaf": false,
+              "is_minor_allele": true
+            },
+            {
+              "population_name": "gnomADg:afr",
+              "allele_frequency": 0,
+              "allele_number": 41568,
+              "allele_count": 0,
+              "is_hpmaf": false,
+              "is_minor_allele": true
+            },
+            {
+              "population_name": "gnomADg:ami",
+              "allele_frequency": 0,
+              "allele_number": 912,
+              "allele_count": 0,
+              "is_hpmaf": false,
+              "is_minor_allele": true
+            },
+            {
+              "population_name": "gnomADg:amr",
+              "allele_frequency": 0,
+              "allele_number": 15308,
+              "allele_count": 0,
+              "is_hpmaf": false,
+              "is_minor_allele": true
+            },
+            {
+              "population_name": "gnomADg:asj",
+              "allele_frequency": 0,
+              "allele_number": 3472,
+              "allele_count": 0,
+              "is_hpmaf": false,
+              "is_minor_allele": true
+            },
+            {
+              "population_name": "gnomADg:eas",
+              "allele_frequency": 0.000385208,
+              "allele_number": 5192,
+              "allele_count": 2,
+              "is_hpmaf": false,
+              "is_minor_allele": true
+            },
+            {
+              "population_name": "gnomADg:fin",
+              "allele_frequency": 0,
+              "allele_number": 10618,
+              "allele_count": 0,
+              "is_hpmaf": false,
+              "is_minor_allele": true
+            },
+            {
+              "population_name": "gnomADg:mid",
+              "allele_frequency": 0,
+              "allele_number": 294,
+              "allele_count": 0,
+              "is_hpmaf": false,
+              "is_minor_allele": true
+            },
+            {
+              "population_name": "gnomADg:nfe",
+              "allele_frequency": 0,
+              "allele_number": 68030,
+              "allele_count": 0,
+              "is_hpmaf": false,
+              "is_minor_allele": true
+            },
+            {
+              "population_name": "gnomADg:remaining",
+              "allele_frequency": 0,
+              "allele_number": 2114,
+              "allele_count": 0,
+              "is_hpmaf": false,
+              "is_minor_allele": true
+            },
+            {
+              "population_name": "gnomADg:sas",
+              "allele_frequency": 0,
+              "allele_number": 4832,
+              "allele_count": 0,
+              "is_hpmaf": false,
+              "is_minor_allele": true
+            },
+            {
+              "population_name": "gnomADe:ALL",
+              "allele_frequency": 0.00000479079,
+              "allele_number": 1461136,
+              "allele_count": 7,
+              "is_hpmaf": false,
+              "is_minor_allele": true
+            },
+            {
+              "population_name": "gnomADe:afr",
+              "allele_frequency": 0,
+              "allele_number": 33464,
+              "allele_count": 0,
+              "is_hpmaf": false,
+              "is_minor_allele": true
+            },
+            {
+              "population_name": "gnomADe:amr",
+              "allele_frequency": 0,
+              "allele_number": 44646,
+              "allele_count": 0,
+              "is_hpmaf": false,
+              "is_minor_allele": true
+            },
+            {
+              "population_name": "gnomADe:asj",
+              "allele_frequency": 0,
+              "allele_number": 26124,
+              "allele_count": 0,
+              "is_hpmaf": false,
+              "is_minor_allele": true
+            },
+            {
+              "population_name": "gnomADe:eas",
+              "allele_frequency": 0.000176598,
+              "allele_number": 39638,
+              "allele_count": 7,
+              "is_hpmaf": false,
+              "is_minor_allele": true
+            },
+            {
+              "population_name": "gnomADe:fin",
+              "allele_frequency": 0,
+              "allele_number": 53384,
+              "allele_count": 0,
+              "is_hpmaf": false,
+              "is_minor_allele": true
+            },
+            {
+              "population_name": "gnomADe:mid",
+              "allele_frequency": 0,
+              "allele_number": 5764,
+              "allele_count": 0,
+              "is_hpmaf": false,
+              "is_minor_allele": true
+            },
+            {
+              "population_name": "gnomADe:nfe",
+              "allele_frequency": 0,
+              "allele_number": 1111558,
+              "allele_count": 0,
+              "is_hpmaf": false,
+              "is_minor_allele": true
+            },
+            {
+              "population_name": "gnomADe:remaining",
+              "allele_frequency": 0,
+              "allele_number": 60360,
+              "allele_count": 0,
+              "is_hpmaf": false,
+              "is_minor_allele": true
+            },
+            {
+              "population_name": "gnomADe:sas",
+              "allele_frequency": 0,
+              "allele_number": 86198,
+              "allele_count": 0,
+              "is_hpmaf": false,
+              "is_minor_allele": true
+            },
+            {
               "population_name": "1000GENOMES:phase_3:ALL",
               "allele_frequency": 0.0002,
               "allele_number": null,
@@ -57,150 +225,6 @@
               "allele_count": null,
               "is_hpmaf": false,
               "is_minor_allele": true
-            },
-            {
-              "population_name": "gnomADe:ALL",
-              "allele_frequency": 0.0000401777,
-              "allele_number": 248894,
-              "allele_count": 10,
-              "is_hpmaf": false,
-              "is_minor_allele": true
-            },
-            {
-              "population_name": "gnomADe:afr",
-              "allele_frequency": 0,
-              "allele_number": 16104,
-              "allele_count": 0,
-              "is_hpmaf": false,
-              "is_minor_allele": true
-            },
-            {
-              "population_name": "gnomADe:amr",
-              "allele_frequency": 0,
-              "allele_number": 34402,
-              "allele_count": 0,
-              "is_hpmaf": false,
-              "is_minor_allele": true
-            },
-            {
-              "population_name": "gnomADe:asj",
-              "allele_frequency": 0,
-              "allele_number": 10010,
-              "allele_count": 0,
-              "is_hpmaf": false,
-              "is_minor_allele": true
-            },
-            {
-              "population_name": "gnomADe:eas",
-              "allele_frequency": 0.000549995,
-              "allele_number": 18182,
-              "allele_count": 10,
-              "is_hpmaf": false,
-              "is_minor_allele": true
-            },
-            {
-              "population_name": "gnomADe:fin",
-              "allele_frequency": 0,
-              "allele_number": 21578,
-              "allele_count": 0,
-              "is_hpmaf": false,
-              "is_minor_allele": true
-            },
-            {
-              "population_name": "gnomADe:nfe",
-              "allele_frequency": 0,
-              "allele_number": 112036,
-              "allele_count": 0,
-              "is_hpmaf": false,
-              "is_minor_allele": true
-            },
-            {
-              "population_name": "gnomADe:oth",
-              "allele_frequency": 0,
-              "allele_number": 6066,
-              "allele_count": 0,
-              "is_hpmaf": false,
-              "is_minor_allele": true
-            },
-            {
-              "population_name": "gnomADe:sas",
-              "allele_frequency": 0,
-              "allele_number": 30516,
-              "allele_count": 0,
-              "is_hpmaf": false,
-              "is_minor_allele": true
-            },
-            {
-              "population_name": "gnomADg:ALL",
-              "allele_frequency": 0.0000131387,
-              "allele_number": 152222,
-              "allele_count": 2,
-              "is_hpmaf": false,
-              "is_minor_allele": true
-            },
-            {
-              "population_name": "gnomADg:afr",
-              "allele_frequency": 0,
-              "allele_number": 41446,
-              "allele_count": 0,
-              "is_hpmaf": false,
-              "is_minor_allele": true
-            },
-            {
-              "population_name": "gnomADg:amr",
-              "allele_frequency": 0,
-              "allele_number": 15288,
-              "allele_count": 0,
-              "is_hpmaf": false,
-              "is_minor_allele": true
-            },
-            {
-              "population_name": "gnomADg:asj",
-              "allele_frequency": 0,
-              "allele_number": 3472,
-              "allele_count": 0,
-              "is_hpmaf": false,
-              "is_minor_allele": true
-            },
-            {
-              "population_name": "gnomADg:eas",
-              "allele_frequency": 0.00038432,
-              "allele_number": 5204,
-              "allele_count": 2,
-              "is_hpmaf": false,
-              "is_minor_allele": true
-            },
-            {
-              "population_name": "gnomADg:fin",
-              "allele_frequency": 0,
-              "allele_number": 10618,
-              "allele_count": 0,
-              "is_hpmaf": false,
-              "is_minor_allele": true
-            },
-            {
-              "population_name": "gnomADg:nfe",
-              "allele_frequency": 0,
-              "allele_number": 68038,
-              "allele_count": 0,
-              "is_hpmaf": false,
-              "is_minor_allele": true
-            },
-            {
-              "population_name": "gnomADg:oth",
-              "allele_frequency": 0,
-              "allele_number": 2092,
-              "allele_count": 0,
-              "is_hpmaf": false,
-              "is_minor_allele": true
-            },
-            {
-              "population_name": "gnomADg:sas",
-              "allele_frequency": 0,
-              "allele_number": 4836,
-              "allele_count": 0,
-              "is_hpmaf": false,
-              "is_minor_allele": true
             }
           ]
         },
@@ -211,6 +235,174 @@
         {
           "name": "13:32379902:C:C",
           "population_frequencies": [
+            {
+              "population_name": "gnomADg:ALL",
+              "allele_frequency": 0.9999868715,
+              "allele_number": null,
+              "allele_count": null,
+              "is_hpmaf": false,
+              "is_minor_allele": false
+            },
+            {
+              "population_name": "gnomADg:afr",
+              "allele_frequency": 1,
+              "allele_number": null,
+              "allele_count": null,
+              "is_hpmaf": false,
+              "is_minor_allele": false
+            },
+            {
+              "population_name": "gnomADg:ami",
+              "allele_frequency": 1,
+              "allele_number": null,
+              "allele_count": null,
+              "is_hpmaf": false,
+              "is_minor_allele": false
+            },
+            {
+              "population_name": "gnomADg:amr",
+              "allele_frequency": 1,
+              "allele_number": null,
+              "allele_count": null,
+              "is_hpmaf": false,
+              "is_minor_allele": false
+            },
+            {
+              "population_name": "gnomADg:asj",
+              "allele_frequency": 1,
+              "allele_number": null,
+              "allele_count": null,
+              "is_hpmaf": false,
+              "is_minor_allele": false
+            },
+            {
+              "population_name": "gnomADg:eas",
+              "allele_frequency": 0.999614792,
+              "allele_number": null,
+              "allele_count": null,
+              "is_hpmaf": false,
+              "is_minor_allele": false
+            },
+            {
+              "population_name": "gnomADg:fin",
+              "allele_frequency": 1,
+              "allele_number": null,
+              "allele_count": null,
+              "is_hpmaf": false,
+              "is_minor_allele": false
+            },
+            {
+              "population_name": "gnomADg:mid",
+              "allele_frequency": 1,
+              "allele_number": null,
+              "allele_count": null,
+              "is_hpmaf": false,
+              "is_minor_allele": false
+            },
+            {
+              "population_name": "gnomADg:nfe",
+              "allele_frequency": 1,
+              "allele_number": null,
+              "allele_count": null,
+              "is_hpmaf": false,
+              "is_minor_allele": false
+            },
+            {
+              "population_name": "gnomADg:remaining",
+              "allele_frequency": 1,
+              "allele_number": null,
+              "allele_count": null,
+              "is_hpmaf": false,
+              "is_minor_allele": false
+            },
+            {
+              "population_name": "gnomADg:sas",
+              "allele_frequency": 1,
+              "allele_number": null,
+              "allele_count": null,
+              "is_hpmaf": false,
+              "is_minor_allele": false
+            },
+            {
+              "population_name": "gnomADe:ALL",
+              "allele_frequency": 0.99999520921,
+              "allele_number": null,
+              "allele_count": null,
+              "is_hpmaf": false,
+              "is_minor_allele": false
+            },
+            {
+              "population_name": "gnomADe:afr",
+              "allele_frequency": 1,
+              "allele_number": null,
+              "allele_count": null,
+              "is_hpmaf": false,
+              "is_minor_allele": false
+            },
+            {
+              "population_name": "gnomADe:amr",
+              "allele_frequency": 1,
+              "allele_number": null,
+              "allele_count": null,
+              "is_hpmaf": false,
+              "is_minor_allele": false
+            },
+            {
+              "population_name": "gnomADe:asj",
+              "allele_frequency": 1,
+              "allele_number": null,
+              "allele_count": null,
+              "is_hpmaf": false,
+              "is_minor_allele": false
+            },
+            {
+              "population_name": "gnomADe:eas",
+              "allele_frequency": 0.999823402,
+              "allele_number": null,
+              "allele_count": null,
+              "is_hpmaf": false,
+              "is_minor_allele": false
+            },
+            {
+              "population_name": "gnomADe:fin",
+              "allele_frequency": 1,
+              "allele_number": null,
+              "allele_count": null,
+              "is_hpmaf": false,
+              "is_minor_allele": false
+            },
+            {
+              "population_name": "gnomADe:mid",
+              "allele_frequency": 1,
+              "allele_number": null,
+              "allele_count": null,
+              "is_hpmaf": false,
+              "is_minor_allele": false
+            },
+            {
+              "population_name": "gnomADe:nfe",
+              "allele_frequency": 1,
+              "allele_number": null,
+              "allele_count": null,
+              "is_hpmaf": false,
+              "is_minor_allele": false
+            },
+            {
+              "population_name": "gnomADe:remaining",
+              "allele_frequency": 1,
+              "allele_number": null,
+              "allele_count": null,
+              "is_hpmaf": false,
+              "is_minor_allele": false
+            },
+            {
+              "population_name": "gnomADe:sas",
+              "allele_frequency": 1,
+              "allele_number": null,
+              "allele_count": null,
+              "is_hpmaf": false,
+              "is_minor_allele": false
+            },
             {
               "population_name": "1000GENOMES:phase_3:ALL",
               "allele_frequency": 0.9998,
@@ -258,150 +450,6 @@
               "allele_count": null,
               "is_hpmaf": false,
               "is_minor_allele": false
-            },
-            {
-              "population_name": "gnomADe:ALL",
-              "allele_frequency": 0.9999598223,
-              "allele_number": null,
-              "allele_count": null,
-              "is_hpmaf": false,
-              "is_minor_allele": false
-            },
-            {
-              "population_name": "gnomADe:afr",
-              "allele_frequency": 1,
-              "allele_number": null,
-              "allele_count": null,
-              "is_hpmaf": false,
-              "is_minor_allele": false
-            },
-            {
-              "population_name": "gnomADe:amr",
-              "allele_frequency": 1,
-              "allele_number": null,
-              "allele_count": null,
-              "is_hpmaf": false,
-              "is_minor_allele": false
-            },
-            {
-              "population_name": "gnomADe:asj",
-              "allele_frequency": 1,
-              "allele_number": null,
-              "allele_count": null,
-              "is_hpmaf": false,
-              "is_minor_allele": false
-            },
-            {
-              "population_name": "gnomADe:eas",
-              "allele_frequency": 0.999450005,
-              "allele_number": null,
-              "allele_count": null,
-              "is_hpmaf": false,
-              "is_minor_allele": false
-            },
-            {
-              "population_name": "gnomADe:fin",
-              "allele_frequency": 1,
-              "allele_number": null,
-              "allele_count": null,
-              "is_hpmaf": false,
-              "is_minor_allele": false
-            },
-            {
-              "population_name": "gnomADe:nfe",
-              "allele_frequency": 1,
-              "allele_number": null,
-              "allele_count": null,
-              "is_hpmaf": false,
-              "is_minor_allele": false
-            },
-            {
-              "population_name": "gnomADe:oth",
-              "allele_frequency": 1,
-              "allele_number": null,
-              "allele_count": null,
-              "is_hpmaf": false,
-              "is_minor_allele": false
-            },
-            {
-              "population_name": "gnomADe:sas",
-              "allele_frequency": 1,
-              "allele_number": null,
-              "allele_count": null,
-              "is_hpmaf": false,
-              "is_minor_allele": false
-            },
-            {
-              "population_name": "gnomADg:ALL",
-              "allele_frequency": 0.9999868613,
-              "allele_number": null,
-              "allele_count": null,
-              "is_hpmaf": false,
-              "is_minor_allele": false
-            },
-            {
-              "population_name": "gnomADg:afr",
-              "allele_frequency": 1,
-              "allele_number": null,
-              "allele_count": null,
-              "is_hpmaf": false,
-              "is_minor_allele": false
-            },
-            {
-              "population_name": "gnomADg:amr",
-              "allele_frequency": 1,
-              "allele_number": null,
-              "allele_count": null,
-              "is_hpmaf": false,
-              "is_minor_allele": false
-            },
-            {
-              "population_name": "gnomADg:asj",
-              "allele_frequency": 1,
-              "allele_number": null,
-              "allele_count": null,
-              "is_hpmaf": false,
-              "is_minor_allele": false
-            },
-            {
-              "population_name": "gnomADg:eas",
-              "allele_frequency": 0.99961568,
-              "allele_number": null,
-              "allele_count": null,
-              "is_hpmaf": false,
-              "is_minor_allele": false
-            },
-            {
-              "population_name": "gnomADg:fin",
-              "allele_frequency": 1,
-              "allele_number": null,
-              "allele_count": null,
-              "is_hpmaf": false,
-              "is_minor_allele": false
-            },
-            {
-              "population_name": "gnomADg:nfe",
-              "allele_frequency": 1,
-              "allele_number": null,
-              "allele_count": null,
-              "is_hpmaf": false,
-              "is_minor_allele": false
-            },
-            {
-              "population_name": "gnomADg:oth",
-              "allele_frequency": 1,
-              "allele_number": null,
-              "allele_count": null,
-              "is_hpmaf": false,
-              "is_minor_allele": false
-            },
-            {
-              "population_name": "gnomADg:sas",
-              "allele_frequency": 1,
-              "allele_number": null,
-              "allele_count": null,
-              "is_hpmaf": false,
-              "is_minor_allele": false
             }
           ]
         }
@@ -409,6 +457,6 @@
     }
   },
   "extensions": {
-    "execution_time_in_seconds": 0.73
+    "execution_time_in_seconds": 0.11
   }
 }

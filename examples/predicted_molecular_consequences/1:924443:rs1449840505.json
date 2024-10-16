@@ -1,102 +1,102 @@
 {
-    "data": {
-      "variant": {
-        "name": "rs1449840505",
-        "allele_type": {
-          "accession_id": "deletion",
-          "value": "deletion",
-          "url": "http://sequenceontology.org/browser/current_release/term/SO:0000159"
-        },
-        "alleles": [
-          {
-            "name": "1:924443:CAAG:C",
-            "predicted_molecular_consequences": [
-              {
-                "allele_name": "-",
-                "stable_id": "ENST00000616016",
-                "feature_type": {
-                  "value": "Transcript"
-                },
-                "consequences": [
-                  {
-                    "value": "inframe_deletion"
-                  }
-                ],
-                "gene_symbol": "SAMD11",
-                "gene_stable_id": "ENSG00000187634",
-                "transcript_biotype": "protein_coding",
-                "protein_stable_id": "protein_id_placeholder",
-                "prediction_results": [],
-                "cdna_location": {
-                  "start": 522,
-                  "end": 524,
-                  "length": 3,
-                  "ref_sequence": "AAG",
-                  "alt_sequence": "-"
-                },
-                "cds_location": {
-                  "start": 13,
-                  "end": 15,
-                  "length": 3,
-                  "ref_sequence": "AAG",
-                  "alt_sequence": "-"
-                },
-                "protein_location": {
-                  "start": 5,
-                  "end": 5,
-                  "length": 1,
-                  "ref_sequence": "K",
-                  "alt_sequence": "-"
-                }
+  "data": {
+    "variant": {
+      "name": "rs1449840505",
+      "allele_type": {
+        "accession_id": "deletion",
+        "value": "deletion",
+        "url": "http://sequenceontology.org/browser/current_release/term/SO:0000159"
+      },
+      "alleles": [
+        {
+          "name": "1:924443:CAAG:C",
+          "predicted_molecular_consequences": [
+            {
+              "allele_name": "-",
+              "stable_id": "ENST00000616016.5",
+              "feature_type": {
+                "value": "Transcript"
               },
-              {
-                "allele_name": "-",
-                "stable_id": "ENST00000618323",
-                "feature_type": {
-                  "value": "Transcript"
-                },
-                "consequences": [
-                  {
-                    "value": "inframe_deletion"
-                  }
-                ],
-                "gene_symbol": "SAMD11",
-                "gene_stable_id": "ENSG00000187634",
-                "transcript_biotype": "protein_coding",
-                "protein_stable_id": "protein_id_placeholder",
-                "prediction_results": [],
-                "cdna_location": {
-                  "start": 522,
-                  "end": 524,
-                  "length": 3,
-                  "ref_sequence": "AAG",
-                  "alt_sequence": "-"
-                },
-                "cds_location": {
-                  "start": 13,
-                  "end": 15,
-                  "length": 3,
-                  "ref_sequence": "AAG",
-                  "alt_sequence": "-"
-                },
-                "protein_location": {
-                  "start": 5,
-                  "end": 5,
-                  "length": 1,
-                  "ref_sequence": "K",
-                  "alt_sequence": "-"
+              "consequences": [
+                {
+                  "value": "inframe_deletion"
                 }
+              ],
+              "gene_symbol": "SAMD11",
+              "gene_stable_id": "ENSG00000187634",
+              "transcript_biotype": "protein_coding",
+              "protein_stable_id": null,
+              "prediction_results": [],
+              "cdna_location": {
+                "start": 522,
+                "end": 524,
+                "length": 3,
+                "ref_sequence": "AAG",
+                "alt_sequence": "-"
+              },
+              "cds_location": {
+                "start": 13,
+                "end": 15,
+                "length": 3,
+                "ref_sequence": "AAG",
+                "alt_sequence": "-"
+              },
+              "protein_location": {
+                "start": 5,
+                "end": 5,
+                "length": 1,
+                "ref_sequence": "K",
+                "alt_sequence": "-"
               }
-            ]
-          },
-          {
-            "name": "1:924443:CAAG:CAAG",
-            "predicted_molecular_consequences": []
-          }
-        ]
-      }
-    },
-    "extensions": {
-      "execution_time_in_seconds": 0.08
+            },
+            {
+              "allele_name": "-",
+              "stable_id": "ENST00000618323.5",
+              "feature_type": {
+                "value": "Transcript"
+              },
+              "consequences": [
+                {
+                  "value": "inframe_deletion"
+                }
+              ],
+              "gene_symbol": "SAMD11",
+              "gene_stable_id": "ENSG00000187634",
+              "transcript_biotype": "protein_coding",
+              "protein_stable_id": null,
+              "prediction_results": [],
+              "cdna_location": {
+                "start": 522,
+                "end": 524,
+                "length": 3,
+                "ref_sequence": "AAG",
+                "alt_sequence": "-"
+              },
+              "cds_location": {
+                "start": 13,
+                "end": 15,
+                "length": 3,
+                "ref_sequence": "AAG",
+                "alt_sequence": "-"
+              },
+              "protein_location": {
+                "start": 5,
+                "end": 5,
+                "length": 1,
+                "ref_sequence": "K",
+                "alt_sequence": "-"
+              }
+            }
+          ]
+        },
+        {
+          "name": "1:924443:CAAG:CAAG",
+          "predicted_molecular_consequences": []
+        }
+      ]
     }
+  },
+  "extensions": {
+    "execution_time_in_seconds": 0.07
   }
+}

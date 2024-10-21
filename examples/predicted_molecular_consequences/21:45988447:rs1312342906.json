@@ -13,7 +13,7 @@
           "predicted_molecular_consequences": [
             {
               "allele_name": "C",
-              "stable_id": "ENST00000361866",
+              "stable_id": "ENST00000361866.8",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -25,7 +25,7 @@
               "gene_symbol": "COL6A1",
               "gene_stable_id": "ENSG00000142156",
               "transcript_biotype": "protein_coding",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [],
               "cdna_location": null,
               "cds_location": null,

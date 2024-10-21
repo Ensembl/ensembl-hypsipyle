@@ -13,7 +13,7 @@
           "predicted_molecular_consequences": [
             {
               "allele_name": "G",
-              "stable_id": "ENST00000366667",
+              "stable_id": "ENST00000366667.6",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -25,7 +25,7 @@
               "gene_symbol": "AGT",
               "gene_stable_id": "ENSG00000135744",
               "transcript_biotype": "protein_coding",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [
                 {
                   "score": 1,
@@ -74,7 +74,7 @@
             },
             {
               "allele_name": "G",
-              "stable_id": "ENST00000679684",
+              "stable_id": "ENST00000679684.1",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -86,7 +86,7 @@
               "gene_symbol": "AGT",
               "gene_stable_id": "ENSG00000135744",
               "transcript_biotype": "protein_coding",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [
                 {
                   "score": 1,
@@ -135,7 +135,7 @@
             },
             {
               "allele_name": "G",
-              "stable_id": "ENST00000679738",
+              "stable_id": "ENST00000679738.1",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -150,7 +150,7 @@
               "gene_symbol": "AGT",
               "gene_stable_id": "ENSG00000135744",
               "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [
                 {
                   "score": 1,
@@ -199,7 +199,7 @@
             },
             {
               "allele_name": "G",
-              "stable_id": "ENST00000679802",
+              "stable_id": "ENST00000679802.1",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -214,7 +214,7 @@
               "gene_symbol": "AGT",
               "gene_stable_id": "ENSG00000135744",
               "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [
                 {
                   "score": 1,
@@ -263,7 +263,7 @@
             },
             {
               "allele_name": "G",
-              "stable_id": "ENST00000679854",
+              "stable_id": "ENST00000679854.1",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -275,13 +275,13 @@
               "gene_symbol": "AGT",
               "gene_stable_id": "ENSG00000135744",
               "transcript_biotype": "retained_intron",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [],
               "cdna_location": {
                 "start": 1287,
                 "end": 1287,
                 "length": 1,
-                "ref_sequence": "A",
+                "ref_sequence": "-",
                 "alt_sequence": "G"
               },
               "cds_location": null,
@@ -289,7 +289,7 @@
             },
             {
               "allele_name": "G",
-              "stable_id": "ENST00000679957",
+              "stable_id": "ENST00000679957.1",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -301,7 +301,7 @@
               "gene_symbol": "AGT",
               "gene_stable_id": "ENSG00000135744",
               "transcript_biotype": "protein_coding",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [
                 {
                   "score": 1,
@@ -350,7 +350,7 @@
             },
             {
               "allele_name": "G",
-              "stable_id": "ENST00000680041",
+              "stable_id": "ENST00000680041.1",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -362,7 +362,7 @@
               "gene_symbol": "AGT",
               "gene_stable_id": "ENSG00000135744",
               "transcript_biotype": "protein_coding",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [
                 {
                   "score": 1,
@@ -411,7 +411,7 @@
             },
             {
               "allele_name": "G",
-              "stable_id": "ENST00000680783",
+              "stable_id": "ENST00000680783.1",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -423,7 +423,7 @@
               "gene_symbol": "AGT",
               "gene_stable_id": "ENSG00000135744",
               "transcript_biotype": "protein_coding",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [
                 {
                   "score": 1,
@@ -472,7 +472,7 @@
             },
             {
               "allele_name": "G",
-              "stable_id": "ENST00000681269",
+              "stable_id": "ENST00000681269.1",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -484,7 +484,7 @@
               "gene_symbol": "AGT",
               "gene_stable_id": "ENSG00000135744",
               "transcript_biotype": "protein_coding",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [
                 {
                   "score": 1,
@@ -533,7 +533,7 @@
             },
             {
               "allele_name": "G",
-              "stable_id": "ENST00000681347",
+              "stable_id": "ENST00000681347.1",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -545,13 +545,13 @@
               "gene_symbol": "AGT",
               "gene_stable_id": "ENSG00000135744",
               "transcript_biotype": "retained_intron",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [],
               "cdna_location": {
                 "start": 1287,
                 "end": 1287,
                 "length": 1,
-                "ref_sequence": "A",
+                "ref_sequence": "-",
                 "alt_sequence": "G"
               },
               "cds_location": null,
@@ -559,7 +559,7 @@
             },
             {
               "allele_name": "G",
-              "stable_id": "ENST00000681514",
+              "stable_id": "ENST00000681514.1",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -571,7 +571,7 @@
               "gene_symbol": "AGT",
               "gene_stable_id": "ENSG00000135744",
               "transcript_biotype": "protein_coding",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [
                 {
                   "score": 1,
@@ -620,7 +620,7 @@
             },
             {
               "allele_name": "G",
-              "stable_id": "ENST00000681772",
+              "stable_id": "ENST00000681772.1",
               "feature_type": {
                 "value": "Transcript"
               },
@@ -635,7 +635,7 @@
               "gene_symbol": "AGT",
               "gene_stable_id": "ENSG00000135744",
               "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": "protein_id_placeholder",
+              "protein_stable_id": null,
               "prediction_results": [
                 {
                   "score": 1,
@@ -692,6 +692,6 @@
     }
   },
   "extensions": {
-    "execution_time_in_seconds": 0.09
+    "execution_time_in_seconds": 0.08
   }
 }

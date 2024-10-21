@@ -4,11 +4,17 @@ query variant_example {
   ) {
     
     name
+    primary_source {
+      description
+      url
+    }
     ensembl_website_display_data {
       count_citations
     }
     alleles
     {
+      allele_sequence
+      reference_sequence
       ensembl_website_display_data {
         count_transcript_consequences
         count_gene_phenotypes

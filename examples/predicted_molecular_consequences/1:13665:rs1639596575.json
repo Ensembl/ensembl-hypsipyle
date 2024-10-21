@@ -1,84 +1,78 @@
 {
-    "data": {
-      "variant": {
-        "name": "rs1639596575",
-        "allele_type": {
-          "accession_id": "deletion",
-          "value": "deletion",
-          "url": "http://sequenceontology.org/browser/current_release/term/SO:0000159"
-        },
-        "alleles": [
-          {
-            "name": "1:13665:CCCGAAGAAA:C",
-            "allele_type": {
-              "accession_id": "deletion"
-            },
-            "predicted_molecular_consequences": [
-              {
-                "allele_name": "-",
-                "stable_id": "ENST00000450305",
-                "feature_type": {
-                  "value": "Transcript"
-                },
-                "consequences": [
-                  {
-                    "value": "non_coding_transcript_exon_variant"
-                  }
-                ],
-                "gene_symbol": "DDX11L1",
-                "gene_stable_id": "ENSG00000223972",
-                "transcript_biotype": "transcribed_unprocessed_pseudogene",
-                "protein_stable_id": "protein_id_placeholder",
-                "prediction_results": [],
-                "cdna_location": {
-                  "start": 628,
-                  "end": null,
-                  "length": null,
-                  "ref_sequence": null,
-                  "alt_sequence": null
-                },
-                "cds_location": null,
-                "protein_location": null
+  "data": {
+    "variant": {
+      "name": "rs1639596575",
+      "allele_type": {
+        "accession_id": "deletion",
+        "value": "deletion",
+        "url": "http://sequenceontology.org/browser/current_release/term/SO:0000159"
+      },
+      "alleles": [
+        {
+          "name": "1:13665:CCCGAAGAAA:C",
+          "predicted_molecular_consequences": [
+            {
+              "allele_name": "-",
+              "stable_id": "ENST00000450305.2",
+              "feature_type": {
+                "value": "Transcript"
               },
-              {
-                "allele_name": "-",
-                "stable_id": "ENST00000456328",
-                "feature_type": {
-                  "value": "Transcript"
-                },
-                "consequences": [
-                  {
-                    "value": "non_coding_transcript_exon_variant"
-                  }
-                ],
-                "gene_symbol": "DDX11L2",
-                "gene_stable_id": "ENSG00000290825",
-                "transcript_biotype": "lncRNA",
-                "protein_stable_id": "protein_id_placeholder",
-                "prediction_results": [],
-                "cdna_location": {
-                  "start": "914",
-                  "end": "922",
-                  "length": 9,
-                  "ref_sequence": "CCGAAGAAA",
-                  "alt_sequence": "-"
-                },
-                "cds_location": null,
-                "protein_location": null
-              }
-            ]
-          },
-          {
-            "name": "1:13665:CCCGAAGAAA:CCCGAAGAAA",
-            "allele_type": {
-              "accession_id": "biological_region"
+              "consequences": [
+                {
+                  "value": "non_coding_transcript_exon_variant"
+                }
+              ],
+              "gene_symbol": "DDX11L1",
+              "gene_stable_id": "ENSG00000223972",
+              "transcript_biotype": "transcribed_unprocessed_pseudogene",
+              "protein_stable_id": null,
+              "prediction_results": [],
+              "cdna_location": {
+                "start": 628,
+                "end": null,
+                "length": null,
+                "ref_sequence": null,
+                "alt_sequence": null
+              },
+              "cds_location": null,
+              "protein_location": null
             },
-            "predicted_molecular_consequences": []
-          }
-        ]
-      }
-    },
-    "extensions": {
-      "execution_time_in_seconds": 0.06
+            {
+              "allele_name": "-",
+              "stable_id": "ENST00000456328.2",
+              "feature_type": {
+                "value": "Transcript"
+              },
+              "consequences": [
+                {
+                  "value": "non_coding_transcript_exon_variant"
+                }
+              ],
+              "gene_symbol": "DDX11L2",
+              "gene_stable_id": "ENSG00000290825",
+              "transcript_biotype": "lncRNA",
+              "protein_stable_id": null,
+              "prediction_results": [],
+              "cdna_location": {
+                "start": 914,
+                "end": 922,
+                "length": 9,
+                "ref_sequence": "CCGAAGAAA",
+                "alt_sequence": "-"
+              },
+              "cds_location": null,
+              "protein_location": null
+            }
+          ]
+        },
+        {
+          "name": "1:13665:CCCGAAGAAA:CCCGAAGAAA",
+          "predicted_molecular_consequences": []
+        }
+      ]
     }
+  },
+  "extensions": {
+    "execution_time_in_seconds": 0.06
   }
+}

@@ -1,6 +1,11 @@
-query indel_example {
+# SNV: "1:230710048:rs699"
+# SNV (multi-allelic): "1:10007:rs1639538116"
+# Insertion: "1:10051:rs1326880612"
+# Deletion: "1:10054:rs1639543820"
+# Indel: "1:10055:rs768019142"
+query variant_example {
   variant(
-    by_id: {genome_id: "a7335667-93e7-11ec-a39d-005056b38ce3", variant_id: "1:10055:rs768019142"}
+    by_id: {genome_id: "a7335667-93e7-11ec-a39d-005056b38ce3", variant_id: "1:230710048:rs699"}
   ) {
     
     name

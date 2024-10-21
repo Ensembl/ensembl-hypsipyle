@@ -1,102 +1,102 @@
 {
-    "data": {
-      "variant": {
-        "name": "rs1405511870",
-        "allele_type": {
-          "accession_id": "insertion",
-          "value": "insertion",
-          "url": "http://sequenceontology.org/browser/current_release/term/SO:0000667"
-        },
-        "alleles": [
-          {
-            "name": "1:924510:G:GCGCTGC",
-            "predicted_molecular_consequences": [
-              {
-                "allele_name": "CGCTGC",
-                "stable_id": "ENST00000616016",
-                "feature_type": {
-                  "value": "Transcript"
-                },
-                "consequences": [
-                  {
-                    "value": "inframe_insertion"
-                  }
-                ],
-                "gene_symbol": "SAMD11",
-                "gene_stable_id": "ENSG00000187634",
-                "transcript_biotype": "protein_coding",
-                "protein_stable_id": "protein_id_placeholder",
-                "prediction_results": [],
-                "cdna_location": {
-                  "start": 588,
-                  "end": 589,
-                  "length": 0,
-                  "ref_sequence": "-",
-                  "alt_sequence": "CGCTGC"
-                },
-                "cds_location": {
-                  "start": 79,
-                  "end": 80,
-                  "length": 0,
-                  "ref_sequence": "gcg",
-                  "alt_sequence": "gCGCTGCcg"
-                },
-                "protein_location": {
-                  "start": 27,
-                  "end": 27,
-                  "length": 0,
-                  "ref_sequence": "A",
-                  "alt_sequence": "ALP"
-                }
+  "data": {
+    "variant": {
+      "name": "rs1405511870",
+      "allele_type": {
+        "accession_id": "insertion",
+        "value": "insertion",
+        "url": "http://sequenceontology.org/browser/current_release/term/SO:0000667"
+      },
+      "alleles": [
+        {
+          "name": "1:924510:G:GCGCTGC",
+          "predicted_molecular_consequences": [
+            {
+              "allele_name": "CGCTGC",
+              "stable_id": "ENST00000616016.5",
+              "feature_type": {
+                "value": "Transcript"
               },
-              {
-                "allele_name": "CGCTGC",
-                "stable_id": "ENST00000618323",
-                "feature_type": {
-                  "value": "Transcript"
-                },
-                "consequences": [
-                  {
-                    "value": "inframe_insertion"
-                  }
-                ],
-                "gene_symbol": "SAMD11",
-                "gene_stable_id": "ENSG00000187634",
-                "transcript_biotype": "protein_coding",
-                "protein_stable_id": "protein_id_placeholder",
-                "prediction_results": [],
-                "cdna_location": {
-                  "start": 588,
-                  "end": 589,
-                  "length": 0,
-                  "ref_sequence": "-",
-                  "alt_sequence": "CGCTGC"
-                },
-                "cds_location": {
-                  "start": 79,
-                  "end": 80,
-                  "length": 0,
-                  "ref_sequence": "gcg",
-                  "alt_sequence": "gCGCTGCcg"
-                },
-                "protein_location": {
-                  "start": 27,
-                  "end": 27,
-                  "length": 0,
-                  "ref_sequence": "A",
-                  "alt_sequence": "ALP"
+              "consequences": [
+                {
+                  "value": "inframe_insertion"
                 }
+              ],
+              "gene_symbol": "SAMD11",
+              "gene_stable_id": "ENSG00000187634",
+              "transcript_biotype": "protein_coding",
+              "protein_stable_id": null,
+              "prediction_results": [],
+              "cdna_location": {
+                "start": 588,
+                "end": 589,
+                "length": 0,
+                "ref_sequence": "-",
+                "alt_sequence": "CGCTGC"
+              },
+              "cds_location": {
+                "start": 79,
+                "end": 80,
+                "length": 0,
+                "ref_sequence": "gcg",
+                "alt_sequence": "gCGCTGCcg"
+              },
+              "protein_location": {
+                "start": 27,
+                "end": 27,
+                "length": 0,
+                "ref_sequence": "A",
+                "alt_sequence": "ALP"
               }
-            ]
-          },
-          {
-            "name": "1:924510:G:G",
-            "predicted_molecular_consequences": []
-          }
-        ]
-      }
-    },
-    "extensions": {
-      "execution_time_in_seconds": 0.06
+            },
+            {
+              "allele_name": "CGCTGC",
+              "stable_id": "ENST00000618323.5",
+              "feature_type": {
+                "value": "Transcript"
+              },
+              "consequences": [
+                {
+                  "value": "inframe_insertion"
+                }
+              ],
+              "gene_symbol": "SAMD11",
+              "gene_stable_id": "ENSG00000187634",
+              "transcript_biotype": "protein_coding",
+              "protein_stable_id": null,
+              "prediction_results": [],
+              "cdna_location": {
+                "start": 588,
+                "end": 589,
+                "length": 0,
+                "ref_sequence": "-",
+                "alt_sequence": "CGCTGC"
+              },
+              "cds_location": {
+                "start": 79,
+                "end": 80,
+                "length": 0,
+                "ref_sequence": "gcg",
+                "alt_sequence": "gCGCTGCcg"
+              },
+              "protein_location": {
+                "start": 27,
+                "end": 27,
+                "length": 0,
+                "ref_sequence": "A",
+                "alt_sequence": "ALP"
+              }
+            }
+          ]
+        },
+        {
+          "name": "1:924510:G:G",
+          "predicted_molecular_consequences": []
+        }
+      ]
     }
+  },
+  "extensions": {
+    "execution_time_in_seconds": 0.07
   }
+}

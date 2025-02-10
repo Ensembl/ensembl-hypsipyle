@@ -71,8 +71,12 @@ class VariantAllele():
         corresponding to Consequence, SIFT, PolyPhen, CADD
         """
         column_list = ["Allele", "PHENOTYPES", "Feature_type", "Feature", "Consequence",
-                        "SIFT", "PolyPhen", "SPDI", "CADD_PHRED","Conservation", "Gene", "SYMBOL",
-                        "BIOTYPE","cDNA_position", "CDS_position", "Protein_position", "Amino_acids", "Codons"]
+                        "SIFT", "PolyPhen", "SpliceAI_pred_DP_AG", "SpliceAI_pred_DP_AL", 
+                        "SpliceAI_pred_DP_DG", "SpliceAI_pred_DP_DL", "SpliceAI_pred_DS_AG", 
+                        "SpliceAI_pred_DS_AL", "SpliceAI_pred_DS_DG", "SpliceAI_pred_DS_DL", 
+                        "SpliceAI_pred_SYMBOL", "SPDI", "CADD_PHRED","Conservation", "Gene", 
+                        "SYMBOL","BIOTYPE","cDNA_position", "CDS_position", "Protein_position", 
+                        "Amino_acids", "Codons"]
         prediction_index_map = {}
         for col in column_list:
                 if self.variant.get_info_key_index(col) is not None:
@@ -177,6 +181,57 @@ class VariantAllele():
                             }
                         }
                     prediction_results.append(sift_prediction_result)
+        
+        if "spliceai_pred_dp_dg" in prediction_index_map:
+            spliceai = {}
+            spliceai["spliceai_pred_dp_dg"] = {
+                "score": csq_record[prediction_index_map["spliceai_pred_dp_dg"]],
+                "qualifier": self.variant.header.get_lines("SpliceAI_pred_DP_AG")[0].value.split(". ")[1]
+            }
+            spliceai["spliceai_pred_dp_dl"] = {
+                "score": csq_record[prediction_index_map["spliceai_pred_dp_dl"]],
+                "qualifier": self.variant.header.get_lines("SpliceAI_pred_DP_DL")[0].value.split(". ")[1]
+            }
+            spliceai["spliceai_pred_ds_dg"] = {
+            "score": csq_record[prediction_index_map["spliceai_pred_ds_dg"]],
+            "qualifier": self.variant.header.get_lines("SpliceAI_pred_DS_DG")[0].value.split(". ")[1]
+            }
+            spliceai["spliceai_pred_ds_dl"] = {
+            "score": csq_record[prediction_index_map["spliceai_pred_ds_dl"]],
+            "qualifier": self.variant.header.get_lines("SpliceAI_pred_DS_DL")[0].value.split(". ")[1]
+            }
+            spliceai["spliceai_pred_dp_ag"] = {
+            "score": csq_record[prediction_index_map["spliceai_pred_dp_ag"]],
+            "qualifier": self.variant.header.get_lines("SpliceAI_pred_DP_AG")[0].value.split(". ")[1]
+            }
+            spliceai["spliceai_pred_dp_al"] = {
+            "score": csq_record[prediction_index_map["spliceai_pred_dp_al"]],
+            "qualifier": self.variant.header.get_lines("SpliceAI_pred_DP_AL")[0].value.split(". ")[1]
+            }
+            spliceai["spliceai_pred_ds_ag"] = {
+            "score": csq_record[prediction_index_map["spliceai_pred_ds_ag"]],
+            "qualifier": self.variant.header.get_lines("SpliceAI_pred_DS_AG")[0].value.split(". ")[1]
+            }
+            spliceai["spliceai_pred_ds_al"] = {
+            "score": csq_record[prediction_index_map["spliceai_pred_ds_al"]],
+            "qualifier": self.variant.header.get_lines("SpliceAI_pred_DS_AL")[0].value.split(". ")[1]
+            }
+
+            for spliceai_score in spliceai.values():
+                if spliceai_score:
+                    print(f"Score: {spliceai_score['score']}")
+                    spliceai_prediction_result  = {
+                            "score": spliceai_score["score"],
+                            "analysis_method": {
+                                "tool": "SpliceAI",
+                                "version": "1.3.1",  ## hardcoding until next data generation
+                                "qualifier": {
+                                    "result_type": spliceai_score["qualifier"]
+
+                                }
+                            }
+                        }
+                    prediction_results.append(spliceai_prediction_result)
 
         if "polyphen" in prediction_index_map.keys():
             polyphen_score = csq_record[prediction_index_map["polyphen"]]

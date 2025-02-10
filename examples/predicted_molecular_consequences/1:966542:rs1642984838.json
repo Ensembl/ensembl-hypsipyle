@@ -35,7 +35,116 @@
                     "definition": ""
                   },
                   "analysis_method": {
-                    "tool": "SIFT"
+                    "tool": "SIFT",
+                    "version": null,
+                    "qualifier": {
+                      "result_type": null,
+                      "mode": null
+                    }
+                  }
+                },
+                {
+                  "score": null,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for acceptor gain",
+                      "mode": null
+                    }
+                  }
+                },
+                {
+                  "score": null,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for donor loss",
+                      "mode": null
+                    }
+                  }
+                },
+                {
+                  "score": null,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for donor gain",
+                      "mode": null
+                    }
+                  }
+                },
+                {
+                  "score": null,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for donor loss",
+                      "mode": null
+                    }
+                  }
+                },
+                {
+                  "score": null,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for acceptor gain",
+                      "mode": null
+                    }
+                  }
+                },
+                {
+                  "score": null,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for acceptor loss",
+                      "mode": null
+                    }
+                  }
+                },
+                {
+                  "score": null,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for acceptor gain",
+                      "mode": null
+                    }
+                  }
+                },
+                {
+                  "score": null,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for acceptor loss",
+                      "mode": null
+                    }
                   }
                 }
               ],
@@ -85,7 +194,116 @@
                     "definition": ""
                   },
                   "analysis_method": {
-                    "tool": "SIFT"
+                    "tool": "SIFT",
+                    "version": null,
+                    "qualifier": {
+                      "result_type": null,
+                      "mode": null
+                    }
+                  }
+                },
+                {
+                  "score": null,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for acceptor gain",
+                      "mode": null
+                    }
+                  }
+                },
+                {
+                  "score": null,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for donor loss",
+                      "mode": null
+                    }
+                  }
+                },
+                {
+                  "score": null,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for donor gain",
+                      "mode": null
+                    }
+                  }
+                },
+                {
+                  "score": null,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for donor loss",
+                      "mode": null
+                    }
+                  }
+                },
+                {
+                  "score": null,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for acceptor gain",
+                      "mode": null
+                    }
+                  }
+                },
+                {
+                  "score": null,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for acceptor loss",
+                      "mode": null
+                    }
+                  }
+                },
+                {
+                  "score": null,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for acceptor gain",
+                      "mode": null
+                    }
+                  }
+                },
+                {
+                  "score": null,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for acceptor loss",
+                      "mode": null
+                    }
                   }
                 }
               ],
@@ -135,7 +353,116 @@
                     "definition": ""
                   },
                   "analysis_method": {
-                    "tool": "SIFT"
+                    "tool": "SIFT",
+                    "version": null,
+                    "qualifier": {
+                      "result_type": null,
+                      "mode": null
+                    }
+                  }
+                },
+                {
+                  "score": null,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for acceptor gain",
+                      "mode": null
+                    }
+                  }
+                },
+                {
+                  "score": null,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for donor loss",
+                      "mode": null
+                    }
+                  }
+                },
+                {
+                  "score": null,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for donor gain",
+                      "mode": null
+                    }
+                  }
+                },
+                {
+                  "score": null,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for donor loss",
+                      "mode": null
+                    }
+                  }
+                },
+                {
+                  "score": null,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for acceptor gain",
+                      "mode": null
+                    }
+                  }
+                },
+                {
+                  "score": null,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for acceptor loss",
+                      "mode": null
+                    }
+                  }
+                },
+                {
+                  "score": null,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for acceptor gain",
+                      "mode": null
+                    }
+                  }
+                },
+                {
+                  "score": null,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for acceptor loss",
+                      "mode": null
+                    }
                   }
                 }
               ],
@@ -170,7 +497,465 @@
       ]
     }
   },
+  "errors": [
+    {
+      "message": "Float cannot represent non numeric value: ''",
+      "locations": [
+        {
+          "line": 29,
+          "column": 11
+        }
+      ],
+      "path": [
+        "variant",
+        "alleles",
+        0,
+        "predicted_molecular_consequences",
+        0,
+        "prediction_results",
+        1,
+        "score"
+      ]
+    },
+    {
+      "message": "Float cannot represent non numeric value: ''",
+      "locations": [
+        {
+          "line": 29,
+          "column": 11
+        }
+      ],
+      "path": [
+        "variant",
+        "alleles",
+        0,
+        "predicted_molecular_consequences",
+        0,
+        "prediction_results",
+        2,
+        "score"
+      ]
+    },
+    {
+      "message": "Float cannot represent non numeric value: ''",
+      "locations": [
+        {
+          "line": 29,
+          "column": 11
+        }
+      ],
+      "path": [
+        "variant",
+        "alleles",
+        0,
+        "predicted_molecular_consequences",
+        0,
+        "prediction_results",
+        3,
+        "score"
+      ]
+    },
+    {
+      "message": "Float cannot represent non numeric value: ''",
+      "locations": [
+        {
+          "line": 29,
+          "column": 11
+        }
+      ],
+      "path": [
+        "variant",
+        "alleles",
+        0,
+        "predicted_molecular_consequences",
+        0,
+        "prediction_results",
+        4,
+        "score"
+      ]
+    },
+    {
+      "message": "Float cannot represent non numeric value: ''",
+      "locations": [
+        {
+          "line": 29,
+          "column": 11
+        }
+      ],
+      "path": [
+        "variant",
+        "alleles",
+        0,
+        "predicted_molecular_consequences",
+        0,
+        "prediction_results",
+        5,
+        "score"
+      ]
+    },
+    {
+      "message": "Float cannot represent non numeric value: ''",
+      "locations": [
+        {
+          "line": 29,
+          "column": 11
+        }
+      ],
+      "path": [
+        "variant",
+        "alleles",
+        0,
+        "predicted_molecular_consequences",
+        0,
+        "prediction_results",
+        6,
+        "score"
+      ]
+    },
+    {
+      "message": "Float cannot represent non numeric value: ''",
+      "locations": [
+        {
+          "line": 29,
+          "column": 11
+        }
+      ],
+      "path": [
+        "variant",
+        "alleles",
+        0,
+        "predicted_molecular_consequences",
+        0,
+        "prediction_results",
+        7,
+        "score"
+      ]
+    },
+    {
+      "message": "Float cannot represent non numeric value: ''",
+      "locations": [
+        {
+          "line": 29,
+          "column": 11
+        }
+      ],
+      "path": [
+        "variant",
+        "alleles",
+        0,
+        "predicted_molecular_consequences",
+        0,
+        "prediction_results",
+        8,
+        "score"
+      ]
+    },
+    {
+      "message": "Float cannot represent non numeric value: ''",
+      "locations": [
+        {
+          "line": 29,
+          "column": 11
+        }
+      ],
+      "path": [
+        "variant",
+        "alleles",
+        0,
+        "predicted_molecular_consequences",
+        1,
+        "prediction_results",
+        1,
+        "score"
+      ]
+    },
+    {
+      "message": "Float cannot represent non numeric value: ''",
+      "locations": [
+        {
+          "line": 29,
+          "column": 11
+        }
+      ],
+      "path": [
+        "variant",
+        "alleles",
+        0,
+        "predicted_molecular_consequences",
+        1,
+        "prediction_results",
+        2,
+        "score"
+      ]
+    },
+    {
+      "message": "Float cannot represent non numeric value: ''",
+      "locations": [
+        {
+          "line": 29,
+          "column": 11
+        }
+      ],
+      "path": [
+        "variant",
+        "alleles",
+        0,
+        "predicted_molecular_consequences",
+        1,
+        "prediction_results",
+        3,
+        "score"
+      ]
+    },
+    {
+      "message": "Float cannot represent non numeric value: ''",
+      "locations": [
+        {
+          "line": 29,
+          "column": 11
+        }
+      ],
+      "path": [
+        "variant",
+        "alleles",
+        0,
+        "predicted_molecular_consequences",
+        1,
+        "prediction_results",
+        4,
+        "score"
+      ]
+    },
+    {
+      "message": "Float cannot represent non numeric value: ''",
+      "locations": [
+        {
+          "line": 29,
+          "column": 11
+        }
+      ],
+      "path": [
+        "variant",
+        "alleles",
+        0,
+        "predicted_molecular_consequences",
+        1,
+        "prediction_results",
+        5,
+        "score"
+      ]
+    },
+    {
+      "message": "Float cannot represent non numeric value: ''",
+      "locations": [
+        {
+          "line": 29,
+          "column": 11
+        }
+      ],
+      "path": [
+        "variant",
+        "alleles",
+        0,
+        "predicted_molecular_consequences",
+        1,
+        "prediction_results",
+        6,
+        "score"
+      ]
+    },
+    {
+      "message": "Float cannot represent non numeric value: ''",
+      "locations": [
+        {
+          "line": 29,
+          "column": 11
+        }
+      ],
+      "path": [
+        "variant",
+        "alleles",
+        0,
+        "predicted_molecular_consequences",
+        1,
+        "prediction_results",
+        7,
+        "score"
+      ]
+    },
+    {
+      "message": "Float cannot represent non numeric value: ''",
+      "locations": [
+        {
+          "line": 29,
+          "column": 11
+        }
+      ],
+      "path": [
+        "variant",
+        "alleles",
+        0,
+        "predicted_molecular_consequences",
+        1,
+        "prediction_results",
+        8,
+        "score"
+      ]
+    },
+    {
+      "message": "Float cannot represent non numeric value: ''",
+      "locations": [
+        {
+          "line": 29,
+          "column": 11
+        }
+      ],
+      "path": [
+        "variant",
+        "alleles",
+        0,
+        "predicted_molecular_consequences",
+        2,
+        "prediction_results",
+        1,
+        "score"
+      ]
+    },
+    {
+      "message": "Float cannot represent non numeric value: ''",
+      "locations": [
+        {
+          "line": 29,
+          "column": 11
+        }
+      ],
+      "path": [
+        "variant",
+        "alleles",
+        0,
+        "predicted_molecular_consequences",
+        2,
+        "prediction_results",
+        2,
+        "score"
+      ]
+    },
+    {
+      "message": "Float cannot represent non numeric value: ''",
+      "locations": [
+        {
+          "line": 29,
+          "column": 11
+        }
+      ],
+      "path": [
+        "variant",
+        "alleles",
+        0,
+        "predicted_molecular_consequences",
+        2,
+        "prediction_results",
+        3,
+        "score"
+      ]
+    },
+    {
+      "message": "Float cannot represent non numeric value: ''",
+      "locations": [
+        {
+          "line": 29,
+          "column": 11
+        }
+      ],
+      "path": [
+        "variant",
+        "alleles",
+        0,
+        "predicted_molecular_consequences",
+        2,
+        "prediction_results",
+        4,
+        "score"
+      ]
+    },
+    {
+      "message": "Float cannot represent non numeric value: ''",
+      "locations": [
+        {
+          "line": 29,
+          "column": 11
+        }
+      ],
+      "path": [
+        "variant",
+        "alleles",
+        0,
+        "predicted_molecular_consequences",
+        2,
+        "prediction_results",
+        5,
+        "score"
+      ]
+    },
+    {
+      "message": "Float cannot represent non numeric value: ''",
+      "locations": [
+        {
+          "line": 29,
+          "column": 11
+        }
+      ],
+      "path": [
+        "variant",
+        "alleles",
+        0,
+        "predicted_molecular_consequences",
+        2,
+        "prediction_results",
+        6,
+        "score"
+      ]
+    },
+    {
+      "message": "Float cannot represent non numeric value: ''",
+      "locations": [
+        {
+          "line": 29,
+          "column": 11
+        }
+      ],
+      "path": [
+        "variant",
+        "alleles",
+        0,
+        "predicted_molecular_consequences",
+        2,
+        "prediction_results",
+        7,
+        "score"
+      ]
+    },
+    {
+      "message": "Float cannot represent non numeric value: ''",
+      "locations": [
+        {
+          "line": 29,
+          "column": 11
+        }
+      ],
+      "path": [
+        "variant",
+        "alleles",
+        0,
+        "predicted_molecular_consequences",
+        2,
+        "prediction_results",
+        8,
+        "score"
+      ]
+    }
+  ],
   "extensions": {
-    "execution_time_in_seconds": 0.06
+    "execution_time_in_seconds": 0.13
   }
 }

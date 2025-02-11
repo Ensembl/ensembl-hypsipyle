@@ -218,8 +218,7 @@ class VariantAllele():
             }
 
             for spliceai_score in spliceai.values():
-                if spliceai_score:
-                    print(f"Score: {spliceai_score['score']}")
+                if spliceai_score["score"]:
                     spliceai_prediction_result  = {
                             "score": spliceai_score["score"],
                             "analysis_method": {

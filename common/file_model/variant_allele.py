@@ -116,7 +116,11 @@ class VariantAllele():
                         "score": csq_record[prediction_index_map["cadd_phred"]] ,
                         "analysis_method": {
                             "tool": "CADD",
-                            "qualifier": "CADD"
+                            "qualifier": 
+                             {
+                                "result_type": "CADD Phred score"
+
+                             }
                         }
 
                 } if csq_record[prediction_index_map["cadd_phred"]] else None
@@ -177,7 +181,9 @@ class VariantAllele():
                             "score": score,
                             "analysis_method": {
                                 "tool": "SIFT",
-                                "qualifier": "SIFT"
+                                "qualifier": {
+                                    "result_type": "SIFT score"
+                                }
                             }
                         }
                     prediction_results.append(sift_prediction_result)
@@ -246,7 +252,10 @@ class VariantAllele():
                             "score": score,
                             "analysis_method": {
                                 "tool": "PolyPhen",
-                                "qualifier": "PolyPhen"
+                                "qualifier": {
+                                    "result_type": "PolyPhen score"
+                                }
+                               
                             }
                         }
                     prediction_results.append(polyphen_prediction_result)

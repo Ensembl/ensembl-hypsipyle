@@ -260,7 +260,9 @@ class Variant ():
                     "result": consequence_map[min(consequence_map.keys())]  ,
                     "analysis_method": {
                         "tool": "Ensembl VEP",
-                        "qualifier": "most severe consequence"
+                        "qualifier": {
+                            "result_type": "most severe consequence"
+                        }
                     }
         } 
 
@@ -273,7 +275,9 @@ class Variant ():
                     "score": csq_record_list[gerp_index] ,
                     "analysis_method": {
                         "tool": "GERP",
-                        "qualifier": "GERP"
+                        "qualifier": {
+                            "result_type": "GERP score"
+                        }
                     }
                 } if csq_record_list[gerp_index] else {}
             return gerp_prediction_result
@@ -287,7 +291,9 @@ class Variant ():
                     "result": csq_record_list[aa_index] ,
                     "analysis_method": {
                         "tool": "AncestralAllele",
-                        "qualifier": "",
+                        "qualifier": {
+                            "result_type": "Ancestral Allele"
+                        },
                         "version": "110" #self.vep_version
                     }
                 } if csq_record_list[aa_index] and csq_record_list[aa_index]!="."  else {}

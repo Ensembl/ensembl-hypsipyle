@@ -4,7 +4,7 @@ type Qualifier {
   Qualifier
 """
   result_type: String
-  mode: [String]
+  modes: [String]
 }
 
 

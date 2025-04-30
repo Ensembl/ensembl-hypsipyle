@@ -119,8 +119,8 @@ class VariantAllele():
                             "qualifier": 
                              {
                                 "result_type": "CADD Phred score"
-
-                             }
+                             },
+                             "reference_data": []
                         }
 
                 } if csq_record[prediction_index_map["cadd_phred"]] else None
@@ -181,9 +181,12 @@ class VariantAllele():
                             "score": score,
                             "analysis_method": {
                                 "tool": "SIFT",
+                                "version": "6.2.1", ## hardcoding until next data generation
                                 "qualifier": {
-                                    "result_type": "SIFT score"
-                                }
+                                    "result_type": "SIFT score",
+                                    "modes": []
+                                },
+                                "reference_data": []
                             }
                         }
                     prediction_results.append(sift_prediction_result)
@@ -231,9 +234,11 @@ class VariantAllele():
                                 "tool": "SpliceAI",
                                 "version": "1.3.1",  ## hardcoding until next data generation
                                 "qualifier": {
-                                    "result_type": spliceai_score["qualifier"]
+                                    "result_type": spliceai_score["qualifier"],
+                                    "modes": []
 
-                                }
+                                },
+                                "reference_data": []
                             }
                         }
                     prediction_results.append(spliceai_prediction_result)
@@ -252,10 +257,12 @@ class VariantAllele():
                             "score": score,
                             "analysis_method": {
                                 "tool": "PolyPhen",
+                                "version": "2.2.3", ## hardcoding until next data generation
                                 "qualifier": {
-                                    "result_type": "PolyPhen score"
-                                }
-                               
+                                    "result_type": "PolyPhen score",
+                                    "modes": ["HumVar"] ## hardcoding until next data generation
+                                },
+                                "reference_data": []
                             }
                         }
                     prediction_results.append(polyphen_prediction_result)

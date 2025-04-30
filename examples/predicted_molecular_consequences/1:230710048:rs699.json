@@ -36,10 +36,10 @@
                   },
                   "analysis_method": {
                     "tool": "SIFT",
-                    "version": null,
+                    "version": "6.2.1",
                     "qualifier": {
-                      "result_type": null,
-                      "mode": null
+                      "result_type": "SIFT score",
+                      "modes": []
                     }
                   }
                 },
@@ -52,7 +52,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -65,7 +65,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for donor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -78,7 +78,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for donor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -91,7 +91,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for donor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -104,7 +104,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -117,7 +117,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -130,7 +130,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -143,7 +143,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for acceptor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -156,10 +156,12 @@
                   },
                   "analysis_method": {
                     "tool": "PolyPhen",
-                    "version": null,
+                    "version": "2.2.3",
                     "qualifier": {
-                      "result_type": null,
-                      "mode": null
+                      "result_type": "PolyPhen score",
+                      "modes": [
+                        "HumVar"
+                      ]
                     }
                   }
                 }
@@ -211,10 +213,10 @@
                   },
                   "analysis_method": {
                     "tool": "SIFT",
-                    "version": null,
+                    "version": "6.2.1",
                     "qualifier": {
-                      "result_type": null,
-                      "mode": null
+                      "result_type": "SIFT score",
+                      "modes": []
                     }
                   }
                 },
@@ -227,7 +229,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -240,7 +242,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for donor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -253,7 +255,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for donor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -266,7 +268,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for donor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -279,7 +281,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -292,7 +294,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -305,7 +307,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -318,7 +320,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for acceptor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -331,10 +333,12 @@
                   },
                   "analysis_method": {
                     "tool": "PolyPhen",
-                    "version": null,
+                    "version": "2.2.3",
                     "qualifier": {
-                      "result_type": null,
-                      "mode": null
+                      "result_type": "PolyPhen score",
+                      "modes": [
+                        "HumVar"
+                      ]
                     }
                   }
                 }
@@ -389,10 +393,10 @@
                   },
                   "analysis_method": {
                     "tool": "SIFT",
-                    "version": null,
+                    "version": "6.2.1",
                     "qualifier": {
-                      "result_type": null,
-                      "mode": null
+                      "result_type": "SIFT score",
+                      "modes": []
                     }
                   }
                 },
@@ -405,7 +409,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -418,7 +422,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for donor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -431,7 +435,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for donor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -444,7 +448,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for donor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -457,7 +461,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -470,7 +474,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -483,7 +487,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -496,7 +500,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for acceptor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -509,10 +513,12 @@
                   },
                   "analysis_method": {
                     "tool": "PolyPhen",
-                    "version": null,
+                    "version": "2.2.3",
                     "qualifier": {
-                      "result_type": null,
-                      "mode": null
+                      "result_type": "PolyPhen score",
+                      "modes": [
+                        "HumVar"
+                      ]
                     }
                   }
                 }
@@ -567,10 +573,10 @@
                   },
                   "analysis_method": {
                     "tool": "SIFT",
-                    "version": null,
+                    "version": "6.2.1",
                     "qualifier": {
-                      "result_type": null,
-                      "mode": null
+                      "result_type": "SIFT score",
+                      "modes": []
                     }
                   }
                 },
@@ -583,7 +589,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -596,7 +602,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for donor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -609,7 +615,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for donor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -622,7 +628,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for donor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -635,7 +641,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -648,7 +654,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -661,7 +667,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -674,7 +680,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for acceptor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -687,10 +693,12 @@
                   },
                   "analysis_method": {
                     "tool": "PolyPhen",
-                    "version": null,
+                    "version": "2.2.3",
                     "qualifier": {
-                      "result_type": null,
-                      "mode": null
+                      "result_type": "PolyPhen score",
+                      "modes": [
+                        "HumVar"
+                      ]
                     }
                   }
                 }
@@ -742,7 +750,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -755,7 +763,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for donor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -768,7 +776,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for donor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -781,7 +789,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for donor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -794,7 +802,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -807,7 +815,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -820,7 +828,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -833,7 +841,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for acceptor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 }
@@ -873,10 +881,10 @@
                   },
                   "analysis_method": {
                     "tool": "SIFT",
-                    "version": null,
+                    "version": "6.2.1",
                     "qualifier": {
-                      "result_type": null,
-                      "mode": null
+                      "result_type": "SIFT score",
+                      "modes": []
                     }
                   }
                 },
@@ -889,7 +897,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -902,7 +910,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for donor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -915,7 +923,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for donor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -928,7 +936,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for donor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -941,7 +949,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -954,7 +962,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -967,7 +975,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -980,7 +988,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for acceptor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -993,10 +1001,12 @@
                   },
                   "analysis_method": {
                     "tool": "PolyPhen",
-                    "version": null,
+                    "version": "2.2.3",
                     "qualifier": {
-                      "result_type": null,
-                      "mode": null
+                      "result_type": "PolyPhen score",
+                      "modes": [
+                        "HumVar"
+                      ]
                     }
                   }
                 }
@@ -1048,10 +1058,10 @@
                   },
                   "analysis_method": {
                     "tool": "SIFT",
-                    "version": null,
+                    "version": "6.2.1",
                     "qualifier": {
-                      "result_type": null,
-                      "mode": null
+                      "result_type": "SIFT score",
+                      "modes": []
                     }
                   }
                 },
@@ -1064,7 +1074,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1077,7 +1087,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for donor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1090,7 +1100,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for donor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1103,7 +1113,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for donor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1116,7 +1126,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1129,7 +1139,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1142,7 +1152,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1155,7 +1165,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for acceptor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1168,10 +1178,12 @@
                   },
                   "analysis_method": {
                     "tool": "PolyPhen",
-                    "version": null,
+                    "version": "2.2.3",
                     "qualifier": {
-                      "result_type": null,
-                      "mode": null
+                      "result_type": "PolyPhen score",
+                      "modes": [
+                        "HumVar"
+                      ]
                     }
                   }
                 }
@@ -1223,10 +1235,10 @@
                   },
                   "analysis_method": {
                     "tool": "SIFT",
-                    "version": null,
+                    "version": "6.2.1",
                     "qualifier": {
-                      "result_type": null,
-                      "mode": null
+                      "result_type": "SIFT score",
+                      "modes": []
                     }
                   }
                 },
@@ -1239,7 +1251,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1252,7 +1264,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for donor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1265,7 +1277,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for donor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1278,7 +1290,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for donor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1291,7 +1303,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1304,7 +1316,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1317,7 +1329,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1330,7 +1342,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for acceptor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1343,10 +1355,12 @@
                   },
                   "analysis_method": {
                     "tool": "PolyPhen",
-                    "version": null,
+                    "version": "2.2.3",
                     "qualifier": {
-                      "result_type": null,
-                      "mode": null
+                      "result_type": "PolyPhen score",
+                      "modes": [
+                        "HumVar"
+                      ]
                     }
                   }
                 }
@@ -1398,10 +1412,10 @@
                   },
                   "analysis_method": {
                     "tool": "SIFT",
-                    "version": null,
+                    "version": "6.2.1",
                     "qualifier": {
-                      "result_type": null,
-                      "mode": null
+                      "result_type": "SIFT score",
+                      "modes": []
                     }
                   }
                 },
@@ -1414,7 +1428,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1427,7 +1441,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for donor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1440,7 +1454,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for donor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1453,7 +1467,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for donor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1466,7 +1480,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1479,7 +1493,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1492,7 +1506,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1505,7 +1519,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for acceptor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1518,10 +1532,12 @@
                   },
                   "analysis_method": {
                     "tool": "PolyPhen",
-                    "version": null,
+                    "version": "2.2.3",
                     "qualifier": {
-                      "result_type": null,
-                      "mode": null
+                      "result_type": "PolyPhen score",
+                      "modes": [
+                        "HumVar"
+                      ]
                     }
                   }
                 }
@@ -1573,7 +1589,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1586,7 +1602,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for donor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1599,7 +1615,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for donor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1612,7 +1628,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for donor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1625,7 +1641,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1638,7 +1654,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1651,7 +1667,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1664,7 +1680,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for acceptor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 }
@@ -1704,10 +1720,10 @@
                   },
                   "analysis_method": {
                     "tool": "SIFT",
-                    "version": null,
+                    "version": "6.2.1",
                     "qualifier": {
-                      "result_type": null,
-                      "mode": null
+                      "result_type": "SIFT score",
+                      "modes": []
                     }
                   }
                 },
@@ -1720,7 +1736,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1733,7 +1749,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for donor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1746,7 +1762,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for donor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1759,7 +1775,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for donor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1772,7 +1788,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1785,7 +1801,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1798,7 +1814,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1811,7 +1827,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for acceptor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1824,10 +1840,12 @@
                   },
                   "analysis_method": {
                     "tool": "PolyPhen",
-                    "version": null,
+                    "version": "2.2.3",
                     "qualifier": {
-                      "result_type": null,
-                      "mode": null
+                      "result_type": "PolyPhen score",
+                      "modes": [
+                        "HumVar"
+                      ]
                     }
                   }
                 }
@@ -1882,10 +1900,10 @@
                   },
                   "analysis_method": {
                     "tool": "SIFT",
-                    "version": null,
+                    "version": "6.2.1",
                     "qualifier": {
-                      "result_type": null,
-                      "mode": null
+                      "result_type": "SIFT score",
+                      "modes": []
                     }
                   }
                 },
@@ -1898,7 +1916,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1911,7 +1929,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for donor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1924,7 +1942,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for donor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1937,7 +1955,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for donor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1950,7 +1968,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1963,7 +1981,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1976,7 +1994,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for acceptor gain",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -1989,7 +2007,7 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for acceptor loss",
-                      "mode": null
+                      "modes": []
                     }
                   }
                 },
@@ -2002,10 +2020,12 @@
                   },
                   "analysis_method": {
                     "tool": "PolyPhen",
-                    "version": null,
+                    "version": "2.2.3",
                     "qualifier": {
-                      "result_type": null,
-                      "mode": null
+                      "result_type": "PolyPhen score",
+                      "modes": [
+                        "HumVar"
+                      ]
                     }
                   }
                 }
@@ -2042,6 +2062,6 @@
     }
   },
   "extensions": {
-    "execution_time_in_seconds": 0.13
+    "execution_time_in_seconds": 0.33
   }
 }

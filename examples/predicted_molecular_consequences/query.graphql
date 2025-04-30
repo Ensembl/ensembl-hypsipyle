@@ -40,7 +40,7 @@ query variant_molecular_consequences {
             qualifier
             {
               result_type
-              mode
+              modes
             }
           }
         }

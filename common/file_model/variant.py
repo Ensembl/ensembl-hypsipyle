@@ -261,7 +261,8 @@ class Variant ():
                     "analysis_method": {
                         "tool": "Ensembl VEP",
                         "qualifier": {
-                            "result_type": "most severe consequence"
+                            "result_type": "most severe consequence",
+                            "modes": []
                         }
                     }
         } 
@@ -276,7 +277,8 @@ class Variant ():
                     "analysis_method": {
                         "tool": "GERP",
                         "qualifier": {
-                            "result_type": "GERP score"
+                            "result_type": "GERP score",
+                            "modes": []
                         }
                     }
                 } if csq_record_list[gerp_index] else {}
@@ -292,7 +294,8 @@ class Variant ():
                     "analysis_method": {
                         "tool": "AncestralAllele",
                         "qualifier": {
-                            "result_type": "Ancestral Allele"
+                            "result_type": "Ancestral Allele",
+                            "modes": []
                         },
                         "version": "110" #self.vep_version
                     }

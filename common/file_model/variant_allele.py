@@ -235,7 +235,7 @@ class VariantAllele():
                                 "version": "1.3.1",  ## hardcoding until next data generation
                                 "qualifier": {
                                     "result_type": spliceai_score["qualifier"],
-                                    "modes": ["masked scores"]
+                                    "modes": ["masked scores"] ## hardcoding until next data generation
 
                                 },
                                 "reference_data": []

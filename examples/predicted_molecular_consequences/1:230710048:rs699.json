@@ -52,7 +52,9 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor gain",
-                      "modes": []
+                      "modes": [
+                        "masked scores"
+                      ]
                     }
                   }
                 },
@@ -65,7 +67,9 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for donor loss",
-                      "modes": []
+                      "modes": [
+                        "masked scores"
+                      ]
                     }
                   }
                 },
@@ -78,7 +82,9 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for donor gain",
-                      "modes": []
+                      "modes": [
+                        "masked scores"
+                      ]
                     }
                   }
                 },
@@ -91,7 +97,9 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for donor loss",
-                      "modes": []
+                      "modes": [
+                        "masked scores"
+                      ]
                     }
                   }
                 },
@@ -104,7 +112,9 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor gain",
-                      "modes": []
+                      "modes": [
+                        "masked scores"
+                      ]
                     }
                   }
                 },
@@ -117,7 +127,9 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor loss",
-                      "modes": []
+                      "modes": [
+                        "masked scores"
+                      ]
                     }
                   }
                 },
@@ -130,7 +142,9 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for acceptor gain",
-                      "modes": []
+                      "modes": [
+                        "masked scores"
+                      ]
                     }
                   }
                 },
@@ -143,7 +157,9 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for acceptor loss",
-                      "modes": []
+                      "modes": [
+                        "masked scores"
+                      ]
                     }
                   }
                 },
@@ -190,674 +206,6 @@
             },
             {
               "allele_name": "G",
-              "stable_id": "ENST00000679684.1",
-              "feature_type": {
-                "value": "Transcript"
-              },
-              "consequences": [
-                {
-                  "value": "missense_variant"
-                }
-              ],
-              "gene_symbol": "AGT",
-              "gene_stable_id": "ENSG00000135744",
-              "transcript_biotype": "protein_coding",
-              "protein_stable_id": null,
-              "prediction_results": [
-                {
-                  "score": 1,
-                  "result": null,
-                  "classification": {
-                    "label": "tolerated",
-                    "definition": ""
-                  },
-                  "analysis_method": {
-                    "tool": "SIFT",
-                    "version": "6.2.1",
-                    "qualifier": {
-                      "result_type": "SIFT score",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": -47,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta position for acceptor gain",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 45,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta position for donor loss",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta score for donor gain",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta score for donor loss",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": -19,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta position for acceptor gain",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 34,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta position for acceptor loss",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta score for acceptor gain",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta score for acceptor loss",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": {
-                    "label": "benign",
-                    "definition": ""
-                  },
-                  "analysis_method": {
-                    "tool": "PolyPhen",
-                    "version": "2.2.3",
-                    "qualifier": {
-                      "result_type": "PolyPhen score",
-                      "modes": [
-                        "HumVar"
-                      ]
-                    }
-                  }
-                }
-              ],
-              "cdna_location": {
-                "start": 1287,
-                "end": 1287,
-                "length": 1,
-                "ref_sequence": "T",
-                "alt_sequence": "C"
-              },
-              "cds_location": {
-                "start": 776,
-                "end": 776,
-                "length": 1,
-                "ref_sequence": "aTg",
-                "alt_sequence": "aCg"
-              },
-              "protein_location": {
-                "start": 259,
-                "end": 259,
-                "length": 1,
-                "ref_sequence": "M",
-                "alt_sequence": "T"
-              }
-            },
-            {
-              "allele_name": "G",
-              "stable_id": "ENST00000679738.1",
-              "feature_type": {
-                "value": "Transcript"
-              },
-              "consequences": [
-                {
-                  "value": "missense_variant"
-                },
-                {
-                  "value": "NMD_transcript_variant"
-                }
-              ],
-              "gene_symbol": "AGT",
-              "gene_stable_id": "ENSG00000135744",
-              "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": null,
-              "prediction_results": [
-                {
-                  "score": 1,
-                  "result": null,
-                  "classification": {
-                    "label": "tolerated",
-                    "definition": ""
-                  },
-                  "analysis_method": {
-                    "tool": "SIFT",
-                    "version": "6.2.1",
-                    "qualifier": {
-                      "result_type": "SIFT score",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": -47,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta position for acceptor gain",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 45,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta position for donor loss",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta score for donor gain",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta score for donor loss",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": -19,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta position for acceptor gain",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 34,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta position for acceptor loss",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta score for acceptor gain",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta score for acceptor loss",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": {
-                    "label": "benign",
-                    "definition": ""
-                  },
-                  "analysis_method": {
-                    "tool": "PolyPhen",
-                    "version": "2.2.3",
-                    "qualifier": {
-                      "result_type": "PolyPhen score",
-                      "modes": [
-                        "HumVar"
-                      ]
-                    }
-                  }
-                }
-              ],
-              "cdna_location": {
-                "start": 1366,
-                "end": 1366,
-                "length": 1,
-                "ref_sequence": "T",
-                "alt_sequence": "C"
-              },
-              "cds_location": {
-                "start": 776,
-                "end": 776,
-                "length": 1,
-                "ref_sequence": "aTg",
-                "alt_sequence": "aCg"
-              },
-              "protein_location": {
-                "start": 259,
-                "end": 259,
-                "length": 1,
-                "ref_sequence": "M",
-                "alt_sequence": "T"
-              }
-            },
-            {
-              "allele_name": "G",
-              "stable_id": "ENST00000679802.1",
-              "feature_type": {
-                "value": "Transcript"
-              },
-              "consequences": [
-                {
-                  "value": "missense_variant"
-                },
-                {
-                  "value": "NMD_transcript_variant"
-                }
-              ],
-              "gene_symbol": "AGT",
-              "gene_stable_id": "ENSG00000135744",
-              "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": null,
-              "prediction_results": [
-                {
-                  "score": 1,
-                  "result": null,
-                  "classification": {
-                    "label": "tolerated",
-                    "definition": ""
-                  },
-                  "analysis_method": {
-                    "tool": "SIFT",
-                    "version": "6.2.1",
-                    "qualifier": {
-                      "result_type": "SIFT score",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": -47,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta position for acceptor gain",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 45,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta position for donor loss",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta score for donor gain",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta score for donor loss",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": -19,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta position for acceptor gain",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 34,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta position for acceptor loss",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta score for acceptor gain",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta score for acceptor loss",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": {
-                    "label": "benign",
-                    "definition": ""
-                  },
-                  "analysis_method": {
-                    "tool": "PolyPhen",
-                    "version": "2.2.3",
-                    "qualifier": {
-                      "result_type": "PolyPhen score",
-                      "modes": [
-                        "HumVar"
-                      ]
-                    }
-                  }
-                }
-              ],
-              "cdna_location": {
-                "start": 1287,
-                "end": 1287,
-                "length": 1,
-                "ref_sequence": "T",
-                "alt_sequence": "C"
-              },
-              "cds_location": {
-                "start": 776,
-                "end": 776,
-                "length": 1,
-                "ref_sequence": "aTg",
-                "alt_sequence": "aCg"
-              },
-              "protein_location": {
-                "start": 259,
-                "end": 259,
-                "length": 1,
-                "ref_sequence": "M",
-                "alt_sequence": "T"
-              }
-            },
-            {
-              "allele_name": "G",
-              "stable_id": "ENST00000679854.1",
-              "feature_type": {
-                "value": "Transcript"
-              },
-              "consequences": [
-                {
-                  "value": "non_coding_transcript_exon_variant"
-                }
-              ],
-              "gene_symbol": "AGT",
-              "gene_stable_id": "ENSG00000135744",
-              "transcript_biotype": "retained_intron",
-              "protein_stable_id": null,
-              "prediction_results": [
-                {
-                  "score": -47,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta position for acceptor gain",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 45,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta position for donor loss",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta score for donor gain",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta score for donor loss",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": -19,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta position for acceptor gain",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 34,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta position for acceptor loss",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta score for acceptor gain",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta score for acceptor loss",
-                      "modes": []
-                    }
-                  }
-                }
-              ],
-              "cdna_location": {
-                "start": 1287,
-                "end": 1287,
-                "length": 1,
-                "ref_sequence": "-",
-                "alt_sequence": "G"
-              },
-              "cds_location": null,
-              "protein_location": null
-            },
-            {
-              "allele_name": "G",
               "stable_id": "ENST00000679957.1",
               "feature_type": {
                 "value": "Transcript"
@@ -897,7 +245,9 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor gain",
-                      "modes": []
+                      "modes": [
+                        "masked scores"
+                      ]
                     }
                   }
                 },
@@ -910,7 +260,9 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for donor loss",
-                      "modes": []
+                      "modes": [
+                        "masked scores"
+                      ]
                     }
                   }
                 },
@@ -923,7 +275,9 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for donor gain",
-                      "modes": []
+                      "modes": [
+                        "masked scores"
+                      ]
                     }
                   }
                 },
@@ -936,7 +290,9 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for donor loss",
-                      "modes": []
+                      "modes": [
+                        "masked scores"
+                      ]
                     }
                   }
                 },
@@ -949,7 +305,9 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor gain",
-                      "modes": []
+                      "modes": [
+                        "masked scores"
+                      ]
                     }
                   }
                 },
@@ -962,7 +320,9 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor loss",
-                      "modes": []
+                      "modes": [
+                        "masked scores"
+                      ]
                     }
                   }
                 },
@@ -975,7 +335,9 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for acceptor gain",
-                      "modes": []
+                      "modes": [
+                        "masked scores"
+                      ]
                     }
                   }
                 },
@@ -988,7 +350,9 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for acceptor loss",
-                      "modes": []
+                      "modes": [
+                        "masked scores"
+                      ]
                     }
                   }
                 },
@@ -1014,183 +378,6 @@
               "cdna_location": {
                 "start": 1287,
                 "end": 1287,
-                "length": 1,
-                "ref_sequence": "T",
-                "alt_sequence": "C"
-              },
-              "cds_location": {
-                "start": 776,
-                "end": 776,
-                "length": 1,
-                "ref_sequence": "aTg",
-                "alt_sequence": "aCg"
-              },
-              "protein_location": {
-                "start": 259,
-                "end": 259,
-                "length": 1,
-                "ref_sequence": "M",
-                "alt_sequence": "T"
-              }
-            },
-            {
-              "allele_name": "G",
-              "stable_id": "ENST00000680041.1",
-              "feature_type": {
-                "value": "Transcript"
-              },
-              "consequences": [
-                {
-                  "value": "missense_variant"
-                }
-              ],
-              "gene_symbol": "AGT",
-              "gene_stable_id": "ENSG00000135744",
-              "transcript_biotype": "protein_coding",
-              "protein_stable_id": null,
-              "prediction_results": [
-                {
-                  "score": 1,
-                  "result": null,
-                  "classification": {
-                    "label": "tolerated",
-                    "definition": ""
-                  },
-                  "analysis_method": {
-                    "tool": "SIFT",
-                    "version": "6.2.1",
-                    "qualifier": {
-                      "result_type": "SIFT score",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": -47,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta position for acceptor gain",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 45,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta position for donor loss",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta score for donor gain",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta score for donor loss",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": -19,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta position for acceptor gain",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 34,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta position for acceptor loss",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta score for acceptor gain",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta score for acceptor loss",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": {
-                    "label": "benign",
-                    "definition": ""
-                  },
-                  "analysis_method": {
-                    "tool": "PolyPhen",
-                    "version": "2.2.3",
-                    "qualifier": {
-                      "result_type": "PolyPhen score",
-                      "modes": [
-                        "HumVar"
-                      ]
-                    }
-                  }
-                }
-              ],
-              "cdna_location": {
-                "start": 991,
-                "end": 991,
                 "length": 1,
                 "ref_sequence": "T",
                 "alt_sequence": "C"
@@ -1251,7 +438,9 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor gain",
-                      "modes": []
+                      "modes": [
+                        "masked scores"
+                      ]
                     }
                   }
                 },
@@ -1264,7 +453,9 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for donor loss",
-                      "modes": []
+                      "modes": [
+                        "masked scores"
+                      ]
                     }
                   }
                 },
@@ -1277,7 +468,9 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for donor gain",
-                      "modes": []
+                      "modes": [
+                        "masked scores"
+                      ]
                     }
                   }
                 },
@@ -1290,7 +483,9 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for donor loss",
-                      "modes": []
+                      "modes": [
+                        "masked scores"
+                      ]
                     }
                   }
                 },
@@ -1303,7 +498,9 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor gain",
-                      "modes": []
+                      "modes": [
+                        "masked scores"
+                      ]
                     }
                   }
                 },
@@ -1316,7 +513,9 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor loss",
-                      "modes": []
+                      "modes": [
+                        "masked scores"
+                      ]
                     }
                   }
                 },
@@ -1329,7 +528,9 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for acceptor gain",
-                      "modes": []
+                      "modes": [
+                        "masked scores"
+                      ]
                     }
                   }
                 },
@@ -1342,7 +543,9 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for acceptor loss",
-                      "modes": []
+                      "modes": [
+                        "masked scores"
+                      ]
                     }
                   }
                 },
@@ -1386,314 +589,6 @@
                 "ref_sequence": "M",
                 "alt_sequence": "T"
               }
-            },
-            {
-              "allele_name": "G",
-              "stable_id": "ENST00000681269.1",
-              "feature_type": {
-                "value": "Transcript"
-              },
-              "consequences": [
-                {
-                  "value": "missense_variant"
-                }
-              ],
-              "gene_symbol": "AGT",
-              "gene_stable_id": "ENSG00000135744",
-              "transcript_biotype": "protein_coding",
-              "protein_stable_id": null,
-              "prediction_results": [
-                {
-                  "score": 1,
-                  "result": null,
-                  "classification": {
-                    "label": "tolerated",
-                    "definition": ""
-                  },
-                  "analysis_method": {
-                    "tool": "SIFT",
-                    "version": "6.2.1",
-                    "qualifier": {
-                      "result_type": "SIFT score",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": -47,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta position for acceptor gain",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 45,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta position for donor loss",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta score for donor gain",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta score for donor loss",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": -19,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta position for acceptor gain",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 34,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta position for acceptor loss",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta score for acceptor gain",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta score for acceptor loss",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": {
-                    "label": "benign",
-                    "definition": ""
-                  },
-                  "analysis_method": {
-                    "tool": "PolyPhen",
-                    "version": "2.2.3",
-                    "qualifier": {
-                      "result_type": "PolyPhen score",
-                      "modes": [
-                        "HumVar"
-                      ]
-                    }
-                  }
-                }
-              ],
-              "cdna_location": {
-                "start": 868,
-                "end": 868,
-                "length": 1,
-                "ref_sequence": "T",
-                "alt_sequence": "C"
-              },
-              "cds_location": {
-                "start": 776,
-                "end": 776,
-                "length": 1,
-                "ref_sequence": "aTg",
-                "alt_sequence": "aCg"
-              },
-              "protein_location": {
-                "start": 259,
-                "end": 259,
-                "length": 1,
-                "ref_sequence": "M",
-                "alt_sequence": "T"
-              }
-            },
-            {
-              "allele_name": "G",
-              "stable_id": "ENST00000681347.1",
-              "feature_type": {
-                "value": "Transcript"
-              },
-              "consequences": [
-                {
-                  "value": "non_coding_transcript_exon_variant"
-                }
-              ],
-              "gene_symbol": "AGT",
-              "gene_stable_id": "ENSG00000135744",
-              "transcript_biotype": "retained_intron",
-              "protein_stable_id": null,
-              "prediction_results": [
-                {
-                  "score": -47,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta position for acceptor gain",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 45,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta position for donor loss",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta score for donor gain",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta score for donor loss",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": -19,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta position for acceptor gain",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 34,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta position for acceptor loss",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta score for acceptor gain",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta score for acceptor loss",
-                      "modes": []
-                    }
-                  }
-                }
-              ],
-              "cdna_location": {
-                "start": 1287,
-                "end": 1287,
-                "length": 1,
-                "ref_sequence": "-",
-                "alt_sequence": "G"
-              },
-              "cds_location": null,
-              "protein_location": null
             },
             {
               "allele_name": "G",
@@ -1736,7 +631,9 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor gain",
-                      "modes": []
+                      "modes": [
+                        "masked scores"
+                      ]
                     }
                   }
                 },
@@ -1749,7 +646,9 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for donor loss",
-                      "modes": []
+                      "modes": [
+                        "masked scores"
+                      ]
                     }
                   }
                 },
@@ -1762,7 +661,9 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for donor gain",
-                      "modes": []
+                      "modes": [
+                        "masked scores"
+                      ]
                     }
                   }
                 },
@@ -1775,7 +676,9 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for donor loss",
-                      "modes": []
+                      "modes": [
+                        "masked scores"
+                      ]
                     }
                   }
                 },
@@ -1788,7 +691,9 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor gain",
-                      "modes": []
+                      "modes": [
+                        "masked scores"
+                      ]
                     }
                   }
                 },
@@ -1801,7 +706,9 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta position for acceptor loss",
-                      "modes": []
+                      "modes": [
+                        "masked scores"
+                      ]
                     }
                   }
                 },
@@ -1814,7 +721,9 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for acceptor gain",
-                      "modes": []
+                      "modes": [
+                        "masked scores"
+                      ]
                     }
                   }
                 },
@@ -1827,7 +736,9 @@
                     "version": "1.3.1",
                     "qualifier": {
                       "result_type": "Delta score for acceptor loss",
-                      "modes": []
+                      "modes": [
+                        "masked scores"
+                      ]
                     }
                   }
                 },
@@ -1871,186 +782,6 @@
                 "ref_sequence": "M",
                 "alt_sequence": "T"
               }
-            },
-            {
-              "allele_name": "G",
-              "stable_id": "ENST00000681772.1",
-              "feature_type": {
-                "value": "Transcript"
-              },
-              "consequences": [
-                {
-                  "value": "missense_variant"
-                },
-                {
-                  "value": "NMD_transcript_variant"
-                }
-              ],
-              "gene_symbol": "AGT",
-              "gene_stable_id": "ENSG00000135744",
-              "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": null,
-              "prediction_results": [
-                {
-                  "score": 1,
-                  "result": null,
-                  "classification": {
-                    "label": "tolerated",
-                    "definition": ""
-                  },
-                  "analysis_method": {
-                    "tool": "SIFT",
-                    "version": "6.2.1",
-                    "qualifier": {
-                      "result_type": "SIFT score",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": -47,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta position for acceptor gain",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 45,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta position for donor loss",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta score for donor gain",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta score for donor loss",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": -19,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta position for acceptor gain",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 34,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta position for acceptor loss",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta score for acceptor gain",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": null,
-                  "analysis_method": {
-                    "tool": "SpliceAI",
-                    "version": "1.3.1",
-                    "qualifier": {
-                      "result_type": "Delta score for acceptor loss",
-                      "modes": []
-                    }
-                  }
-                },
-                {
-                  "score": 0,
-                  "result": null,
-                  "classification": {
-                    "label": "benign",
-                    "definition": ""
-                  },
-                  "analysis_method": {
-                    "tool": "PolyPhen",
-                    "version": "2.2.3",
-                    "qualifier": {
-                      "result_type": "PolyPhen score",
-                      "modes": [
-                        "HumVar"
-                      ]
-                    }
-                  }
-                }
-              ],
-              "cdna_location": {
-                "start": 1287,
-                "end": 1287,
-                "length": 1,
-                "ref_sequence": "T",
-                "alt_sequence": "C"
-              },
-              "cds_location": {
-                "start": 776,
-                "end": 776,
-                "length": 1,
-                "ref_sequence": "aTg",
-                "alt_sequence": "aCg"
-              },
-              "protein_location": {
-                "start": 259,
-                "end": 259,
-                "length": 1,
-                "ref_sequence": "M",
-                "alt_sequence": "T"
-              }
             }
           ]
         },
@@ -2062,6 +793,6 @@
     }
   },
   "extensions": {
-    "execution_time_in_seconds": 0.33
+    "execution_time_in_seconds": 0.58
   }
 }

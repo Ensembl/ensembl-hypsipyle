@@ -195,7 +195,7 @@ class VariantAllele():
             spliceai = {}
             spliceai["spliceai_pred_dp_dg"] = {
                 "score": csq_record[prediction_index_map["spliceai_pred_dp_dg"]],
-                "qualifier": self.variant.header.get_lines("SpliceAI_pred_DP_AG")[0].value.split(". ")[1]
+                "qualifier": self.variant.header.get_lines("SpliceAI_pred_DP_DG")[0].value.split(". ")[1]
             }
             spliceai["spliceai_pred_dp_dl"] = {
                 "score": csq_record[prediction_index_map["spliceai_pred_dp_dl"]],

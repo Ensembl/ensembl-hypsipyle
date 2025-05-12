@@ -35,7 +35,7 @@
                     "tool": "SpliceAI",
                     "version": "1.3.1",
                     "qualifier": {
-                      "result_type": "Delta position for acceptor gain",
+                      "result_type": "Delta position for donor gain",
                       "modes": [
                         "masked scores"
                       ]
@@ -162,6 +162,6 @@
     }
   },
   "extensions": {
-    "execution_time_in_seconds": 0.41
+    "execution_time_in_seconds": 1.06
   }
 }

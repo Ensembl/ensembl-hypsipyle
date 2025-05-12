@@ -35,336 +35,132 @@
                     "definition": ""
                   },
                   "analysis_method": {
-                    "tool": "SIFT"
+                    "tool": "SIFT",
+                    "version": "6.2.1",
+                    "qualifier": {
+                      "result_type": "SIFT score",
+                      "modes": []
+                    }
                   }
                 },
                 {
-                  "score": 0.157,
+                  "score": -5,
                   "result": null,
-                  "classification": {
-                    "label": "benign",
-                    "definition": ""
-                  },
+                  "classification": null,
                   "analysis_method": {
-                    "tool": "PolyPhen"
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for donor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
                   }
-                }
-              ],
-              "cdna_location": {
-                "start": 9305,
-                "end": 9305,
-                "length": 1,
-                "ref_sequence": "C",
-                "alt_sequence": "A"
-              },
-              "cds_location": {
-                "start": 9106,
-                "end": 9106,
-                "length": 1,
-                "ref_sequence": "Caa",
-                "alt_sequence": "Aaa"
-              },
-              "protein_location": {
-                "start": 3036,
-                "end": 3036,
-                "length": 1,
-                "ref_sequence": "Q",
-                "alt_sequence": "K"
-              }
-            },
-            {
-              "allele_name": "A",
-              "stable_id": "ENST00000470094.2",
-              "feature_type": {
-                "value": "Transcript"
-              },
-              "consequences": [
-                {
-                  "value": "missense_variant"
                 },
                 {
-                  "value": "NMD_transcript_variant"
-                }
-              ],
-              "gene_symbol": "BRCA2",
-              "gene_stable_id": "ENSG00000139618",
-              "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": null,
-              "prediction_results": [],
-              "cdna_location": {
-                "start": 9305,
-                "end": 9305,
-                "length": 1,
-                "ref_sequence": "C",
-                "alt_sequence": "A"
-              },
-              "cds_location": {
-                "start": 9106,
-                "end": 9106,
-                "length": 1,
-                "ref_sequence": "Caa",
-                "alt_sequence": "Aaa"
-              },
-              "protein_location": {
-                "start": 3036,
-                "end": 3036,
-                "length": 1,
-                "ref_sequence": "Q",
-                "alt_sequence": "K"
-              }
-            },
-            {
-              "allele_name": "A",
-              "stable_id": "ENST00000528762.2",
-              "feature_type": {
-                "value": "Transcript"
-              },
-              "consequences": [
-                {
-                  "value": "3_prime_UTR_variant"
+                  "score": 11,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for donor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
                 },
-                {
-                  "value": "NMD_transcript_variant"
-                }
-              ],
-              "gene_symbol": "BRCA2",
-              "gene_stable_id": "ENSG00000139618",
-              "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": null,
-              "prediction_results": [],
-              "cdna_location": {
-                "start": 9369,
-                "end": 9369,
-                "length": 1,
-                "ref_sequence": "-",
-                "alt_sequence": "A"
-              },
-              "cds_location": null,
-              "protein_location": null
-            },
-            {
-              "allele_name": "A",
-              "stable_id": "ENST00000530893.7",
-              "feature_type": {
-                "value": "Transcript"
-              },
-              "consequences": [
-                {
-                  "value": "missense_variant"
-                }
-              ],
-              "gene_symbol": "BRCA2",
-              "gene_stable_id": "ENSG00000139618",
-              "transcript_biotype": "protein_coding",
-              "protein_stable_id": null,
-              "prediction_results": [],
-              "cdna_location": {
-                "start": 9304,
-                "end": 9304,
-                "length": 1,
-                "ref_sequence": "C",
-                "alt_sequence": "A"
-              },
-              "cds_location": {
-                "start": 8737,
-                "end": 8737,
-                "length": 1,
-                "ref_sequence": "Caa",
-                "alt_sequence": "Aaa"
-              },
-              "protein_location": {
-                "start": 2913,
-                "end": 2913,
-                "length": 1,
-                "ref_sequence": "Q",
-                "alt_sequence": "K"
-              }
-            },
-            {
-              "allele_name": "A",
-              "stable_id": "ENST00000544455.6",
-              "feature_type": {
-                "value": "Transcript"
-              },
-              "consequences": [
-                {
-                  "value": "missense_variant"
-                }
-              ],
-              "gene_symbol": "BRCA2",
-              "gene_stable_id": "ENSG00000139618",
-              "transcript_biotype": "protein_coding",
-              "protein_stable_id": null,
-              "prediction_results": [
                 {
                   "score": 0,
                   "result": null,
-                  "classification": {
-                    "label": "deleterious",
-                    "definition": ""
-                  },
+                  "classification": null,
                   "analysis_method": {
-                    "tool": "SIFT"
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for donor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
                   }
                 },
                 {
-                  "score": 0.157,
+                  "score": 0.28,
                   "result": null,
-                  "classification": {
-                    "label": "benign",
-                    "definition": ""
-                  },
+                  "classification": null,
                   "analysis_method": {
-                    "tool": "PolyPhen"
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for donor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
                   }
-                }
-              ],
-              "cdna_location": {
-                "start": 9205,
-                "end": 9205,
-                "length": 1,
-                "ref_sequence": "C",
-                "alt_sequence": "A"
-              },
-              "cds_location": {
-                "start": 9106,
-                "end": 9106,
-                "length": 1,
-                "ref_sequence": "Caa",
-                "alt_sequence": "Aaa"
-              },
-              "protein_location": {
-                "start": 3036,
-                "end": 3036,
-                "length": 1,
-                "ref_sequence": "Q",
-                "alt_sequence": "K"
-              }
-            },
-            {
-              "allele_name": "A",
-              "stable_id": "ENST00000614259.2",
-              "feature_type": {
-                "value": "Transcript"
-              },
-              "consequences": [
-                {
-                  "value": "3_prime_UTR_variant"
                 },
                 {
-                  "value": "NMD_transcript_variant"
-                }
-              ],
-              "gene_symbol": "BRCA2",
-              "gene_stable_id": "ENSG00000139618",
-              "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": null,
-              "prediction_results": [],
-              "cdna_location": {
-                "start": 9114,
-                "end": 9114,
-                "length": 1,
-                "ref_sequence": "-",
-                "alt_sequence": "A"
-              },
-              "cds_location": null,
-              "protein_location": null
-            },
-            {
-              "allele_name": "A",
-              "stable_id": "ENST00000665585.2",
-              "feature_type": {
-                "value": "Transcript"
-              },
-              "consequences": [
-                {
-                  "value": "3_prime_UTR_variant"
+                  "score": 11,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for acceptor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
                 },
                 {
-                  "value": "NMD_transcript_variant"
-                }
-              ],
-              "gene_symbol": "BRCA2",
-              "gene_stable_id": "ENSG00000139618",
-              "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": null,
-              "prediction_results": [],
-              "cdna_location": {
-                "start": 9618,
-                "end": 9618,
-                "length": 1,
-                "ref_sequence": "-",
-                "alt_sequence": "A"
-              },
-              "cds_location": null,
-              "protein_location": null
-            },
-            {
-              "allele_name": "A",
-              "stable_id": "ENST00000666593.2",
-              "feature_type": {
-                "value": "Transcript"
-              },
-              "consequences": [
-                {
-                  "value": "missense_variant"
+                  "score": 12,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for acceptor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
                 },
-                {
-                  "value": "NMD_transcript_variant"
-                }
-              ],
-              "gene_symbol": "BRCA2",
-              "gene_stable_id": "ENSG00000139618",
-              "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": null,
-              "prediction_results": [],
-              "cdna_location": {
-                "start": 9305,
-                "end": 9305,
-                "length": 1,
-                "ref_sequence": "C",
-                "alt_sequence": "A"
-              },
-              "cds_location": {
-                "start": 9106,
-                "end": 9106,
-                "length": 1,
-                "ref_sequence": "Caa",
-                "alt_sequence": "Aaa"
-              },
-              "protein_location": {
-                "start": 3036,
-                "end": 3036,
-                "length": 1,
-                "ref_sequence": "Q",
-                "alt_sequence": "K"
-              }
-            },
-            {
-              "allele_name": "A",
-              "stable_id": "ENST00000680887.1",
-              "feature_type": {
-                "value": "Transcript"
-              },
-              "consequences": [
-                {
-                  "value": "missense_variant"
-                }
-              ],
-              "gene_symbol": "BRCA2",
-              "gene_stable_id": "ENSG00000139618",
-              "transcript_biotype": "protein_coding",
-              "protein_stable_id": null,
-              "prediction_results": [
                 {
                   "score": 0,
                   "result": null,
-                  "classification": {
-                    "label": "deleterious",
-                    "definition": ""
-                  },
+                  "classification": null,
                   "analysis_method": {
-                    "tool": "SIFT"
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for acceptor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 0,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for acceptor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
                   }
                 },
                 {
@@ -375,13 +171,20 @@
                     "definition": ""
                   },
                   "analysis_method": {
-                    "tool": "PolyPhen"
+                    "tool": "PolyPhen",
+                    "version": "2.2.3",
+                    "qualifier": {
+                      "result_type": "PolyPhen score",
+                      "modes": [
+                        "HumVar"
+                      ]
+                    }
                   }
                 }
               ],
               "cdna_location": {
-                "start": 9231,
-                "end": 9231,
+                "start": 9305,
+                "end": 9305,
                 "length": 1,
                 "ref_sequence": "C",
                 "alt_sequence": "A"
@@ -416,7 +219,162 @@
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "protein_coding",
               "protein_stable_id": null,
-              "prediction_results": [],
+              "prediction_results": [
+                {
+                  "score": 0,
+                  "result": null,
+                  "classification": {
+                    "label": "deleterious",
+                    "definition": ""
+                  },
+                  "analysis_method": {
+                    "tool": "SIFT",
+                    "version": "6.2.1",
+                    "qualifier": {
+                      "result_type": "SIFT score",
+                      "modes": []
+                    }
+                  }
+                },
+                {
+                  "score": -5,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for donor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 11,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for donor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 0,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for donor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 0.28,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for donor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 11,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for acceptor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 12,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for acceptor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 0,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for acceptor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 0,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for acceptor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 0.216,
+                  "result": null,
+                  "classification": {
+                    "label": "benign",
+                    "definition": ""
+                  },
+                  "analysis_method": {
+                    "tool": "PolyPhen",
+                    "version": "2.2.3",
+                    "qualifier": {
+                      "result_type": "PolyPhen score",
+                      "modes": [
+                        "HumVar"
+                      ]
+                    }
+                  }
+                }
+              ],
               "cdna_location": {
                 "start": 9254,
                 "end": 9254,
@@ -441,29 +399,178 @@
             },
             {
               "allele_name": "A",
-              "stable_id": "ENST00000700203.1",
+              "stable_id": "ENST00000713678.1",
               "feature_type": {
                 "value": "Transcript"
               },
               "consequences": [
                 {
-                  "value": "non_coding_transcript_exon_variant"
+                  "value": "missense_variant"
                 }
               ],
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
-              "transcript_biotype": "retained_intron",
+              "transcript_biotype": "protein_coding",
               "protein_stable_id": null,
-              "prediction_results": [],
+              "prediction_results": [
+                {
+                  "score": 0,
+                  "result": null,
+                  "classification": {
+                    "label": "deleterious",
+                    "definition": ""
+                  },
+                  "analysis_method": {
+                    "tool": "SIFT",
+                    "version": "6.2.1",
+                    "qualifier": {
+                      "result_type": "SIFT score",
+                      "modes": []
+                    }
+                  }
+                },
+                {
+                  "score": -5,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for donor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 11,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for donor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 0,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for donor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 0.28,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for donor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 11,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for acceptor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 12,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for acceptor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 0,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for acceptor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 0,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for acceptor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                }
+              ],
               "cdna_location": {
-                "start": 1233,
-                "end": 1233,
+                "start": 9317,
+                "end": 9317,
                 "length": 1,
-                "ref_sequence": "-",
+                "ref_sequence": "C",
                 "alt_sequence": "A"
               },
-              "cds_location": null,
-              "protein_location": null
+              "cds_location": {
+                "start": 9106,
+                "end": 9106,
+                "length": 1,
+                "ref_sequence": "Caa",
+                "alt_sequence": "Aaa"
+              },
+              "protein_location": {
+                "start": 3036,
+                "end": 3036,
+                "length": 1,
+                "ref_sequence": "Q",
+                "alt_sequence": "K"
+              }
             }
           ]
         },
@@ -494,336 +601,132 @@
                     "definition": ""
                   },
                   "analysis_method": {
-                    "tool": "SIFT"
+                    "tool": "SIFT",
+                    "version": "6.2.1",
+                    "qualifier": {
+                      "result_type": "SIFT score",
+                      "modes": []
+                    }
                   }
                 },
                 {
-                  "score": 0.343,
+                  "score": -5,
                   "result": null,
-                  "classification": {
-                    "label": "benign",
-                    "definition": ""
-                  },
+                  "classification": null,
                   "analysis_method": {
-                    "tool": "PolyPhen"
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for donor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
                   }
-                }
-              ],
-              "cdna_location": {
-                "start": 9305,
-                "end": 9305,
-                "length": 1,
-                "ref_sequence": "C",
-                "alt_sequence": "G"
-              },
-              "cds_location": {
-                "start": 9106,
-                "end": 9106,
-                "length": 1,
-                "ref_sequence": "Caa",
-                "alt_sequence": "Gaa"
-              },
-              "protein_location": {
-                "start": 3036,
-                "end": 3036,
-                "length": 1,
-                "ref_sequence": "Q",
-                "alt_sequence": "E"
-              }
-            },
-            {
-              "allele_name": "G",
-              "stable_id": "ENST00000470094.2",
-              "feature_type": {
-                "value": "Transcript"
-              },
-              "consequences": [
-                {
-                  "value": "missense_variant"
                 },
                 {
-                  "value": "NMD_transcript_variant"
-                }
-              ],
-              "gene_symbol": "BRCA2",
-              "gene_stable_id": "ENSG00000139618",
-              "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": null,
-              "prediction_results": [],
-              "cdna_location": {
-                "start": 9305,
-                "end": 9305,
-                "length": 1,
-                "ref_sequence": "C",
-                "alt_sequence": "G"
-              },
-              "cds_location": {
-                "start": 9106,
-                "end": 9106,
-                "length": 1,
-                "ref_sequence": "Caa",
-                "alt_sequence": "Gaa"
-              },
-              "protein_location": {
-                "start": 3036,
-                "end": 3036,
-                "length": 1,
-                "ref_sequence": "Q",
-                "alt_sequence": "E"
-              }
-            },
-            {
-              "allele_name": "G",
-              "stable_id": "ENST00000528762.2",
-              "feature_type": {
-                "value": "Transcript"
-              },
-              "consequences": [
-                {
-                  "value": "3_prime_UTR_variant"
+                  "score": 11,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for donor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
                 },
                 {
-                  "value": "NMD_transcript_variant"
-                }
-              ],
-              "gene_symbol": "BRCA2",
-              "gene_stable_id": "ENSG00000139618",
-              "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": null,
-              "prediction_results": [],
-              "cdna_location": {
-                "start": 9369,
-                "end": 9369,
-                "length": 1,
-                "ref_sequence": "-",
-                "alt_sequence": "G"
-              },
-              "cds_location": null,
-              "protein_location": null
-            },
-            {
-              "allele_name": "G",
-              "stable_id": "ENST00000530893.7",
-              "feature_type": {
-                "value": "Transcript"
-              },
-              "consequences": [
+                  "score": 0.12,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for donor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
                 {
-                  "value": "missense_variant"
-                }
-              ],
-              "gene_symbol": "BRCA2",
-              "gene_stable_id": "ENSG00000139618",
-              "transcript_biotype": "protein_coding",
-              "protein_stable_id": null,
-              "prediction_results": [],
-              "cdna_location": {
-                "start": 9304,
-                "end": 9304,
-                "length": 1,
-                "ref_sequence": "C",
-                "alt_sequence": "G"
-              },
-              "cds_location": {
-                "start": 8737,
-                "end": 8737,
-                "length": 1,
-                "ref_sequence": "Caa",
-                "alt_sequence": "Gaa"
-              },
-              "protein_location": {
-                "start": 2913,
-                "end": 2913,
-                "length": 1,
-                "ref_sequence": "Q",
-                "alt_sequence": "E"
-              }
-            },
-            {
-              "allele_name": "G",
-              "stable_id": "ENST00000544455.6",
-              "feature_type": {
-                "value": "Transcript"
-              },
-              "consequences": [
+                  "score": 0.06,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for donor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
                 {
-                  "value": "missense_variant"
-                }
-              ],
-              "gene_symbol": "BRCA2",
-              "gene_stable_id": "ENSG00000139618",
-              "transcript_biotype": "protein_coding",
-              "protein_stable_id": null,
-              "prediction_results": [
+                  "score": 11,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for acceptor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": -20,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for acceptor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
                 {
                   "score": 0,
                   "result": null,
-                  "classification": {
-                    "label": "deleterious",
-                    "definition": ""
-                  },
+                  "classification": null,
                   "analysis_method": {
-                    "tool": "SIFT"
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for acceptor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
                   }
                 },
-                {
-                  "score": 0.343,
-                  "result": null,
-                  "classification": {
-                    "label": "benign",
-                    "definition": ""
-                  },
-                  "analysis_method": {
-                    "tool": "PolyPhen"
-                  }
-                }
-              ],
-              "cdna_location": {
-                "start": 9205,
-                "end": 9205,
-                "length": 1,
-                "ref_sequence": "C",
-                "alt_sequence": "G"
-              },
-              "cds_location": {
-                "start": 9106,
-                "end": 9106,
-                "length": 1,
-                "ref_sequence": "Caa",
-                "alt_sequence": "Gaa"
-              },
-              "protein_location": {
-                "start": 3036,
-                "end": 3036,
-                "length": 1,
-                "ref_sequence": "Q",
-                "alt_sequence": "E"
-              }
-            },
-            {
-              "allele_name": "G",
-              "stable_id": "ENST00000614259.2",
-              "feature_type": {
-                "value": "Transcript"
-              },
-              "consequences": [
-                {
-                  "value": "3_prime_UTR_variant"
-                },
-                {
-                  "value": "NMD_transcript_variant"
-                }
-              ],
-              "gene_symbol": "BRCA2",
-              "gene_stable_id": "ENSG00000139618",
-              "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": null,
-              "prediction_results": [],
-              "cdna_location": {
-                "start": 9114,
-                "end": 9114,
-                "length": 1,
-                "ref_sequence": "-",
-                "alt_sequence": "G"
-              },
-              "cds_location": null,
-              "protein_location": null
-            },
-            {
-              "allele_name": "G",
-              "stable_id": "ENST00000665585.2",
-              "feature_type": {
-                "value": "Transcript"
-              },
-              "consequences": [
-                {
-                  "value": "3_prime_UTR_variant"
-                },
-                {
-                  "value": "NMD_transcript_variant"
-                }
-              ],
-              "gene_symbol": "BRCA2",
-              "gene_stable_id": "ENSG00000139618",
-              "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": null,
-              "prediction_results": [],
-              "cdna_location": {
-                "start": 9618,
-                "end": 9618,
-                "length": 1,
-                "ref_sequence": "-",
-                "alt_sequence": "G"
-              },
-              "cds_location": null,
-              "protein_location": null
-            },
-            {
-              "allele_name": "G",
-              "stable_id": "ENST00000666593.2",
-              "feature_type": {
-                "value": "Transcript"
-              },
-              "consequences": [
-                {
-                  "value": "missense_variant"
-                },
-                {
-                  "value": "NMD_transcript_variant"
-                }
-              ],
-              "gene_symbol": "BRCA2",
-              "gene_stable_id": "ENSG00000139618",
-              "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": null,
-              "prediction_results": [],
-              "cdna_location": {
-                "start": 9305,
-                "end": 9305,
-                "length": 1,
-                "ref_sequence": "C",
-                "alt_sequence": "G"
-              },
-              "cds_location": {
-                "start": 9106,
-                "end": 9106,
-                "length": 1,
-                "ref_sequence": "Caa",
-                "alt_sequence": "Gaa"
-              },
-              "protein_location": {
-                "start": 3036,
-                "end": 3036,
-                "length": 1,
-                "ref_sequence": "Q",
-                "alt_sequence": "E"
-              }
-            },
-            {
-              "allele_name": "G",
-              "stable_id": "ENST00000680887.1",
-              "feature_type": {
-                "value": "Transcript"
-              },
-              "consequences": [
-                {
-                  "value": "missense_variant"
-                }
-              ],
-              "gene_symbol": "BRCA2",
-              "gene_stable_id": "ENSG00000139618",
-              "transcript_biotype": "protein_coding",
-              "protein_stable_id": null,
-              "prediction_results": [
                 {
                   "score": 0,
                   "result": null,
-                  "classification": {
-                    "label": "deleterious",
-                    "definition": ""
-                  },
+                  "classification": null,
                   "analysis_method": {
-                    "tool": "SIFT"
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for acceptor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
                   }
                 },
                 {
@@ -834,13 +737,20 @@
                     "definition": ""
                   },
                   "analysis_method": {
-                    "tool": "PolyPhen"
+                    "tool": "PolyPhen",
+                    "version": "2.2.3",
+                    "qualifier": {
+                      "result_type": "PolyPhen score",
+                      "modes": [
+                        "HumVar"
+                      ]
+                    }
                   }
                 }
               ],
               "cdna_location": {
-                "start": 9231,
-                "end": 9231,
+                "start": 9305,
+                "end": 9305,
                 "length": 1,
                 "ref_sequence": "C",
                 "alt_sequence": "G"
@@ -875,7 +785,162 @@
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "protein_coding",
               "protein_stable_id": null,
-              "prediction_results": [],
+              "prediction_results": [
+                {
+                  "score": 0,
+                  "result": null,
+                  "classification": {
+                    "label": "deleterious",
+                    "definition": ""
+                  },
+                  "analysis_method": {
+                    "tool": "SIFT",
+                    "version": "6.2.1",
+                    "qualifier": {
+                      "result_type": "SIFT score",
+                      "modes": []
+                    }
+                  }
+                },
+                {
+                  "score": -5,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for donor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 11,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for donor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 0.12,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for donor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 0.06,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for donor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 11,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for acceptor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": -20,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for acceptor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 0,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for acceptor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 0,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for acceptor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 0.343,
+                  "result": null,
+                  "classification": {
+                    "label": "benign",
+                    "definition": ""
+                  },
+                  "analysis_method": {
+                    "tool": "PolyPhen",
+                    "version": "2.2.3",
+                    "qualifier": {
+                      "result_type": "PolyPhen score",
+                      "modes": [
+                        "HumVar"
+                      ]
+                    }
+                  }
+                }
+              ],
               "cdna_location": {
                 "start": 9254,
                 "end": 9254,
@@ -900,29 +965,178 @@
             },
             {
               "allele_name": "G",
-              "stable_id": "ENST00000700203.1",
+              "stable_id": "ENST00000713678.1",
               "feature_type": {
                 "value": "Transcript"
               },
               "consequences": [
                 {
-                  "value": "non_coding_transcript_exon_variant"
+                  "value": "missense_variant"
                 }
               ],
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
-              "transcript_biotype": "retained_intron",
+              "transcript_biotype": "protein_coding",
               "protein_stable_id": null,
-              "prediction_results": [],
+              "prediction_results": [
+                {
+                  "score": 0,
+                  "result": null,
+                  "classification": {
+                    "label": "deleterious",
+                    "definition": ""
+                  },
+                  "analysis_method": {
+                    "tool": "SIFT",
+                    "version": "6.2.1",
+                    "qualifier": {
+                      "result_type": "SIFT score",
+                      "modes": []
+                    }
+                  }
+                },
+                {
+                  "score": -5,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for donor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 11,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for donor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 0.12,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for donor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 0.06,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for donor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 11,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for acceptor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": -20,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for acceptor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 0,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for acceptor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 0,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for acceptor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                }
+              ],
               "cdna_location": {
-                "start": 1233,
-                "end": 1233,
+                "start": 9317,
+                "end": 9317,
                 "length": 1,
-                "ref_sequence": "-",
+                "ref_sequence": "C",
                 "alt_sequence": "G"
               },
-              "cds_location": null,
-              "protein_location": null
+              "cds_location": {
+                "start": 9106,
+                "end": 9106,
+                "length": 1,
+                "ref_sequence": "Caa",
+                "alt_sequence": "Gaa"
+              },
+              "protein_location": {
+                "start": 3036,
+                "end": 3036,
+                "length": 1,
+                "ref_sequence": "Q",
+                "alt_sequence": "E"
+              }
             }
           ]
         },
@@ -944,293 +1158,131 @@
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "protein_coding",
               "protein_stable_id": null,
-              "prediction_results": [],
+              "prediction_results": [
+                {
+                  "score": -5,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for donor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 11,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for donor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 0,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for donor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 0.32,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for donor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 11,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for acceptor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 12,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for acceptor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 0,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for acceptor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 0,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for acceptor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                }
+              ],
               "cdna_location": {
                 "start": 9305,
                 "end": 9305,
-                "length": 1,
-                "ref_sequence": "C",
-                "alt_sequence": "T"
-              },
-              "cds_location": {
-                "start": 9106,
-                "end": 9106,
-                "length": 1,
-                "ref_sequence": "Caa",
-                "alt_sequence": "Taa"
-              },
-              "protein_location": {
-                "start": 3036,
-                "end": 3036,
-                "length": 1,
-                "ref_sequence": "Q",
-                "alt_sequence": "*"
-              }
-            },
-            {
-              "allele_name": "T",
-              "stable_id": "ENST00000470094.2",
-              "feature_type": {
-                "value": "Transcript"
-              },
-              "consequences": [
-                {
-                  "value": "stop_gained"
-                },
-                {
-                  "value": "NMD_transcript_variant"
-                }
-              ],
-              "gene_symbol": "BRCA2",
-              "gene_stable_id": "ENSG00000139618",
-              "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": null,
-              "prediction_results": [],
-              "cdna_location": {
-                "start": 9305,
-                "end": 9305,
-                "length": 1,
-                "ref_sequence": "C",
-                "alt_sequence": "T"
-              },
-              "cds_location": {
-                "start": 9106,
-                "end": 9106,
-                "length": 1,
-                "ref_sequence": "Caa",
-                "alt_sequence": "Taa"
-              },
-              "protein_location": {
-                "start": 3036,
-                "end": 3036,
-                "length": 1,
-                "ref_sequence": "Q",
-                "alt_sequence": "*"
-              }
-            },
-            {
-              "allele_name": "T",
-              "stable_id": "ENST00000528762.2",
-              "feature_type": {
-                "value": "Transcript"
-              },
-              "consequences": [
-                {
-                  "value": "3_prime_UTR_variant"
-                },
-                {
-                  "value": "NMD_transcript_variant"
-                }
-              ],
-              "gene_symbol": "BRCA2",
-              "gene_stable_id": "ENSG00000139618",
-              "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": null,
-              "prediction_results": [],
-              "cdna_location": {
-                "start": 9369,
-                "end": 9369,
-                "length": 1,
-                "ref_sequence": "-",
-                "alt_sequence": "T"
-              },
-              "cds_location": null,
-              "protein_location": null
-            },
-            {
-              "allele_name": "T",
-              "stable_id": "ENST00000530893.7",
-              "feature_type": {
-                "value": "Transcript"
-              },
-              "consequences": [
-                {
-                  "value": "stop_gained"
-                }
-              ],
-              "gene_symbol": "BRCA2",
-              "gene_stable_id": "ENSG00000139618",
-              "transcript_biotype": "protein_coding",
-              "protein_stable_id": null,
-              "prediction_results": [],
-              "cdna_location": {
-                "start": 9304,
-                "end": 9304,
-                "length": 1,
-                "ref_sequence": "C",
-                "alt_sequence": "T"
-              },
-              "cds_location": {
-                "start": 8737,
-                "end": 8737,
-                "length": 1,
-                "ref_sequence": "Caa",
-                "alt_sequence": "Taa"
-              },
-              "protein_location": {
-                "start": 2913,
-                "end": 2913,
-                "length": 1,
-                "ref_sequence": "Q",
-                "alt_sequence": "*"
-              }
-            },
-            {
-              "allele_name": "T",
-              "stable_id": "ENST00000544455.6",
-              "feature_type": {
-                "value": "Transcript"
-              },
-              "consequences": [
-                {
-                  "value": "stop_gained"
-                }
-              ],
-              "gene_symbol": "BRCA2",
-              "gene_stable_id": "ENSG00000139618",
-              "transcript_biotype": "protein_coding",
-              "protein_stable_id": null,
-              "prediction_results": [],
-              "cdna_location": {
-                "start": 9205,
-                "end": 9205,
-                "length": 1,
-                "ref_sequence": "C",
-                "alt_sequence": "T"
-              },
-              "cds_location": {
-                "start": 9106,
-                "end": 9106,
-                "length": 1,
-                "ref_sequence": "Caa",
-                "alt_sequence": "Taa"
-              },
-              "protein_location": {
-                "start": 3036,
-                "end": 3036,
-                "length": 1,
-                "ref_sequence": "Q",
-                "alt_sequence": "*"
-              }
-            },
-            {
-              "allele_name": "T",
-              "stable_id": "ENST00000614259.2",
-              "feature_type": {
-                "value": "Transcript"
-              },
-              "consequences": [
-                {
-                  "value": "3_prime_UTR_variant"
-                },
-                {
-                  "value": "NMD_transcript_variant"
-                }
-              ],
-              "gene_symbol": "BRCA2",
-              "gene_stable_id": "ENSG00000139618",
-              "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": null,
-              "prediction_results": [],
-              "cdna_location": {
-                "start": 9114,
-                "end": 9114,
-                "length": 1,
-                "ref_sequence": "-",
-                "alt_sequence": "T"
-              },
-              "cds_location": null,
-              "protein_location": null
-            },
-            {
-              "allele_name": "T",
-              "stable_id": "ENST00000665585.2",
-              "feature_type": {
-                "value": "Transcript"
-              },
-              "consequences": [
-                {
-                  "value": "3_prime_UTR_variant"
-                },
-                {
-                  "value": "NMD_transcript_variant"
-                }
-              ],
-              "gene_symbol": "BRCA2",
-              "gene_stable_id": "ENSG00000139618",
-              "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": null,
-              "prediction_results": [],
-              "cdna_location": {
-                "start": 9618,
-                "end": 9618,
-                "length": 1,
-                "ref_sequence": "-",
-                "alt_sequence": "T"
-              },
-              "cds_location": null,
-              "protein_location": null
-            },
-            {
-              "allele_name": "T",
-              "stable_id": "ENST00000666593.2",
-              "feature_type": {
-                "value": "Transcript"
-              },
-              "consequences": [
-                {
-                  "value": "stop_gained"
-                },
-                {
-                  "value": "NMD_transcript_variant"
-                }
-              ],
-              "gene_symbol": "BRCA2",
-              "gene_stable_id": "ENSG00000139618",
-              "transcript_biotype": "nonsense_mediated_decay",
-              "protein_stable_id": null,
-              "prediction_results": [],
-              "cdna_location": {
-                "start": 9305,
-                "end": 9305,
-                "length": 1,
-                "ref_sequence": "C",
-                "alt_sequence": "T"
-              },
-              "cds_location": {
-                "start": 9106,
-                "end": 9106,
-                "length": 1,
-                "ref_sequence": "Caa",
-                "alt_sequence": "Taa"
-              },
-              "protein_location": {
-                "start": 3036,
-                "end": 3036,
-                "length": 1,
-                "ref_sequence": "Q",
-                "alt_sequence": "*"
-              }
-            },
-            {
-              "allele_name": "T",
-              "stable_id": "ENST00000680887.1",
-              "feature_type": {
-                "value": "Transcript"
-              },
-              "consequences": [
-                {
-                  "value": "stop_gained"
-                }
-              ],
-              "gene_symbol": "BRCA2",
-              "gene_stable_id": "ENSG00000139618",
-              "transcript_biotype": "protein_coding",
-              "protein_stable_id": null,
-              "prediction_results": [],
-              "cdna_location": {
-                "start": 9231,
-                "end": 9231,
                 "length": 1,
                 "ref_sequence": "C",
                 "alt_sequence": "T"
@@ -1265,7 +1317,128 @@
               "gene_stable_id": "ENSG00000139618",
               "transcript_biotype": "protein_coding",
               "protein_stable_id": null,
-              "prediction_results": [],
+              "prediction_results": [
+                {
+                  "score": -5,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for donor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 11,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for donor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 0,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for donor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 0.32,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for donor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 11,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for acceptor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 12,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for acceptor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 0,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for acceptor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 0,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for acceptor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                }
+              ],
               "cdna_location": {
                 "start": 9254,
                 "end": 9254,
@@ -1290,29 +1463,162 @@
             },
             {
               "allele_name": "T",
-              "stable_id": "ENST00000700203.1",
+              "stable_id": "ENST00000713678.1",
               "feature_type": {
                 "value": "Transcript"
               },
               "consequences": [
                 {
-                  "value": "non_coding_transcript_exon_variant"
+                  "value": "stop_gained"
                 }
               ],
               "gene_symbol": "BRCA2",
               "gene_stable_id": "ENSG00000139618",
-              "transcript_biotype": "retained_intron",
+              "transcript_biotype": "protein_coding",
               "protein_stable_id": null,
-              "prediction_results": [],
+              "prediction_results": [
+                {
+                  "score": -5,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for donor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 11,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for donor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 0,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for donor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 0.32,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for donor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 11,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for acceptor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 12,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta position for acceptor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 0,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for acceptor gain",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "score": 0,
+                  "result": null,
+                  "classification": null,
+                  "analysis_method": {
+                    "tool": "SpliceAI",
+                    "version": "1.3.1",
+                    "qualifier": {
+                      "result_type": "Delta score for acceptor loss",
+                      "modes": [
+                        "masked scores"
+                      ]
+                    }
+                  }
+                }
+              ],
               "cdna_location": {
-                "start": 1233,
-                "end": 1233,
+                "start": 9317,
+                "end": 9317,
                 "length": 1,
-                "ref_sequence": "-",
+                "ref_sequence": "C",
                 "alt_sequence": "T"
               },
-              "cds_location": null,
-              "protein_location": null
+              "cds_location": {
+                "start": 9106,
+                "end": 9106,
+                "length": 1,
+                "ref_sequence": "Caa",
+                "alt_sequence": "Taa"
+              },
+              "protein_location": {
+                "start": 3036,
+                "end": 3036,
+                "length": 1,
+                "ref_sequence": "Q",
+                "alt_sequence": "*"
+              }
             }
           ]
         },
@@ -1324,6 +1630,6 @@
     }
   },
   "extensions": {
-    "execution_time_in_seconds": 0.12
+    "execution_time_in_seconds": 3.08
   }
 }

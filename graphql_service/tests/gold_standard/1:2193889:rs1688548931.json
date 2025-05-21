@@ -1,0 +1,585 @@
+{
+    "data": {
+        "variant": {
+            "name": "rs1688548931",
+            "alternative_names": [],
+            "primary_source": {
+                "__typename": "ExternalReference"
+            },
+            "type": "Variant",
+            "allele_type": {
+                "__typename": "OntologyTermMetadata"
+            },
+            "slice": {
+                "__typename": "Slice"
+            },
+            "alleles": [
+                {
+                    "name": "1:2193889:G:GCTCCGGGCCGCAC",
+                    "allele_sequence": "GCTCCGGGCCGCAC",
+                    "reference_sequence": "G",
+                    "alternative_names": [],
+                    "type": "VariantAllele",
+                    "allele_type": {
+                        "__typename": "OntologyTermMetadata"
+                    },
+                    "slice": {
+                        "__typename": "Slice"
+                    },
+                    "phenotype_assertions": [],
+                    "prediction_results": [],
+                    "population_frequencies": [],
+                    "predicted_molecular_consequences": [
+                        {
+                            "allele_name": "CTCCGGGCCGCAC",
+                            "stable_id": "ENST00000378543",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000162585",
+                            "gene_symbol": "FAAP20",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "protein_coding",
+                            "cdna_location": {
+                                "relation": null,
+                                "start": 84,
+                                "end": 85,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "-",
+                                "alt_sequence": "GTGCGGCCCGGAG"
+                            },
+                            "cds_location": {
+                                "relation": null,
+                                "start": 83,
+                                "end": 84,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "agc",
+                                "alt_sequence": "agGTGCGGCCCGGAGc"
+                            },
+                            "protein_location": {
+                                "relation": null,
+                                "start": 28,
+                                "end": 28,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "S",
+                                "alt_sequence": "RCGPEX"
+                            }
+                        },
+                        {
+                            "allele_name": "CTCCGGGCCGCAC",
+                            "stable_id": "ENST00000378546",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000162585",
+                            "gene_symbol": "FAAP20",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "protein_coding",
+                            "cdna_location": {
+                                "relation": null,
+                                "start": 242,
+                                "end": 243,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "-",
+                                "alt_sequence": "GTGCGGCCCGGAG"
+                            },
+                            "cds_location": {
+                                "relation": null,
+                                "start": 219,
+                                "end": 220,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "-",
+                                "alt_sequence": "GTGCGGCCCGGAG"
+                            },
+                            "protein_location": {
+                                "relation": null,
+                                "start": 73,
+                                "end": 74,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "-",
+                                "alt_sequence": "VRPGX"
+                            }
+                        },
+                        {
+                            "allele_name": "CTCCGGGCCGCAC",
+                            "stable_id": "ENST00000400918",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000162585",
+                            "gene_symbol": "FAAP20",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "protein_coding",
+                            "cdna_location": {
+                                "relation": null,
+                                "start": 221,
+                                "end": 222,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "-",
+                                "alt_sequence": "GTGCGGCCCGGAG"
+                            },
+                            "cds_location": {
+                                "relation": null,
+                                "start": 219,
+                                "end": 220,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "-",
+                                "alt_sequence": "GTGCGGCCCGGAG"
+                            },
+                            "protein_location": {
+                                "relation": null,
+                                "start": 73,
+                                "end": 74,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "-",
+                                "alt_sequence": "VRPGX"
+                            }
+                        },
+                        {
+                            "allele_name": "CTCCGGGCCGCAC",
+                            "stable_id": "ENST00000400919",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000162585",
+                            "gene_symbol": "FAAP20",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "protein_coding",
+                            "cdna_location": {
+                                "relation": null,
+                                "start": 109,
+                                "end": 110,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "-",
+                                "alt_sequence": "GTGCGGCCCGGAG"
+                            },
+                            "cds_location": {
+                                "relation": null,
+                                "start": 83,
+                                "end": 84,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "agc",
+                                "alt_sequence": "agGTGCGGCCCGGAGc"
+                            },
+                            "protein_location": {
+                                "relation": null,
+                                "start": 28,
+                                "end": 28,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "S",
+                                "alt_sequence": "RCGPEX"
+                            }
+                        },
+                        {
+                            "allele_name": "CTCCGGGCCGCAC",
+                            "stable_id": "ENST00000401813",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000162585",
+                            "gene_symbol": "FAAP20",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "protein_coding_CDS_not_defined",
+                            "cdna_location": {
+                                "relation": null,
+                                "start": 2058,
+                                "end": 2059,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "-",
+                                "alt_sequence": "CTCCGGGCCGCAC"
+                            },
+                            "cds_location": null,
+                            "protein_location": null
+                        },
+                        {
+                            "allele_name": "CTCCGGGCCGCAC",
+                            "stable_id": "ENST00000414253",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                },
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000162585",
+                            "gene_symbol": "FAAP20",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "nonsense_mediated_decay",
+                            "cdna_location": {
+                                "relation": null,
+                                "start": 245,
+                                "end": 246,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "-",
+                                "alt_sequence": "GTGCGGCCCGGAG"
+                            },
+                            "cds_location": {
+                                "relation": null,
+                                "start": 219,
+                                "end": 220,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "-",
+                                "alt_sequence": "GTGCGGCCCGGAG"
+                            },
+                            "protein_location": {
+                                "relation": null,
+                                "start": 73,
+                                "end": 74,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "-",
+                                "alt_sequence": "VRPGX"
+                            }
+                        },
+                        {
+                            "allele_name": "CTCCGGGCCGCAC",
+                            "stable_id": "ENST00000420515",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000162585",
+                            "gene_symbol": "FAAP20",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "protein_coding",
+                            "cdna_location": {
+                                "relation": null,
+                                "start": 218,
+                                "end": 219,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "-",
+                                "alt_sequence": "GTGCGGCCCGGAG"
+                            },
+                            "cds_location": {
+                                "relation": null,
+                                "start": 219,
+                                "end": 220,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "-",
+                                "alt_sequence": "GTGCGGCCCGGAG"
+                            },
+                            "protein_location": {
+                                "relation": null,
+                                "start": 73,
+                                "end": 74,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "-",
+                                "alt_sequence": "VRPGX"
+                            }
+                        },
+                        {
+                            "allele_name": "CTCCGGGCCGCAC",
+                            "stable_id": "ENST00000428120",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                },
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000162585",
+                            "gene_symbol": "FAAP20",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "nonsense_mediated_decay",
+                            "cdna_location": {
+                                "relation": null,
+                                "start": 211,
+                                "end": 212,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "-",
+                                "alt_sequence": "GTGCGGCCCGGAG"
+                            },
+                            "cds_location": {
+                                "relation": null,
+                                "start": 213,
+                                "end": 214,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "-",
+                                "alt_sequence": "GTGCGGCCCGGAG"
+                            },
+                            "protein_location": {
+                                "relation": null,
+                                "start": 71,
+                                "end": 72,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "-",
+                                "alt_sequence": "VRPGX"
+                            }
+                        },
+                        {
+                            "allele_name": "CTCCGGGCCGCAC",
+                            "stable_id": "ENST00000440825",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                },
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000162585",
+                            "gene_symbol": "FAAP20",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "nonsense_mediated_decay",
+                            "cdna_location": {
+                                "relation": null,
+                                "start": 73,
+                                "end": 74,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "-",
+                                "alt_sequence": "GTGCGGCCCGGAG"
+                            },
+                            "cds_location": {
+                                "relation": null,
+                                "start": 75,
+                                "end": 76,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "-",
+                                "alt_sequence": "GTGCGGCCCGGAG"
+                            },
+                            "protein_location": {
+                                "relation": null,
+                                "start": 25,
+                                "end": 26,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "-",
+                                "alt_sequence": "VRPGX"
+                            }
+                        },
+                        {
+                            "allele_name": "CTCCGGGCCGCAC",
+                            "stable_id": "ENST00000469733",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000162585",
+                            "gene_symbol": "FAAP20",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "protein_coding_CDS_not_defined",
+                            "cdna_location": {
+                                "relation": null,
+                                "start": 979,
+                                "end": 980,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "-",
+                                "alt_sequence": "CTCCGGGCCGCAC"
+                            },
+                            "cds_location": null,
+                            "protein_location": null
+                        },
+                        {
+                            "allele_name": "CTCCGGGCCGCAC",
+                            "stable_id": "ENST00000476803",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000162585",
+                            "gene_symbol": "FAAP20",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "protein_coding_CDS_not_defined",
+                            "cdna_location": {
+                                "relation": null,
+                                "start": 237,
+                                "end": 238,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "-",
+                                "alt_sequence": "CTCCGGGCCGCAC"
+                            },
+                            "cds_location": null,
+                            "protein_location": null
+                        },
+                        {
+                            "allele_name": "CTCCGGGCCGCAC",
+                            "stable_id": "ENST00000487186",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000162585",
+                            "gene_symbol": "FAAP20",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "protein_coding_CDS_not_defined",
+                            "cdna_location": {
+                                "relation": null,
+                                "start": 3091,
+                                "end": 3092,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "-",
+                                "alt_sequence": "CTCCGGGCCGCAC"
+                            },
+                            "cds_location": null,
+                            "protein_location": null
+                        },
+                        {
+                            "allele_name": "CTCCGGGCCGCAC",
+                            "stable_id": "ENST00000497675",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000162585",
+                            "gene_symbol": "FAAP20",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "retained_intron",
+                            "cdna_location": {
+                                "relation": null,
+                                "start": 132,
+                                "end": 133,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "-",
+                                "alt_sequence": "CTCCGGGCCGCAC"
+                            },
+                            "cds_location": null,
+                            "protein_location": null
+                        }
+                    ],
+                    "ensembl_website_display_data": {
+                        "count_transcript_consequences": 13,
+                        "count_overlapped_genes": 1,
+                        "count_regulatory_consequences": 1,
+                        "count_variant_phenotypes": 0,
+                        "count_gene_phenotypes": 0,
+                        "representative_population_allele_frequency": null
+                    }
+                },
+                {
+                    "name": "1:2193889:G:G",
+                    "allele_sequence": "G",
+                    "reference_sequence": "G",
+                    "alternative_names": [],
+                    "type": "VariantAllele",
+                    "allele_type": {
+                        "__typename": "OntologyTermMetadata"
+                    },
+                    "slice": {
+                        "__typename": "Slice"
+                    },
+                    "phenotype_assertions": [],
+                    "prediction_results": [],
+                    "population_frequencies": [],
+                    "predicted_molecular_consequences": [],
+                    "ensembl_website_display_data": {
+                        "count_transcript_consequences": 0,
+                        "count_overlapped_genes": 0,
+                        "count_regulatory_consequences": 0,
+                        "count_variant_phenotypes": 0,
+                        "count_gene_phenotypes": 0,
+                        "representative_population_allele_frequency": null
+                    }
+                }
+            ],
+            "prediction_results": [
+                {
+                    "score": null,
+                    "result": "frameshift_variant",
+                    "classification": null,
+                    "analysis_method": {
+                        "__typename": "AnalysisMethod"
+                    }
+                }
+            ],
+            "ensembl_website_display_data": {
+                "count_citations": 0
+            }
+        }
+    }
+}

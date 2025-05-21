@@ -1,0 +1,172 @@
+{
+    "data": {
+        "variant": {
+            "name": "rs569586139",
+            "alternative_names": [],
+            "primary_source": {
+                "__typename": "ExternalReference"
+            },
+            "type": "Variant",
+            "allele_type": {
+                "__typename": "OntologyTermMetadata"
+            },
+            "slice": {
+                "__typename": "Slice"
+            },
+            "alleles": [
+                {
+                    "name": "19:474690:G:A",
+                    "allele_sequence": "A",
+                    "reference_sequence": "G",
+                    "alternative_names": [],
+                    "type": "VariantAllele",
+                    "allele_type": {
+                        "__typename": "OntologyTermMetadata"
+                    },
+                    "slice": {
+                        "__typename": "Slice"
+                    },
+                    "phenotype_assertions": [],
+                    "prediction_results": [],
+                    "population_frequencies": [],
+                    "predicted_molecular_consequences": [
+                        {
+                            "allele_name": "A",
+                            "stable_id": "ENST00000315489",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000181781",
+                            "gene_symbol": "CIMAP1D",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "protein_coding",
+                            "cdna_location": {
+                                "relation": null,
+                                "start": 294,
+                                "end": 294,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "C",
+                                "alt_sequence": "T"
+                            },
+                            "cds_location": {
+                                "relation": null,
+                                "start": 58,
+                                "end": 58,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "Cga",
+                                "alt_sequence": "Tga"
+                            },
+                            "protein_location": {
+                                "relation": null,
+                                "start": 20,
+                                "end": 20,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "R",
+                                "alt_sequence": "*"
+                            }
+                        },
+                        {
+                            "allele_name": "A",
+                            "stable_id": "ENST00000382696",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000181781",
+                            "gene_symbol": "CIMAP1D",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "protein_coding",
+                            "cdna_location": {
+                                "relation": null,
+                                "start": 191,
+                                "end": 191,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "C",
+                                "alt_sequence": "T"
+                            },
+                            "cds_location": {
+                                "relation": null,
+                                "start": 58,
+                                "end": 58,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "Cga",
+                                "alt_sequence": "Tga"
+                            },
+                            "protein_location": {
+                                "relation": null,
+                                "start": 20,
+                                "end": 20,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "R",
+                                "alt_sequence": "*"
+                            }
+                        }
+                    ],
+                    "ensembl_website_display_data": {
+                        "count_transcript_consequences": 2,
+                        "count_overlapped_genes": 1,
+                        "count_regulatory_consequences": 0,
+                        "count_variant_phenotypes": 0,
+                        "count_gene_phenotypes": 0,
+                        "representative_population_allele_frequency": 1.96892e-05
+                    }
+                },
+                {
+                    "name": "19:474690:G:G",
+                    "allele_sequence": "G",
+                    "reference_sequence": "G",
+                    "alternative_names": [],
+                    "type": "VariantAllele",
+                    "allele_type": {
+                        "__typename": "OntologyTermMetadata"
+                    },
+                    "slice": {
+                        "__typename": "Slice"
+                    },
+                    "phenotype_assertions": [],
+                    "prediction_results": [],
+                    "population_frequencies": [],
+                    "predicted_molecular_consequences": [],
+                    "ensembl_website_display_data": {
+                        "count_transcript_consequences": 0,
+                        "count_overlapped_genes": 0,
+                        "count_regulatory_consequences": 0,
+                        "count_variant_phenotypes": 0,
+                        "count_gene_phenotypes": 0,
+                        "representative_population_allele_frequency": 0.9999803108
+                    }
+                }
+            ],
+            "prediction_results": [
+                {
+                    "score": null,
+                    "result": "stop_gained",
+                    "classification": null,
+                    "analysis_method": {
+                        "__typename": "AnalysisMethod"
+                    }
+                }
+            ],
+            "ensembl_website_display_data": {
+                "count_citations": 0
+            }
+        }
+    }
+}

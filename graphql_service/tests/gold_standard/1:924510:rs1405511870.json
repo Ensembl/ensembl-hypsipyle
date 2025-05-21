@@ -1,0 +1,264 @@
+{
+    "data": {
+        "variant": {
+            "name": "rs1405511870",
+            "alternative_names": [],
+            "primary_source": {
+                "__typename": "ExternalReference"
+            },
+            "type": "Variant",
+            "allele_type": {
+                "__typename": "OntologyTermMetadata"
+            },
+            "slice": {
+                "__typename": "Slice"
+            },
+            "alleles": [
+                {
+                    "name": "1:924510:G:GCGCTGC",
+                    "allele_sequence": "GCGCTGC",
+                    "reference_sequence": "G",
+                    "alternative_names": [],
+                    "type": "VariantAllele",
+                    "allele_type": {
+                        "__typename": "OntologyTermMetadata"
+                    },
+                    "slice": {
+                        "__typename": "Slice"
+                    },
+                    "phenotype_assertions": [],
+                    "prediction_results": [],
+                    "population_frequencies": [],
+                    "predicted_molecular_consequences": [
+                        {
+                            "allele_name": "CGCTGC",
+                            "stable_id": "ENST00000616016",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000187634",
+                            "gene_symbol": "SAMD11",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "protein_coding",
+                            "cdna_location": {
+                                "relation": null,
+                                "start": 588,
+                                "end": 589,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "-",
+                                "alt_sequence": "CGCTGC"
+                            },
+                            "cds_location": {
+                                "relation": null,
+                                "start": 79,
+                                "end": 80,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "gcg",
+                                "alt_sequence": "gCGCTGCcg"
+                            },
+                            "protein_location": {
+                                "relation": null,
+                                "start": 27,
+                                "end": 27,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "A",
+                                "alt_sequence": "ALP"
+                            }
+                        },
+                        {
+                            "allele_name": "CGCTGC",
+                            "stable_id": "ENST00000618323",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000187634",
+                            "gene_symbol": "SAMD11",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "protein_coding",
+                            "cdna_location": {
+                                "relation": null,
+                                "start": 588,
+                                "end": 589,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "-",
+                                "alt_sequence": "CGCTGC"
+                            },
+                            "cds_location": {
+                                "relation": null,
+                                "start": 79,
+                                "end": 80,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "gcg",
+                                "alt_sequence": "gCGCTGCcg"
+                            },
+                            "protein_location": {
+                                "relation": null,
+                                "start": 27,
+                                "end": 27,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "A",
+                                "alt_sequence": "ALP"
+                            }
+                        },
+                        {
+                            "allele_name": "CGCTGC",
+                            "stable_id": "ENST00000756700",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                },
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000223764",
+                            "gene_symbol": "LINC02593",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "lncRNA",
+                            "cdna_location": null,
+                            "cds_location": null,
+                            "protein_location": null
+                        },
+                        {
+                            "allele_name": "CGCTGC",
+                            "stable_id": "ENST00000756701",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                },
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000223764",
+                            "gene_symbol": "LINC02593",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "lncRNA",
+                            "cdna_location": null,
+                            "cds_location": null,
+                            "protein_location": null
+                        },
+                        {
+                            "allele_name": "CGCTGC",
+                            "stable_id": "ENST00000756702",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                },
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000223764",
+                            "gene_symbol": "LINC02593",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "lncRNA",
+                            "cdna_location": null,
+                            "cds_location": null,
+                            "protein_location": null
+                        },
+                        {
+                            "allele_name": "CGCTGC",
+                            "stable_id": "ENST00000756703",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                },
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000223764",
+                            "gene_symbol": "LINC02593",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "lncRNA",
+                            "cdna_location": null,
+                            "cds_location": null,
+                            "protein_location": null
+                        }
+                    ],
+                    "ensembl_website_display_data": {
+                        "count_transcript_consequences": 2,
+                        "count_overlapped_genes": 1,
+                        "count_regulatory_consequences": 1,
+                        "count_variant_phenotypes": 0,
+                        "count_gene_phenotypes": 0,
+                        "representative_population_allele_frequency": 2.00792e-05
+                    }
+                },
+                {
+                    "name": "1:924510:G:G",
+                    "allele_sequence": "G",
+                    "reference_sequence": "G",
+                    "alternative_names": [],
+                    "type": "VariantAllele",
+                    "allele_type": {
+                        "__typename": "OntologyTermMetadata"
+                    },
+                    "slice": {
+                        "__typename": "Slice"
+                    },
+                    "phenotype_assertions": [],
+                    "prediction_results": [],
+                    "population_frequencies": [],
+                    "predicted_molecular_consequences": [],
+                    "ensembl_website_display_data": {
+                        "count_transcript_consequences": 0,
+                        "count_overlapped_genes": 0,
+                        "count_regulatory_consequences": 0,
+                        "count_variant_phenotypes": 0,
+                        "count_gene_phenotypes": 0,
+                        "representative_population_allele_frequency": 0.9999799208
+                    }
+                }
+            ],
+            "prediction_results": [
+                {
+                    "score": null,
+                    "result": "inframe_insertion",
+                    "classification": null,
+                    "analysis_method": {
+                        "__typename": "AnalysisMethod"
+                    }
+                }
+            ],
+            "ensembl_website_display_data": {
+                "count_citations": 0
+            }
+        }
+    }
+}

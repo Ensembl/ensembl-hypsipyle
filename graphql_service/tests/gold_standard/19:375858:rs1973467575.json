@@ -1,0 +1,241 @@
+{
+    "data": {
+        "variant": {
+            "name": "rs1973467575",
+            "alternative_names": [],
+            "primary_source": {
+                "__typename": "ExternalReference"
+            },
+            "type": "Variant",
+            "allele_type": {
+                "__typename": "OntologyTermMetadata"
+            },
+            "slice": {
+                "__typename": "Slice"
+            },
+            "alleles": [
+                {
+                    "name": "19:375858:T:TCGTACA",
+                    "allele_sequence": "TCGTACA",
+                    "reference_sequence": "T",
+                    "alternative_names": [],
+                    "type": "VariantAllele",
+                    "allele_type": {
+                        "__typename": "OntologyTermMetadata"
+                    },
+                    "slice": {
+                        "__typename": "Slice"
+                    },
+                    "phenotype_assertions": [],
+                    "prediction_results": [],
+                    "population_frequencies": [],
+                    "predicted_molecular_consequences": [
+                        {
+                            "allele_name": "CGTACA",
+                            "stable_id": "ENST00000342640",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000105549",
+                            "gene_symbol": "SPMAP2",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "protein_coding",
+                            "cdna_location": {
+                                "relation": null,
+                                "start": 168,
+                                "end": 169,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "-",
+                                "alt_sequence": "TGTACG"
+                            },
+                            "cds_location": {
+                                "relation": null,
+                                "start": 112,
+                                "end": 113,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "gag",
+                                "alt_sequence": "gTGTACGag"
+                            },
+                            "protein_location": {
+                                "relation": null,
+                                "start": 38,
+                                "end": 38,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "E",
+                                "alt_sequence": "VYE"
+                            }
+                        },
+                        {
+                            "allele_name": "CGTACA",
+                            "stable_id": "ENST00000346878",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000105549",
+                            "gene_symbol": "SPMAP2",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "protein_coding",
+                            "cdna_location": {
+                                "relation": null,
+                                "start": 112,
+                                "end": 113,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "-",
+                                "alt_sequence": "TGTACG"
+                            },
+                            "cds_location": {
+                                "relation": null,
+                                "start": 112,
+                                "end": 113,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "gag",
+                                "alt_sequence": "gTGTACGag"
+                            },
+                            "protein_location": {
+                                "relation": null,
+                                "start": 38,
+                                "end": 38,
+                                "length": 0,
+                                "percentage_overlap": null,
+                                "ref_sequence": "E",
+                                "alt_sequence": "VYE"
+                            }
+                        },
+                        {
+                            "allele_name": "CGTACA",
+                            "stable_id": "ENST00000797533",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                },
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000286667",
+                            "gene_symbol": "",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "lncRNA",
+                            "cdna_location": null,
+                            "cds_location": null,
+                            "protein_location": null
+                        },
+                        {
+                            "allele_name": "CGTACA",
+                            "stable_id": "ENST00000797534",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                },
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000286667",
+                            "gene_symbol": "",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "lncRNA",
+                            "cdna_location": null,
+                            "cds_location": null,
+                            "protein_location": null
+                        },
+                        {
+                            "allele_name": "CGTACA",
+                            "stable_id": "ENST00000797535",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                },
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000286667",
+                            "gene_symbol": "",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "lncRNA",
+                            "cdna_location": null,
+                            "cds_location": null,
+                            "protein_location": null
+                        }
+                    ],
+                    "ensembl_website_display_data": {
+                        "count_transcript_consequences": 2,
+                        "count_overlapped_genes": 1,
+                        "count_regulatory_consequences": 0,
+                        "count_variant_phenotypes": 0,
+                        "count_gene_phenotypes": 0,
+                        "representative_population_allele_frequency": null
+                    }
+                },
+                {
+                    "name": "19:375858:T:T",
+                    "allele_sequence": "T",
+                    "reference_sequence": "T",
+                    "alternative_names": [],
+                    "type": "VariantAllele",
+                    "allele_type": {
+                        "__typename": "OntologyTermMetadata"
+                    },
+                    "slice": {
+                        "__typename": "Slice"
+                    },
+                    "phenotype_assertions": [],
+                    "prediction_results": [],
+                    "population_frequencies": [],
+                    "predicted_molecular_consequences": [],
+                    "ensembl_website_display_data": {
+                        "count_transcript_consequences": 0,
+                        "count_overlapped_genes": 0,
+                        "count_regulatory_consequences": 0,
+                        "count_variant_phenotypes": 0,
+                        "count_gene_phenotypes": 0,
+                        "representative_population_allele_frequency": null
+                    }
+                }
+            ],
+            "prediction_results": [
+                {
+                    "score": null,
+                    "result": "inframe_insertion",
+                    "classification": null,
+                    "analysis_method": {
+                        "__typename": "AnalysisMethod"
+                    }
+                }
+            ],
+            "ensembl_website_display_data": {
+                "count_citations": 0
+            }
+        }
+    }
+}

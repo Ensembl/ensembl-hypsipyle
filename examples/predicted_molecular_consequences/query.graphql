@@ -36,6 +36,12 @@ query variant_molecular_consequences {
           analysis_method
           {
             tool
+            version
+            qualifier
+            {
+              result_type
+              modes
+            }
           }
         }
         cdna_location

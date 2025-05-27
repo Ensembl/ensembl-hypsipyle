@@ -1,11 +1,20 @@
 
+type Qualifier {
+"""
+  Qualifier
+"""
+  result_type: String
+  modes: [String]
+}
+
+
 type AnalysisMethod {
 """
   Analysis Method
 """
   tool: String
   version: String
-  qualifier: String
+  qualifier: Qualifier
   reference_data: [ExternalDB]
 }
 
@@ -17,4 +26,5 @@ type PredictionResult {
   result: String
   classification: ValueSet
   analysis_method: AnalysisMethod
+
 }

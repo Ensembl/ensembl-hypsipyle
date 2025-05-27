@@ -35,7 +35,12 @@
                     "definition": ""
                   },
                   "analysis_method": {
-                    "tool": "SIFT"
+                    "tool": "SIFT",
+                    "version": "6.2.1",
+                    "qualifier": {
+                      "result_type": "SIFT score",
+                      "modes": []
+                    }
                   }
                 }
               ],
@@ -85,7 +90,12 @@
                     "definition": ""
                   },
                   "analysis_method": {
-                    "tool": "SIFT"
+                    "tool": "SIFT",
+                    "version": "6.2.1",
+                    "qualifier": {
+                      "result_type": "SIFT score",
+                      "modes": []
+                    }
                   }
                 }
               ],
@@ -135,7 +145,12 @@
                     "definition": ""
                   },
                   "analysis_method": {
-                    "tool": "SIFT"
+                    "tool": "SIFT",
+                    "version": "6.2.1",
+                    "qualifier": {
+                      "result_type": "SIFT score",
+                      "modes": []
+                    }
                   }
                 }
               ],
@@ -171,6 +186,6 @@
     }
   },
   "extensions": {
-    "execution_time_in_seconds": 0.06
+    "execution_time_in_seconds": 0.12
   }
 }

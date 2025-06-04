@@ -68,3 +68,7 @@ venv.bak/
 # editor cruft
 .vscode
 .idea
+
+# mac os
+.DS_Store
+common/.DS_Store

@@ -1,0 +1,172 @@
+{
+    "data": {
+        "variant": {
+            "name": "rs267606881",
+            "alternative_names": [],
+            "primary_source": {
+                "__typename": "ExternalReference"
+            },
+            "type": "Variant",
+            "allele_type": {
+                "__typename": "OntologyTermMetadata"
+            },
+            "slice": {
+                "__typename": "Slice"
+            },
+            "alleles": [
+                {
+                    "name": "MT:8529:G:A",
+                    "allele_sequence": "A",
+                    "reference_sequence": "G",
+                    "alternative_names": [],
+                    "type": "VariantAllele",
+                    "allele_type": {
+                        "__typename": "OntologyTermMetadata"
+                    },
+                    "slice": {
+                        "__typename": "Slice"
+                    },
+                    "phenotype_assertions": [],
+                    "prediction_results": [],
+                    "population_frequencies": [],
+                    "predicted_molecular_consequences": [
+                        {
+                            "allele_name": "A",
+                            "stable_id": "ENST00000361851",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000228253",
+                            "gene_symbol": "MT-ATP8",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "protein_coding",
+                            "cdna_location": {
+                                "relation": null,
+                                "start": 164,
+                                "end": 164,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "G",
+                                "alt_sequence": "A"
+                            },
+                            "cds_location": {
+                                "relation": null,
+                                "start": 164,
+                                "end": 164,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "tGa",
+                                "alt_sequence": "tAa"
+                            },
+                            "protein_location": {
+                                "relation": null,
+                                "start": 55,
+                                "end": 55,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "W",
+                                "alt_sequence": "*"
+                            }
+                        },
+                        {
+                            "allele_name": "A",
+                            "stable_id": "ENST00000361899",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000198899",
+                            "gene_symbol": "MT-ATP6",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "protein_coding",
+                            "cdna_location": {
+                                "relation": null,
+                                "start": 3,
+                                "end": 3,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "G",
+                                "alt_sequence": "A"
+                            },
+                            "cds_location": {
+                                "relation": null,
+                                "start": 3,
+                                "end": 3,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "atG",
+                                "alt_sequence": "atA"
+                            },
+                            "protein_location": {
+                                "relation": null,
+                                "start": 1,
+                                "end": 1,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "M",
+                                "alt_sequence": "M"
+                            }
+                        }
+                    ],
+                    "ensembl_website_display_data": {
+                        "count_transcript_consequences": 2,
+                        "count_overlapped_genes": 2,
+                        "count_regulatory_consequences": 0,
+                        "count_variant_phenotypes": 0,
+                        "count_gene_phenotypes": 0,
+                        "representative_population_allele_frequency": null
+                    }
+                },
+                {
+                    "name": "MT:8529:G:G",
+                    "allele_sequence": "G",
+                    "reference_sequence": "G",
+                    "alternative_names": [],
+                    "type": "VariantAllele",
+                    "allele_type": {
+                        "__typename": "OntologyTermMetadata"
+                    },
+                    "slice": {
+                        "__typename": "Slice"
+                    },
+                    "phenotype_assertions": [],
+                    "prediction_results": [],
+                    "population_frequencies": [],
+                    "predicted_molecular_consequences": [],
+                    "ensembl_website_display_data": {
+                        "count_transcript_consequences": 0,
+                        "count_overlapped_genes": 0,
+                        "count_regulatory_consequences": 0,
+                        "count_variant_phenotypes": 0,
+                        "count_gene_phenotypes": 0,
+                        "representative_population_allele_frequency": null
+                    }
+                }
+            ],
+            "prediction_results": [
+                {
+                    "score": null,
+                    "result": "stop_gained",
+                    "classification": null,
+                    "analysis_method": {
+                        "__typename": "AnalysisMethod"
+                    }
+                }
+            ],
+            "ensembl_website_display_data": {
+                "count_citations": 1
+            }
+        }
+    }
+}

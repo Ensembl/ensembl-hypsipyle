@@ -1,0 +1,172 @@
+{
+    "data": {
+        "variant": {
+            "name": "rs1452804066",
+            "alternative_names": [],
+            "primary_source": {
+                "__typename": "ExternalReference"
+            },
+            "type": "Variant",
+            "allele_type": {
+                "__typename": "OntologyTermMetadata"
+            },
+            "slice": {
+                "__typename": "Slice"
+            },
+            "alleles": [
+                {
+                    "name": "19:685717:C:G",
+                    "allele_sequence": "G",
+                    "reference_sequence": "C",
+                    "alternative_names": [],
+                    "type": "VariantAllele",
+                    "allele_type": {
+                        "__typename": "OntologyTermMetadata"
+                    },
+                    "slice": {
+                        "__typename": "Slice"
+                    },
+                    "phenotype_assertions": [],
+                    "prediction_results": [],
+                    "population_frequencies": [],
+                    "predicted_molecular_consequences": [
+                        {
+                            "allele_name": "G",
+                            "stable_id": "ENST00000329267",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000185198",
+                            "gene_symbol": "PRSS57",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "protein_coding",
+                            "cdna_location": {
+                                "relation": null,
+                                "start": 870,
+                                "end": 870,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "G",
+                                "alt_sequence": "C"
+                            },
+                            "cds_location": {
+                                "relation": null,
+                                "start": 848,
+                                "end": 848,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "tGa",
+                                "alt_sequence": "tCa"
+                            },
+                            "protein_location": {
+                                "relation": null,
+                                "start": 283,
+                                "end": 283,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "*",
+                                "alt_sequence": "S"
+                            }
+                        },
+                        {
+                            "allele_name": "G",
+                            "stable_id": "ENST00000613411",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000185198",
+                            "gene_symbol": "PRSS57",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "protein_coding",
+                            "cdna_location": {
+                                "relation": null,
+                                "start": 919,
+                                "end": 919,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "G",
+                                "alt_sequence": "C"
+                            },
+                            "cds_location": {
+                                "relation": null,
+                                "start": 851,
+                                "end": 851,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "tGa",
+                                "alt_sequence": "tCa"
+                            },
+                            "protein_location": {
+                                "relation": null,
+                                "start": 284,
+                                "end": 284,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "*",
+                                "alt_sequence": "S"
+                            }
+                        }
+                    ],
+                    "ensembl_website_display_data": {
+                        "count_transcript_consequences": 2,
+                        "count_overlapped_genes": 1,
+                        "count_regulatory_consequences": 0,
+                        "count_variant_phenotypes": 0,
+                        "count_gene_phenotypes": 0,
+                        "representative_population_allele_frequency": null
+                    }
+                },
+                {
+                    "name": "19:685717:C:C",
+                    "allele_sequence": "C",
+                    "reference_sequence": "C",
+                    "alternative_names": [],
+                    "type": "VariantAllele",
+                    "allele_type": {
+                        "__typename": "OntologyTermMetadata"
+                    },
+                    "slice": {
+                        "__typename": "Slice"
+                    },
+                    "phenotype_assertions": [],
+                    "prediction_results": [],
+                    "population_frequencies": [],
+                    "predicted_molecular_consequences": [],
+                    "ensembl_website_display_data": {
+                        "count_transcript_consequences": 0,
+                        "count_overlapped_genes": 0,
+                        "count_regulatory_consequences": 0,
+                        "count_variant_phenotypes": 0,
+                        "count_gene_phenotypes": 0,
+                        "representative_population_allele_frequency": null
+                    }
+                }
+            ],
+            "prediction_results": [
+                {
+                    "score": null,
+                    "result": "stop_lost",
+                    "classification": null,
+                    "analysis_method": {
+                        "__typename": "AnalysisMethod"
+                    }
+                }
+            ],
+            "ensembl_website_display_data": {
+                "count_citations": 0
+            }
+        }
+    }
+}

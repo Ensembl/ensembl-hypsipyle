@@ -1,0 +1,420 @@
+{
+    "data": {
+        "variant": {
+            "name": "rs1268711754",
+            "alternative_names": [],
+            "primary_source": {
+                "__typename": "ExternalReference"
+            },
+            "type": "Variant",
+            "allele_type": {
+                "__typename": "OntologyTermMetadata"
+            },
+            "slice": {
+                "__typename": "Slice"
+            },
+            "alleles": [
+                {
+                    "name": "19:111026:T:C",
+                    "allele_sequence": "C",
+                    "reference_sequence": "T",
+                    "alternative_names": [],
+                    "type": "VariantAllele",
+                    "allele_type": {
+                        "__typename": "OntologyTermMetadata"
+                    },
+                    "slice": {
+                        "__typename": "Slice"
+                    },
+                    "phenotype_assertions": [],
+                    "prediction_results": [],
+                    "population_frequencies": [],
+                    "predicted_molecular_consequences": [
+                        {
+                            "allele_name": "C",
+                            "stable_id": "ENST00000318050",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000176695",
+                            "gene_symbol": "OR4F17",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "protein_coding",
+                            "cdna_location": {
+                                "relation": null,
+                                "start": 384,
+                                "end": 384,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "T",
+                                "alt_sequence": "C"
+                            },
+                            "cds_location": {
+                                "relation": null,
+                                "start": 348,
+                                "end": 348,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "taT",
+                                "alt_sequence": "taC"
+                            },
+                            "protein_location": {
+                                "relation": null,
+                                "start": 116,
+                                "end": 116,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "Y",
+                                "alt_sequence": "Y"
+                            }
+                        },
+                        {
+                            "allele_name": "C",
+                            "stable_id": "ENST00000585993",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000176695",
+                            "gene_symbol": "OR4F17",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "protein_coding",
+                            "cdna_location": {
+                                "relation": null,
+                                "start": 539,
+                                "end": 539,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "T",
+                                "alt_sequence": "C"
+                            },
+                            "cds_location": {
+                                "relation": null,
+                                "start": 348,
+                                "end": 348,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "taT",
+                                "alt_sequence": "taC"
+                            },
+                            "protein_location": {
+                                "relation": null,
+                                "start": 116,
+                                "end": 116,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "Y",
+                                "alt_sequence": "Y"
+                            }
+                        },
+                        {
+                            "allele_name": "C",
+                            "stable_id": "ENST00000618231",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000176695",
+                            "gene_symbol": "OR4F17",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "protein_coding",
+                            "cdna_location": {
+                                "relation": null,
+                                "start": 456,
+                                "end": 456,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "T",
+                                "alt_sequence": "C"
+                            },
+                            "cds_location": {
+                                "relation": null,
+                                "start": 411,
+                                "end": 411,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "taT",
+                                "alt_sequence": "taC"
+                            },
+                            "protein_location": {
+                                "relation": null,
+                                "start": 137,
+                                "end": 137,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "Y",
+                                "alt_sequence": "Y"
+                            }
+                        },
+                        {
+                            "allele_name": "C",
+                            "stable_id": "ENST00000641591",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                },
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000176695",
+                            "gene_symbol": "OR4F17",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "protein_coding_CDS_not_defined",
+                            "cdna_location": null,
+                            "cds_location": null,
+                            "protein_location": null
+                        }
+                    ],
+                    "ensembl_website_display_data": {
+                        "count_transcript_consequences": 4,
+                        "count_overlapped_genes": 1,
+                        "count_regulatory_consequences": 1,
+                        "count_variant_phenotypes": 0,
+                        "count_gene_phenotypes": 0,
+                        "representative_population_allele_frequency": 6.78113e-06
+                    }
+                },
+                {
+                    "name": "19:111026:T:G",
+                    "allele_sequence": "G",
+                    "reference_sequence": "T",
+                    "alternative_names": [],
+                    "type": "VariantAllele",
+                    "allele_type": {
+                        "__typename": "OntologyTermMetadata"
+                    },
+                    "slice": {
+                        "__typename": "Slice"
+                    },
+                    "phenotype_assertions": [],
+                    "prediction_results": [],
+                    "population_frequencies": [],
+                    "predicted_molecular_consequences": [
+                        {
+                            "allele_name": "G",
+                            "stable_id": "ENST00000318050",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000176695",
+                            "gene_symbol": "OR4F17",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "protein_coding",
+                            "cdna_location": {
+                                "relation": null,
+                                "start": 384,
+                                "end": 384,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "T",
+                                "alt_sequence": "G"
+                            },
+                            "cds_location": {
+                                "relation": null,
+                                "start": 348,
+                                "end": 348,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "taT",
+                                "alt_sequence": "taG"
+                            },
+                            "protein_location": {
+                                "relation": null,
+                                "start": 116,
+                                "end": 116,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "Y",
+                                "alt_sequence": "*"
+                            }
+                        },
+                        {
+                            "allele_name": "G",
+                            "stable_id": "ENST00000585993",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000176695",
+                            "gene_symbol": "OR4F17",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "protein_coding",
+                            "cdna_location": {
+                                "relation": null,
+                                "start": 539,
+                                "end": 539,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "T",
+                                "alt_sequence": "G"
+                            },
+                            "cds_location": {
+                                "relation": null,
+                                "start": 348,
+                                "end": 348,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "taT",
+                                "alt_sequence": "taG"
+                            },
+                            "protein_location": {
+                                "relation": null,
+                                "start": 116,
+                                "end": 116,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "Y",
+                                "alt_sequence": "*"
+                            }
+                        },
+                        {
+                            "allele_name": "G",
+                            "stable_id": "ENST00000618231",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000176695",
+                            "gene_symbol": "OR4F17",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "protein_coding",
+                            "cdna_location": {
+                                "relation": null,
+                                "start": 456,
+                                "end": 456,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "T",
+                                "alt_sequence": "G"
+                            },
+                            "cds_location": {
+                                "relation": null,
+                                "start": 411,
+                                "end": 411,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "taT",
+                                "alt_sequence": "taG"
+                            },
+                            "protein_location": {
+                                "relation": null,
+                                "start": 137,
+                                "end": 137,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "Y",
+                                "alt_sequence": "*"
+                            }
+                        },
+                        {
+                            "allele_name": "G",
+                            "stable_id": "ENST00000641591",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                },
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000176695",
+                            "gene_symbol": "OR4F17",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "protein_coding_CDS_not_defined",
+                            "cdna_location": null,
+                            "cds_location": null,
+                            "protein_location": null
+                        }
+                    ],
+                    "ensembl_website_display_data": {
+                        "count_transcript_consequences": 4,
+                        "count_overlapped_genes": 1,
+                        "count_regulatory_consequences": 1,
+                        "count_variant_phenotypes": 0,
+                        "count_gene_phenotypes": 0,
+                        "representative_population_allele_frequency": 2.03434e-05
+                    }
+                },
+                {
+                    "name": "19:111026:T:T",
+                    "allele_sequence": "T",
+                    "reference_sequence": "T",
+                    "alternative_names": [],
+                    "type": "VariantAllele",
+                    "allele_type": {
+                        "__typename": "OntologyTermMetadata"
+                    },
+                    "slice": {
+                        "__typename": "Slice"
+                    },
+                    "phenotype_assertions": [],
+                    "prediction_results": [],
+                    "population_frequencies": [],
+                    "predicted_molecular_consequences": [],
+                    "ensembl_website_display_data": {
+                        "count_transcript_consequences": 0,
+                        "count_overlapped_genes": 0,
+                        "count_regulatory_consequences": 0,
+                        "count_variant_phenotypes": 0,
+                        "count_gene_phenotypes": 0,
+                        "representative_population_allele_frequency": 0.99997287547
+                    }
+                }
+            ],
+            "prediction_results": [
+                {
+                    "score": null,
+                    "result": "stop_gained",
+                    "classification": null,
+                    "analysis_method": {
+                        "__typename": "AnalysisMethod"
+                    }
+                }
+            ],
+            "ensembl_website_display_data": {
+                "count_citations": 0
+            }
+        }
+    }
+}

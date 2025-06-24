@@ -49,7 +49,7 @@ class Variant ():
         self.population_map = {}
     
     def add_vcf_record(self, record, header):
-        self.vcf_records["frequencies"] = {"record": record, "header": header}
+        self.vcf_records["population_frequencies"] = {"record": record, "header": header}
 
     def get_alternative_names(self) -> List:
         return []
@@ -336,10 +336,11 @@ class Variant ():
                 print(f"No population mapping for - {self.genome_uuid}")
 
         population_frequency_map = {}
-        info = vcf_record.record.INFO
+        info = vcf_record["record"].INFO
+
         for csq_record in info["CSQ"]:
             csq_record_list = csq_record.split("|")
-            allele_index = self.get_info_key_index("Allele",vcf_record.header) 
+            allele_index = self.get_info_key_index("Allele",header=vcf_record["header"]) 
             if csq_record_list[allele_index] is not None and csq_record_list[allele_index] not in population_frequency_map.keys():
                 population_frequency_map[csq_record_list[allele_index]] = {}
                 for pop_key, pop in pop_mapping.items():
@@ -348,7 +349,7 @@ class Variant ():
                             continue
                         allele_count = allele_number = allele_frequency = None
                         for freq_key, freq_val in sub_pop["frequencies"].items():
-                            col_index = self.get_info_key_index(freq_val, vcf_record.header)
+                            col_index = self.get_info_key_index(freq_val, header=vcf_record["header"])
                             if col_index and csq_record_list[col_index] is not None:
                                 if freq_key == "af":
                                     allele_frequency = csq_record_list[col_index] or None
@@ -395,7 +396,7 @@ class Variant ():
         for pop in pop_mapping.values():
             pop_names.extend([sub_pop["name"] for sub_pop in pop])
         hpmaf = []
-        pop_frequency_map = self.traverse_population_info(self.vcf_records["frequencies"])
+        pop_frequency_map = self.traverse_population_info(self.vcf_records["population_frequencies"])
         if not pop_frequency_map:
             return pop_frequency_map 
 

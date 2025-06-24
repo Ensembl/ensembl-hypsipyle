@@ -32,15 +32,6 @@ class FileClient:
         Get a variant entry from variant_id
         """
 
-        try: 
-            [contig, pos, id] = self.split_variant_id(variant_id)
-            pos = int(pos)
-        except:
-            #TODO: This needs to go to thoas logger
-            #TODO: Exception needs to be caught appropriately
-            print("Please check that the variant_id is in the format: contig:position:identifier")
-        
-        
         base_file = vcfpy.Reader.from_path(os.path.join(self.data_root, genome_uuid, track_name, f"variation.vcf.gz"))
         base_record = self.fetch_record(base_file, variant_id)
 
@@ -51,20 +42,22 @@ class FileClient:
         for _, datafile in self.collection.items():
             record = self.fetch_record(datafile, variant_id)
             if record:
-                variant.add_record(record, datafile.header)
+                variant.add_vcf_record(record, datafile.header)
         return variant
             
     def load_annotation_files(self, genome_uuid):
 
         root_dir = Path(os.path.join(self.data_root, genome_uuid))
         ## files can be vcf or text, need a parser class
-        datafiles = root_dir.glob("frequencies/*.vcf.gz")
+        datafiles = root_dir.glob("annotation/frequencies/*.vcf.gz")
         for datafile in datafiles:
             self.collection[os.path.basename(datafile)] = vcfpy.Reader.from_path(datafile)
         
                                                            
-    def fetch_record(self, datafile: str, variant_id):
+    def fetch_record(self, datafile: str, variant_id: str):
         try:
+            [contig, pos, id] = self.split_variant_id(variant_id)
+            pos = int(pos)
             for rec in datafile.fetch(contig, pos-1, pos):
                 if rec.ID[0] == id:
                     break # No duplicate variants

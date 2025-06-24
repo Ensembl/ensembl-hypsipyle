@@ -38,6 +38,7 @@ class Variant ():
         self.name = record.ID[0]
         self.record = record 
         self.header = header
+        self.vcf_records = {}
         self.chromosome = record.CHROM         ###TODO: convert the contig name in the file to match the chromosome id given in the payload 
         self.position = record.POS
         self.alts = record.ALT
@@ -47,6 +48,9 @@ class Variant ():
         self.vep_version = re.search("v\d+", self.header.get_lines("VEP")[0].value).group()
         self.population_map = {}
     
+    def add_vcf_record(self, record, header):
+        self.vcf_records["frequencies"] = {"record": record, "header": header}
+
     def get_alternative_names(self) -> List:
         return []
     
@@ -302,14 +306,26 @@ class Variant ():
                 } if csq_record_list[aa_index] and csq_record_list[aa_index]!="."  else {}
             return aa_prediction_result
     
-    def get_info_key_index(self, key: str, info_id: str ="CSQ") -> int:
-            info_field = self.header.get_info_field_info(info_id).description
+    def get_info_key_index(self, key: str, info_id: str ="CSQ", header: Any=None) -> int:
+            header = header or self.header
+            info_field = header.get_info_field_info(info_id).description
             csq_list = info_field.split("Format: ")[1].split("|")
             for index, value in enumerate(csq_list):
                 if value == key:
                     return index   
-                
-    def traverse_population_info(self) -> Mapping:
+         
+    def traverse_population_info(self, vcf_record) -> Mapping:
+        """_summary_
+        Traverses variant alleles within variant vcf record and returns a map of population frequencies keyed by alleles
+        Args:
+            record (_type_): _description_
+
+        Raises:
+            Exception: _description_
+
+        Returns:
+            Mapping: _description_
+        """
         directory = os.path.dirname(__file__)
         with open(os.path.join(directory,'populations.json')) as pop_file:
             pop_mapping_all = json.load(pop_file)
@@ -320,9 +336,10 @@ class Variant ():
                 print(f"No population mapping for - {self.genome_uuid}")
 
         population_frequency_map = {}
-        for csq_record in self.info["CSQ"]:
+        info = vcf_record.record.INFO
+        for csq_record in info["CSQ"]:
             csq_record_list = csq_record.split("|")
-            allele_index = self.get_info_key_index("Allele") 
+            allele_index = self.get_info_key_index("Allele",vcf_record.header) 
             if csq_record_list[allele_index] is not None and csq_record_list[allele_index] not in population_frequency_map.keys():
                 population_frequency_map[csq_record_list[allele_index]] = {}
                 for pop_key, pop in pop_mapping.items():
@@ -331,7 +348,7 @@ class Variant ():
                             continue
                         allele_count = allele_number = allele_frequency = None
                         for freq_key, freq_val in sub_pop["frequencies"].items():
-                            col_index = self.get_info_key_index(freq_val)
+                            col_index = self.get_info_key_index(freq_val, vcf_record.header)
                             if col_index and csq_record_list[col_index] is not None:
                                 if freq_key == "af":
                                     allele_frequency = csq_record_list[col_index] or None
@@ -378,7 +395,7 @@ class Variant ():
         for pop in pop_mapping.values():
             pop_names.extend([sub_pop["name"] for sub_pop in pop])
         hpmaf = []
-        pop_frequency_map = self.traverse_population_info()
+        pop_frequency_map = self.traverse_population_info(self.vcf_records["frequencies"])
         if not pop_frequency_map:
             return pop_frequency_map 
 
@@ -440,6 +457,7 @@ class Variant ():
                 elif hpmaf_pop[0] < hpmaf_frequency:
                     break
         return pop_frequency_map
+    
     def get_web_display_data(self)-> Mapping:
         n_citations = self.info["NCITE"] if "NCITE" in self.info else 0
         return {

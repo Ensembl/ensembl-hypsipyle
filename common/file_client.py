@@ -27,11 +27,11 @@ class FileClient:
         self.collection = {}
         
     
-    def get_variant_record(self, genome_uuid: str, variant_id: str, track_name: str="dbSNP"):
+    def get_variant_record(self, genome_uuid: str, variant_id: str, track_name: str) -> Variant:
         """
         Get a variant entry from variant_id
         """
-
+        track_name = track_name or "dbSNP"
         base_file = vcfpy.Reader.from_path(os.path.join(self.data_root, genome_uuid, track_name, f"variation.vcf.gz"))
         base_record = self.fetch_record(base_file, variant_id)
 

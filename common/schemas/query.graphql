@@ -7,4 +7,5 @@ type Query {
 input IdInput {
   genome_id: String!
   variant_id: String!
+  track_name: String
 }

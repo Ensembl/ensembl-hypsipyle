@@ -19,12 +19,31 @@ from ariadne.types import Extension, ContextValue
 
 class QueryExecutionTimeExtension(Extension):
     def __init__(self):
+        """Initialises the QueryExecutionTimeExtension instance.
+
+        Sets the initial start timestamp to None.
+        """
         self.start_timestamp = None
 
     def request_started(self, context: ContextValue) -> None:
+        """Records the start timestamp when a request is initiated.
+
+        Args:
+            context (ContextValue): The context of the current request.
+        """
         self.start_timestamp = time.perf_counter_ns()
 
     def format(self, context):
+        """Formats and returns the execution time of the query.
+
+        Calculates the execution time in seconds from the recorded start time.
+
+        Args:
+            context: The context of the current request.
+
+        Returns:
+            dict: A dictionary with the key 'execution_time_in_seconds' and its corresponding value.
+        """
         if self.start_timestamp:
             exec_time_in_secs = round(
                 (time.perf_counter_ns() - self.start_timestamp) / 1000000000, 2

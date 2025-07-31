@@ -21,7 +21,14 @@ from functools import reduce
 from common.file_model.utils import minimise_allele
 
 class VariantAllele():
-    def __init__(self, allele_index: str, alt: str, variant:dict) -> None:
+    def __init__(self, allele_index: str, alt: str, variant: dict) -> None:
+        """Initialises a VariantAllele instance.
+
+        Args:
+            allele_index (str): The index of the allele.
+            alt (str): The alternate allele.
+            variant (dict): The variant data.
+        """
         
         self.name = f"{variant.chromosome}:{variant.position}:{variant.ref}:{alt}"
         self.variant = variant
@@ -34,41 +41,86 @@ class VariantAllele():
         self.info_map = self.traverse_csq_info()
 
     def get_allele_type(self):
+        """Retrieves the allele type from the variant.
+
+        Returns:
+            Any: The allele type data.
+        """
         #TODO: change this to VariantAllele level
         return self.variant.get_allele_type(self.alt)
 
     def get_alternative_names(self):
+        """Retrieves alternative names for this allele.
+
+        Returns:
+            Any: A collection of alternative names.
+        """
         return self.variant.get_alternative_names()
 
     def get_slice(self):
+        """Retrieves a slice of data for this allele.
+
+        Returns:
+            Any: The sliced data.
+        """
         #TODO: review this to change to VariantAllele level
         return self.variant.get_slice(self.alt)
     
     def get_phenotype_assertions(self):
+        """Retrieves phenotype assertions for the allele.
+
+        Returns:
+            list: A list of phenotype assertions.
+        """
         min_alt = minimise_allele(self.alt, self.reference_sequence)
         return self.info_map[min_alt]["phenotype_assertions"] if min_alt in self.info_map else []
 
     def get_predicted_molecular_consequences(self):
+        """Retrieves predicted molecular consequences for the allele.
+
+        Returns:
+            list: A list of predicted molecular consequences.
+        """
         ## compute info_map only for these methods, first check if non-empty and compute only then
         min_alt = minimise_allele(self.alt, self.reference_sequence)
         return self.info_map[min_alt]["predicted_molecular_consequences"] if min_alt in self.info_map else []
     
     def get_prediction_results(self):
+        """Retrieves prediction results for the allele.
+
+        Returns:
+            list: A list of prediction results.
+        """
         min_alt = minimise_allele(self.alt, self.reference_sequence)
         return self.info_map[min_alt]["prediction_results"] if min_alt in self.info_map else []
     
     def get_population_allele_frequencies(self):
+        """Retrieves population allele frequencies.
+
+        Returns:
+            Any: The frequency data as mapped by allele.
+        """
         min_alt = minimise_allele(self.alt, self.reference_sequence)
         population_map = self.variant.set_frequency_flags()
         return population_map[min_alt].values() if min_alt in population_map else []
 
     def get_web_display_data(self) -> Mapping:
+        """Retrieves data intended for web display of the allele.
+
+        Returns:
+            Mapping: A mapping containing web display data.
+        """
         return self.variant.get_statistics_info()[self.allele_sequence]
     
     def traverse_csq_info(self) -> Mapping:
-        """
-        This function is to traverse the CSQ record and extract columns
-        corresponding to Consequence, SIFT, PolyPhen, CADD
+        """Traverses the CSQ records to extract annotation details.
+
+        Extracts columns related to Allele, PHENOTYPES, Feature type, Feature, Consequence,
+        SIFT, PolyPhen, SPDI, CADD, Conservation, Gene, SYMBOL, BIOTYPE, cDNA position,
+        CDS position, Protein position, Amino acids and Codons.
+
+        Returns:
+            Mapping: A dictionary mapping alleles to their annotation details.
         """
         column_list = ["Allele", "PHENOTYPES", "Feature_type", "Feature", "Consequence",
                         "SIFT", "PolyPhen", "SPDI", "CADD_PHRED","Conservation", "Gene", "SYMBOL",
@@ -105,6 +157,16 @@ class VariantAllele():
         return info_map
      
     def create_allele_prediction_results(self, current_prediction_results: Mapping, csq_record: List, prediction_index_map: dict) -> list:
+        """Creates prediction results for the allele based on a CSQ record.
+
+        Args:
+            current_prediction_results (Mapping): Existing prediction results.
+            csq_record (List): The CSQ record split into fields.
+            prediction_index_map (dict): A mapping from annotation keys to their indices.
+
+        Returns:
+            list: A list of new prediction results.
+        """
         prediction_results = []
         if "cadd_phred" in prediction_index_map.keys():
             if not self.prediction_result_already_exists(current_prediction_results, "CADD"):
@@ -123,13 +185,30 @@ class VariantAllele():
         return prediction_results
     
     def prediction_result_already_exists(self, current_prediction_results: Mapping, tool: str) -> bool:
+        """Checks if a prediction result for a specific tool already exists.
+
+        Args:
+            current_prediction_results (Mapping): The current prediction results.
+            tool (str): The analysis tool name.
+
+        Returns:
+            bool: True if a result exists, False otherwise.
+        """
         for prediction_result in current_prediction_results:
             if prediction_result["analysis_method"]["tool"] == tool:
                 return True
 
         return False
     
-    def parse_position(self, position: str)->Tuple:
+    def parse_position(self, position: str) -> Tuple:
+        """Parses the position string into start, end and length.
+
+        Args:
+            position (str): A position string (e.g. "start-end").
+
+        Returns:
+            Tuple: A tuple containing the start position, end position, and length.
+        """
         position_list  = position.split("-")
         position_start = position_list[0]
         position_end = position_start if len(position_list) < 2 else position_list[1]
@@ -145,6 +224,15 @@ class VariantAllele():
         return (position_start,position_end,position_length)
     
     def create_allele_predicted_molecular_consequence(self, csq_record: List, prediction_index_map: dict) -> Mapping:
+        """Creates the predicted molecular consequence for the allele based on a CSQ record.
+
+        Args:
+            csq_record (List): The CSQ record split into fields.
+            prediction_index_map (dict): A dictionary mapping annotation keys to indices.
+
+        Returns:
+            Mapping: A dictionary describing the predicted molecular consequence.
+        """
         feature_type = csq_record[prediction_index_map["feature_type"]]
         consequences_list = []
         if "consequence" in prediction_index_map.keys():
@@ -279,6 +367,14 @@ class VariantAllele():
 
     
     def format_sift_polyphen_output(self, output: str) -> tuple:
+        """Formats the output from SIFT/PolyPhen analysis.
+
+        Args:
+            output (str): The raw output string from the analysis.
+
+        Returns:
+            tuple: A tuple containing a descriptive label and the score as a float.
+        """
         try:
             (result, score) = re.split(r"[()]", output)[:2]
         except:
@@ -305,6 +401,14 @@ class VariantAllele():
         return (result, score)
     
     def create_allele_phenotype_assertion(self, phenotype: str) -> Mapping:
+        """Creates a phenotype assertion from the given phenotype string.
+
+        Args:
+            phenotype (str): The phenotype string with embedded details.
+
+        Returns:
+            Mapping: A dictionary representing the phenotype assertion, or None if not applicable.
+        """
 
         feature_type=None
         splits = phenotype.split("+")
@@ -343,4 +447,4 @@ class VariantAllele():
                 "evidence": evidence_list
             }
 
-    
+

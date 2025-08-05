@@ -19,7 +19,7 @@ import json
 import operator
 from functools import reduce
 from common.file_model.variant_allele import VariantAllele
-from common.file_model.utils import minimise_allele
+from common.file_model.utils import minimise_allele, decode_population_name
 
 def reduce_allele_length(allele_list: List):
     """Returns the maximum length of allele values in the list.
@@ -444,7 +444,7 @@ class Variant():
 
                         if allele_frequency is not None:
                             population_frequency = {
-                                            "population_name": sub_pop["name"],
+                                            "population_name": decode_population_name(sub_pop["name"]),
                                             "allele_frequency": float(allele_frequency),
                                             "allele_count": allele_count,
                                             "allele_number": allele_number,

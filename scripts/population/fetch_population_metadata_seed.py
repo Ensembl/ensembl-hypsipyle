@@ -90,11 +90,11 @@ with open("assemblies.txt") as fd:
             p_map["name"] = pop[0]
             p_map["description"] = pop[0]
             p_map["type"] = "regional"
-            p_map["is_global"] = "true"
+            p_map["is_global"] = True
             p_map["display_group_name"] = pop[0]
-            p_map["super_population"] = super_population if super_population else None
+            p_map["super_population"] = {"name" : super_population }  if super_population else None
             if super_population:
-                p_map["is_global"] = "false"
+                p_map["is_global"] = False
             p_map["sub_populations"] = []
             for sub_pop in sub_populations.split("\n"):
                 if sub_pop:

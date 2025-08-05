@@ -69,15 +69,14 @@ for species_name, species in data.items():
         else:
              for population_file in population_source["files"]:
                 for sub_population in population_file["include_fields"]:
-                    print(sub_population)
                     for field_key,field_val in sub_population['fields'].items():
-                        sub_population['fields'][field_key]=field_val
+                        sub_population['fields'][field_key]=f"UNSPECIFIED_{field_val}"
                         if sub_population["name"] in population_frequencies: 
                             if population_frequencies[sub_population["name"]] != sub_population:
                                 print(f"Conflicting fields for {sub_population['name']}")
                             continue
                         else:
-                            population_frequencies[sub_population["name"]]=sub_population
+                            population_frequencies[sub_population["name"]]=[sub_population]
 
         genome_uuids = get_genome_uuids(server,species_name)
         for genome_uuid in genome_uuids:

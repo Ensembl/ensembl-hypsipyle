@@ -21,7 +21,7 @@ from starlette.requests import Request
 from graphql_service.resolver.variant_model import (
     QUERY_TYPE,
     VARIANT_TYPE,
-    VARIANT_ALLELE_TYPE,
+    VARIANT_ALLELE_TYPE
 )
 
 

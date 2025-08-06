@@ -16,7 +16,6 @@ from typing import Dict, Callable
 import ariadne
 from graphql import GraphQLSchema
 from starlette.requests import Request
-from ariadne import ScalarType
 
 from graphql_service.resolver.variant_model import (
     QUERY_TYPE,

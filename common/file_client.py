@@ -12,9 +12,7 @@
    limitations under the License.
 """
 import vcfpy
-import json
 import os
-import glob
 from common.file_model.variant import Variant
 
 class FileClient:

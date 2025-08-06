@@ -12,12 +12,11 @@
    limitations under the License.
 """
 
-from typing import Dict, Optional, List, Any
-import json, os
+from typing import Dict, List
+import json
+import os
 from ariadne import QueryType, ObjectType
 from graphql import GraphQLResolveInfo
-import subprocess
-import json
 
 from graphql_service.resolver.exceptions import (
     VariantNotFoundError

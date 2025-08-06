@@ -13,7 +13,6 @@
 """
 
 import pytest
-import os
 import json
 import difflib
 from .test_utils import get_test_case_ids, execute_query

@@ -12,12 +12,8 @@
    limitations under the License.
 """
 
-from typing import Any, Mapping, List, Union, Tuple
+from typing import Mapping, List, Tuple
 import re
-import os
-import json
-import operator
-from functools import reduce
 from common.file_model.utils import minimise_allele
 
 class VariantAllele():

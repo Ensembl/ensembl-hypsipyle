@@ -22,21 +22,23 @@ from graphql_service.ariadne_app import (
 )
 import functools
 
+
 def build_schema_context() -> tuple:
     """
     Prepare the GraphQL executable schema and context provider for tests.
     """
-    config = { "data_root": "/app/data" }
+    config = {"data_root": "/app/data"}
     schema = prepare_executable_schema()
     file_client = FileClient(config)
-    context = prepare_context_provider({ "file_client": file_client })
+    context = prepare_context_provider({"file_client": file_client})
     return schema, context
+
 
 def get_test_case_ids(gold_std_dir: str, genome_id: str) -> list:
     """
-    Dynamically generate a list of test cases from 
+    Dynamically generate a list of test cases from
     gold standard query result JSON files in gold_std_dir.
-    
+
     Expected file naming: <variant_id>.json
     Uses the same genome_id for all test cases.
     """
@@ -47,12 +49,13 @@ def get_test_case_ids(gold_std_dir: str, genome_id: str) -> list:
             cases.append((variant_id, genome_id))
     return cases
 
+
 @functools.lru_cache(maxsize=1)
 def master_query_template() -> Template:
     """
     Template for the master query.
     """
-    
+
     query = """{
         variant(
             by_id: { genome_id: "$genome_id", variant_id: "$variant_id" }
@@ -163,7 +166,10 @@ def master_query_template() -> Template:
     }"""
     return Template(query)
 
-async def execute_query(schema_context: tuple, genome_id: str, variant_id: str) -> tuple:
+
+async def execute_query(
+    schema_context: tuple, genome_id: str, variant_id: str
+) -> tuple:
     """
     Execute the query for a given variant_id and genome_id according to template
     query, returning tne query string, success status, and result.
@@ -172,10 +178,10 @@ async def execute_query(schema_context: tuple, genome_id: str, variant_id: str) 
     template = master_query_template()
     query = template.substitute(genome_id=genome_id, variant_id=variant_id)
     success, result = await graphql(
-        executable_schema,
-        {"query": query},
-        context_value=context(request={})
+        executable_schema, {"query": query}, context_value=context(request={})
     )
-    
-    assert success is True, (f"Query execution failed for variant {variant_id}.\nQuery: {query}\nResult: {result}")
+
+    assert success is True, (
+        f"Query execution failed for variant {variant_id}.\nQuery: {query}\nResult: {result}"
+    )
     return query, success, result

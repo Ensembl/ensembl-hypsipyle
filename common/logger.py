@@ -12,7 +12,6 @@
    limitations under the License.
 """
 
-import logging
 from pymongo import monitoring
 
 

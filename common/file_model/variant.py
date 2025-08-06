@@ -22,6 +22,14 @@ from common.file_model.variant_allele import VariantAllele
 from common.file_model.utils import minimise_allele
 
 def reduce_allele_length(allele_list: List):
+    """Returns the maximum length of allele values in the list.
+
+    Args:
+        allele_list (List): A list of allele objects with a 'value' attribute.
+
+    Returns:
+        int: The maximum length of allele.value, or -1 if no allele has a value longer than -1.
+    """
     allele_length = -1
     for allele in allele_list:
         if len(allele.value) > allele_length:
@@ -30,10 +38,17 @@ def reduce_allele_length(allele_list: List):
 
 
 
-class Variant ():
-    variant_sources = {}       ## used to cache source information, class attribute
+class Variant():
+    variant_sources = {}  # used to cache source information, class attribute
 
     def __init__(self, record: Any, header: Any, genome_uuid: str) -> None:
+        """Initialises a Variant instance.
+
+        Args:
+            record (Any): The variant record.
+            header (Any): The header information.
+            genome_uuid (str): The genome UUID.
+        """
         self.genome_uuid = genome_uuid
         self.name = record.ID[0]
         self.record = record 
@@ -48,9 +63,19 @@ class Variant ():
         self.population_map = {}
     
     def get_alternative_names(self) -> List:
+        """Returns alternative names for the variant.
+
+        Returns:
+            List: A list of alternative names.
+        """
         return []
     
     def parse_source_from_header(self) -> Mapping:
+        """Parses source information from the header and caches it.
+
+        Returns:
+            Mapping: The updated mapping of source information.
+        """
         genome_uuid = self.genome_uuid
         if genome_uuid not in self.variant_sources:
             self.variant_sources[genome_uuid] = {}
@@ -66,9 +91,13 @@ class Variant ():
             self.variant_sources[genome_uuid][source] = source_info
 
     def get_primary_source(self) -> Mapping:
-        """
-        Fetches source from variant INFO columns
-        Fallsback to fetching from the header
+        """Fetches the primary source information for the variant.
+
+        It attempts to retrieve the source from the variant INFO columns and falls back 
+        to header information if necessary.
+
+        Returns:
+            Mapping: A mapping containing source details, or None if an error occurs.
         """
 
         try:
@@ -157,6 +186,16 @@ class Variant ():
         
 
     def set_allele_type(self, alt_one_bp: bool, ref_one_bp: bool, ref_alt_equal_bp: bool):         
+        """Determines the allele type and corresponding Sequence Ontology (SO) term.
+
+        Args:
+            alt_one_bp (bool): True if the alternate allele is one base long.
+            ref_one_bp (bool): True if the reference allele is one base long.
+            ref_alt_equal_bp (bool): True if the alternate and reference alleles have equal lengths.
+
+        Returns:
+            tuple: A tuple containing the allele type and its SO term.
+        """
         match [alt_one_bp, ref_one_bp, ref_alt_equal_bp]:
             case [True, True, True]: 
                 allele_type = "SNV" 
@@ -180,6 +219,14 @@ class Variant ():
         return allele_type, SO_term
     
     def get_allele_type(self, allele: Union[str, List]) -> Mapping :
+        """Determines the allele type based on the provided allele.
+
+        Args:
+            allele (Union[str, List]): The allele value or a list of allele objects.
+
+        Returns:
+            Mapping: A mapping containing allele type information and an associated URL.
+        """
         if isinstance(allele, str):
             if allele == self.ref:
                 allele_type, SO_term = "biological_region","SO:0001411"
@@ -202,7 +249,19 @@ class Variant ():
 
         }  
     
-    def get_slice(self, allele: Union[str, List] ) -> Mapping :
+    def get_slice(self, allele: Union[str, List]) -> Mapping :
+        """Computes the location slice for the variant based on the given allele.
+
+        This method calculates the start, end and length of the variant's reference region based
+        on the provided allele. If the allele is different from the reference and is determined 
+        to be an insertion, the length is set to zero and the end is adjusted accordingly.
+
+        Args:
+            allele (Union[str, List]): The allele value or list of alleles used to determine the slice.
+
+        Returns:
+            Mapping: A dictionary containing the 'location', 'region' and 'strand' details.
+        """
 
         start = self.position
         length = len(self.ref)
@@ -234,6 +293,11 @@ class Variant ():
     
     
     def get_alleles(self) -> List:
+        """Generates a list of VariantAllele instances for the variant.
+
+        Returns:
+            List: A list of VariantAllele objects, including both alternate and reference alleles.
+        """
         variant_allele_list = []
 
         
@@ -246,6 +310,11 @@ class Variant ():
         return variant_allele_list
     
     def get_most_severe_consequence(self) -> Mapping:
+        """Determines the most severe consequence from the variant's CSQ records.
+
+        Returns:
+            Mapping: A mapping containing the most severe consequence and the analysis method.
+        """
         consequence_index = self.get_info_key_index("Consequence")
         consequence_map = {}
         directory = os.path.dirname(__file__)
@@ -268,6 +337,11 @@ class Variant ():
         } 
 
     def get_gerp_score(self) -> Mapping:
+        """Retrieves the GERP score from the variant's CSQ record.
+
+        Returns:
+            Mapping: A mapping with the GERP score and its analysis method, or an empty mapping if not available.
+        """
         csq_record = self.info["CSQ"]
         csq_record_list = csq_record[0].split("|")
         if self.get_info_key_index("Conservation") is not None:
@@ -285,6 +359,11 @@ class Variant ():
             return gerp_prediction_result
     
     def get_ancestral_allele(self) -> Mapping:
+        """Retrieves the ancestral allele from the variant's CSQ record.
+
+        Returns:
+            Mapping: A mapping with the ancestral allele and its analysis method, or an empty mapping if not available.
+        """
         csq_record = self.info["CSQ"]
         csq_record_list = csq_record[0].split("|")
         if self.get_info_key_index("AA") is not None:
@@ -302,7 +381,16 @@ class Variant ():
                 } if csq_record_list[aa_index] and csq_record_list[aa_index]!="."  else {}
             return aa_prediction_result
     
-    def get_info_key_index(self, key: str, info_id: str ="CSQ") -> int:
+    def get_info_key_index(self, key: str, info_id: str = "CSQ") -> int:
+        """Retrieves the index of the specified key in the CSQ format.
+
+        Args:
+            key (str): The key to locate.
+            info_id (str, optional): The identifier for the info field. Defaults to "CSQ".
+
+        Returns:
+            int: The index of the key in the CSQ field.
+        """
             info_field = self.header.get_info_field_info(info_id).description
             csq_list = info_field.split("Format: ")[1].split("|")
             for index, value in enumerate(csq_list):
@@ -310,6 +398,11 @@ class Variant ():
                     return index   
                 
     def traverse_population_info(self) -> Mapping:
+        """Traverses the population mapping to extract allele frequency data.
+
+        Returns:
+            Mapping: A mapping of alleles to their respective population frequency details.
+        """
         directory = os.path.dirname(__file__)
         with open(os.path.join(directory,'populations.json')) as pop_file:
             pop_mapping_all = json.load(pop_file)
@@ -362,10 +455,11 @@ class Variant ():
         return population_frequency_map
     
     def set_frequency_flags(self):
-        """
-        Calculates MAF (minor allele frequency) and  HPMAF by iterating through each allele 
-        """
+        """Calculates minor allele frequency (MAF) and high population minor allele frequency (HPMAF) flags for each allele.
 
+        Returns:
+            Mapping: A mapping of allele frequency data with MAF and HPMAF flags applied.
+        """
         directory = os.path.dirname(__file__)
         with open(os.path.join(directory,'populations.json')) as pop_file:
             pop_mapping_all = json.load(pop_file)
@@ -440,13 +534,25 @@ class Variant ():
                 elif hpmaf_pop[0] < hpmaf_frequency:
                     break
         return pop_frequency_map
-    def get_web_display_data(self)-> Mapping:
+    
+    
+    def get_web_display_data(self) -> Mapping:
+        """Obtains data for web display of the variant.
+
+        Returns:
+            Mapping: A mapping containing web display data, such as citation counts.
+        """
         n_citations = self.info["NCITE"] if "NCITE" in self.info else 0
         return {
             "count_citations": n_citations
         }
     
-    def get_statistics_info(self)-> Mapping:
+    def get_statistics_info(self) -> Mapping:
+        """Collects statistical information for each allele of the variant.
+
+        Returns:
+            Mapping: A mapping where each allele is associated with various counts and frequency data.
+        """
         alleles = [i.value for i in self.alts]
         statistics_info = {}
         

@@ -127,17 +127,23 @@ query variant_example {
 
 
 class CustomExplorerGraphiQL(ExplorerGraphiQL):
-    """
-    We can customize the GraphiQL interface in Ariadne by overriding the ExplorerGraphiQL class
-    which is responsible for rendering the default GraphiQL UI
-    """
-
+    """Customisation of the GraphiQL interface for the Ensembl Variation API."""
+    
     def __init__(
         self,
         title: str = "Ensembl Variation API",
         explorer_plugin: bool = True,
         default_query: str = DEFAULT_QUERY,
     ):
+        """Initialises the CustomExplorerGraphiQL instance.
+
+        Renders a customised GraphiQL HTML interface using the provided title and default query.
+
+        Args:
+            title (str, optional): The title to display on the GraphiQL interface. Defaults to "Ensembl Variation API".
+            explorer_plugin (bool, optional): Whether the explorer plugin is enabled. Defaults to True.
+            default_query (str, optional): The default GraphQL query to pre-populate the interface. Defaults to DEFAULT_QUERY.
+        """
         super(CustomExplorerGraphiQL, self).__init__()
         self.parsed_html = render_template(
             CUSTOM_GRAPHIQL_HTML,

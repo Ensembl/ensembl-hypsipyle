@@ -17,12 +17,14 @@ from .test_utils import build_schema_context
 import os
 import json
 
-@pytest.fixture(scope="session") 
+
+@pytest.fixture(scope="session")
 def schema_context():
     """
     Session-scoped fixture reused by all tests.
     """
     return build_schema_context()
+
 
 @pytest.fixture(scope="session")
 def gold_standard_loader():
@@ -30,8 +32,10 @@ def gold_standard_loader():
     Returns a function that, given a variant_id, will read
     and parse the corresponding JSON gold-standard file.
     """
+
     def _loader(path: str, genome_id: str, variant_id: str) -> dict:
         path = os.path.join(path, genome_id, f"{variant_id}.json")
         with open(path, "r") as f:
             return json.load(f)
+
     return _loader

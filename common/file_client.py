@@ -11,15 +11,18 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 """
+
 import vcfpy
 import os
 from common.file_model.variant import Variant
+
 
 class FileClient:
     """Client to load file into memory.
 
     This class provides methods to retrieve and process variant data from VCF files.
     """
+
     def __init__(self, config):
         """Initialises a FileClient instance.
 
@@ -27,7 +30,7 @@ class FileClient:
             config (dict): A configuration dictionary containing at least the "data_root" key.
         """
         self.data_root = config.get("data_root")
-        
+
     def get_variant_record(self, genome_uuid: str, variant_id: str):
         """Retrieves a variant entry using the specified variant identifier.
 
@@ -49,17 +52,19 @@ class FileClient:
         else:
             print("Please check the directory path for the given genome uuid")
 
-        try: 
+        try:
             [contig, pos, id] = self.split_variant_id(variant_id)
             pos = int(pos)
         except:
             # TODO: This needs to go to thoas logger
             # TODO: Exception needs to be caught appropriately
-            print("Please check that the variant_id is in the format: contig:position:identifier")
+            print(
+                "Please check that the variant_id is in the format: contig:position:identifier"
+            )
         data = {}
         variant = None
         try:
-            for rec in self.collection.fetch(contig, pos-1, pos):
+            for rec in self.collection.fetch(contig, pos - 1, pos):
                 if rec.ID[0] == id:
                     variant = Variant(rec, self.header, genome_uuid)
                     break
@@ -67,7 +72,7 @@ class FileClient:
         except:
             # Return None when variant cannot be fetched
             return
-        
+
     def split_variant_id(self, variant_id: str):
         """Splits the variant identifier into its constituent parts.
 
@@ -80,5 +85,3 @@ class FileClient:
             list: A list containing the contig, position, and identifier.
         """
         return variant_id.split(":")
-
-

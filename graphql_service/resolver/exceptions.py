@@ -11,6 +11,7 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 """
+
 from typing import Dict
 
 from graphql import GraphQLError
@@ -29,13 +30,10 @@ class FieldNotFoundError(GraphQLError):
         super().__init__(message, extensions=self.extensions)
 
 
-
 class VariantNotFoundError(FieldNotFoundError):
     """
     Custom error to be raised if variant is not found
     """
-    def __init__(
-        self, variant_id: str
-    ):
-        super().__init__("variant_id", {"variant_id": variant_id})
 
+    def __init__(self, variant_id: str):
+        super().__init__("variant_id", {"variant_id": variant_id})

@@ -11,6 +11,7 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 """
+
 from typing import Dict, Callable
 
 import ariadne
@@ -20,14 +21,14 @@ from starlette.requests import Request
 from graphql_service.resolver.variant_model import (
     QUERY_TYPE,
     VARIANT_TYPE,
-    VARIANT_ALLELE_TYPE
+    VARIANT_ALLELE_TYPE,
 )
 
 
 def prepare_executable_schema() -> GraphQLSchema:
     """Combines schema definitions with the corresponding resolvers to produce an executable schema.
 
-    Loads the GraphQL schema from the "common/schemas" directory and integrates it with the 
+    Loads the GraphQL schema from the "common/schemas" directory and integrates it with the
     query and variant resolvers.
 
     Returns:
@@ -35,18 +36,15 @@ def prepare_executable_schema() -> GraphQLSchema:
     """
     schema = ariadne.load_schema_from_path("common/schemas")
     return ariadne.make_executable_schema(
-        schema,
-        QUERY_TYPE,
-        VARIANT_TYPE,
-        VARIANT_ALLELE_TYPE
+        schema, QUERY_TYPE, VARIANT_TYPE, VARIANT_ALLELE_TYPE
     )
 
 
 def prepare_context_provider(context: Dict) -> Callable[[Request], Dict]:
     """Creates a context provider function for GraphQL executions.
 
-    Returns a closure that injects a fresh context for each request. The context will include 
-    the incoming request and the shared file client, ensuring that request-specific data does 
+    Returns a closure that injects a fresh context for each request. The context will include
+    the incoming request and the shared file client, ensuring that request-specific data does
     not leak between executions.
 
     Args:
@@ -56,6 +54,7 @@ def prepare_context_provider(context: Dict) -> Callable[[Request], Dict]:
         Callable[[Request], Dict]: A function that takes a Request and returns a context dictionary.
     """
     file_client = context["file_client"]
+
     def context_provider(request: Request) -> Dict:
         """Provides a fresh context for each GraphQL execution.
 

@@ -34,7 +34,7 @@ for species_name, species in data.items():
             for population_file in population_source["files"]:
                 prefix = population_file["short_name"]
                 if prefix != pop_freq_name:
-                    multiple_file_flag=1
+                    multiple_file_flag = 1
                 for sub_population in population_file["include_fields"]:
                     for field_key, field_val in sub_population["fields"].items():
                         sub_population["fields"][field_key] = f"{prefix}_{field_val}"
@@ -47,8 +47,7 @@ for species_name, species in data.items():
                         ),
                         None,
                     )
-                    if (sub_population_item and not multiple_file_flag):
-                        print(sub_population["name"])
+                    if sub_population_item and not multiple_file_flag:
                         if sub_population_item != sub_population:
                             print(f"Conflicting fields for {sub_population['name']}")
                         continue
@@ -61,19 +60,19 @@ for species_name, species in data.items():
                         sub_population["fields"][field_key] = f"UNSPECIFIED_{field_val}"
                     # population can come from multiple files, skip duplicates
                     if sub_population["name"] in population_frequencies:
-                        if (population_frequencies[sub_population["name"]] != sub_population):
-                            print(sub_population)
-                            print(population_frequencies[sub_population["name"]])
-                            print(
-                                f"Conflicting fields for {sub_population['name']}"
-                            )
+                        if (
+                            population_frequencies[sub_population["name"]]
+                            != sub_population
+                        ):
+                            print(f"Conflicting fields for {sub_population['name']}")
                         continue
                     else:
-                        population_frequencies[sub_population["name"]] = [sub_population]
+                        population_frequencies[sub_population["name"]] = [
+                            sub_population
+                        ]
 
         genome_uuids = get_genome_uuids(server, species_name)
         for genome_uuid in genome_uuids:
-            print(genome_uuid)
             population_map[genome_uuid] = population_frequencies
 
 # Write population-data.json

@@ -15,9 +15,6 @@
 import json
 from utils import parse_ini, get_genome_uuids
 
-
-
-
 # Open and read the JSON file
 with open("seed-files/populations.json", "r") as file:
     data = json.load(file)
@@ -25,7 +22,6 @@ with open("seed-files/populations.json", "r") as file:
 server = parse_ini("db.ini", "metadata")
 
 population_map = {}
-
 
 # Convert common name to genome uuid
 for species_name, species in data.items():

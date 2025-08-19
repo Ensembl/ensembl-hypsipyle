@@ -408,7 +408,7 @@ class Variant():
             pop_mapping_all = json.load(pop_file)
             try:
                 pop_mapping = pop_mapping_all[self.genome_uuid]
-            except:
+            except Exception:
                 pop_mapping = {}
                 print(f"No population mapping for - {self.genome_uuid}")
 
@@ -427,11 +427,11 @@ class Variant():
                             col_index = self.get_info_key_index(freq_val)
                             if col_index and csq_record_list[col_index] is not None:
                                 if freq_key == "af":
-                                    allele_frequency = csq_record_list[col_index] or None
+                                    allele_frequency = csq_record_list[col_index].split("&")[0] or None
                                 elif freq_key == "an":
-                                    allele_number = csq_record_list[col_index] or None
+                                    allele_number = csq_record_list[col_index].split("&")[0] or None
                                 elif freq_key == "ac":
-                                    allele_count = csq_record_list[col_index] or None
+                                    allele_count = csq_record_list[col_index].split("&")[0] or None
                                 else:
                                     raise Exception('Frequency metric is not recognised')
   

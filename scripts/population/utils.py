@@ -42,7 +42,8 @@ def parse_ini(ini_file: str, section: str = "database") -> dict:
 
 
 def get_genome_uuids(server: dict, production_name: str) -> str:
-    """_summary_
+    """
+    Get genome uuids form the database
 
     Args:
         server (dict): database config

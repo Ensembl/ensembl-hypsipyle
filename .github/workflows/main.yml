@@ -9,4 +9,4 @@ jobs:
       - name: setup
         run: docker build -t my-app -f ./Dockerfile.dev .
       - name: linting
-        run: docker run -v "${{ github.workspace }}:/app" -w /app --rm my-app ruff format
+        run: docker run -v "${{ github.workspace }}:/app" -w /app --rm my-app ruff check

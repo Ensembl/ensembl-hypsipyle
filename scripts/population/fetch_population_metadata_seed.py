@@ -15,7 +15,7 @@
 import json
 import csv
 import subprocess
-from .utils import parse_ini
+from utils import parse_ini
 
 
 def fetch_populations(server: dict, variation_db_name: str) -> str:

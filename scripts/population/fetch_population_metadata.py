@@ -13,7 +13,7 @@
 """
 
 import json
-from .utils import parse_ini, get_genome_uuids
+from utils import parse_ini, get_genome_uuids
 
 # Open and read the JSON file
 with open("seed-files/population_metadata.json", "r") as file:

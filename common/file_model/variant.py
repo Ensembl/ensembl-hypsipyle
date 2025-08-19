@@ -454,20 +454,24 @@ class Variant():
                             population_frequency_map[csq_record_list[allele_index]][sub_pop["name"]] = population_frequency
         return population_frequency_map
     
-    def set_frequency_flags(self):
+    def parse_population_file(self) ->  dict:
+        directory = os.path.dirname(__file__)
+        pop_mapping = {}
+        with open(os.path.join(directory,'populations.json')) as pop_file:
+            pop_mapping_all = json.load(pop_file)
+            try:
+                pop_mapping = pop_mapping_all[self.genome_uuid]
+            except Exception:
+                print(f"No population mapping for - {self.genome_uuid}")
+        return pop_mapping
+        
+    def set_frequency_flags(self) -> Mapping:
         """Calculates minor allele frequency (MAF) and high population minor allele frequency (HPMAF) flags for each allele.
 
         Returns:
             Mapping: A mapping of allele frequency data with MAF and HPMAF flags applied.
         """
-        directory = os.path.dirname(__file__)
-        with open(os.path.join(directory,'populations.json')) as pop_file:
-            pop_mapping_all = json.load(pop_file)
-            try:
-                pop_mapping = pop_mapping_all[self.genome_uuid]
-            except:
-                pop_mapping = {}
-                print(f"No population mapping for - {self.genome_uuid}")
+        pop_mapping = self.parse_population_file()
         pop_names = []
         for pop in pop_mapping.values():
             pop_names.extend([sub_pop["name"] for sub_pop in pop])
@@ -555,7 +559,8 @@ class Variant():
         """
         alleles = [i.value for i in self.alts]
         statistics_info = {}
-        
+        if not self.parse_population_file():
+            print(f"No representative allele frequency for - {self.genome_uuid}")
         for index,allele in enumerate(alleles):
             statistics_info[allele] = {
                                         "count_transcript_consequences": self.info["NTCSQ"][index]  if "NTCSQ" in self.info else 0,
@@ -574,4 +579,5 @@ class Variant():
                                         "count_gene_phenotypes": 0,
                                         "representative_population_allele_frequency": 1-float(sum(filter(None,self.info["RAF"]))) if "RAF" in self.info else None
         }
+        
         return statistics_info

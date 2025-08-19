@@ -204,7 +204,7 @@ def resolve_ensmebl_website_display_data_from_variant_allele(
 @QUERY_TYPE.field("version")
 def resolve_api(
     _: None, info: GraphQLResolveInfo
-):  # the second argument must be named `info` to avoid a NameError
+) -> Dict:  # the second argument must be named `info` to avoid a NameError
     return {"api": {"major": "0", "minor": "1", "patch": "0-beta"}}
 
 

@@ -69,7 +69,6 @@ population_map = {}
 for species_name, species in data.items():
     population_frequencies = {}
     for population_source in species:
-
         if population_source["name"] != "UNSPECIFIED": 
             pop_freq_name = population_source['name']
             population_frequencies[pop_freq_name] = []
@@ -79,7 +78,10 @@ for species_name, species in data.items():
                 for sub_population in population_file["include_fields"]:
                     for field_key,field_val in sub_population['fields'].items():
                         sub_population['fields'][field_key]=f"{prefix}_{field_val}" 
-                    population_frequencies[pop_freq_name].append(sub_population)
+                    if sub_population in population_frequencies[pop_freq_name]:
+                        continue
+                    else:
+                        population_frequencies[pop_freq_name].append(sub_population)
         else:
              for population_file in population_source["files"]:
                 for sub_population in population_file["include_fields"]:

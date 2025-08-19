@@ -13,7 +13,10 @@
 """
 
 import json
-from .utils import parse_ini, get_genome_uuids
+from utils import parse_ini, get_genome_uuids
+
+
+
 
 # Open and read the JSON file
 with open("seed-files/populations.json", "r") as file:
@@ -23,18 +26,19 @@ server = parse_ini("db.ini", "metadata")
 
 population_map = {}
 
-# For mouse, file list (for SNP and indels), output fields are per files
-exception_list = ["MGP"]
 
 # Convert common name to genome uuid
 for species_name, species in data.items():
     population_frequencies = {}
+    multiple_file_flag = 0
     for population_source in species:
         if population_source["name"] != "UNSPECIFIED":
             pop_freq_name = population_source["name"]
             population_frequencies[pop_freq_name] = []
             for population_file in population_source["files"]:
                 prefix = population_file["short_name"]
+                if prefix != pop_freq_name:
+                    multiple_file_flag=1
                 for sub_population in population_file["include_fields"]:
                     for field_key, field_val in sub_population["fields"].items():
                         sub_population["fields"][field_key] = f"{prefix}_{field_val}"
@@ -47,10 +51,8 @@ for species_name, species in data.items():
                         ),
                         None,
                     )
-                    if (
-                        sub_population_item
-                        and sub_population["name"] not in exception_list
-                    ):
+                    if (sub_population_item and not multiple_file_flag):
+                        print(sub_population["name"])
                         if sub_population_item != sub_population:
                             print(f"Conflicting fields for {sub_population['name']}")
                         continue
@@ -61,23 +63,21 @@ for species_name, species in data.items():
                 for sub_population in population_file["include_fields"]:
                     for field_key, field_val in sub_population["fields"].items():
                         sub_population["fields"][field_key] = f"UNSPECIFIED_{field_val}"
-                        # population can come from multiple files, skip duplicates
-                        if sub_population["name"] in population_frequencies:
-                            if (
-                                population_frequencies[sub_population["name"]]
-                                != sub_population
-                            ):
-                                print(
-                                    f"Conflicting fields for {sub_population['name']}"
-                                )
-                            continue
-                        else:
-                            population_frequencies[sub_population["name"]] = [
-                                sub_population
-                            ]
+                    # population can come from multiple files, skip duplicates
+                    if sub_population["name"] in population_frequencies:
+                        if (population_frequencies[sub_population["name"]] != sub_population):
+                            print(sub_population)
+                            print(population_frequencies[sub_population["name"]])
+                            print(
+                                f"Conflicting fields for {sub_population['name']}"
+                            )
+                        continue
+                    else:
+                        population_frequencies[sub_population["name"]] = [sub_population]
 
         genome_uuids = get_genome_uuids(server, species_name)
         for genome_uuid in genome_uuids:
+            print(genome_uuid)
             population_map[genome_uuid] = population_frequencies
 
 # Write population-data.json

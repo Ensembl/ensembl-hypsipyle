@@ -37,8 +37,9 @@ def parse_ini(ini_file: str, section: str = "database") -> dict:
         host = config[section]["host"]
         port = config[section]["port"]
         user = config[section]["user"]
+        database = config[section]["database"] if "database" in config[section] else None
 
-    return {"host": host, "port": port, "user": user}
+    return {"host": host, "port": port, "user": user, "database": database}
 
 
 def get_genome_uuids(server: dict, production_name: str) -> str:
@@ -47,11 +48,12 @@ def get_genome_uuids(server: dict, production_name: str) -> str:
 
     Args:
         server (dict): database config
-        production_name (str): production ame for assembly
+        production_name (str): production name for assembly
 
     Returns:
         str: genome uuids
     """
+    print(server["database"])
     if production_name == "homo_sapiens_gca\\d{9}v\\d{1}":
         query = 'SELECT genome_uuid FROM genome WHERE PRODUCTION_NAME LIKE "homo_sapiens_gca%";'
     else:

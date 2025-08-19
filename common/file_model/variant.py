@@ -391,11 +391,11 @@ class Variant():
         Returns:
             int: The index of the key in the CSQ field.
         """
-            info_field = self.header.get_info_field_info(info_id).description
-            csq_list = info_field.split("Format: ")[1].split("|")
-            for index, value in enumerate(csq_list):
-                if value == key:
-                    return index   
+        info_field = self.header.get_info_field_info(info_id).description
+        csq_list = info_field.split("Format: ")[1].split("|")
+        for index, value in enumerate(csq_list):
+            if value == key:
+                return index   
                 
     def traverse_population_info(self) -> Mapping:
         """Traverses the population mapping to extract allele frequency data.
@@ -575,5 +575,3 @@ class Variant():
                                         "representative_population_allele_frequency": 1-float(sum(filter(None,self.info["RAF"]))) if "RAF" in self.info else None
         }
         return statistics_info
-
-

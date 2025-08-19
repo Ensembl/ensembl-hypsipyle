@@ -16,8 +16,6 @@ from typing import Any, Mapping, List, Union
 import re
 import os
 import json
-import operator
-from functools import reduce
 from common.file_model.variant_allele import VariantAllele
 from common.file_model.utils import minimise_allele, decode_population_name
 
@@ -160,7 +158,7 @@ class Variant():
                 variant_id = f"{self.chromosome}:{self.position}:{self.name}"
             
 
-        except Exception as e:
+        except Exception:
             return None 
 
         return {
@@ -439,7 +437,7 @@ class Variant():
                                 try:  
                                     # calculating allele frequency on fly
                                     allele_frequency = int(allele_count)/int(allele_number)
-                                except:
+                                except Exception:
                                     print(f"Cannot calculate AF using expression - {allele_count}/{allele_number}")
 
                         if allele_frequency is not None:

@@ -1,0 +1,6593 @@
+{
+    "homo_sapiens":
+    [
+        {
+            "name": "gnomADg:ALL",
+            "description": "All gnomAD genomes individuals v4.1",
+            "type": "regional",
+            "is_global": true,
+            "display_group_name": "gnomAD genomes v4.1",
+            "super_population":null,
+            "sub_populations": [
+                {
+                    "name": "gnomADg:afr"
+                },
+                {
+                    "name": "gnomADg:ami"
+                },
+                {
+                    "name": "gnomADg:amr"
+                },
+                {
+                    "name": "gnomADg:asj"
+                },
+                {
+                    "name": "gnomADg:eas"
+                },
+                {
+                    "name": "gnomADg:fin"
+                },
+                {
+                    "name": "gnomADg:mid"
+                },
+                {
+                    "name": "gnomADg:nfe"
+                },
+                {
+                    "name": "gnomADg:remaining"
+                },
+                {
+                    "name": "gnomADg:sas"
+                }
+            
+            ]   
+        },
+        {
+            "name": "gnomADg:afr",
+            "description": "African/African American",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADg:ami",
+            "description": "Amish",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADg:amr",
+            "description": "Latino",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADg:asj",
+            "description": "Ashkenazi Jewish",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADg:eas",
+            "description": "East Asian",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADg:fin",
+            "description": "Finnish",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+                
+        },
+        {
+            "name": "gnomADg:mid",
+            "description": "Middle Eastern",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]       
+        },
+        {
+            "name": "gnomADg:nfe",
+            "description": "Non-Finnish European",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]       
+        },
+        {
+            "name": "gnomADg:remaining",
+            "description": "Remaining",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]       
+        },
+        {
+            "name": "gnomADg:sas",
+            "description": "South Asian",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]       
+        },
+        {
+                
+            "name": "gnomADe:ALL",
+            "description": "All gnomAD exomes individuals v4.1",
+            "type": "regional",
+            "is_global": true,
+            "display_group_name": "gnomAD exomes v4.1",
+            "super_population":null,
+            "sub_populations": [
+                {
+                    "name": "gnomADe:afr"
+                },
+                {
+                    "name": "gnomADe:amr"
+                },
+                {
+                    "name": "gnomADe:asj"
+                },
+                {
+                    "name": "gnomADe:eas"
+                },
+                {
+                    "name": "gnomADe:fin"
+                },
+                {
+                    "name": "gnomADe:mid"
+                },
+                {
+                    "name": "gnomADe:nfe"
+                },
+                {
+                    "name": "gnomADe:remaining"
+                },
+                {
+                    "name": "gnomADe:sas"
+                }
+            
+            ]   
+        },
+        {
+            "name": "gnomADe:afr",
+            "description": "African/African American",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD exomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADe:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADe:amr",
+            "description": "Latino",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD exomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADe:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADe:asj",
+            "description": "Ashkenazi Jewish",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD exomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADe:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADe:eas",
+            "description": "East Asian",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD exomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADe:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADe:fin",
+            "description": "Finnish",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD exomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADe:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+                
+        },
+        {
+            "name": "gnomADe:nfe",
+            "description": "Non-Finnish European",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD exomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADe:ALL"
+            },
+            "sub_populations": [
+            
+            ]       
+        },
+        {
+            "name": "gnomADe:mid",
+            "description": "Middle Eastern",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD exomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADe:ALL"
+            },
+            "sub_populations": [
+            
+            ]       
+        },
+        {
+            "name": "gnomADe:remaining",
+            "description": "Remaining",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD exomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADe:ALL"
+            },
+            "sub_populations": [
+            
+            ]       
+        },
+        {
+            "name": "gnomADe:sas",
+            "description": "South Asian",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD exomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADe:ALL"
+            },
+            "sub_populations": [
+            
+            ]       
+        },
+        {
+        "name": "1000GENOMES:phase_3:ALL",
+        "description": "All phase 3 individuals",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":null,
+        "sub_populations": [
+        {
+            "name": "1000GENOMES:phase_3:AFR"
+        },
+        {
+            "name": "1000GENOMES:phase_3:AMR"
+        },
+        {
+            "name": "1000GENOMES:phase_3:EAS"
+        },
+        {
+            "name": "1000GENOMES:phase_3:EUR"
+        },
+        {
+            "name": "1000GENOMES:phase_3:SAS"
+        }
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:AFR",
+        "description": "African",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:ALL"
+        },
+        "sub_populations": [
+        {
+            "name": "1000GENOMES:phase_3:ACB"
+        },
+        {
+            "name": "1000GENOMES:phase_3:ASW"
+        },
+        {
+            "name": "1000GENOMES:phase_3:ESN"
+        },
+        {
+            "name": "1000GENOMES:phase_3:GWD"
+        },
+        {
+            "name": "1000GENOMES:phase_3:LWK"
+        },
+        {
+            "name": "1000GENOMES:phase_3:MSL"
+        }
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:AMR",
+        "description": "American",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:ALL"
+        },
+        "sub_populations": [
+        {
+            "name": "1000GENOMES:phase_3:CLM"
+        },
+        {
+            "name": "1000GENOMES:phase_3:MXL"
+        },
+        {
+            "name": "1000GENOMES:phase_3:PEL"
+        },
+        {
+            "name": "1000GENOMES:phase_3:PUR"
+        }
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:EAS",
+        "description": "East Asian",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:ALL"
+        },
+        "sub_populations": [
+        {
+            "name": "1000GENOMES:phase_3:CDX"
+        },
+        {
+            "name": "1000GENOMES:phase_3:CHB"
+        },
+        {
+            "name": "1000GENOMES:phase_3:CHS"
+        },
+        {
+            "name": "1000GENOMES:phase_3:JPT"
+        },
+        {
+            "name": "1000GENOMES:phase_3:KHV"
+        }
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:EUR",
+        "description": "European",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:ALL"
+        },
+        "sub_populations": [
+        {
+            "name": "1000GENOMES:phase_3:CEU"
+        },
+        {
+            "name": "1000GENOMES:phase_3:FIN"
+        },
+        {
+            "name": "1000GENOMES:phase_3:GBR"
+        },
+        {
+            "name": "1000GENOMES:phase_3:IBS"
+        },
+        {
+            "name": "1000GENOMES:phase_3:TSI"
+        }
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:SAS",
+        "description": "South Asian",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:ALL"
+        },
+        "sub_populations": [
+        {
+            "name": "1000GENOMES:phase_3:BEB"
+        },
+        {
+            "name": "1000GENOMES:phase_3:GIH"
+        },
+        {
+            "name": "1000GENOMES:phase_3:ITU"
+        },
+        {
+            "name": "1000GENOMES:phase_3:PJL"
+        },
+        {
+            "name": "1000GENOMES:phase_3:STU"
+        }
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:ACB",
+        "description": "African Caribbean in Barbados",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:AFR"
+        },
+        "sub_populations": [
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:ASW",
+        "description": "African Ancestry in Southwest US",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:AFR"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:ESN",
+        "description": "Esan in Nigeria",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:AFR"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:GWD",
+        "description": "Gambian in Western Division, The Gambia",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:AFR"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:LWK",
+        "description": "Luhya in Webuye, Kenya",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:AFR"
+        },
+        "sub_populations": [
+            
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:MSL",
+        "description": "Mende in Sierra Leone",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:AFR"
+        },
+        "sub_populations": [
+            
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:CLM",
+        "description": "Colombian in Medellin, Colombia",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:AMR"
+        },
+        "sub_populations": [
+            
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:MXL",
+        "description": "Mexican Ancestry in Los Angeles, California",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:AMR"
+        },
+        "sub_populations": [
+            
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:PEL",
+        "description": "Peruvian in Lima, Peru",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:AMR"
+        },
+        "sub_populations": [
+            
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:PUR",
+        "description": "Puerto Rican in Puerto Rico",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:AMR"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:CDX",
+        "description": "Chinese Dai in Xishuangbanna, China",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:EAS"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:CHB",
+        "description": "Han Chinese in Bejing, China",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:EAS"
+        },
+        "sub_populations": [
+            
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:CHS",
+        "description": "Southern Han Chinese, China",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:EAS"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:JPT",
+        "description": "Japanese in Tokyo, Japan",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:EAS"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:KHV",
+        "description": "Kinh in Ho Chi Minh City, Vietnam",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:EAS"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:CEU",
+        "description": " Utah residents with Northern and Western European ancestry",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:EUR"
+        },
+        "sub_populations": [
+            
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:FIN",
+        "description": "Finnish in Finland",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:EUR"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:GBR",
+        "description": "British in England and Scotland",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:EUR"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:IBS",
+        "description": "Iberian populations in Spain",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:EUR"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:TSI",
+        "description": "Toscani in Italy",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:EUR"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:BEB",
+        "description": "Bengali in Bangladesh",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:SAS"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:GIH",
+        "description": "Gujarati Indian in Houston, TX",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:SAS"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:ITU",
+        "description": "Indian Telugu in the UK",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:SAS"
+        },
+        "sub_populations": [
+            
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:PJL",
+        "description": "Punjabi in Lahore, Pakistan",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:SAS"
+        },
+        "sub_populations": [
+            
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:STU",
+        "description": "Sri Lankan Tamil in the UK",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:SAS"
+        },
+        "sub_populations": [
+        
+        ]
+        }
+    ],
+    "homo_sapiens_37": 
+    [
+
+         {
+            "name": "gnomADg:ALL",
+            "description": "All gnomAD genomes individuals v4.1",
+            "type": "regional",
+            "is_global": true,
+            "display_group_name": "gnomAD genomes v4.1",
+            "super_population":null,
+            "sub_populations": [
+                {
+                    "name": "gnomADg:afr"
+                },
+                {
+                    "name": "gnomADg:ami"
+                },
+                {
+                    "name": "gnomADg:amr"
+                },
+                {
+                    "name": "gnomADg:asj"
+                },
+                {
+                    "name": "gnomADg:eas"
+                },
+                {
+                    "name": "gnomADg:fin"
+                },
+                {
+                    "name": "gnomADg:mid"
+                },
+                {
+                    "name": "gnomADg:nfe"
+                },
+                {
+                    "name": "gnomADg:remaining"
+                },
+                {
+                    "name": "gnomADg:sas"
+                }
+            
+            ]   
+        },
+        {
+            "name": "gnomADg:afr",
+            "description": "African/African American",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADg:ami",
+            "description": "Amish",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADg:amr",
+            "description": "Latino",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADg:asj",
+            "description": "Ashkenazi Jewish",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADg:eas",
+            "description": "East Asian",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADg:fin",
+            "description": "Finnish",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+                
+        },
+        {
+            "name": "gnomADg:mid",
+            "description": "Middle Eastern",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]       
+        },
+        {
+            "name": "gnomADg:nfe",
+            "description": "Non-Finnish European",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]       
+        },
+        {
+            "name": "gnomADg:remaining",
+            "description": "Remaining",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]       
+        },
+        {
+            "name": "gnomADg:sas",
+            "description": "South Asian",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]       
+        },
+        {
+                
+            "name": "gnomADe:ALL",
+            "description": "All gnomAD exomes individuals v4.1",
+            "type": "regional",
+            "is_global": true,
+            "display_group_name": "gnomAD exomes v4.1",
+            "super_population":null,
+            "sub_populations": [
+                {
+                    "name": "gnomADe:afr"
+                },
+                {
+                    "name": "gnomADe:amr"
+                },
+                {
+                    "name": "gnomADe:asj"
+                },
+                {
+                    "name": "gnomADe:eas"
+                },
+                {
+                    "name": "gnomADe:fin"
+                },
+                {
+                    "name": "gnomADe:mid"
+                },
+                {
+                    "name": "gnomADe:nfe"
+                },
+                {
+                    "name": "gnomADe:remaining"
+                },
+                {
+                    "name": "gnomADe:sas"
+                }
+            
+            ]   
+        },
+        {
+            "name": "gnomADe:afr",
+            "description": "African/African American",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD exomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADe:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADe:amr",
+            "description": "Latino",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD exomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADe:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADe:asj",
+            "description": "Ashkenazi Jewish",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD exomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADe:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADe:eas",
+            "description": "East Asian",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD exomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADe:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADe:fin",
+            "description": "Finnish",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD exomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADe:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+                
+        },
+        {
+            "name": "gnomADe:nfe",
+            "description": "Non-Finnish European",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD exomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADe:ALL"
+            },
+            "sub_populations": [
+            
+            ]       
+        },
+        {
+            "name": "gnomADe:mid",
+            "description": "Middle Eastern",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD exomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADe:ALL"
+            },
+            "sub_populations": [
+            
+            ]       
+        },
+        {
+            "name": "gnomADe:remaining",
+            "description": "Remaining",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD exomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADe:ALL"
+            },
+            "sub_populations": [
+            
+            ]       
+        },
+        {
+            "name": "gnomADe:sas",
+            "description": "South Asian",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD exomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADe:ALL"
+            },
+            "sub_populations": [
+            
+            ]       
+        },
+        {
+        "name": "1000GENOMES:phase_3:ALL",
+        "description": "All phase 3 individuals",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":null,
+        "sub_populations": [
+        {
+            "name": "1000GENOMES:phase_3:AFR"
+        },
+        {
+            "name": "1000GENOMES:phase_3:AMR"
+        },
+        {
+            "name": "1000GENOMES:phase_3:EAS"
+        },
+        {
+            "name": "1000GENOMES:phase_3:EUR"
+        },
+        {
+            "name": "1000GENOMES:phase_3:SAS"
+        }
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:AFR",
+        "description": "African",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:ALL"
+        },
+        "sub_populations": [
+        {
+            "name": "1000GENOMES:phase_3:ACB"
+        },
+        {
+            "name": "1000GENOMES:phase_3:ASW"
+        },
+        {
+            "name": "1000GENOMES:phase_3:ESN"
+        },
+        {
+            "name": "1000GENOMES:phase_3:GWD"
+        },
+        {
+            "name": "1000GENOMES:phase_3:LWK"
+        },
+        {
+            "name": "1000GENOMES:phase_3:MSL"
+        }
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:AMR",
+        "description": "American",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:ALL"
+        },
+        "sub_populations": [
+        {
+            "name": "1000GENOMES:phase_3:CLM"
+        },
+        {
+            "name": "1000GENOMES:phase_3:MXL"
+        },
+        {
+            "name": "1000GENOMES:phase_3:PEL"
+        },
+        {
+            "name": "1000GENOMES:phase_3:PUR"
+        }
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:EAS",
+        "description": "East Asian",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:ALL"
+        },
+        "sub_populations": [
+        {
+            "name": "1000GENOMES:phase_3:CDX"
+        },
+        {
+            "name": "1000GENOMES:phase_3:CHB"
+        },
+        {
+            "name": "1000GENOMES:phase_3:CHS"
+        },
+        {
+            "name": "1000GENOMES:phase_3:JPT"
+        },
+        {
+            "name": "1000GENOMES:phase_3:KHV"
+        }
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:EUR",
+        "description": "European",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:ALL"
+        },
+        "sub_populations": [
+        {
+            "name": "1000GENOMES:phase_3:CEU"
+        },
+        {
+            "name": "1000GENOMES:phase_3:FIN"
+        },
+        {
+            "name": "1000GENOMES:phase_3:GBR"
+        },
+        {
+            "name": "1000GENOMES:phase_3:IBS"
+        },
+        {
+            "name": "1000GENOMES:phase_3:TSI"
+        }
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:SAS",
+        "description": "South Asian",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:ALL"
+        },
+        "sub_populations": [
+        {
+            "name": "1000GENOMES:phase_3:BEB"
+        },
+        {
+            "name": "1000GENOMES:phase_3:GIH"
+        },
+        {
+            "name": "1000GENOMES:phase_3:ITU"
+        },
+        {
+            "name": "1000GENOMES:phase_3:PJL"
+        },
+        {
+            "name": "1000GENOMES:phase_3:STU"
+        }
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:ACB",
+        "description": "African Caribbean in Barbados",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:AFR"
+        },
+        "sub_populations": [
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:ASW",
+        "description": "African Ancestry in Southwest US",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:AFR"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:ESN",
+        "description": "Esan in Nigeria",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:AFR"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:GWD",
+        "description": "Gambian in Western Division, The Gambia",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:AFR"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:LWK",
+        "description": "Luhya in Webuye, Kenya",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:AFR"
+        },
+        "sub_populations": [
+            
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:MSL",
+        "description": "Mende in Sierra Leone",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:AFR"
+        },
+        "sub_populations": [
+            
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:CLM",
+        "description": "Colombian in Medellin, Colombia",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:AMR"
+        },
+        "sub_populations": [
+            
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:MXL",
+        "description": "Mexican Ancestry in Los Angeles, California",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:AMR"
+        },
+        "sub_populations": [
+            
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:PEL",
+        "description": "Peruvian in Lima, Peru",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:AMR"
+        },
+        "sub_populations": [
+            
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:PUR",
+        "description": "Puerto Rican in Puerto Rico",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:AMR"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:CDX",
+        "description": "Chinese Dai in Xishuangbanna, China",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:EAS"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:CHB",
+        "description": "Han Chinese in Bejing, China",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:EAS"
+        },
+        "sub_populations": [
+            
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:CHS",
+        "description": "Southern Han Chinese, China",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:EAS"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:JPT",
+        "description": "Japanese in Tokyo, Japan",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:EAS"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:KHV",
+        "description": "Kinh in Ho Chi Minh City, Vietnam",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:EAS"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:CEU",
+        "description": " Utah residents with Northern and Western European ancestry",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:EUR"
+        },
+        "sub_populations": [
+            
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:FIN",
+        "description": "Finnish in Finland",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:EUR"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:GBR",
+        "description": "British in England and Scotland",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:EUR"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:IBS",
+        "description": "Iberian populations in Spain",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:EUR"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:TSI",
+        "description": "Toscani in Italy",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:EUR"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:BEB",
+        "description": "Bengali in Bangladesh",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:SAS"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:GIH",
+        "description": "Gujarati Indian in Houston, TX",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:SAS"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:ITU",
+        "description": "Indian Telugu in the UK",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:SAS"
+        },
+        "sub_populations": [
+            
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:PJL",
+        "description": "Punjabi in Lahore, Pakistan",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:SAS"
+        },
+        "sub_populations": [
+            
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:STU",
+        "description": "Sri Lankan Tamil in the UK",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:SAS"
+        },
+        "sub_populations": [
+        
+        ]
+        }
+    ],
+   "homo_sapiens_gca\\d{9}v\\d{1}": 
+   [
+     {
+            "name": "gnomADg:ALL",
+            "description": "All gnomAD genomes individuals v4.1",
+            "type": "regional",
+            "is_global": true,
+            "display_group_name": "gnomAD genomes v4.1",
+            "super_population":null,
+            "sub_populations": [
+                {
+                    "name": "gnomADg:afr"
+                },
+                {
+                    "name": "gnomADg:ami"
+                },
+                {
+                    "name": "gnomADg:amr"
+                },
+                {
+                    "name": "gnomADg:asj"
+                },
+                {
+                    "name": "gnomADg:eas"
+                },
+                {
+                    "name": "gnomADg:fin"
+                },
+                {
+                    "name": "gnomADg:mid"
+                },
+                {
+                    "name": "gnomADg:nfe"
+                },
+                {
+                    "name": "gnomADg:remaining"
+                },
+                {
+                    "name": "gnomADg:sas"
+                }
+            
+            ]   
+        },
+        {
+            "name": "gnomADg:afr",
+            "description": "African/African American",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADg:ami",
+            "description": "Amish",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADg:amr",
+            "description": "Latino",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADg:asj",
+            "description": "Ashkenazi Jewish",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADg:eas",
+            "description": "East Asian",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADg:fin",
+            "description": "Finnish",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+                
+        },
+        {
+            "name": "gnomADg:mid",
+            "description": "Middle Eastern",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]       
+        },
+        {
+            "name": "gnomADg:nfe",
+            "description": "Non-Finnish European",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]       
+        },
+        {
+            "name": "gnomADg:remaining",
+            "description": "Remaining",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]       
+        },
+        {
+            "name": "gnomADg:sas",
+            "description": "South Asian",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD genomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADg:ALL"
+            },
+            "sub_populations": [
+            
+            ]       
+        },
+        {
+                
+            "name": "gnomADe:ALL",
+            "description": "All gnomAD exomes individuals v4.1",
+            "type": "regional",
+            "is_global": true,
+            "display_group_name": "gnomAD exomes v4.1",
+            "super_population":null,
+            "sub_populations": [
+                {
+                    "name": "gnomADe:afr"
+                },
+                {
+                    "name": "gnomADe:amr"
+                },
+                {
+                    "name": "gnomADe:asj"
+                },
+                {
+                    "name": "gnomADe:eas"
+                },
+                {
+                    "name": "gnomADe:fin"
+                },
+                {
+                    "name": "gnomADe:mid"
+                },
+                {
+                    "name": "gnomADe:nfe"
+                },
+                {
+                    "name": "gnomADe:remaining"
+                },
+                {
+                    "name": "gnomADe:sas"
+                }
+            
+            ]   
+        },
+        {
+            "name": "gnomADe:afr",
+            "description": "African/African American",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD exomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADe:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADe:amr",
+            "description": "Latino",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD exomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADe:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADe:asj",
+            "description": "Ashkenazi Jewish",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD exomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADe:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADe:eas",
+            "description": "East Asian",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD exomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADe:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+        },
+        {
+            "name": "gnomADe:fin",
+            "description": "Finnish",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD exomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADe:ALL"
+            },
+            "sub_populations": [
+            
+            ]
+                
+        },
+        {
+            "name": "gnomADe:nfe",
+            "description": "Non-Finnish European",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD exomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADe:ALL"
+            },
+            "sub_populations": [
+            
+            ]       
+        },
+        {
+            "name": "gnomADe:mid",
+            "description": "Middle Eastern",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD exomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADe:ALL"
+            },
+            "sub_populations": [
+            
+            ]       
+        },
+        {
+            "name": "gnomADe:remaining",
+            "description": "Remaining",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD exomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADe:ALL"
+            },
+            "sub_populations": [
+            
+            ]       
+        },
+        {
+            "name": "gnomADe:sas",
+            "description": "South Asian",
+            "type": "regional",
+            "is_global": false,
+            "display_group_name": "gnomAD exomes v4.1",
+            "super_population":
+            {
+                "name": "gnomADe:ALL"
+            },
+            "sub_populations": [
+            
+            ]       
+        },
+        {
+        "name": "1000GENOMES:phase_3:ALL",
+        "description": "All phase 3 individuals",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":null,
+        "sub_populations": [
+        {
+            "name": "1000GENOMES:phase_3:AFR"
+        },
+        {
+            "name": "1000GENOMES:phase_3:AMR"
+        },
+        {
+            "name": "1000GENOMES:phase_3:EAS"
+        },
+        {
+            "name": "1000GENOMES:phase_3:EUR"
+        },
+        {
+            "name": "1000GENOMES:phase_3:SAS"
+        }
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:AFR",
+        "description": "African",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:ALL"
+        },
+        "sub_populations": [
+        {
+            "name": "1000GENOMES:phase_3:ACB"
+        },
+        {
+            "name": "1000GENOMES:phase_3:ASW"
+        },
+        {
+            "name": "1000GENOMES:phase_3:ESN"
+        },
+        {
+            "name": "1000GENOMES:phase_3:GWD"
+        },
+        {
+            "name": "1000GENOMES:phase_3:LWK"
+        },
+        {
+            "name": "1000GENOMES:phase_3:MSL"
+        }
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:AMR",
+        "description": "American",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:ALL"
+        },
+        "sub_populations": [
+        {
+            "name": "1000GENOMES:phase_3:CLM"
+        },
+        {
+            "name": "1000GENOMES:phase_3:MXL"
+        },
+        {
+            "name": "1000GENOMES:phase_3:PEL"
+        },
+        {
+            "name": "1000GENOMES:phase_3:PUR"
+        }
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:EAS",
+        "description": "East Asian",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:ALL"
+        },
+        "sub_populations": [
+        {
+            "name": "1000GENOMES:phase_3:CDX"
+        },
+        {
+            "name": "1000GENOMES:phase_3:CHB"
+        },
+        {
+            "name": "1000GENOMES:phase_3:CHS"
+        },
+        {
+            "name": "1000GENOMES:phase_3:JPT"
+        },
+        {
+            "name": "1000GENOMES:phase_3:KHV"
+        }
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:EUR",
+        "description": "European",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:ALL"
+        },
+        "sub_populations": [
+        {
+            "name": "1000GENOMES:phase_3:CEU"
+        },
+        {
+            "name": "1000GENOMES:phase_3:FIN"
+        },
+        {
+            "name": "1000GENOMES:phase_3:GBR"
+        },
+        {
+            "name": "1000GENOMES:phase_3:IBS"
+        },
+        {
+            "name": "1000GENOMES:phase_3:TSI"
+        }
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:SAS",
+        "description": "South Asian",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:ALL"
+        },
+        "sub_populations": [
+        {
+            "name": "1000GENOMES:phase_3:BEB"
+        },
+        {
+            "name": "1000GENOMES:phase_3:GIH"
+        },
+        {
+            "name": "1000GENOMES:phase_3:ITU"
+        },
+        {
+            "name": "1000GENOMES:phase_3:PJL"
+        },
+        {
+            "name": "1000GENOMES:phase_3:STU"
+        }
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:ACB",
+        "description": "African Caribbean in Barbados",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:AFR"
+        },
+        "sub_populations": [
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:ASW",
+        "description": "African Ancestry in Southwest US",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:AFR"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:ESN",
+        "description": "Esan in Nigeria",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:AFR"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:GWD",
+        "description": "Gambian in Western Division, The Gambia",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:AFR"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:LWK",
+        "description": "Luhya in Webuye, Kenya",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:AFR"
+        },
+        "sub_populations": [
+            
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:MSL",
+        "description": "Mende in Sierra Leone",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:AFR"
+        },
+        "sub_populations": [
+            
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:CLM",
+        "description": "Colombian in Medellin, Colombia",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:AMR"
+        },
+        "sub_populations": [
+            
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:MXL",
+        "description": "Mexican Ancestry in Los Angeles, California",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:AMR"
+        },
+        "sub_populations": [
+            
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:PEL",
+        "description": "Peruvian in Lima, Peru",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:AMR"
+        },
+        "sub_populations": [
+            
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:PUR",
+        "description": "Puerto Rican in Puerto Rico",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:AMR"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:CDX",
+        "description": "Chinese Dai in Xishuangbanna, China",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:EAS"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:CHB",
+        "description": "Han Chinese in Bejing, China",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:EAS"
+        },
+        "sub_populations": [
+            
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:CHS",
+        "description": "Southern Han Chinese, China",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:EAS"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:JPT",
+        "description": "Japanese in Tokyo, Japan",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:EAS"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:KHV",
+        "description": "Kinh in Ho Chi Minh City, Vietnam",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:EAS"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:CEU",
+        "description": " Utah residents with Northern and Western European ancestry",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:EUR"
+        },
+        "sub_populations": [
+            
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:FIN",
+        "description": "Finnish in Finland",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:EUR"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:GBR",
+        "description": "British in England and Scotland",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:EUR"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:IBS",
+        "description": "Iberian populations in Spain",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:EUR"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:TSI",
+        "description": "Toscani in Italy",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:EUR"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:BEB",
+        "description": "Bengali in Bangladesh",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:SAS"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:GIH",
+        "description": "Gujarati Indian in Houston, TX",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:SAS"
+        },
+        "sub_populations": [
+        
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:ITU",
+        "description": "Indian Telugu in the UK",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:SAS"
+        },
+        "sub_populations": [
+            
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:PJL",
+        "description": "Punjabi in Lahore, Pakistan",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:SAS"
+        },
+        "sub_populations": [
+            
+        ]
+        },
+        {
+        "name": "1000GENOMES:phase_3:STU",
+        "description": "Sri Lankan Tamil in the UK",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "1000 Genomes Project Phase 3",
+        "super_population":
+        {
+            "name": "1000GENOMES:phase_3:SAS"
+        },
+        "sub_populations": [
+        
+        ]
+        }
+   
+   ],
+   "mus_musculus": [
+       {
+        "name": "MGP",
+        "description": "MOUSE GENOMES PROJECT",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Mouse Genomes Project",
+        "super_population":null,
+        "sub_populations": []  
+       }
+   ],
+   "bos_taurus": [
+      {
+        "name": "NextGen",
+        "description": "NextGen",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "NextGen",
+        "super_population":null,
+        "sub_populations": []  
+       }
+   ],
+   "gallus_gallus": [
+    {
+        "name": "PRJEB44919",
+        "description": "PRJEB44919",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "PRJEB44919",
+        "super_population":null,
+        "sub_populations": []  
+       }
+     
+   ],
+   "canis_lupus_familiaris": [
+    {
+        "name": "PRJEB24066",
+        "description": "PRJEB24066",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "PRJEB24066",
+        "super_population":null,
+        "sub_populations": []  
+       }
+      
+   ],
+   "canis_lupus_familiarisboxer": [
+     {
+        "name": "PRJEB24066",
+        "description": "PRJEB24066",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "PRJEB24066",
+        "super_population":null,
+        "sub_populations": []  
+    }
+     
+   ],
+   "ovis_aries":  
+   [
+    {
+        "name": "NextGen:MOOA",
+        "description": "NextGen:MOOA",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "NextGen:MOOA",
+        "super_population":null,
+        "sub_populations": []  
+    },
+    {
+        "name": "NextGen:IROA",
+        "description": "NextGen:IROA",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "NextGen:IROA",
+        "super_population":null,
+        "sub_populations": []  
+    },
+    {
+        "name": "ISGC:ALL",
+        "description": "ISGC",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "ISGC:ALL",
+        "super_population":null,
+        "sub_populations": [
+        {
+        "name": "ISGC:TIB"
+        },
+        {
+            "name": "ISGC:CHN"
+        },
+        {
+            "name": "ISGC:DOP"
+        },
+        {
+            "name": "ISGC:SCB"
+        },
+        {
+            "name": "ISGC:DWM"
+        },
+        {
+            "name": "ISGC:NOR"
+        },
+        {
+            "name": "ISGC:CCP"
+        },
+        {
+            "name": "ISGC:BOU"
+        },
+        {
+            "name": "ISGC:SUM"
+        },
+        {
+            "name": "ISGC:SWA"
+        },
+        {
+            "name": "ISGC:TWM"
+        },
+        {
+            "name": "ISGC:SAK"
+        },
+        {
+            "name": "ISGC:KRY"
+        },
+        {
+            "name": "ISGC:MER"
+        },
+        {
+            "name": "ISGC:SUF"
+        },
+        {
+            "name": "ISGC:CPW"
+        },
+        {
+            "name": "ISGC:FIN"
+        },
+        {
+            "name": "ISGC:SAN"
+        },
+        {
+            "name": "ISGC:TXL"
+        },
+        {
+            "name": "ISGC:COR"
+        },
+        {
+            "name": "ISGC:DOW"
+        },
+        {
+            "name": "ISGC:CHU"
+        },
+        {
+            "name": "ISGC:BOR"
+        },
+        {
+            "name": "ISGC:BEN"
+        },
+        {
+            "name": "ISGC:RON"
+        },
+        {
+            "name": "ISGC:SAR"
+        },
+        {
+            "name": "ISGC:MEP"
+        },
+        {
+            "name": "ISGC:BAN"
+        },
+        {
+            "name": "ISGC:OUL"
+        },
+        {
+            "name": "ISGC:WIL"
+        },
+        {
+            "name": "ISGC:LAM"
+        },
+        {
+            "name": "ISGC:CAS"
+        },
+        {
+            "name": "ISGC:DMA"
+        },
+        {
+            "name": "ISGC:AWS"
+        },
+        {
+            "name": "ISGC:VBN"
+        },
+        {
+            "name": "ISGC:NAM"
+        },
+        {
+            "name": "ISGC:CHE"
+        },
+        {
+            "name": "ISGC:ROM"
+        },
+        {
+            "name": "ISGC:TIM"
+        },
+        {
+            "name": "ISGC:BAG"
+        },
+        {
+            "name": "ISGC:GAI"
+        },
+        {
+            "name": "ISGC:GAR"
+        },
+        {
+            "name": "ISGC:LAC"
+        },
+        {
+            "name": "ISGC:MOR"
+        },
+        {
+            "name": "ISGC:MEN"
+        },
+        {
+            "name": "ISGC:UNK"
+        },
+        {
+            "name": "ISGC:GUL"
+        },
+        {
+            "name": "ISGC:CMP"
+        },
+        {
+            "name": "ISGC:BRA"
+        },
+        {
+            "name": "ISGC:MIR"
+        },
+        {
+            "name": "ISGC:AFS"
+        },
+        {
+            "name": "ISGC:AWD"
+        },
+        {
+            "name": "ISGC:WHS"
+        },
+        {
+            "name": "ISGC:OJA"
+        },
+        {
+            "name": "ISGC:KAR"
+        },
+        {
+            "name": "ISGC:NWS"
+        },
+        {
+            "name": "ISGC:SAL"
+        },
+        {
+            "name": "ISGC:MEH"
+        }
+
+        ] 
+    },
+    {
+        "name": "ISGC:TIB",
+        "description": "TIBETAN population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:TIB",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:CHN",
+        "description": "CHANGTHANGI population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:CHN",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:DOP",
+        "description": "DORSET POLLED population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:DOP",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:SCB",
+        "description": "SCOTTISH BLACKFACE population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:SCB",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:DWM",
+        "description": "DOLLGELLAU WELSH MOUNTAIN population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:DWM",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:NOR",
+        "description": "NORDUZ population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:NOR",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:CCP",
+        "description": "CINE CAPARI population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:CCP",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:BOU",
+        "description": "BOUJAD population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:BOU",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:SUM",
+        "description": "SUMATRAN population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:SUM",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:SWA",
+        "description": "SWISS WHITE ALPINE population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:SWA",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:TWM",
+        "description": "TREGAON WELSH MOUNTAIN population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:TWM",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:SAK",
+        "description": "SAKIZ population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:SAK",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:KRY",
+        "description": "KARYA population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:KRY",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:MER",
+        "description": "MERINO population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:MER",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:SUF",
+        "description": "SUFFOLK BLACKFACE population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:SUF",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:CPW",
+        "description": "COOPWORTH population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:CPW",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:FIN",
+        "description": "FINNSHEEP population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:FIN",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:SAN",
+        "description": "SANTA INES population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:SAN",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:TXL",
+        "description": "TEXEL population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:TXL",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:COR",
+        "description": "CORRIEDALE population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:COR",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:DOW",
+        "description": "DORSET population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:DOW",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:CHU",
+        "description": "CHURRA population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:CHU",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:BOR",
+        "description": "BORDER LEICESTER population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:BOR",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:BEN",
+        "description": "BENI GUIL population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:BEN",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:RON",
+        "description": "RONDERIB AFRIKANER population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:RON",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:SAR",
+        "description": "SARDINIAN ANCESTRAL BLACK population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:SAR",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:MEP",
+        "description": "MERINO POLLED population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:MEP",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:BAN",
+        "description": "BANGLADESHI population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:BAN",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:OUL",
+        "description": "OULED DJELLAL population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:OUL",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:WIL",
+        "description": "WILTSHIRE population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:WIL",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:LAM",
+        "description": "MEAT LACAUNE population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:LAM",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:CAS",
+        "description": "CASTELLANA population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:CAS",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:DMA",
+        "description": "D'MAN population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:DMA",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:AWS",
+        "description": "AWASSI population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:AWS",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:VBN",
+        "description": "VALAIS BLACK NOSE population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:VBN",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:NAM",
+        "description": "NAMAQUA AFRIKANER population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:NAM",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:CHE",
+        "description": "CHEVIOT population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:CHE",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:ROM",
+        "description": "ROMNEY population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:ROM",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:TIM",
+        "description": "TIMAHDITE population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:TIM",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:BAG",
+        "description": "BANGLADESHI GAROLE population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:BAG",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:GAI",
+        "description": "INDIAN GAROLE population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:GAI",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:GAR",
+        "description": "GARUT population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:GAR",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:LAC",
+        "description": "MILK LACAUNE population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:LAC",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:MOR",
+        "description": "MORADA NOVA population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:MOR",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:MEN",
+        "description": "ETHIOPIAN MENZ population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:MEN",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:UNK",
+        "description": "UNCLASSIFIED population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:UNK",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:GUL",
+        "description": "GULF COAST NATIVE population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:GUL",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:CMP",
+        "description": "COMPOSITE population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:CMP",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:BRA",
+        "description": "BRAZILIAN CREOLE population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:BRA",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:MIR",
+        "description": "SWISS MIRROR population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:MIR",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:AFS",
+        "description": "AFSHARI population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:AFS",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:AWD",
+        "description": "AFRICAN WHITE DORPER population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:AWD",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:WHS",
+        "description": "WELSH HARDY SPECKLED FACE population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:WHS",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:OJA",
+        "description": "OJALADA population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:OJA",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:KAR",
+        "description": "KARAKAS population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:KAR",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:NWS",
+        "description": "NORWEGIAN WHITE SHEEP population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:NWS",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:SAL",
+        "description": "SALZ population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:SAL",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:MEH",
+        "description": "MERINO HORNED population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:MEH",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    }
+   ],
+   "ovis_aries_rambouillet": 
+   [
+    {
+        "name": "NextGen:MOOA",
+        "description": "NextGen:MOOA",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "NextGen:MOOA",
+        "super_population":null,
+        "sub_populations": []  
+    },
+    {
+        "name": "NextGen:IROA",
+        "description": "NextGen:IROA",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "NextGen:IROA",
+        "super_population":null,
+        "sub_populations": []  
+    },
+    {
+        "name": "ISGC:ALL",
+        "description": "ISGC",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "ISGC:ALL",
+        "super_population":null,
+        "sub_populations": [
+        {
+        "name": "ISGC:TIB"
+        },
+        {
+            "name": "ISGC:CHN"
+        },
+        {
+            "name": "ISGC:DOP"
+        },
+        {
+            "name": "ISGC:SCB"
+        },
+        {
+            "name": "ISGC:DWM"
+        },
+        {
+            "name": "ISGC:NOR"
+        },
+        {
+            "name": "ISGC:CCP"
+        },
+        {
+            "name": "ISGC:BOU"
+        },
+        {
+            "name": "ISGC:SUM"
+        },
+        {
+            "name": "ISGC:SWA"
+        },
+        {
+            "name": "ISGC:TWM"
+        },
+        {
+            "name": "ISGC:SAK"
+        },
+        {
+            "name": "ISGC:KRY"
+        },
+        {
+            "name": "ISGC:MER"
+        },
+        {
+            "name": "ISGC:SUF"
+        },
+        {
+            "name": "ISGC:CPW"
+        },
+        {
+            "name": "ISGC:FIN"
+        },
+        {
+            "name": "ISGC:SAN"
+        },
+        {
+            "name": "ISGC:TXL"
+        },
+        {
+            "name": "ISGC:COR"
+        },
+        {
+            "name": "ISGC:DOW"
+        },
+        {
+            "name": "ISGC:CHU"
+        },
+        {
+            "name": "ISGC:BOR"
+        },
+        {
+            "name": "ISGC:BEN"
+        },
+        {
+            "name": "ISGC:RON"
+        },
+        {
+            "name": "ISGC:SAR"
+        },
+        {
+            "name": "ISGC:MEP"
+        },
+        {
+            "name": "ISGC:BAN"
+        },
+        {
+            "name": "ISGC:OUL"
+        },
+        {
+            "name": "ISGC:WIL"
+        },
+        {
+            "name": "ISGC:LAM"
+        },
+        {
+            "name": "ISGC:CAS"
+        },
+        {
+            "name": "ISGC:DMA"
+        },
+        {
+            "name": "ISGC:AWS"
+        },
+        {
+            "name": "ISGC:VBN"
+        },
+        {
+            "name": "ISGC:NAM"
+        },
+        {
+            "name": "ISGC:CHE"
+        },
+        {
+            "name": "ISGC:ROM"
+        },
+        {
+            "name": "ISGC:TIM"
+        },
+        {
+            "name": "ISGC:BAG"
+        },
+        {
+            "name": "ISGC:GAI"
+        },
+        {
+            "name": "ISGC:GAR"
+        },
+        {
+            "name": "ISGC:LAC"
+        },
+        {
+            "name": "ISGC:MOR"
+        },
+        {
+            "name": "ISGC:MEN"
+        },
+        {
+            "name": "ISGC:UNK"
+        },
+        {
+            "name": "ISGC:GUL"
+        },
+        {
+            "name": "ISGC:CMP"
+        },
+        {
+            "name": "ISGC:BRA"
+        },
+        {
+            "name": "ISGC:MIR"
+        },
+        {
+            "name": "ISGC:AFS"
+        },
+        {
+            "name": "ISGC:AWD"
+        },
+        {
+            "name": "ISGC:WHS"
+        },
+        {
+            "name": "ISGC:OJA"
+        },
+        {
+            "name": "ISGC:KAR"
+        },
+        {
+            "name": "ISGC:NWS"
+        },
+        {
+            "name": "ISGC:SAL"
+        },
+        {
+            "name": "ISGC:MEH"
+        }
+
+        ] 
+    },
+    {
+        "name": "ISGC:TIB",
+        "description": "TIBETAN population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:TIB",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:CHN",
+        "description": "CHANGTHANGI population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:CHN",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:DOP",
+        "description": "DORSET POLLED population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:DOP",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:SCB",
+        "description": "SCOTTISH BLACKFACE population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:SCB",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:DWM",
+        "description": "DOLLGELLAU WELSH MOUNTAIN population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:DWM",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:NOR",
+        "description": "NORDUZ population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:NOR",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:CCP",
+        "description": "CINE CAPARI population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:CCP",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:BOU",
+        "description": "BOUJAD population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:BOU",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:SUM",
+        "description": "SUMATRAN population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:SUM",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:SWA",
+        "description": "SWISS WHITE ALPINE population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:SWA",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:TWM",
+        "description": "TREGAON WELSH MOUNTAIN population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:TWM",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:SAK",
+        "description": "SAKIZ population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:SAK",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:KRY",
+        "description": "KARYA population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:KRY",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:MER",
+        "description": "MERINO population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:MER",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:SUF",
+        "description": "SUFFOLK BLACKFACE population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:SUF",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:CPW",
+        "description": "COOPWORTH population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:CPW",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:FIN",
+        "description": "FINNSHEEP population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:FIN",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:SAN",
+        "description": "SANTA INES population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:SAN",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:TXL",
+        "description": "TEXEL population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:TXL",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:COR",
+        "description": "CORRIEDALE population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:COR",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:DOW",
+        "description": "DORSET population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:DOW",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:CHU",
+        "description": "CHURRA population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:CHU",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:BOR",
+        "description": "BORDER LEICESTER population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:BOR",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:BEN",
+        "description": "BENI GUIL population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:BEN",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:RON",
+        "description": "RONDERIB AFRIKANER population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:RON",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:SAR",
+        "description": "SARDINIAN ANCESTRAL BLACK population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:SAR",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:MEP",
+        "description": "MERINO POLLED population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:MEP",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:BAN",
+        "description": "BANGLADESHI population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:BAN",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:OUL",
+        "description": "OULED DJELLAL population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:OUL",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:WIL",
+        "description": "WILTSHIRE population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:WIL",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:LAM",
+        "description": "MEAT LACAUNE population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:LAM",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:CAS",
+        "description": "CASTELLANA population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:CAS",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:DMA",
+        "description": "D'MAN population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:DMA",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:AWS",
+        "description": "AWASSI population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:AWS",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:VBN",
+        "description": "VALAIS BLACK NOSE population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:VBN",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:NAM",
+        "description": "NAMAQUA AFRIKANER population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:NAM",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:CHE",
+        "description": "CHEVIOT population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:CHE",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:ROM",
+        "description": "ROMNEY population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:ROM",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:TIM",
+        "description": "TIMAHDITE population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:TIM",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:BAG",
+        "description": "BANGLADESHI GAROLE population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:BAG",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:GAI",
+        "description": "INDIAN GAROLE population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:GAI",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:GAR",
+        "description": "GARUT population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:GAR",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:LAC",
+        "description": "MILK LACAUNE population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:LAC",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:MOR",
+        "description": "MORADA NOVA population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:MOR",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:MEN",
+        "description": "ETHIOPIAN MENZ population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:MEN",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:UNK",
+        "description": "UNCLASSIFIED population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:UNK",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:GUL",
+        "description": "GULF COAST NATIVE population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:GUL",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:CMP",
+        "description": "COMPOSITE population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:CMP",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:BRA",
+        "description": "BRAZILIAN CREOLE population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:BRA",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:MIR",
+        "description": "SWISS MIRROR population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:MIR",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:AFS",
+        "description": "AFSHARI population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:AFS",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:AWD",
+        "description": "AFRICAN WHITE DORPER population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:AWD",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:WHS",
+        "description": "WELSH HARDY SPECKLED FACE population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:WHS",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:OJA",
+        "description": "OJALADA population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:OJA",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:KAR",
+        "description": "KARAKAS population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:KAR",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:NWS",
+        "description": "NORWEGIAN WHITE SHEEP population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:NWS",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:SAL",
+        "description": "SALZ population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:SAL",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    },
+    {
+        "name": "ISGC:MEH",
+        "description": "MERINO HORNED population from the International Sheep Genome Consortium",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ISGC:MEH",
+        "super_population": {
+            "name": "ISGC:ALL"
+        },
+        "sub_population": []
+    }
+   ],
+   "capra_hircus": [
+       {
+            "name": "NextGen",
+            "description": "NextGen",
+            "type": "regional",
+            "is_global": true,
+            "display_group_name": "NextGen",
+            "super_population":null,
+            "sub_populations": []  
+       }
+   ],
+   "equus_caballus": [
+     {
+        "name": "PRJEB9799",
+        "description": "PRJEB9799",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "PRJEB9799",
+        "super_population":null,
+        "sub_populations": []  
+    }
+   ],
+   "oreochromis_niloticus": [
+     {
+        "name": "PRJEB38548",
+        "description": "PRJEB38548",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "PRJEB38548",
+        "super_population":null,
+        "sub_populations": []  
+    }
+     
+   ],
+   "neovison_vison": [
+     {
+        "name": "PRJEB26368",
+        "description": "PRJEB26368",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "PRJEB26368",
+        "super_population":null,
+        "sub_populations": []  
+    }
+      
+   ],
+    "aedes_aegypti_lvpagwg" : [
+    {
+        "name": "A.aegypti Australia field isolate, Queensland Cairns 2011, individual insect (2011)",
+        "description": "A.aegypti Australia field isolate, Queensland Cairns 2011, individual insect (2011)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "A.aegypti Australia field isolate, Queensland Cairns 2011, individual insect (2011)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "A.aegypti Brazil field isolate, Bahia Jacobina 2013, individual insect (2013)",
+        "description": "A.aegypti Brazil field isolate, Bahia Jacobina 2013, individual insect (2013)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "A.aegypti Brazil field isolate, Bahia Jacobina 2013, individual insect (2013)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "A.aegypti French Polynesia field isolate, Tahiti  2013, individual insect (2013)",
+        "description": "A.aegypti French Polynesia field isolate, Tahiti  2013, individual insect (2013)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "A.aegypti French Polynesia field isolate, Tahiti  2013, individual insect (2013)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "A.aegypti Mexico field isolate, Chiapas Tapachula 2013, individual insect (2013)",
+        "description": "A.aegypti Mexico field isolate, Chiapas Tapachula 2013, individual insect (2013)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "A.aegypti Mexico field isolate, Chiapas Tapachula 2013, individual insect (2013)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "A.aegypti Senegal field isolate, Sedhiou Sedhiou 2011, individual insect (2011)",
+        "description": "A.aegypti Senegal field isolate, Sedhiou Sedhiou 2011, individual insect (2011)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "A.aegypti Senegal field isolate, Sedhiou Sedhiou 2011, individual insect (2011)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "A.aegypti Senegal field isolate, Tambacounda Goudiry 2011, individual insect (2011)",
+        "description": "A.aegypti Senegal field isolate, Tambacounda Goudiry 2011, individual insect (2011)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "A.aegypti Senegal field isolate, Tambacounda Goudiry 2011, individual insect (2011)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "A.aegypti Thailand field isolate, Rayong  2011, individual insect (2011)",
+        "description": "A.aegypti Thailand field isolate, Rayong  2011, individual insect (2011)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "A.aegypti Thailand field isolate, Rayong  2011, individual insect (2011)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "A.aegypti USA field isolate, Florida Key West 2011, individual insect (2011)",
+        "description": "A.aegypti USA field isolate, Florida Key West 2011, individual insect (2011)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "A.aegypti USA field isolate, Florida Key West 2011, individual insect (2011)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "A.aegypti USA field isolate, Hawaii  2011, individual insect (2011)",
+        "description": "A.aegypti USA field isolate, Hawaii  2011, individual insect (2011)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "A.aegypti USA field isolate, Hawaii  2011, individual insect (2011)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "A.aegypti USA field isolate, Puerto Rico Patillas 2013, individual insect (2013)",
+        "description": "A.aegypti USA field isolate, Puerto Rico Patillas 2013, individual insect (2013)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "A.aegypti USA field isolate, Puerto Rico Patillas 2013, individual insect (2013)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "A.aegypti USA field isolate, Texas Houston 2011, individual insect (2011)",
+        "description": "A.aegypti USA field isolate, Texas Houston 2011, individual insect (2011)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "A.aegypti USA field isolate, Texas Houston 2011, individual insect (2011)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "A.aegypti Uganda field isolate, Entebbe Lunyo 2011, individual insect (2011)",
+        "description": "A.aegypti Uganda field isolate, Entebbe Lunyo 2011, individual insect (2011)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "A.aegypti Uganda field isolate, Entebbe Lunyo 2011, individual insect (2011)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Bora Bora strain, deltamethrin susceptible",
+        "description": "Bora Bora strain, deltamethrin susceptible",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Bora Bora strain, deltamethrin susceptible",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Bora Bora strain, generally susceptible to insecticides",
+        "description": "Bora Bora strain, generally susceptible to insecticides",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Bora Bora strain, generally susceptible to insecticides",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Cayenne strain (French Guiana), deltamethrin resistant (2014)",
+        "description": "Cayenne strain (French Guiana), deltamethrin resistant (2014)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Cayenne strain (French Guiana), deltamethrin resistant (2014)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Cayenne strain (French Guiana), deltamethrin susceptible (2014)",
+        "description": "Cayenne strain (French Guiana), deltamethrin susceptible (2014)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Cayenne strain (French Guiana), deltamethrin susceptible (2014)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Chetumal strain",
+        "description": "Chetumal strain",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Chetumal strain",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Deltamethrin resistant strain",
+        "description": "Deltamethrin resistant strain",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Deltamethrin resistant strain",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Deltamethrin susceptible strain",
+        "description": "Deltamethrin susceptible strain",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Deltamethrin susceptible strain",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Imidacloprid (neonicotinoid) insecticide resistant colony derived from Bora Bora strain",
+        "description": "Imidacloprid (neonicotinoid) insecticide resistant colony derived from Bora Bora strain",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Imidacloprid (neonicotinoid) insecticide resistant colony derived from Bora Bora strain",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Liverpool strain",
+        "description": "Liverpool strain",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Liverpool strain",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Liverpool strain, deltamethrin susceptible",
+        "description": "Liverpool strain, deltamethrin susceptible",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Liverpool strain, deltamethrin susceptible",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Nakhonsawan strain (Thailand), deltamethrin resistant (2014)",
+        "description": "Nakhonsawan strain (Thailand), deltamethrin resistant (2014)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Nakhonsawan strain (Thailand), deltamethrin resistant (2014)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Nakhonsawan strain (Thailand), deltamethrin susceptible (2014)",
+        "description": "Nakhonsawan strain (Thailand), deltamethrin susceptible (2014)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Nakhonsawan strain (Thailand), deltamethrin susceptible (2014)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "New Orleans strain (USA), deltamethrin susceptible",
+        "description": "New Orleans strain (USA), deltamethrin susceptible",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "New Orleans strain (USA), deltamethrin susceptible",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Pattalung strain (Thailand), deltamethrin susceptible",
+        "description": "Pattalung strain (Thailand), deltamethrin susceptible",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Pattalung strain (Thailand), deltamethrin susceptible",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Permethrin (pyrethroid) insecticide resistant colony derived from Bora Bora strain",
+        "description": "Permethrin (pyrethroid) insecticide resistant colony derived from Bora Bora strain",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Permethrin (pyrethroid) insecticide resistant colony derived from Bora Bora strain",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Phetchaburi strain (Thailand), deltamethrin resistant (2014)",
+        "description": "Phetchaburi strain (Thailand), deltamethrin resistant (2014)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Phetchaburi strain (Thailand), deltamethrin resistant (2014)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Phetchaburi strain (Thailand), deltamethrin susceptible (2014)",
+        "description": "Phetchaburi strain (Thailand), deltamethrin susceptible (2014)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Phetchaburi strain (Thailand), deltamethrin susceptible (2014)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Propoxur (carbamate) insecticide resistant colony derived from Bora Bora strain",
+        "description": "Propoxur (carbamate) insecticide resistant colony derived from Bora Bora strain",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Propoxur (carbamate) insecticide resistant colony derived from Bora Bora strain",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Rexville D-Puerto Rico strain",
+        "description": "Rexville D-Puerto Rico strain",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Rexville D-Puerto Rico strain",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Saint-Georges strain (French Guiana), deltamethrin resistant (2014)",
+        "description": "Saint-Georges strain (French Guiana), deltamethrin resistant (2014)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Saint-Georges strain (French Guiana), deltamethrin resistant (2014)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Saint-Georges strain (French Guiana), deltamethrin susceptible (2014)",
+        "description": "Saint-Georges strain (French Guiana), deltamethrin susceptible (2014)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Saint-Georges strain (French Guiana), deltamethrin susceptible (2014)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Clovis, CA (2013)",
+        "description": "Clovis, CA (2013)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Clovis, CA (2013)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Exeter, CA (2014)",
+        "description": "Exeter, CA (2014)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Exeter, CA (2014)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Fresno, CA (2015)",
+        "description": "Fresno, CA (2015)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Fresno, CA (2015)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Garden Grove, CA (2015)",
+        "description": "Garden Grove, CA (2015)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Garden Grove, CA (2015)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Los Angeles, CA (2014)",
+        "description": "Los Angeles, CA (2014)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Los Angeles, CA (2014)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Madera, CA (2013)",
+        "description": "Madera, CA (2013)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Madera, CA (2013)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Madera, CA (2015)",
+        "description": "Madera, CA (2015)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Madera, CA (2015)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Mission Viejo, CA (2015)",
+        "description": "Mission Viejo, CA (2015)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Mission Viejo, CA (2015)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "San Diego, CA (2015)",
+        "description": "San Diego, CA (2015)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "San Diego, CA (2015)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "San Mateo, CA (2013)",
+        "description": "San Mateo, CA (2013)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "San Mateo, CA (2013)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Jacobina, Brazil (2015)",
+        "description": "Jacobina, Brazil (2015)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Jacobina, Brazil (2015)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "New Orleans, LA, USA (2011)",
+        "description": "New Orleans, LA, USA (2011)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "New Orleans, LA, USA (2011)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "New Orleans, LA, USA (2012)",
+        "description": "New Orleans, LA, USA (2012)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "New Orleans, LA, USA (2012)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "New Orleans, LA, USA (2015)",
+        "description": "New Orleans, LA, USA (2015)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "New Orleans, LA, USA (2015)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Yaounde, Cameroon (2013)",
+        "description": "Yaounde, Cameroon (2013)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Yaounde, Cameroon (2013)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Yaounde, Cameroon (2015)",
+        "description": "Yaounde, Cameroon (2015)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Yaounde, Cameroon (2015)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Aedes mascarensis, Mauritius (2014)",
+        "description": "Aedes mascarensis, Mauritius (2014)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Aedes mascarensis, Mauritius (2014)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Amacuzac, MOR, Mexico (2014)",
+        "description": "Amacuzac, MOR, Mexico (2014)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Amacuzac, MOR, Mexico (2014)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Attock, Pakistan (2014)",
+        "description": "Attock, Pakistan (2014)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Attock, Pakistan (2014)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Madera, California, USA (2013)",
+        "description": "Madera, California, USA (2013)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Madera, California, USA (2013)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Washington, DC, USA (2014)",
+        "description": "Washington, DC, USA (2014)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Washington, DC, USA (2014)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Cali, Colombia (2013)",
+        "description": "Cali, Colombia (2013)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Cali, Colombia (2013)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Cebu City, Philippines (2013)",
+        "description": "Cebu City, Philippines (2013)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Cebu City, Philippines (2013)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Dominica, rural (2016)",
+        "description": "Dominica, rural (2016)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Dominica, rural (2016)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Dominica, urban (2016)",
+        "description": "Dominica, urban (2016)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Dominica, urban (2016)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "El Paso, TX, USA (2015)",
+        "description": "El Paso, TX, USA (2015)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "El Paso, TX, USA (2015)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Goudiry, Senegal (2012)",
+        "description": "Goudiry, Senegal (2012)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Goudiry, Senegal (2012)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Hanoi, Vietnam (2013)",
+        "description": "Hanoi, Vietnam (2013)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Hanoi, Vietnam (2013)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Hawaii, USA (2016)",
+        "description": "Hawaii, USA (2016)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Hawaii, USA (2016)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Ho Chih Minh, Vietnam (2013)",
+        "description": "Ho Chih Minh, Vietnam (2013)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Ho Chih Minh, Vietnam (2013)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Hopa, Turkey (2015)",
+        "description": "Hopa, Turkey (2015)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Hopa, Turkey (2015)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Jacobina, Brazil (2013)",
+        "description": "Jacobina, Brazil (2013)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Jacobina, Brazil (2013)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Johannesburg, South Africa (2015)",
+        "description": "Johannesburg, South Africa (2015)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Johannesburg, South Africa (2015)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Karachi, Pakistan (2010)",
+        "description": "Karachi, Pakistan (2010)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Karachi, Pakistan (2010)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Madeira (2012)",
+        "description": "Madeira (2012)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Madeira (2012)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Maraba, Brazil (2010)",
+        "description": "Maraba, Brazil (2010)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Maraba, Brazil (2010)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Muscogee County, Georgia, USA (2012)",
+        "description": "Muscogee County, Georgia, USA (2012)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Muscogee County, Georgia, USA (2012)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Burkina Faso, Burkina Faso (2015)",
+        "description": "Burkina Faso, Burkina Faso (2015)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Burkina Faso, Burkina Faso (2015)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Nairobi, Kenya (2012)",
+        "description": "Nairobi, Kenya (2012)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Nairobi, Kenya (2012)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Nogales, SON, Mexico (2013)",
+        "description": "Nogales, SON, Mexico (2013)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Nogales, SON, Mexico (2013)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "North Key West, FL, USA (2013)",
+        "description": "North Key West, FL, USA (2013)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "North Key West, FL, USA (2013)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Pakistan - PK (2010)",
+        "description": "Pakistan - PK (2010)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Pakistan - PK (2010)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Punjab, Pakistan (2010)",
+        "description": "Punjab, Pakistan (2010)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Punjab, Pakistan (2010)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Rio de Janeiro, Brazil (2014)",
+        "description": "Rio de Janeiro, Brazil (2014)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Rio de Janeiro, Brazil (2014)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Rio de Janeiro, Brazil (2015)",
+        "description": "Rio de Janeiro, Brazil (2015)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Rio de Janeiro, Brazil (2015)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Riyadh, Saudi Arabia (2012)",
+        "description": "Riyadh, Saudi Arabia (2012)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Riyadh, Saudi Arabia (2012)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Angola, Luanda (2016)",
+        "description": "Angola, Luanda (2016)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Angola, Luanda (2016)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Australia, Cairns (2013)",
+        "description": "Australia, Cairns (2013)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Australia, Cairns (2013)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Brazil, Macapa (2012)",
+        "description": "Brazil, Macapa (2012)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Brazil, Macapa (2012)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Saint Vincent - VC (2015)",
+        "description": "Saint Vincent - VC (2015)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Saint Vincent - VC (2015)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Sedhiou, Senegal (2012)",
+        "description": "Sedhiou, Senegal (2012)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Sedhiou, Senegal (2012)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Siquirres, Costa Rica (2014)",
+        "description": "Siquirres, Costa Rica (2014)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Siquirres, Costa Rica (2014)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Sri Lanka, SL (2014)",
+        "description": "Sri Lanka, SL (2014)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Sri Lanka, SL (2014)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Tapachula Norte, CHP, Mexico (2012)",
+        "description": "Tapachula Norte, CHP, Mexico (2012)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Tapachula Norte, CHP, Mexico (2012)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Tbilisi-Tsereteli, Georgia (2015)",
+        "description": "Tbilisi-Tsereteli, Georgia (2015)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Tbilisi-Tsereteli, Georgia (2015)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Tijuana, Mexico (2013)",
+        "description": "Tijuana, Mexico (2013)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Tijuana, Mexico (2013)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Tobago - TT (2015)",
+        "description": "Tobago - TT (2015)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Tobago - TT (2015)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Trinidad, Republic of Trinidad and Tobaco (2014)",
+        "description": "Trinidad, Republic of Trinidad and Tobaco (2014)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Trinidad, Republic of Trinidad and Tobaco (2014)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Tucson, AZ, USA (2012)",
+        "description": "Tucson, AZ, USA (2012)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Tucson, AZ, USA (2012)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Washington, DC, USA (2014)",
+        "description": "Washington, DC, USA (2014)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Washington, DC, USA (2014)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Cameroon, Buffalo camp (2014)",
+        "description": "Cameroon, Buffalo camp (2014)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Cameroon, Buffalo camp (2014)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Cameroon, Yaounde Forest (2015)",
+        "description": "Cameroon, Yaounde Forest (2015)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Cameroon, Yaounde Forest (2015)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Cameroon, Yaounde Mokolo (2015)",
+        "description": "Cameroon, Yaounde Mokolo (2015)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Cameroon, Yaounde Mokolo (2015)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Cameroon, Yaounde Mvog_Ada (2015)",
+        "description": "Cameroon, Yaounde Mvog_Ada (2015)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Cameroon, Yaounde Mvog_Ada (2015)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Cameroon, Yaounde Village (2015)",
+        "description": "Cameroon, Yaounde Village (2015)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Cameroon, Yaounde Village (2015)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Caribbean, Dominica (2016)",
+        "description": "Caribbean, Dominica (2016)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Caribbean, Dominica (2016)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Gabon, Franceville (2014)",
+        "description": "Gabon, Franceville (2014)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Gabon, Franceville (2014)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Gabon, Lope Forest (2014)",
+        "description": "Gabon, Lope Forest (2014)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Gabon, Lope Forest (2014)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Gabon, Lope Village (2014)",
+        "description": "Gabon, Lope Village (2014)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Gabon, Lope Village (2014)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Georgia, Georgia (2015)",
+        "description": "Georgia, Georgia (2015)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Georgia, Georgia (2015)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Jacobina2016_Jac16_POPULATION",
+        "description": "Jacobina2016_Jac16_POPULATION",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Jacobina2016_Jac16_POPULATION",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Jacobina_Jac_POPULATION",
+        "description": "Jacobina_Jac_POPULATION",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Jacobina_Jac_POPULATION",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Kahawa_Sukari_KS_A_POPULATION",
+        "description": "Kahawa_Sukari_KS_A_POPULATION",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Kahawa_Sukari_KS_A_POPULATION",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Kenya, Kaya Forest (2012)",
+        "description": "Kenya, Kaya Forest (2012)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Kenya, Kaya Forest (2012)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Kenya, Nairobi (2012)",
+        "description": "Kenya, Nairobi (2012)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Kenya, Nairobi (2012)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Mauritius island, Aedes mascarensis (2014)",
+        "description": "Mauritius island, Aedes mascarensis (2014)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Mauritius island, Aedes mascarensis (2014)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Mexico, Chetumal lab strain (2013)",
+        "description": "Mexico, Chetumal lab strain (2013)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Mexico, Chetumal lab strain (2013)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Philippines, Philippines (2013)",
+        "description": "Philippines, Philippines (2013)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Philippines, Philippines (2013)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Reunion island, Reunion Island (2016)",
+        "description": "Reunion island, Reunion Island (2016)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Reunion island, Reunion Island (2016)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Tahiti, Tahiti (2010)",
+        "description": "Tahiti, Tahiti (2010)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Tahiti, Tahiti (2010)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Uganda, Lunyo (2013)",
+        "description": "Uganda, Lunyo (2013)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Uganda, Lunyo (2013)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Uganda, Zika village (2016)",
+        "description": "Uganda, Zika village (2016)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Uganda, Zika village (2016)",
+        "super_population": null,
+        "sub_populations": []
+    }
+        
+    ],
+    "anopheles_gambiae" : [
+    {
+        "name": "ALL",
+        "description": "ALL",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "ALL",
+        "super_population": null,
+        "sub_populations": [
+            {
+                "name": "GAS"
+            },
+            {
+                "name": "UGS"
+            },
+            {
+                "name": "GNS"
+            },
+            {
+                "name": "BFS"
+            },
+            {
+                "name": "GWA"
+            },
+            {
+                "name": "KES"
+            },
+            {
+                "name": "CMS"
+            },
+            {
+                "name": "AOM"
+            },
+            {
+                "name": "BFM"
+            }
+        ]
+    },
+    {
+        "name": "GAS",
+        "description": "GAS",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "GAS",
+        "super_population": 
+        {
+            "name": "ALL"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "UGS",
+        "description": "UGS",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "UGS",
+        "super_population": {
+            "name": "ALL"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "GNS",
+        "description": "GNS",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "GNS",
+        "super_population": {
+            "name": "ALL"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "BFS",
+        "description": "BFS",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "BFS",
+        "super_population": {
+            "name": "ALL"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "GWA",
+        "description": "GWA",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "GWA",
+        "super_population": {
+            "name": "ALL"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "KES",
+        "description": "KES",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "KES",
+        "super_population": {
+            "name": "ALL"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "CMS",
+        "description": "CMS",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "CMS",
+        "super_population": {
+            "name": "ALL"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "AOM",
+        "description": "AOM",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "AOM",
+        "super_population": {
+            "name": "ALL"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "BFM",
+        "description": "BFM",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "BFM",
+        "super_population": {
+            "name": "ALL"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "A. arabiensis field isolate, Goundry, Burkina Faso, individual insect (2007)",
+        "description": "A. arabiensis field isolate, Goundry, Burkina Faso, individual insect (2007)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "A. arabiensis field isolate, Goundry, Burkina Faso, individual insect (2007)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "A. coluzzii field isolate, Goundry, Burkina Faso, individual insect (2007)",
+        "description": "A. coluzzii field isolate, Goundry, Burkina Faso, individual insect (2007)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "A. coluzzii field isolate, Goundry, Burkina Faso, individual insect (2007)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "A. coluzzii field isolate, Goundry, Burkina Faso, individual insect (2008)",
+        "description": "A. coluzzii field isolate, Goundry, Burkina Faso, individual insect (2008)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "A. coluzzii field isolate, Goundry, Burkina Faso, individual insect (2008)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "A. coluzzii field isolate, Goundry, Burkina Faso, individual insect (2010)",
+        "description": "A. coluzzii field isolate, Goundry, Burkina Faso, individual insect (2010)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "A. coluzzii field isolate, Goundry, Burkina Faso, individual insect (2010)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "A. coluzzii/gambiae (Goundry form) field isolate, Goundry, Burkina Faso, individual insect (2007)",
+        "description": "A. coluzzii/gambiae (Goundry form) field isolate, Goundry, Burkina Faso, individual insect (2007)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "A. coluzzii/gambiae (Goundry form) field isolate, Goundry, Burkina Faso, individual insect (2007)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "A. coluzzii/gambiae (Goundry form) field isolate, Goundry, Burkina Faso, individual insect (2008)",
+        "description": "A. coluzzii/gambiae (Goundry form) field isolate, Goundry, Burkina Faso, individual insect (2008)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "A. coluzzii/gambiae (Goundry form) field isolate, Goundry, Burkina Faso, individual insect (2008)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "A. coluzzii/gambiae (Goundry form) field isolate, Goundry, Burkina Faso, individual insect (2009)",
+        "description": "A. coluzzii/gambiae (Goundry form) field isolate, Goundry, Burkina Faso, individual insect (2009)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "A. coluzzii/gambiae (Goundry form) field isolate, Goundry, Burkina Faso, individual insect (2009)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "A. gambiae field isolate, Goundry, Burkina Faso, individual insect (2007)",
+        "description": "A. gambiae field isolate, Goundry, Burkina Faso, individual insect (2007)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "A. gambiae field isolate, Goundry, Burkina Faso, individual insect (2007)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "A. gambiae field isolate, Goundry, Burkina Faso, individual insect (2008)",
+        "description": "A. gambiae field isolate, Goundry, Burkina Faso, individual insect (2008)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "A. gambiae field isolate, Goundry, Burkina Faso, individual insect (2008)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "A. gambiae field isolate, Goundry, Burkina Faso, individual insect (2010)",
+        "description": "A. gambiae field isolate, Goundry, Burkina Faso, individual insect (2010)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "A. gambiae field isolate, Goundry, Burkina Faso, individual insect (2010)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Anopheles gambiae M form (2005)",
+        "description": "Anopheles gambiae M form (2005)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Anopheles gambiae M form (2005)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Anopheles gambiae M form (2007)",
+        "description": "Anopheles gambiae M form (2007)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Anopheles gambiae M form (2007)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Anopheles gambiae S form (2005)",
+        "description": "Anopheles gambiae S form (2005)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Anopheles gambiae S form (2005)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Anopheles gambiae S form (2007)",
+        "description": "Anopheles gambiae S form (2007)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Anopheles gambiae S form (2007)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Anopheles gambiae sensu lato individual Dangme West District (2006)",
+        "description": "Anopheles gambiae sensu lato individual Dangme West District (2006)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Anopheles gambiae sensu lato individual Dangme West District (2006)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Anopheles gambiae sensu lato individual Municipality of Tororo (2008)",
+        "description": "Anopheles gambiae sensu lato individual Municipality of Tororo (2008)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Anopheles gambiae sensu lato individual Municipality of Tororo (2008)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Bamako (2004)",
+        "description": "Bamako (2004)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Bamako (2004)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Cameroon_2006_M_form (2006)",
+        "description": "Cameroon_2006_M_form (2006)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Cameroon_2006_M_form (2006)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Cameroon_2006_S_form (2006)",
+        "description": "Cameroon_2006_S_form (2006)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Cameroon_2006_S_form (2006)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Ghana_2006_M_form (2006)",
+        "description": "Ghana_2006_M_form (2006)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Ghana_2006_M_form (2006)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Ghana_2006_S_form (2006)",
+        "description": "Ghana_2006_S_form (2006)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Ghana_2006_S_form (2006)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Guinea-Bissau_1993_M_form (1993)",
+        "description": "Guinea-Bissau_1993_M_form (1993)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Guinea-Bissau_1993_M_form (1993)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Guinea-Bissau_1993_S_form (1993)",
+        "description": "Guinea-Bissau_1993_S_form (1993)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Guinea-Bissau_1993_S_form (1993)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "M (2004)",
+        "description": "M (2004)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "M (2004)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "S (2004)",
+        "description": "S (2004)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "S (2004)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Uganda_2008_S_form (2008)",
+        "description": "Uganda_2008_S_form (2008)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Uganda_2008_S_form (2008)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "individual specimen from 4ARR colony (MR4)",
+        "description": "individual specimen from 4ARR colony (MR4)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "individual specimen from 4ARR colony (MR4)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "individual specimen from Akron colony (MR4)",
+        "description": "individual specimen from Akron colony (MR4)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "individual specimen from Akron colony (MR4)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "individual specimen from G3 colony (MR4)",
+        "description": "individual specimen from G3 colony (MR4)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "individual specimen from G3 colony (MR4)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "individual specimen from KGB colony (MR4)",
+        "description": "individual specimen from KGB colony (MR4)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "individual specimen from KGB colony (MR4)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "individual specimen from Kisumu colony (MR4)",
+        "description": "individual specimen from Kisumu colony (MR4)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "individual specimen from Kisumu colony (MR4)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "individual specimen from L3-5 colony (MR4)",
+        "description": "individual specimen from L3-5 colony (MR4)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "individual specimen from L3-5 colony (MR4)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "individual specimen from SENN colony (MR4)",
+        "description": "individual specimen from SENN colony (MR4)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "individual specimen from SENN colony (MR4)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Serratia",
+        "description": "Serratia",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Serratia",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "G3 colony, female (2017)",
+        "description": "G3 colony, female (2017)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "G3 colony, female (2017)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "G3 colony, male (2017)",
+        "description": "G3 colony, male (2017)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "G3 colony, male (2017)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Kansambwe, Nsadzi, Uganda (2012)",
+        "description": "Kansambwe, Nsadzi, Uganda (2012)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Kansambwe, Nsadzi, Uganda (2012)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Lunnyo, Entebbe, Uganda (2012)",
+        "description": "Lunnyo, Entebbe, Uganda (2012)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Lunnyo, Entebbe, Uganda (2012)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Lutoboka, Bugala, Uganda (2012)",
+        "description": "Lutoboka, Bugala, Uganda (2012)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Lutoboka, Bugala, Uganda (2012)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Naama, Wamala, Uganda (2012)",
+        "description": "Naama, Wamala, Uganda (2012)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Naama, Wamala, Uganda (2012)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Nakibanga, Bukasa, Uganda (2012)",
+        "description": "Nakibanga, Bukasa, Uganda (2012)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Nakibanga, Bukasa, Uganda (2012)",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Sserinya, Uganda (2012)",
+        "description": "Sserinya, Uganda (2012)",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Sserinya, Uganda (2012)",
+        "super_population": null,
+        "sub_populations": []
+    }
+    ],
+    "oryctolagus_cuniculus": [
+    {
+        "name": "ALL:PRJEB27278",
+        "description": "ALL:PRJEB27278",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "ALL:PRJEB27278",
+        "super_population": null,
+        "sub_populations": [
+            {
+                "name": "DOS"
+            },
+            {
+                "name": "EOS"
+            },
+            {
+                "name": "ICN"
+            }
+        ]
+    },
+    {
+        "name": "DOS",
+        "description": "DOS",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "DOS",
+        "super_population": {
+            "name": "ALL:PRJEB27278"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "EOS",
+        "description": "EOS",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "EOS",
+        "super_population": {
+            "name": "ALL:PRJEB27278"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "ICN",
+        "description": "ICN",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "ICN",
+        "super_population": {
+            "name": "ALL:PRJEB27278"
+        },
+        "sub_populations": []
+    }
+    ],
+    "oryza_sativa" : [
+    {
+        "name": "Collection from Duitama et al. 2015",
+        "description": "Collection from Duitama et al. 2015",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Collection from Duitama et al. 2015",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Collection from Zhao et al. 2010",
+        "description": "Collection from Zhao et al. 2010",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Collection from Zhao et al. 2010",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Collection from BGI 2004",
+        "description": "Collection from BGI 2004",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Collection from BGI 2004",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Collection from OMAP 2007",
+        "description": "Collection from OMAP 2007",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Collection from OMAP 2007",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Collection from McNally et al. 2009",
+        "description": "Collection from McNally et al. 2009",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Collection from McNally et al. 2009",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Rice3K_collection:All",
+        "description": "Rice3K_collection:All",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Rice3K_collection:All",
+        "super_population": null,
+        "sub_populations": [
+            {
+                "name": "Rice3K_collection:Aus"
+            },
+            {
+                "name": "Rice3K_collection:Basmati"
+            },
+            {
+                "name": "Rice3K_collection:Indica"
+            },
+            {
+                "name": "Rice3K_collection:Japonica"
+            }
+        ]
+    },
+    {
+        "name": "Rice3K_collection:Aus",
+        "description": "Rice3K_collection:Aus",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "Rice3K_collection:Aus",
+        "super_population": { 
+            "name": "Rice3K_collection:All"
+        },
+        "sub_populations": [
+            {
+                "name": "Rice3K_collection:c-Aus1"
+            },
+            {
+                "name": "Rice3K_collection:c-Aus2"
+            }
+        ]
+    },
+    {
+        "name": "Rice3K_collection:Basmati",
+        "description": "Rice3K_collection:Basmati",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "Rice3K_collection:Basmati",
+        "super_population": { 
+            "name": "Rice3K_collection:All"
+        },
+        "sub_populations": [
+            {
+                "name": "Rice3K_collection:c-Bas"
+            }
+        ]
+    },
+    {
+        "name": "Rice3K_collection:Indica",
+        "description": "Rice3K_collection:Indica",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "Rice3K_collection:Indica",
+        "super_population": { 
+            "name": "Rice3K_collection:All"
+        },
+        "sub_populations": [
+            {
+                "name": "Rice3K_collection:XI-1A"
+            },
+            {
+                "name": "Rice3K_collection:XI-1B1"
+            },
+            {
+                "name": "Rice3K_collection:XI-1B2"
+            },
+            {
+                "name": "Rice3K_collection:XI-2A"
+            },
+            {
+                "name": "Rice3K_collection:XI-2B"
+            },
+            {
+                "name": "Rice3K_collection:XI-3A"
+            },
+            {
+                "name": "Rice3K_collection:XI-3B1"
+            },
+            {
+                "name": "Rice3K_collection:XI-3B2"
+            }
+        ]
+    },
+    {
+        "name": "Rice3K_collection:Japonica",
+        "description": "Rice3K_collection:Japonica",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "Rice3K_collection:Japonica",
+        "super_population": { 
+            "name": "Rice3K_collection:All"
+        },
+        "sub_populations": [
+            {
+                "name": "Rice3K_collection:GJ-sbtrp"
+            },
+            {
+                "name": "Rice3K_collection:GJ-trp1"
+            },
+            {
+                "name": "Rice3K_collection:GJ-trp2"
+            },
+            {
+                "name": "Rice3K_collection:GJ-tmp"
+            }
+        ]
+    },
+    {
+        "name": "Rice3K_collection:c-Aus1",
+        "description": "Rice3K_collection:c-Aus1",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "Rice3K_collection:c-Aus1",
+        "super_population": {
+            "name":"Rice3K_collection:Aus"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "Rice3K_collection:c-Aus2",
+        "description": "Rice3K_collection:c-Aus2",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "Rice3K_collection:c-Aus2",
+        "super_population": {
+            "name":"Rice3K_collection:Aus"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "Rice3K_collection:c-Bas",
+        "description": "Rice3K_collection:c-Bas",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "Rice3K_collection:c-Bas",
+        "super_population": {
+            "name":"Rice3K_collection:Basmati"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "Rice3K_collection:XI-1A",
+        "description": "Rice3K_collection:XI-1A",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "Rice3K_collection:XI-1A",
+        "super_population": {
+            "name":"Rice3K_collection:Indica"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "Rice3K_collection:XI-1B1",
+        "description": "Rice3K_collection:XI-1B1",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "Rice3K_collection:XI-1B1",
+        "super_population": {
+            "name":"Rice3K_collection:Indica"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "Rice3K_collection:XI-1B2",
+        "description": "Rice3K_collection:XI-1B2",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "Rice3K_collection:XI-1B2",
+        "super_population": {
+            "name":"Rice3K_collection:Indica"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "Rice3K_collection:XI-2A",
+        "description": "Rice3K_collection:XI-2A",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "Rice3K_collection:XI-2A",
+        "super_population": {
+            "name":"Rice3K_collection:Indica"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "Rice3K_collection:XI-2B",
+        "description": "Rice3K_collection:XI-2B",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "Rice3K_collection:XI-2B",
+        "super_population": {
+            "name":"Rice3K_collection:Indica"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "Rice3K_collection:XI-3A",
+        "description": "Rice3K_collection:XI-3A",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "Rice3K_collection:XI-3A",
+        "super_population": {
+            "name":"Rice3K_collection:Indica"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "Rice3K_collection:XI-3B1",
+        "description": "Rice3K_collection:XI-3B1",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "Rice3K_collection:XI-3B1",
+        "super_population": {
+            "name":"Rice3K_collection:Indica"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "Rice3K_collection:XI-3B2",
+        "description": "Rice3K_collection:XI-3B2",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "Rice3K_collection:XI-3B2",
+        "super_population": {
+            "name":"Rice3K_collection:Indica"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "Rice3K_collection:GJ-sbtrp",
+        "description": "Rice3K_collection:GJ-sbtrp",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "Rice3K_collection:GJ-sbtrp",
+        "super_population": {
+            "name":"Rice3K_collection:Japonica"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "Rice3K_collection:GJ-trp1",
+        "description": "Rice3K_collection:GJ-trp1",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "Rice3K_collection:GJ-trp1",
+        "super_population": {
+            "name": "Rice3K_collection:Japonica"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "Rice3K_collection:GJ-trp2",
+        "description": "Rice3K_collection:GJ-trp2",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "Rice3K_collection:GJ-trp2",
+        "super_population": {
+            "name":"Rice3K_collection:Japonica"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "Rice3K_collection:GJ-tmp",
+        "description": "Rice3K_collection:GJ-tmp",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "Rice3K_collection:GJ-tmp",
+        "super_population": {
+            "name":"Rice3K_collection:Japonica"
+        },
+        "sub_populations": []
+    }
+    ],
+    "salmo_salar" : [
+    {
+        "name": "ALL:PRJEB34225",
+        "description": "ALL:PRJEB34225",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "ALL:PRJEB34225",
+        "super_population": null,
+        "sub_populations": [
+            {
+                "name": "St. John River"
+            },
+            {
+                "name": "Penobscot River"
+            },
+            {
+                "name": "Gaspe of New Brunswick"
+            }
+        ]
+    },
+    {
+        "name": "St. John River",
+        "description": "St. John River",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "St. John River",
+        "super_population": {
+            "name":"ALL:PRJEB34225"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "Penobscot River",
+        "description": "Penobscot River",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "Penobscot River",
+        "super_population": {
+            "name":"ALL:PRJEB34225"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "Gaspe of New Brunswick",
+        "description": "Gaspe of New Brunswick",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "Gaspe of New Brunswick",
+        "super_population": {
+            "name":"ALL:PRJEB34225"
+        },
+        "sub_populations": []
+    }
+    ],
+    "triticum_aestivum": [
+    {
+        "name": "Axiom",
+        "description": "Axiom",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "Axiom",
+        "super_population": {
+            "name":"super_axiom"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "EMS_mutations",
+        "description": "EMS_mutations",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "EMS_mutations",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "ihvs",
+        "description": "ihvs",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "ihvs",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "super_axiom",
+        "description": "super_axiom",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "super_axiom",
+        "super_population": null,
+        "sub_populations": [
+            {
+                "name": "Axiom"
+            }
+        ]
+    },
+    {
+        "name": "WRC_snps",
+        "description": "WRC_snps",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "WRC_snps",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "watkins_exome",
+        "description": "watkins_exome",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "watkins_exome",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Cornell",
+        "description": "Cornell",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Cornell",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Kronos",
+        "description": "Kronos",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Kronos",
+        "super_population": null,
+        "sub_populations": []
+    },
+    {
+        "name": "Watkins_collection:All",
+        "description": "Watkins_collection:All",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "Watkins_collection:All",
+        "super_population": null,
+        "sub_populations": [
+            {
+                "name": "Watkins_collection:Modern"
+            },
+            {
+                "name": "Watkins_collection:AG1"
+            },
+            {
+                "name": "Watkins_collection:AG2"
+            },
+            {
+                "name": "Watkins_collection:AG3"
+            },
+            {
+                "name": "Watkins_collection:AG4"
+            },
+            {
+                "name": "Watkins_collection:AG5"
+            },
+            {
+                "name": "Watkins_collection:AG6"
+            },
+            {
+                "name": "Watkins_collection:AG7"
+            }
+        ]
+    },
+    {
+        "name": "Watkins_collection:Modern",
+        "description": "Watkins_collection:Modern",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "Watkins_collection:Modern",
+        "super_population": {
+            "name":"Watkins_collection:All"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "Watkins_collection:AG1",
+        "description": "Watkins_collection:AG1",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "Watkins_collection:AG1",
+        "super_population": {
+            "name":"Watkins_collection:All"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "Watkins_collection:AG2",
+        "description": "Watkins_collection:AG2",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "Watkins_collection:AG2",
+        "super_population": {
+            "name":"Watkins_collection:All"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "Watkins_collection:AG3",
+        "description": "Watkins_collection:AG3",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "Watkins_collection:AG3",
+        "super_population": {
+            "name":"Watkins_collection:All"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "Watkins_collection:AG4",
+        "description": "Watkins_collection:AG4",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "Watkins_collection:AG4",
+        "super_population": {
+            "name":"Watkins_collection:All"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "Watkins_collection:AG5",
+        "description": "Watkins_collection:AG5",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "Watkins_collection:AG5",
+        "super_population": {
+            "name":"Watkins_collection:All"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "Watkins_collection:AG6",
+        "description": "Watkins_collection:AG6",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "Watkins_collection:AG6",
+        "super_population": {
+            "name":"Watkins_collection:All"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "Watkins_collection:AG7",
+        "description": "Watkins_collection:AG7",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "Watkins_collection:AG7",
+        "super_population": {
+            "name":"Watkins_collection:All"
+        },
+        "sub_populations": []
+    },
+    {
+        "name": "TaNG",
+        "description": "TaNG",
+        "type": "regional",
+        "is_global": true,
+        "display_group_name": "TaNG",
+        "super_population": null,
+        "sub_populations": []
+    }
+    ]
+
+}

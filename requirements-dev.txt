@@ -5,3 +5,4 @@ snapshottest==0.6.0
 pylint==2.14.3
 mypy==0.961
 black==22.6.0
+ruff==0.12.7

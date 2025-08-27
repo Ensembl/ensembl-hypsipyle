@@ -12,18 +12,28 @@
    limitations under the License.
 """
 
-import logging
-
 from pymongo import monitoring
 
 
 class CommandLogger(monitoring.CommandListener):
-    """Logger for MongoDB transactions"""
+    """Logger for MongoDB transactions."""
 
     def __init__(self, log):
+        """Initialises a CommandLogger instance.
+
+        Args:
+            log (logging.Logger): A logger instance for logging messages.
+        """
         self.log = log
 
     def started(self, event):
+        """Logs a MongoDB command start event.
+
+        If the command is a 'find' operation, it logs the associated query filter.
+
+        Args:
+            event: An event object containing information about the MongoDB command.
+        """
         self.log.debug(
             "[Request id: %s] Command %s started on server %s",
             event.request_id,
@@ -38,6 +48,11 @@ class CommandLogger(monitoring.CommandListener):
             )
 
     def succeeded(self, event):
+        """Logs a successful MongoDB command event.
+
+        Args:
+            event: An event object containing information about the successful MongoDB command.
+        """
         self.log.debug(
             "[Request id: %s] Command %s on server %s succeeded in %s microseconds",
             event.request_id,
@@ -47,6 +62,11 @@ class CommandLogger(monitoring.CommandListener):
         )
 
     def failed(self, event):
+        """Logs a failure event for a MongoDB command.
+
+        Args:
+            event: An event object containing information about the failed MongoDB command.
+        """
         self.log.debug(
             "[Request id: %s] Command %s on server %s failed in %s microseconds",
             event.request_id,

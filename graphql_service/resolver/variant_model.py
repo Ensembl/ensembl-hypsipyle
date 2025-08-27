@@ -12,16 +12,13 @@
    limitations under the License.
 """
 
-from typing import Dict, Optional, List, Any
-import json, os
+from typing import Dict, List
+import json
+import os
 from ariadne import QueryType, ObjectType
 from graphql import GraphQLResolveInfo
-import subprocess
-import json
 
-from graphql_service.resolver.exceptions import (
-    VariantNotFoundError
-)
+from graphql_service.resolver.exceptions import VariantNotFoundError
 
 # Define Query types for GraphQL
 # Don't forget to import these into ariadne_app.py if you add a new type
@@ -31,14 +28,15 @@ VARIANT_TYPE = ObjectType("Variant")
 VARIANT_ALLELE_TYPE = ObjectType("VariantAllele")
 POPULATION_TYPE = ObjectType("Population")
 
+
 @QUERY_TYPE.field("variant")
 async def resolve_variant(
-        _,
-        info: GraphQLResolveInfo,
-        by_id: Dict[str, str] = None,
+    _,
+    info: GraphQLResolveInfo,
+    by_id: Dict[str, str] = None,
 ) -> Dict:
     "Load variants via variant id"
-    
+
     query = {
         "type": "Variant",
         "variant_id": by_id["variant_id"],
@@ -50,12 +48,14 @@ async def resolve_variant(
         raise VariantNotFoundError(by_id["variant_id"])
     return result
 
+
 @VARIANT_TYPE.field("primary_source")
 def primary_source(variant: Dict, info: GraphQLResolveInfo) -> Dict:
     """
     Load primary source for variant
     """
     return variant.get_primary_source()
+
 
 @VARIANT_TYPE.field("allele_type")
 def allele_type(variant: Dict, info: GraphQLResolveInfo) -> Dict:
@@ -64,12 +64,14 @@ def allele_type(variant: Dict, info: GraphQLResolveInfo) -> Dict:
     """
     return variant.get_allele_type(variant.alts)
 
+
 @VARIANT_TYPE.field("alternative_names")
 def alternative_names(variant: Dict, info: GraphQLResolveInfo) -> Dict:
     """
     Load alternative names for variant
     """
     return variant.get_alternative_names()
+
 
 @VARIANT_TYPE.field("slice")
 def slice(variant: Dict, info: GraphQLResolveInfo) -> Dict:
@@ -78,6 +80,7 @@ def slice(variant: Dict, info: GraphQLResolveInfo) -> Dict:
     """
     return variant.get_slice(variant.alts)
 
+
 @VARIANT_TYPE.field("prediction_results")
 def prediction_results(variant: Dict, info: GraphQLResolveInfo) -> Dict:
     """
@@ -85,11 +88,12 @@ def prediction_results(variant: Dict, info: GraphQLResolveInfo) -> Dict:
     """
     prediction_results = []
     prediction_results.append(variant.get_most_severe_consequence())
-    if (variant.get_gerp_score()):
-        prediction_results.append(variant.get_gerp_score()) 
-    if (variant.get_ancestral_allele()):
-        prediction_results.append(variant.get_ancestral_allele()) 
+    if variant.get_gerp_score():
+        prediction_results.append(variant.get_gerp_score())
+    if variant.get_ancestral_allele():
+        prediction_results.append(variant.get_ancestral_allele())
     return prediction_results
+
 
 @VARIANT_TYPE.field("ensembl_website_display_data")
 def ensembl_website_display_data(variant: Dict, info: GraphQLResolveInfo) -> Dict:
@@ -98,6 +102,7 @@ def ensembl_website_display_data(variant: Dict, info: GraphQLResolveInfo) -> Dic
     """
     return variant.get_web_display_data()
 
+
 @VARIANT_TYPE.field("alleles")
 def resolve_alleles_from_variant(variant: Dict, info: GraphQLResolveInfo) -> Dict:
     """
@@ -105,81 +110,112 @@ def resolve_alleles_from_variant(variant: Dict, info: GraphQLResolveInfo) -> Dic
     """
     return variant.get_alleles()
 
+
 @VARIANT_ALLELE_TYPE.field("name")
-def resolve_name_from_variant_allele(variant_allele: Dict, info: GraphQLResolveInfo) -> Dict:
+def resolve_name_from_variant_allele(
+    variant_allele: Dict, info: GraphQLResolveInfo
+) -> Dict:
     """
     Load name for variant allele
     """
     return variant_allele.name
 
+
 @VARIANT_ALLELE_TYPE.field("alternative_names")
-def resolve_alternative_names_from_variant_allele(variant_allele: Dict, info: GraphQLResolveInfo) -> Dict:
+def resolve_alternative_names_from_variant_allele(
+    variant_allele: Dict, info: GraphQLResolveInfo
+) -> Dict:
     """
     Load alternative names for variant allele
     """
     return variant_allele.get_alternative_names()
 
+
 @VARIANT_ALLELE_TYPE.field("slice")
-def resolve_slice_from_variant_allele(variant_allele: Dict, info: GraphQLResolveInfo) -> Dict:
+def resolve_slice_from_variant_allele(
+    variant_allele: Dict, info: GraphQLResolveInfo
+) -> Dict:
     """
     Load slice for variant allele
     """
     return variant_allele.get_slice()
 
+
 @VARIANT_ALLELE_TYPE.field("allele_type")
-def resolve_allele_type_from_variant_allele(variant_allele: Dict, info: GraphQLResolveInfo) -> Dict:
+def resolve_allele_type_from_variant_allele(
+    variant_allele: Dict, info: GraphQLResolveInfo
+) -> Dict:
     """
     Load allele type for variant allele
     """
     return variant_allele.get_allele_type()
 
+
 @VARIANT_ALLELE_TYPE.field("phenotype_assertions")
-def resolve_phenotype_assertions_from_variant_allele(variant_allele: Dict, info: GraphQLResolveInfo) -> Dict:
+def resolve_phenotype_assertions_from_variant_allele(
+    variant_allele: Dict, info: GraphQLResolveInfo
+) -> Dict:
     """
     Load phenotype assertions for variant allele
     """
     return variant_allele.get_phenotype_assertions()
 
+
 @VARIANT_ALLELE_TYPE.field("predicted_molecular_consequences")
-def resolve_predicted_molecular_consequences_from_variant_allele(variant_allele: Dict, info: GraphQLResolveInfo) -> Dict:
+def resolve_predicted_molecular_consequences_from_variant_allele(
+    variant_allele: Dict, info: GraphQLResolveInfo
+) -> Dict:
     """
     Load predicted molecular consequences for variant allele
     """
     return variant_allele.get_predicted_molecular_consequences()
 
+
 @VARIANT_ALLELE_TYPE.field("prediction_results")
-def resolve_prediction_results_from_variant_allele(variant_allele: Dict, info: GraphQLResolveInfo) -> Dict:
+def resolve_prediction_results_from_variant_allele(
+    variant_allele: Dict, info: GraphQLResolveInfo
+) -> Dict:
     """
     Load prediction results for variant allele
     """
     return variant_allele.get_prediction_results()
 
+
 @VARIANT_ALLELE_TYPE.field("population_frequencies")
-def resolve_population_frequencies_from_variant_allele(variant_allele: Dict, info: GraphQLResolveInfo) -> Dict:
+def resolve_population_frequencies_from_variant_allele(
+    variant_allele: Dict, info: GraphQLResolveInfo
+) -> Dict:
     """
     Load population frequencies for variant allele
     """
     return variant_allele.get_population_allele_frequencies()
 
+
 @VARIANT_ALLELE_TYPE.field("ensembl_website_display_data")
-def resolve_ensmebl_website_display_data_from_variant_allele(variant_allele: Dict, info: GraphQLResolveInfo) -> Dict:
+def resolve_ensmebl_website_display_data_from_variant_allele(
+    variant_allele: Dict, info: GraphQLResolveInfo
+) -> Dict:
     """
     Load ensembl website display data for variant allele
     """
     return variant_allele.get_web_display_data()
 
+
 @QUERY_TYPE.field("version")
 def resolve_api(
     _: None, info: GraphQLResolveInfo
-):  # the second argument must be named `info` to avoid a NameError
+) -> Dict:  # the second argument must be named `info` to avoid a NameError
     return {"api": {"major": "0", "minor": "1", "patch": "0-beta"}}
 
+
 @QUERY_TYPE.field("populations")
-def resolve_populations(_: None, info: GraphQLResolveInfo, genome_id: str = None) -> List: 
+def resolve_populations(
+    _: None, info: GraphQLResolveInfo, genome_id: str = None
+) -> List:
     current_directory = os.path.dirname(__file__)
-    population_metadata_file = f"{current_directory}/../../common/file_model/population_metadata.json"
+    population_metadata_file = (
+        f"{current_directory}/../../common/file_model/population_metadata.json"
+    )
     with open(population_metadata_file) as pop_file:
-            population_metadata = json.load(pop_file)
-    return population_metadata.get(genome_id,[]) 
-
-
+        population_metadata = json.load(pop_file)
+    return population_metadata.get(genome_id, [])

@@ -11,23 +11,39 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 """
+
 import vcfpy
-import json
 import os
-import glob
 from common.file_model.variant import Variant
 
+
 class FileClient:
+    """Client to load file into memory.
+
+    This class provides methods to retrieve and process variant data from VCF files.
     """
-    Client to load file in-memory
-    """
+
     def __init__(self, config):
-        self.data_root = config.get("data_root")
-        
-    
-    def get_variant_record(self, genome_uuid: str, variant_id: str):
+        """Initialises a FileClient instance.
+
+        Args:
+            config (dict): A configuration dictionary containing at least the "data_root" key.
         """
-        Get a variant entry from variant_id
+        self.data_root = config.get("data_root")
+
+    def get_variant_record(self, genome_uuid: str, variant_id: str):
+        """Retrieves a variant entry using the specified variant identifier.
+
+        This method loads the VCF file from the configured data root and genome UUID,
+        then attempts to fetch the variant record that matches the given variant_id.
+        The variant_id should be formatted as 'contig:position:identifier'.
+
+        Args:
+            genome_uuid (str): The UUID for the genome.
+            variant_id (str): The variant identifier in the format 'contig:position:identifier'.
+
+        Returns:
+            Variant or None: A Variant instance if a matching record is found; otherwise, None.
         """
         datafile = os.path.join(self.data_root, genome_uuid, "variation.vcf.gz")
         if datafile:
@@ -36,17 +52,19 @@ class FileClient:
         else:
             print("Please check the directory path for the given genome uuid")
 
-        try: 
+        try:
             [contig, pos, id] = self.split_variant_id(variant_id)
             pos = int(pos)
         except:
-            #TODO: This needs to go to thoas logger
-            #TODO: Exception needs to be caught appropriately
-            print("Please check that the variant_id is in the format: contig:position:identifier")
+            # TODO: This needs to go to thoas logger
+            # TODO: Exception needs to be caught appropriately
+            print(
+                "Please check that the variant_id is in the format: contig:position:identifier"
+            )
         data = {}
         variant = None
         try:
-            for rec in self.collection.fetch(contig, pos-1, pos):
+            for rec in self.collection.fetch(contig, pos - 1, pos):
                 if rec.ID[0] == id:
                     variant = Variant(rec, self.header, genome_uuid)
                     break
@@ -54,12 +72,16 @@ class FileClient:
         except:
             # Return None when variant cannot be fetched
             return
-        
-        
+
     def split_variant_id(self, variant_id: str):
-        """
-        Splits variant_id into separate fields
+        """Splits the variant identifier into its constituent parts.
+
+        The variant identifier is expected to be formatted as 'contig:position:identifier'.
+
+        Args:
+            variant_id (str): The variant identifier string.
+
+        Returns:
+            list: A list containing the contig, position, and identifier.
         """
         return variant_id.split(":")
-
-

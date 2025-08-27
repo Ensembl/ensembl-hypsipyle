@@ -1,0 +1,206 @@
+{
+    "data": {
+        "variant": {
+            "name": "rs1360968155",
+            "alternative_names": [],
+            "primary_source": {
+                "__typename": "ExternalReference"
+            },
+            "type": "Variant",
+            "allele_type": {
+                "__typename": "OntologyTermMetadata"
+            },
+            "slice": {
+                "__typename": "Slice"
+            },
+            "alleles": [
+                {
+                    "name": "11:19518426:C:G",
+                    "allele_sequence": "G",
+                    "reference_sequence": "C",
+                    "alternative_names": [],
+                    "type": "VariantAllele",
+                    "allele_type": {
+                        "__typename": "OntologyTermMetadata"
+                    },
+                    "slice": {
+                        "__typename": "Slice"
+                    },
+                    "phenotype_assertions": [],
+                    "prediction_results": [],
+                    "population_frequencies": [],
+                    "predicted_molecular_consequences": [
+                        {
+                            "allele_name": "G",
+                            "stable_id": "ENST00000360655",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000166833",
+                            "gene_symbol": "NAV2",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "protein_coding",
+                            "cdna_location": null,
+                            "cds_location": null,
+                            "protein_location": null
+                        },
+                        {
+                            "allele_name": "G",
+                            "stable_id": "ENST00000532874",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000254622",
+                            "gene_symbol": "NAV2-AS4",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "lncRNA",
+                            "cdna_location": {
+                                "relation": null,
+                                "start": 317,
+                                "end": 317,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "-",
+                                "alt_sequence": "G"
+                            },
+                            "cds_location": null,
+                            "protein_location": null
+                        },
+                        {
+                            "allele_name": "G",
+                            "stable_id": "ENST00000837121",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000254622",
+                            "gene_symbol": "NAV2-AS4",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "lncRNA",
+                            "cdna_location": {
+                                "relation": null,
+                                "start": 513,
+                                "end": 513,
+                                "length": 1,
+                                "percentage_overlap": null,
+                                "ref_sequence": "-",
+                                "alt_sequence": "G"
+                            },
+                            "cds_location": null,
+                            "protein_location": null
+                        },
+                        {
+                            "allele_name": "G",
+                            "stable_id": "ENST00000837122",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                },
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000254622",
+                            "gene_symbol": "NAV2-AS4",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "lncRNA",
+                            "cdna_location": null,
+                            "cds_location": null,
+                            "protein_location": null
+                        },
+                        {
+                            "allele_name": "G",
+                            "stable_id": "ENST00000837123",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                },
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000254622",
+                            "gene_symbol": "NAV2-AS4",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "lncRNA",
+                            "cdna_location": null,
+                            "cds_location": null,
+                            "protein_location": null
+                        }
+                    ],
+                    "ensembl_website_display_data": {
+                        "count_transcript_consequences": 2,
+                        "count_overlapped_genes": 2,
+                        "count_regulatory_consequences": 1,
+                        "count_variant_phenotypes": 0,
+                        "count_gene_phenotypes": 0,
+                        "representative_population_allele_frequency": null
+                    }
+                },
+                {
+                    "name": "11:19518426:C:C",
+                    "allele_sequence": "C",
+                    "reference_sequence": "C",
+                    "alternative_names": [],
+                    "type": "VariantAllele",
+                    "allele_type": {
+                        "__typename": "OntologyTermMetadata"
+                    },
+                    "slice": {
+                        "__typename": "Slice"
+                    },
+                    "phenotype_assertions": [],
+                    "prediction_results": [],
+                    "population_frequencies": [],
+                    "predicted_molecular_consequences": [],
+                    "ensembl_website_display_data": {
+                        "count_transcript_consequences": 0,
+                        "count_overlapped_genes": 0,
+                        "count_regulatory_consequences": 0,
+                        "count_variant_phenotypes": 0,
+                        "count_gene_phenotypes": 0,
+                        "representative_population_allele_frequency": null
+                    }
+                }
+            ],
+            "prediction_results": [
+                {
+                    "score": null,
+                    "result": "splice_donor_variant",
+                    "classification": null,
+                    "analysis_method": {
+                        "__typename": "AnalysisMethod"
+                    }
+                }
+            ],
+            "ensembl_website_display_data": {
+                "count_citations": 0
+            }
+        }
+    }
+}

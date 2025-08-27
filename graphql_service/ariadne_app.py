@@ -11,12 +11,12 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 """
+
 from typing import Dict, Callable
 
 import ariadne
 from graphql import GraphQLSchema
 from starlette.requests import Request
-from ariadne import ScalarType
 
 from graphql_service.resolver.variant_model import (
     QUERY_TYPE,
@@ -26,32 +26,44 @@ from graphql_service.resolver.variant_model import (
 
 
 def prepare_executable_schema() -> GraphQLSchema:
-    """
-    Combine schema definitions with corresponding resolvers
+    """Combines schema definitions with the corresponding resolvers to produce an executable schema.
+
+    Loads the GraphQL schema from the "common/schemas" directory and integrates it with the
+    query and variant resolvers.
+
+    Returns:
+        GraphQLSchema: The executable GraphQL schema.
     """
     schema = ariadne.load_schema_from_path("common/schemas")
     return ariadne.make_executable_schema(
-        schema,
-        QUERY_TYPE,
-        VARIANT_TYPE,
-        VARIANT_ALLELE_TYPE
+        schema, QUERY_TYPE, VARIANT_TYPE, VARIANT_ALLELE_TYPE
     )
 
 
 def prepare_context_provider(context: Dict) -> Callable[[Request], Dict]:
-    """
-    Returns function for injecting context to graphql executors.
+    """Creates a context provider function for GraphQL executions.
 
-    context: The context objects that we want to inject to the graphql
-    executors.  The `context_provider` method is a closure, so the
-    `context` variable will be the same Python object for every request.
-    This means that it should only contain objects that we want to share
-    between requests, for example Mongo client, XrefResolver
+    Returns a closure that injects a fresh context for each request. The context will include
+    the incoming request and the shared file client, ensuring that request-specific data does
+    not leak between executions.
+
+    Args:
+        context (Dict): A dictionary containing shared objects (e.g. file_client) for the application.
+
+    Returns:
+        Callable[[Request], Dict]: A function that takes a Request and returns a context dictionary.
     """
     file_client = context["file_client"]
+
     def context_provider(request: Request) -> Dict:
-        """We must return a new object with every request,
-        otherwise the requests will pollute each other's state"""  
+        """Provides a fresh context for each GraphQL execution.
+
+        Args:
+            request (Request): The incoming HTTP request.
+
+        Returns:
+            Dict: A dictionary containing the request and the shared file_client.
+        """
         return {
             "request": request,
             "file_client": file_client,

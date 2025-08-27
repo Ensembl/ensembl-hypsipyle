@@ -1,0 +1,168 @@
+{
+    "data": {
+        "variant": {
+            "name": "rs1642816219",
+            "alternative_names": [],
+            "primary_source": {
+                "__typename": "ExternalReference"
+            },
+            "type": "Variant",
+            "allele_type": {
+                "__typename": "OntologyTermMetadata"
+            },
+            "slice": {
+                "__typename": "Slice"
+            },
+            "alleles": [
+                {
+                    "name": "1:964529:AGGTCCGCAGTGGGGCTGCGGGGAGGGGGGCGCGGGTCCGCAGTGGGGCTGTGGGAGGGGTCCGCGCGTCCGCAGTGGGGATGTGCTGCGGGGAGGGGGGCGCGGGTCCGCAGTGGGGATGTGCTGCCGGGAGGGGGGCGCGGGTCCGCAGTGGGGATGTGCTGCCGGGAGGGGGGCGCGGGTCCGCAGTGGGGATGTGCTGCCGGGAGGGGGGCGCGGGTCCGCAGTGGGGATGTGCTGCCGGGAGGGGGGCGCG:A",
+                    "allele_sequence": "A",
+                    "reference_sequence": "AGGTCCGCAGTGGGGCTGCGGGGAGGGGGGCGCGGGTCCGCAGTGGGGCTGTGGGAGGGGTCCGCGCGTCCGCAGTGGGGATGTGCTGCGGGGAGGGGGGCGCGGGTCCGCAGTGGGGATGTGCTGCCGGGAGGGGGGCGCGGGTCCGCAGTGGGGATGTGCTGCCGGGAGGGGGGCGCGGGTCCGCAGTGGGGATGTGCTGCCGGGAGGGGGGCGCGGGTCCGCAGTGGGGATGTGCTGCCGGGAGGGGGGCGCG",
+                    "alternative_names": [],
+                    "type": "VariantAllele",
+                    "allele_type": {
+                        "__typename": "OntologyTermMetadata"
+                    },
+                    "slice": {
+                        "__typename": "Slice"
+                    },
+                    "phenotype_assertions": [],
+                    "prediction_results": [],
+                    "population_frequencies": [],
+                    "predicted_molecular_consequences": [
+                        {
+                            "allele_name": "-",
+                            "stable_id": "ENST00000338591",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                },
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                },
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                },
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000187961",
+                            "gene_symbol": "KLHL17",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "protein_coding",
+                            "cdna_location": {
+                                "relation": null,
+                                "start": 1810,
+                                "end": null,
+                                "length": null,
+                                "percentage_overlap": null,
+                                "ref_sequence": null,
+                                "alt_sequence": null
+                            },
+                            "cds_location": {
+                                "relation": null,
+                                "start": 1700,
+                                "end": null,
+                                "length": null,
+                                "percentage_overlap": null,
+                                "ref_sequence": null,
+                                "alt_sequence": null
+                            },
+                            "protein_location": {
+                                "relation": null,
+                                "start": 567,
+                                "end": null,
+                                "length": null,
+                                "percentage_overlap": null,
+                                "ref_sequence": null,
+                                "alt_sequence": null
+                            }
+                        },
+                        {
+                            "allele_name": "-",
+                            "stable_id": "ENST00000466300",
+                            "feature_type": {
+                                "__typename": "OntologyTermMetadata"
+                            },
+                            "consequences": [
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                },
+                                {
+                                    "__typename": "OntologyTermMetadata"
+                                }
+                            ],
+                            "prediction_results": [],
+                            "gene_stable_id": "ENSG00000187961",
+                            "gene_symbol": "KLHL17",
+                            "protein_stable_id": null,
+                            "transcript_biotype": "nonsense_mediated_decay",
+                            "cdna_location": {
+                                "relation": null,
+                                "start": 913,
+                                "end": null,
+                                "length": null,
+                                "percentage_overlap": null,
+                                "ref_sequence": null,
+                                "alt_sequence": null
+                            },
+                            "cds_location": null,
+                            "protein_location": null
+                        }
+                    ],
+                    "ensembl_website_display_data": {
+                        "count_transcript_consequences": 2,
+                        "count_overlapped_genes": 1,
+                        "count_regulatory_consequences": 1,
+                        "count_variant_phenotypes": 0,
+                        "count_gene_phenotypes": 0,
+                        "representative_population_allele_frequency": 7.26934e-06
+                    }
+                },
+                {
+                    "name": "1:964529:AGGTCCGCAGTGGGGCTGCGGGGAGGGGGGCGCGGGTCCGCAGTGGGGCTGTGGGAGGGGTCCGCGCGTCCGCAGTGGGGATGTGCTGCGGGGAGGGGGGCGCGGGTCCGCAGTGGGGATGTGCTGCCGGGAGGGGGGCGCGGGTCCGCAGTGGGGATGTGCTGCCGGGAGGGGGGCGCGGGTCCGCAGTGGGGATGTGCTGCCGGGAGGGGGGCGCGGGTCCGCAGTGGGGATGTGCTGCCGGGAGGGGGGCGCG:AGGTCCGCAGTGGGGCTGCGGGGAGGGGGGCGCGGGTCCGCAGTGGGGCTGTGGGAGGGGTCCGCGCGTCCGCAGTGGGGATGTGCTGCGGGGAGGGGGGCGCGGGTCCGCAGTGGGGATGTGCTGCCGGGAGGGGGGCGCGGGTCCGCAGTGGGGATGTGCTGCCGGGAGGGGGGCGCGGGTCCGCAGTGGGGATGTGCTGCCGGGAGGGGGGCGCGGGTCCGCAGTGGGGATGTGCTGCCGGGAGGGGGGCGCG",
+                    "allele_sequence": "AGGTCCGCAGTGGGGCTGCGGGGAGGGGGGCGCGGGTCCGCAGTGGGGCTGTGGGAGGGGTCCGCGCGTCCGCAGTGGGGATGTGCTGCGGGGAGGGGGGCGCGGGTCCGCAGTGGGGATGTGCTGCCGGGAGGGGGGCGCGGGTCCGCAGTGGGGATGTGCTGCCGGGAGGGGGGCGCGGGTCCGCAGTGGGGATGTGCTGCCGGGAGGGGGGCGCGGGTCCGCAGTGGGGATGTGCTGCCGGGAGGGGGGCGCG",
+                    "reference_sequence": "AGGTCCGCAGTGGGGCTGCGGGGAGGGGGGCGCGGGTCCGCAGTGGGGCTGTGGGAGGGGTCCGCGCGTCCGCAGTGGGGATGTGCTGCGGGGAGGGGGGCGCGGGTCCGCAGTGGGGATGTGCTGCCGGGAGGGGGGCGCGGGTCCGCAGTGGGGATGTGCTGCCGGGAGGGGGGCGCGGGTCCGCAGTGGGGATGTGCTGCCGGGAGGGGGGCGCGGGTCCGCAGTGGGGATGTGCTGCCGGGAGGGGGGCGCG",
+                    "alternative_names": [],
+                    "type": "VariantAllele",
+                    "allele_type": {
+                        "__typename": "OntologyTermMetadata"
+                    },
+                    "slice": {
+                        "__typename": "Slice"
+                    },
+                    "phenotype_assertions": [],
+                    "prediction_results": [],
+                    "population_frequencies": [],
+                    "predicted_molecular_consequences": [],
+                    "ensembl_website_display_data": {
+                        "count_transcript_consequences": 0,
+                        "count_overlapped_genes": 0,
+                        "count_regulatory_consequences": 0,
+                        "count_variant_phenotypes": 0,
+                        "count_gene_phenotypes": 0,
+                        "representative_population_allele_frequency": 0.99999273066
+                    }
+                }
+            ],
+            "prediction_results": [
+                {
+                    "score": null,
+                    "result": "splice_donor_variant",
+                    "classification": null,
+                    "analysis_method": {
+                        "__typename": "AnalysisMethod"
+                    }
+                }
+            ],
+            "ensembl_website_display_data": {
+                "count_citations": 0
+            }
+        }
+    }
+}

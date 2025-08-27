@@ -13,13 +13,25 @@
 """
 
 
-def minimise_allele(alt: str, ref:str) -> str:
-        """
-        VCF file has the representation without anchoring bases
-        for prediction scores in INFO column. This function is useful
-        in matching the SPDI format in VCF with the allele in memory
-        """
-        minimised_allele_string = alt
-        if ref[0] == alt[0]:
-            minimised_allele_string = alt[1:] if len(alt) > 1 else "-"
-        return minimised_allele_string
+def minimise_allele(alt: str, ref: str) -> str:
+    """Converts a VCF allele string into a minimised SPDI format.
+
+    This function converts a VCF allele representation that omits anchoring bases for prediction
+    scores in the INFO column. It removes the anchoring base if the first base of the reference
+    and alternate alleles is identical. If the resulting allele is empty, a hyphen ('-') is returned.
+
+    Args:
+        alt (str): The alternate allele from the VCF data.
+        ref (str): The reference allele from the VCF data.
+
+    Returns:
+        str: The minimised allele in SPDI format.
+    """
+    minimised_allele_string = alt
+    if ref[0] == alt[0]:
+        minimised_allele_string = alt[1:] if len(alt) > 1 else "-"
+    return minimised_allele_string
+
+def decode_population_name(name: str):
+      return name.replace("$2C",",")
+

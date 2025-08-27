@@ -11,6 +11,7 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 """
+
 import logging
 import os
 from typing import Optional
@@ -27,6 +28,7 @@ from starlette.middleware import Middleware
 from starlette.middleware.cors import CORSMiddleware
 
 from common.logger import CommandLogger
+
 # from common.crossrefs import XrefResolver
 from common.file_client import FileClient
 from common.extensions import QueryExecutionTimeExtension
@@ -37,14 +39,13 @@ from graphql_service.ariadne_app import (
 from dotenv import load_dotenv
 
 
-
 load_dotenv("connections.conf")
 
 
 DEBUG_MODE = os.getenv("DEBUG_MODE", False) == "True"
-EXTENSIONS: Optional[
-    ExtensionList
-] = None  # mypy will throw an incompatible type error without this type cast
+EXTENSIONS: Optional[ExtensionList] = (
+    None  # mypy will throw an incompatible type error without this type cast
+)
 
 # Including the execution time in the response
 EXTENSIONS = [QueryExecutionTimeExtension]
@@ -61,11 +62,7 @@ if DEBUG_MODE:
     EXTENSIONS.append(ApolloTracingExtension(trace_default_resolver=True))
 
 FILE_CLIENT = FileClient(os.environ)
-CONTEXT_PROVIDER = prepare_context_provider(
-    {
-        "file_client": FILE_CLIENT
-    }
-)
+CONTEXT_PROVIDER = prepare_context_provider({"file_client": FILE_CLIENT})
 EXECUTABLE_SCHEMA = prepare_executable_schema()
 
 
@@ -127,10 +124,7 @@ query variant_example {
 
 
 class CustomExplorerGraphiQL(ExplorerGraphiQL):
-    """
-    We can customize the GraphiQL interface in Ariadne by overriding the ExplorerGraphiQL class
-    which is responsible for rendering the default GraphiQL UI
-    """
+    """Customisation of the GraphiQL interface for the Ensembl Variation API."""
 
     def __init__(
         self,
@@ -138,6 +132,15 @@ class CustomExplorerGraphiQL(ExplorerGraphiQL):
         explorer_plugin: bool = True,
         default_query: str = DEFAULT_QUERY,
     ):
+        """Initialises the CustomExplorerGraphiQL instance.
+
+        Renders a customised GraphiQL HTML interface using the provided title and default query.
+
+        Args:
+            title (str, optional): The title to display on the GraphiQL interface. Defaults to "Ensembl Variation API".
+            explorer_plugin (bool, optional): Whether the explorer plugin is enabled. Defaults to True.
+            default_query (str, optional): The default GraphQL query to pre-populate the interface. Defaults to DEFAULT_QUERY.
+        """
         super(CustomExplorerGraphiQL, self).__init__()
         self.parsed_html = render_template(
             CUSTOM_GRAPHIQL_HTML,

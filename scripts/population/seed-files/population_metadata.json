@@ -3876,7 +3876,7 @@
         "description": "ALL",
         "type": "regional",
         "is_global": true,
-        "display_group_name": "ALL",
+        "display_group_name": "1000_genomes_project",
         "super_population": null,
         "sub_populations": [
             {
@@ -3913,7 +3913,7 @@
         "description": "GAS",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "GAS",
+        "display_group_name": "1000_genomes_project",
         "super_population": 
         {
             "name": "ALL"
@@ -3925,7 +3925,7 @@
         "description": "UGS",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "UGS",
+        "display_group_name": "1000_genomes_project",
         "super_population": {
             "name": "ALL"
         },
@@ -3936,7 +3936,7 @@
         "description": "GNS",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "GNS",
+        "display_group_name": "1000_genomes_project",
         "super_population": {
             "name": "ALL"
         },
@@ -3947,7 +3947,7 @@
         "description": "BFS",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "BFS",
+        "display_group_name": "1000_genomes_project",
         "super_population": {
             "name": "ALL"
         },
@@ -3958,7 +3958,7 @@
         "description": "GWA",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "GWA",
+        "display_group_name": "1000_genomes_project",
         "super_population": {
             "name": "ALL"
         },
@@ -3969,7 +3969,7 @@
         "description": "KES",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "KES",
+        "display_group_name": "1000_genomes_project",
         "super_population": {
             "name": "ALL"
         },
@@ -3980,7 +3980,7 @@
         "description": "CMS",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "CMS",
+        "display_group_name": "1000_genomes_project",
         "super_population": {
             "name": "ALL"
         },
@@ -3991,7 +3991,7 @@
         "description": "AOM",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "AOM",
+        "display_group_name": "1000_genomes_project",
         "super_population": {
             "name": "ALL"
         },
@@ -4002,7 +4002,7 @@
         "description": "BFM",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "BFM",
+        "display_group_name": "1000_genomes_project",
         "super_population": {
             "name": "ALL"
         },
@@ -4503,7 +4503,7 @@
         "description": "ALL:PRJEB34225",
         "type": "regional",
         "is_global": true,
-        "display_group_name": "ALL:PRJEB34225",
+        "display_group_name": "PRJEB34225",
         "super_population": null,
         "sub_populations": [
             {
@@ -4522,7 +4522,7 @@
         "description": "St. John River",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "St. John River",
+        "display_group_name": "PRJEB34225",
         "super_population": {
             "name":"ALL:PRJEB34225"
         },
@@ -4533,7 +4533,7 @@
         "description": "Penobscot River",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "Penobscot River",
+        "display_group_name": "PRJEB34225",
         "super_population": {
             "name":"ALL:PRJEB34225"
         },
@@ -4544,7 +4544,7 @@
         "description": "Gaspe of New Brunswick",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "Gaspe of New Brunswick",
+        "display_group_name": "PRJEB34225",
         "super_population": {
             "name":"ALL:PRJEB34225"
         },
@@ -4635,7 +4635,7 @@
         "description": "Watkins_collection:All",
         "type": "regional",
         "is_global": true,
-        "display_group_name": "Watkins_collection:All",
+        "display_group_name": "Watkins_collection",
         "super_population": null,
         "sub_populations": [
             {
@@ -4669,7 +4669,7 @@
         "description": "Watkins_collection:Modern",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "Watkins_collection:Modern",
+        "display_group_name": "Watkins_collection",
         "super_population": {
             "name":"Watkins_collection:All"
         },
@@ -4680,7 +4680,7 @@
         "description": "Watkins_collection:AG1",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "Watkins_collection:AG1",
+        "display_group_name": "Watkins_collection",
         "super_population": {
             "name":"Watkins_collection:All"
         },
@@ -4691,7 +4691,7 @@
         "description": "Watkins_collection:AG2",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "Watkins_collection:AG2",
+        "display_group_name": "Watkins_collection",
         "super_population": {
             "name":"Watkins_collection:All"
         },
@@ -4702,7 +4702,7 @@
         "description": "Watkins_collection:AG3",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "Watkins_collection:AG3",
+        "display_group_name": "Watkins_collection",
         "super_population": {
             "name":"Watkins_collection:All"
         },
@@ -4713,7 +4713,7 @@
         "description": "Watkins_collection:AG4",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "Watkins_collection:AG4",
+        "display_group_name": "Watkins_collection",
         "super_population": {
             "name":"Watkins_collection:All"
         },
@@ -4724,7 +4724,7 @@
         "description": "Watkins_collection:AG5",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "Watkins_collection:AG5",
+        "display_group_name": "Watkins_collection",
         "super_population": {
             "name":"Watkins_collection:All"
         },
@@ -4735,7 +4735,7 @@
         "description": "Watkins_collection:AG6",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "Watkins_collection:AG6",
+        "display_group_name": "Watkins_collection",
         "super_population": {
             "name":"Watkins_collection:All"
         },
@@ -4746,7 +4746,7 @@
         "description": "Watkins_collection:AG7",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "Watkins_collection:AG7",
+        "display_group_name": "Watkins_collection",
         "super_population": {
             "name":"Watkins_collection:All"
         },

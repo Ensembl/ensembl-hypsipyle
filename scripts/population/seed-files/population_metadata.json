@@ -2710,7 +2710,7 @@
         "description": "ISGC",
         "type": "regional",
         "is_global": true,
-        "display_group_name": "ISGC:ALL",
+        "display_group_name": "ISGC",
         "super_population":null,
         "sub_populations": [] 
     } 
@@ -4488,11 +4488,11 @@
         "sub_populations": []
     },
     {
-        "name": "Rice3K_collection:All",
-        "description": "Rice3K_collection:All",
+        "name": "Collection from Rice 3k",
+        "description": "Collection from Rice 3k",
         "type": "regional",
         "is_global": true,
-        "display_group_name": "Rice3K_collection",
+        "display_group_name": "Collection from Rice 3k",
         "super_population": null,
         "sub_populations": []
     }

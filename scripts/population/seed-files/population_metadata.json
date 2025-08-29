@@ -2679,824 +2679,11 @@
         "description": "ISGC",
         "type": "regional",
         "is_global": true,
-        "display_group_name": "ISGC:ALL",
+        "display_group_name": "ISGC",
         "super_population":null,
-        "sub_populations": [
-        {
-        "name": "ISGC:TIB"
-        },
-        {
-            "name": "ISGC:CHN"
-        },
-        {
-            "name": "ISGC:DOP"
-        },
-        {
-            "name": "ISGC:SCB"
-        },
-        {
-            "name": "ISGC:DWM"
-        },
-        {
-            "name": "ISGC:NOR"
-        },
-        {
-            "name": "ISGC:CCP"
-        },
-        {
-            "name": "ISGC:BOU"
-        },
-        {
-            "name": "ISGC:SUM"
-        },
-        {
-            "name": "ISGC:SWA"
-        },
-        {
-            "name": "ISGC:TWM"
-        },
-        {
-            "name": "ISGC:SAK"
-        },
-        {
-            "name": "ISGC:KRY"
-        },
-        {
-            "name": "ISGC:MER"
-        },
-        {
-            "name": "ISGC:SUF"
-        },
-        {
-            "name": "ISGC:CPW"
-        },
-        {
-            "name": "ISGC:FIN"
-        },
-        {
-            "name": "ISGC:SAN"
-        },
-        {
-            "name": "ISGC:TXL"
-        },
-        {
-            "name": "ISGC:COR"
-        },
-        {
-            "name": "ISGC:DOW"
-        },
-        {
-            "name": "ISGC:CHU"
-        },
-        {
-            "name": "ISGC:BOR"
-        },
-        {
-            "name": "ISGC:BEN"
-        },
-        {
-            "name": "ISGC:RON"
-        },
-        {
-            "name": "ISGC:SAR"
-        },
-        {
-            "name": "ISGC:MEP"
-        },
-        {
-            "name": "ISGC:BAN"
-        },
-        {
-            "name": "ISGC:OUL"
-        },
-        {
-            "name": "ISGC:WIL"
-        },
-        {
-            "name": "ISGC:LAM"
-        },
-        {
-            "name": "ISGC:CAS"
-        },
-        {
-            "name": "ISGC:DMA"
-        },
-        {
-            "name": "ISGC:AWS"
-        },
-        {
-            "name": "ISGC:VBN"
-        },
-        {
-            "name": "ISGC:NAM"
-        },
-        {
-            "name": "ISGC:CHE"
-        },
-        {
-            "name": "ISGC:ROM"
-        },
-        {
-            "name": "ISGC:TIM"
-        },
-        {
-            "name": "ISGC:BAG"
-        },
-        {
-            "name": "ISGC:GAI"
-        },
-        {
-            "name": "ISGC:GAR"
-        },
-        {
-            "name": "ISGC:LAC"
-        },
-        {
-            "name": "ISGC:MOR"
-        },
-        {
-            "name": "ISGC:MEN"
-        },
-        {
-            "name": "ISGC:UNK"
-        },
-        {
-            "name": "ISGC:GUL"
-        },
-        {
-            "name": "ISGC:CMP"
-        },
-        {
-            "name": "ISGC:BRA"
-        },
-        {
-            "name": "ISGC:MIR"
-        },
-        {
-            "name": "ISGC:AFS"
-        },
-        {
-            "name": "ISGC:AWD"
-        },
-        {
-            "name": "ISGC:WHS"
-        },
-        {
-            "name": "ISGC:OJA"
-        },
-        {
-            "name": "ISGC:KAR"
-        },
-        {
-            "name": "ISGC:NWS"
-        },
-        {
-            "name": "ISGC:SAL"
-        },
-        {
-            "name": "ISGC:MEH"
-        }
-
-        ] 
-    },
-    {
-        "name": "ISGC:TIB",
-        "description": "TIBETAN population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:TIB",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:CHN",
-        "description": "CHANGTHANGI population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:CHN",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:DOP",
-        "description": "DORSET POLLED population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:DOP",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:SCB",
-        "description": "SCOTTISH BLACKFACE population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:SCB",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:DWM",
-        "description": "DOLLGELLAU WELSH MOUNTAIN population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:DWM",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:NOR",
-        "description": "NORDUZ population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:NOR",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:CCP",
-        "description": "CINE CAPARI population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:CCP",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:BOU",
-        "description": "BOUJAD population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:BOU",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:SUM",
-        "description": "SUMATRAN population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:SUM",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:SWA",
-        "description": "SWISS WHITE ALPINE population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:SWA",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:TWM",
-        "description": "TREGAON WELSH MOUNTAIN population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:TWM",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:SAK",
-        "description": "SAKIZ population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:SAK",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:KRY",
-        "description": "KARYA population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:KRY",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:MER",
-        "description": "MERINO population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:MER",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:SUF",
-        "description": "SUFFOLK BLACKFACE population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:SUF",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:CPW",
-        "description": "COOPWORTH population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:CPW",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:FIN",
-        "description": "FINNSHEEP population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:FIN",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:SAN",
-        "description": "SANTA INES population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:SAN",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:TXL",
-        "description": "TEXEL population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:TXL",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:COR",
-        "description": "CORRIEDALE population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:COR",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:DOW",
-        "description": "DORSET population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:DOW",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:CHU",
-        "description": "CHURRA population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:CHU",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:BOR",
-        "description": "BORDER LEICESTER population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:BOR",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:BEN",
-        "description": "BENI GUIL population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:BEN",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:RON",
-        "description": "RONDERIB AFRIKANER population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:RON",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:SAR",
-        "description": "SARDINIAN ANCESTRAL BLACK population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:SAR",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:MEP",
-        "description": "MERINO POLLED population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:MEP",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:BAN",
-        "description": "BANGLADESHI population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:BAN",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:OUL",
-        "description": "OULED DJELLAL population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:OUL",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:WIL",
-        "description": "WILTSHIRE population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:WIL",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:LAM",
-        "description": "MEAT LACAUNE population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:LAM",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:CAS",
-        "description": "CASTELLANA population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:CAS",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:DMA",
-        "description": "D'MAN population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:DMA",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:AWS",
-        "description": "AWASSI population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:AWS",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:VBN",
-        "description": "VALAIS BLACK NOSE population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:VBN",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:NAM",
-        "description": "NAMAQUA AFRIKANER population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:NAM",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:CHE",
-        "description": "CHEVIOT population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:CHE",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:ROM",
-        "description": "ROMNEY population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:ROM",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:TIM",
-        "description": "TIMAHDITE population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:TIM",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:BAG",
-        "description": "BANGLADESHI GAROLE population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:BAG",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:GAI",
-        "description": "INDIAN GAROLE population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:GAI",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:GAR",
-        "description": "GARUT population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:GAR",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:LAC",
-        "description": "MILK LACAUNE population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:LAC",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:MOR",
-        "description": "MORADA NOVA population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:MOR",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:MEN",
-        "description": "ETHIOPIAN MENZ population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:MEN",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:UNK",
-        "description": "UNCLASSIFIED population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:UNK",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:GUL",
-        "description": "GULF COAST NATIVE population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:GUL",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:CMP",
-        "description": "COMPOSITE population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:CMP",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:BRA",
-        "description": "BRAZILIAN CREOLE population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:BRA",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:MIR",
-        "description": "SWISS MIRROR population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:MIR",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:AFS",
-        "description": "AFSHARI population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:AFS",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:AWD",
-        "description": "AFRICAN WHITE DORPER population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:AWD",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:WHS",
-        "description": "WELSH HARDY SPECKLED FACE population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:WHS",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:OJA",
-        "description": "OJALADA population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:OJA",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:KAR",
-        "description": "KARAKAS population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:KAR",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:NWS",
-        "description": "NORWEGIAN WHITE SHEEP population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:NWS",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:SAL",
-        "description": "SALZ population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:SAL",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:MEH",
-        "description": "MERINO HORNED population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:MEH",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
+        "sub_populations": []   
     }
+   
    ],
    "ovis_aries_rambouillet": 
    [
@@ -3523,834 +2710,91 @@
         "description": "ISGC",
         "type": "regional",
         "is_global": true,
-        "display_group_name": "ISGC:ALL",
+        "display_group_name": "ISGC",
         "super_population":null,
-        "sub_populations": [
-        {
-        "name": "ISGC:TIB"
-        },
-        {
-            "name": "ISGC:CHN"
-        },
-        {
-            "name": "ISGC:DOP"
-        },
-        {
-            "name": "ISGC:SCB"
-        },
-        {
-            "name": "ISGC:DWM"
-        },
-        {
-            "name": "ISGC:NOR"
-        },
-        {
-            "name": "ISGC:CCP"
-        },
-        {
-            "name": "ISGC:BOU"
-        },
-        {
-            "name": "ISGC:SUM"
-        },
-        {
-            "name": "ISGC:SWA"
-        },
-        {
-            "name": "ISGC:TWM"
-        },
-        {
-            "name": "ISGC:SAK"
-        },
-        {
-            "name": "ISGC:KRY"
-        },
-        {
-            "name": "ISGC:MER"
-        },
-        {
-            "name": "ISGC:SUF"
-        },
-        {
-            "name": "ISGC:CPW"
-        },
-        {
-            "name": "ISGC:FIN"
-        },
-        {
-            "name": "ISGC:SAN"
-        },
-        {
-            "name": "ISGC:TXL"
-        },
-        {
-            "name": "ISGC:COR"
-        },
-        {
-            "name": "ISGC:DOW"
-        },
-        {
-            "name": "ISGC:CHU"
-        },
-        {
-            "name": "ISGC:BOR"
-        },
-        {
-            "name": "ISGC:BEN"
-        },
-        {
-            "name": "ISGC:RON"
-        },
-        {
-            "name": "ISGC:SAR"
-        },
-        {
-            "name": "ISGC:MEP"
-        },
-        {
-            "name": "ISGC:BAN"
-        },
-        {
-            "name": "ISGC:OUL"
-        },
-        {
-            "name": "ISGC:WIL"
-        },
-        {
-            "name": "ISGC:LAM"
-        },
-        {
-            "name": "ISGC:CAS"
-        },
-        {
-            "name": "ISGC:DMA"
-        },
-        {
-            "name": "ISGC:AWS"
-        },
-        {
-            "name": "ISGC:VBN"
-        },
-        {
-            "name": "ISGC:NAM"
-        },
-        {
-            "name": "ISGC:CHE"
-        },
-        {
-            "name": "ISGC:ROM"
-        },
-        {
-            "name": "ISGC:TIM"
-        },
-        {
-            "name": "ISGC:BAG"
-        },
-        {
-            "name": "ISGC:GAI"
-        },
-        {
-            "name": "ISGC:GAR"
-        },
-        {
-            "name": "ISGC:LAC"
-        },
-        {
-            "name": "ISGC:MOR"
-        },
-        {
-            "name": "ISGC:MEN"
-        },
-        {
-            "name": "ISGC:UNK"
-        },
-        {
-            "name": "ISGC:GUL"
-        },
-        {
-            "name": "ISGC:CMP"
-        },
-        {
-            "name": "ISGC:BRA"
-        },
-        {
-            "name": "ISGC:MIR"
-        },
-        {
-            "name": "ISGC:AFS"
-        },
-        {
-            "name": "ISGC:AWD"
-        },
-        {
-            "name": "ISGC:WHS"
-        },
-        {
-            "name": "ISGC:OJA"
-        },
-        {
-            "name": "ISGC:KAR"
-        },
-        {
-            "name": "ISGC:NWS"
-        },
-        {
-            "name": "ISGC:SAL"
-        },
-        {
-            "name": "ISGC:MEH"
-        }
-
-        ] 
-    },
-    {
-        "name": "ISGC:TIB",
-        "description": "TIBETAN population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:TIB",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:CHN",
-        "description": "CHANGTHANGI population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:CHN",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:DOP",
-        "description": "DORSET POLLED population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:DOP",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:SCB",
-        "description": "SCOTTISH BLACKFACE population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:SCB",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:DWM",
-        "description": "DOLLGELLAU WELSH MOUNTAIN population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:DWM",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:NOR",
-        "description": "NORDUZ population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:NOR",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:CCP",
-        "description": "CINE CAPARI population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:CCP",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:BOU",
-        "description": "BOUJAD population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:BOU",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:SUM",
-        "description": "SUMATRAN population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:SUM",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:SWA",
-        "description": "SWISS WHITE ALPINE population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:SWA",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:TWM",
-        "description": "TREGAON WELSH MOUNTAIN population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:TWM",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:SAK",
-        "description": "SAKIZ population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:SAK",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:KRY",
-        "description": "KARYA population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:KRY",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:MER",
-        "description": "MERINO population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:MER",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:SUF",
-        "description": "SUFFOLK BLACKFACE population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:SUF",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:CPW",
-        "description": "COOPWORTH population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:CPW",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:FIN",
-        "description": "FINNSHEEP population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:FIN",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:SAN",
-        "description": "SANTA INES population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:SAN",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:TXL",
-        "description": "TEXEL population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:TXL",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:COR",
-        "description": "CORRIEDALE population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:COR",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:DOW",
-        "description": "DORSET population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:DOW",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:CHU",
-        "description": "CHURRA population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:CHU",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:BOR",
-        "description": "BORDER LEICESTER population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:BOR",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:BEN",
-        "description": "BENI GUIL population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:BEN",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:RON",
-        "description": "RONDERIB AFRIKANER population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:RON",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:SAR",
-        "description": "SARDINIAN ANCESTRAL BLACK population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:SAR",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:MEP",
-        "description": "MERINO POLLED population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:MEP",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:BAN",
-        "description": "BANGLADESHI population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:BAN",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:OUL",
-        "description": "OULED DJELLAL population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:OUL",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:WIL",
-        "description": "WILTSHIRE population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:WIL",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:LAM",
-        "description": "MEAT LACAUNE population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:LAM",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:CAS",
-        "description": "CASTELLANA population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:CAS",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:DMA",
-        "description": "D'MAN population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:DMA",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:AWS",
-        "description": "AWASSI population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:AWS",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:VBN",
-        "description": "VALAIS BLACK NOSE population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:VBN",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:NAM",
-        "description": "NAMAQUA AFRIKANER population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:NAM",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:CHE",
-        "description": "CHEVIOT population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:CHE",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:ROM",
-        "description": "ROMNEY population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:ROM",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:TIM",
-        "description": "TIMAHDITE population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:TIM",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:BAG",
-        "description": "BANGLADESHI GAROLE population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:BAG",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:GAI",
-        "description": "INDIAN GAROLE population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:GAI",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:GAR",
-        "description": "GARUT population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:GAR",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:LAC",
-        "description": "MILK LACAUNE population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:LAC",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:MOR",
-        "description": "MORADA NOVA population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:MOR",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:MEN",
-        "description": "ETHIOPIAN MENZ population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:MEN",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:UNK",
-        "description": "UNCLASSIFIED population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:UNK",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:GUL",
-        "description": "GULF COAST NATIVE population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:GUL",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:CMP",
-        "description": "COMPOSITE population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:CMP",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:BRA",
-        "description": "BRAZILIAN CREOLE population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:BRA",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:MIR",
-        "description": "SWISS MIRROR population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:MIR",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:AFS",
-        "description": "AFSHARI population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:AFS",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:AWD",
-        "description": "AFRICAN WHITE DORPER population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:AWD",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:WHS",
-        "description": "WELSH HARDY SPECKLED FACE population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:WHS",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:OJA",
-        "description": "OJALADA population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:OJA",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:KAR",
-        "description": "KARAKAS population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:KAR",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:NWS",
-        "description": "NORWEGIAN WHITE SHEEP population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:NWS",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:SAL",
-        "description": "SALZ population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:SAL",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    },
-    {
-        "name": "ISGC:MEH",
-        "description": "MERINO HORNED population from the International Sheep Genome Consortium",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "ISGC:MEH",
-        "super_population": {
-            "name": "ISGC:ALL"
-        },
-        "sub_population": []
-    }
+        "sub_populations": [] 
+    } 
    ],
    "capra_hircus": [
        {
-            "name": "NextGen",
+            "name": "NextGen:All",
             "description": "NextGen",
             "type": "regional",
             "is_global": true,
             "display_group_name": "NextGen",
             "super_population":null,
-            "sub_populations": []  
+            "sub_populations": [
+                {
+                    "name": "NextGen:MOCH"
+                },
+                {
+                    "name": "NextGen:FRCH"
+                },
+                {
+                    "name": "NextGen:AUCH"
+                },
+                {
+                    "name": "NextGen:ITCH"
+                },
+                {
+                    "name": "NextGen:IRCH"
+                }
+            ]
+       },
+       {
+        "name": "NextGen:MOCH",
+        "description": "NextGen MOCH",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "NextGen",
+        "super_population":{
+            "name": "NextGen:All"
+        },
+        "sub_populations": []
+       },
+       {
+        "name": "NextGen:FRCH",
+        "description": "NextGen FRCH",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "NextGen",
+        "super_population":{
+            "name": "NextGen:All"
+        },
+        "sub_populations": []
+       },
+       {
+        "name": "NextGen:AUCH",
+        "description": "NextGen AUCH",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "NextGen",
+        "super_population":{
+            "name": "NextGen:All"
+        },
+        "sub_populations": []
+       },
+       {
+        "name": "NextGen:ITCH",
+        "description": "NextGen ITCH",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "NextGen",
+        "super_population":{
+            "name": "NextGen:All"
+        },
+        "sub_populations": []
+       },
+       {
+        "name": "NextGen:IRCH",
+        "description": "NextGen IRCH",
+        "type": "regional",
+        "is_global": false,
+        "display_group_name": "NextGen",
+        "super_population":{
+            "name": "NextGen:All"
+        },
+        "sub_populations": []
        }
    ],
    "equus_caballus": [
@@ -5432,7 +3876,7 @@
         "description": "ALL",
         "type": "regional",
         "is_global": true,
-        "display_group_name": "ALL",
+        "display_group_name": "1000_genomes_project",
         "super_population": null,
         "sub_populations": [
             {
@@ -5469,7 +3913,7 @@
         "description": "GAS",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "GAS",
+        "display_group_name": "1000_genomes_project",
         "super_population": 
         {
             "name": "ALL"
@@ -5481,7 +3925,7 @@
         "description": "UGS",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "UGS",
+        "display_group_name": "1000_genomes_project",
         "super_population": {
             "name": "ALL"
         },
@@ -5492,7 +3936,7 @@
         "description": "GNS",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "GNS",
+        "display_group_name": "1000_genomes_project",
         "super_population": {
             "name": "ALL"
         },
@@ -5503,7 +3947,7 @@
         "description": "BFS",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "BFS",
+        "display_group_name": "1000_genomes_project",
         "super_population": {
             "name": "ALL"
         },
@@ -5514,7 +3958,7 @@
         "description": "GWA",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "GWA",
+        "display_group_name": "1000_genomes_project",
         "super_population": {
             "name": "ALL"
         },
@@ -5525,7 +3969,7 @@
         "description": "KES",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "KES",
+        "display_group_name": "1000_genomes_project",
         "super_population": {
             "name": "ALL"
         },
@@ -5536,7 +3980,7 @@
         "description": "CMS",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "CMS",
+        "display_group_name": "1000_genomes_project",
         "super_population": {
             "name": "ALL"
         },
@@ -5547,7 +3991,7 @@
         "description": "AOM",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "AOM",
+        "display_group_name": "1000_genomes_project",
         "super_population": {
             "name": "ALL"
         },
@@ -5558,7 +4002,7 @@
         "description": "BFM",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "BFM",
+        "display_group_name": "1000_genomes_project",
         "super_population": {
             "name": "ALL"
         },
@@ -5997,7 +4441,7 @@
         "sub_populations": []
     }
     ],
-    "oryza_sativa" : [
+    "oryza_sativa_gca001433935v1cm" : [
     {
         "name": "Collection from Duitama et al. 2015",
         "description": "Collection from Duitama et al. 2015",
@@ -6044,283 +4488,12 @@
         "sub_populations": []
     },
     {
-        "name": "Rice3K_collection:All",
-        "description": "Rice3K_collection:All",
+        "name": "Collection from Rice 3k",
+        "description": "Collection from Rice 3k",
         "type": "regional",
         "is_global": true,
-        "display_group_name": "Rice3K_collection:All",
+        "display_group_name": "Collection from Rice 3k",
         "super_population": null,
-        "sub_populations": [
-            {
-                "name": "Rice3K_collection:Aus"
-            },
-            {
-                "name": "Rice3K_collection:Basmati"
-            },
-            {
-                "name": "Rice3K_collection:Indica"
-            },
-            {
-                "name": "Rice3K_collection:Japonica"
-            }
-        ]
-    },
-    {
-        "name": "Rice3K_collection:Aus",
-        "description": "Rice3K_collection:Aus",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "Rice3K_collection:Aus",
-        "super_population": { 
-            "name": "Rice3K_collection:All"
-        },
-        "sub_populations": [
-            {
-                "name": "Rice3K_collection:c-Aus1"
-            },
-            {
-                "name": "Rice3K_collection:c-Aus2"
-            }
-        ]
-    },
-    {
-        "name": "Rice3K_collection:Basmati",
-        "description": "Rice3K_collection:Basmati",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "Rice3K_collection:Basmati",
-        "super_population": { 
-            "name": "Rice3K_collection:All"
-        },
-        "sub_populations": [
-            {
-                "name": "Rice3K_collection:c-Bas"
-            }
-        ]
-    },
-    {
-        "name": "Rice3K_collection:Indica",
-        "description": "Rice3K_collection:Indica",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "Rice3K_collection:Indica",
-        "super_population": { 
-            "name": "Rice3K_collection:All"
-        },
-        "sub_populations": [
-            {
-                "name": "Rice3K_collection:XI-1A"
-            },
-            {
-                "name": "Rice3K_collection:XI-1B1"
-            },
-            {
-                "name": "Rice3K_collection:XI-1B2"
-            },
-            {
-                "name": "Rice3K_collection:XI-2A"
-            },
-            {
-                "name": "Rice3K_collection:XI-2B"
-            },
-            {
-                "name": "Rice3K_collection:XI-3A"
-            },
-            {
-                "name": "Rice3K_collection:XI-3B1"
-            },
-            {
-                "name": "Rice3K_collection:XI-3B2"
-            }
-        ]
-    },
-    {
-        "name": "Rice3K_collection:Japonica",
-        "description": "Rice3K_collection:Japonica",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "Rice3K_collection:Japonica",
-        "super_population": { 
-            "name": "Rice3K_collection:All"
-        },
-        "sub_populations": [
-            {
-                "name": "Rice3K_collection:GJ-sbtrp"
-            },
-            {
-                "name": "Rice3K_collection:GJ-trp1"
-            },
-            {
-                "name": "Rice3K_collection:GJ-trp2"
-            },
-            {
-                "name": "Rice3K_collection:GJ-tmp"
-            }
-        ]
-    },
-    {
-        "name": "Rice3K_collection:c-Aus1",
-        "description": "Rice3K_collection:c-Aus1",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "Rice3K_collection:c-Aus1",
-        "super_population": {
-            "name":"Rice3K_collection:Aus"
-        },
-        "sub_populations": []
-    },
-    {
-        "name": "Rice3K_collection:c-Aus2",
-        "description": "Rice3K_collection:c-Aus2",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "Rice3K_collection:c-Aus2",
-        "super_population": {
-            "name":"Rice3K_collection:Aus"
-        },
-        "sub_populations": []
-    },
-    {
-        "name": "Rice3K_collection:c-Bas",
-        "description": "Rice3K_collection:c-Bas",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "Rice3K_collection:c-Bas",
-        "super_population": {
-            "name":"Rice3K_collection:Basmati"
-        },
-        "sub_populations": []
-    },
-    {
-        "name": "Rice3K_collection:XI-1A",
-        "description": "Rice3K_collection:XI-1A",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "Rice3K_collection:XI-1A",
-        "super_population": {
-            "name":"Rice3K_collection:Indica"
-        },
-        "sub_populations": []
-    },
-    {
-        "name": "Rice3K_collection:XI-1B1",
-        "description": "Rice3K_collection:XI-1B1",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "Rice3K_collection:XI-1B1",
-        "super_population": {
-            "name":"Rice3K_collection:Indica"
-        },
-        "sub_populations": []
-    },
-    {
-        "name": "Rice3K_collection:XI-1B2",
-        "description": "Rice3K_collection:XI-1B2",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "Rice3K_collection:XI-1B2",
-        "super_population": {
-            "name":"Rice3K_collection:Indica"
-        },
-        "sub_populations": []
-    },
-    {
-        "name": "Rice3K_collection:XI-2A",
-        "description": "Rice3K_collection:XI-2A",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "Rice3K_collection:XI-2A",
-        "super_population": {
-            "name":"Rice3K_collection:Indica"
-        },
-        "sub_populations": []
-    },
-    {
-        "name": "Rice3K_collection:XI-2B",
-        "description": "Rice3K_collection:XI-2B",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "Rice3K_collection:XI-2B",
-        "super_population": {
-            "name":"Rice3K_collection:Indica"
-        },
-        "sub_populations": []
-    },
-    {
-        "name": "Rice3K_collection:XI-3A",
-        "description": "Rice3K_collection:XI-3A",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "Rice3K_collection:XI-3A",
-        "super_population": {
-            "name":"Rice3K_collection:Indica"
-        },
-        "sub_populations": []
-    },
-    {
-        "name": "Rice3K_collection:XI-3B1",
-        "description": "Rice3K_collection:XI-3B1",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "Rice3K_collection:XI-3B1",
-        "super_population": {
-            "name":"Rice3K_collection:Indica"
-        },
-        "sub_populations": []
-    },
-    {
-        "name": "Rice3K_collection:XI-3B2",
-        "description": "Rice3K_collection:XI-3B2",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "Rice3K_collection:XI-3B2",
-        "super_population": {
-            "name":"Rice3K_collection:Indica"
-        },
-        "sub_populations": []
-    },
-    {
-        "name": "Rice3K_collection:GJ-sbtrp",
-        "description": "Rice3K_collection:GJ-sbtrp",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "Rice3K_collection:GJ-sbtrp",
-        "super_population": {
-            "name":"Rice3K_collection:Japonica"
-        },
-        "sub_populations": []
-    },
-    {
-        "name": "Rice3K_collection:GJ-trp1",
-        "description": "Rice3K_collection:GJ-trp1",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "Rice3K_collection:GJ-trp1",
-        "super_population": {
-            "name": "Rice3K_collection:Japonica"
-        },
-        "sub_populations": []
-    },
-    {
-        "name": "Rice3K_collection:GJ-trp2",
-        "description": "Rice3K_collection:GJ-trp2",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "Rice3K_collection:GJ-trp2",
-        "super_population": {
-            "name":"Rice3K_collection:Japonica"
-        },
-        "sub_populations": []
-    },
-    {
-        "name": "Rice3K_collection:GJ-tmp",
-        "description": "Rice3K_collection:GJ-tmp",
-        "type": "regional",
-        "is_global": false,
-        "display_group_name": "Rice3K_collection:GJ-tmp",
-        "super_population": {
-            "name":"Rice3K_collection:Japonica"
-        },
         "sub_populations": []
     }
     ],
@@ -6330,7 +4503,7 @@
         "description": "ALL:PRJEB34225",
         "type": "regional",
         "is_global": true,
-        "display_group_name": "ALL:PRJEB34225",
+        "display_group_name": "PRJEB34225",
         "super_population": null,
         "sub_populations": [
             {
@@ -6349,7 +4522,7 @@
         "description": "St. John River",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "St. John River",
+        "display_group_name": "PRJEB34225",
         "super_population": {
             "name":"ALL:PRJEB34225"
         },
@@ -6360,7 +4533,7 @@
         "description": "Penobscot River",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "Penobscot River",
+        "display_group_name": "PRJEB34225",
         "super_population": {
             "name":"ALL:PRJEB34225"
         },
@@ -6371,7 +4544,7 @@
         "description": "Gaspe of New Brunswick",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "Gaspe of New Brunswick",
+        "display_group_name": "PRJEB34225",
         "super_population": {
             "name":"ALL:PRJEB34225"
         },
@@ -6462,7 +4635,7 @@
         "description": "Watkins_collection:All",
         "type": "regional",
         "is_global": true,
-        "display_group_name": "Watkins_collection:All",
+        "display_group_name": "Watkins_collection",
         "super_population": null,
         "sub_populations": [
             {
@@ -6496,7 +4669,7 @@
         "description": "Watkins_collection:Modern",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "Watkins_collection:Modern",
+        "display_group_name": "Watkins_collection",
         "super_population": {
             "name":"Watkins_collection:All"
         },
@@ -6507,7 +4680,7 @@
         "description": "Watkins_collection:AG1",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "Watkins_collection:AG1",
+        "display_group_name": "Watkins_collection",
         "super_population": {
             "name":"Watkins_collection:All"
         },
@@ -6518,7 +4691,7 @@
         "description": "Watkins_collection:AG2",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "Watkins_collection:AG2",
+        "display_group_name": "Watkins_collection",
         "super_population": {
             "name":"Watkins_collection:All"
         },
@@ -6529,7 +4702,7 @@
         "description": "Watkins_collection:AG3",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "Watkins_collection:AG3",
+        "display_group_name": "Watkins_collection",
         "super_population": {
             "name":"Watkins_collection:All"
         },
@@ -6540,7 +4713,7 @@
         "description": "Watkins_collection:AG4",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "Watkins_collection:AG4",
+        "display_group_name": "Watkins_collection",
         "super_population": {
             "name":"Watkins_collection:All"
         },
@@ -6551,7 +4724,7 @@
         "description": "Watkins_collection:AG5",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "Watkins_collection:AG5",
+        "display_group_name": "Watkins_collection",
         "super_population": {
             "name":"Watkins_collection:All"
         },
@@ -6562,7 +4735,7 @@
         "description": "Watkins_collection:AG6",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "Watkins_collection:AG6",
+        "display_group_name": "Watkins_collection",
         "super_population": {
             "name":"Watkins_collection:All"
         },
@@ -6573,7 +4746,7 @@
         "description": "Watkins_collection:AG7",
         "type": "regional",
         "is_global": false,
-        "display_group_name": "Watkins_collection:AG7",
+        "display_group_name": "Watkins_collection",
         "super_population": {
             "name":"Watkins_collection:All"
         },

@@ -2675,7 +2675,7 @@
         "sub_populations": []  
     },
     {
-        "name": "ISGC:ALL",
+        "name": "ISGC",
         "description": "ISGC",
         "type": "regional",
         "is_global": true,
@@ -2706,7 +2706,7 @@
         "sub_populations": []  
     },
     {
-        "name": "ISGC:ALL",
+        "name": "ISGC",
         "description": "ISGC",
         "type": "regional",
         "is_global": true,
@@ -4558,9 +4558,7 @@
         "type": "regional",
         "is_global": false,
         "display_group_name": "Axiom",
-        "super_population": {
-            "name":"super_axiom"
-        },
+        "super_population": {},
         "sub_populations": []
     },
     {
@@ -4580,19 +4578,6 @@
         "display_group_name": "ihvs",
         "super_population": null,
         "sub_populations": []
-    },
-    {
-        "name": "super_axiom",
-        "description": "super_axiom",
-        "type": "regional",
-        "is_global": true,
-        "display_group_name": "super_axiom",
-        "super_population": null,
-        "sub_populations": [
-            {
-                "name": "Axiom"
-            }
-        ]
     },
     {
         "name": "WRC_snps",

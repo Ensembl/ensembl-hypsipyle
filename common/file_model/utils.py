@@ -31,3 +31,7 @@ def minimise_allele(alt: str, ref: str) -> str:
     if ref[0] == alt[0]:
         minimised_allele_string = alt[1:] if len(alt) > 1 else "-"
     return minimised_allele_string
+
+def decode_population_name(name: str):
+      return name.replace("$2C",",")
+

@@ -16,10 +16,8 @@ from typing import Any, Mapping, List, Union
 import re
 import os
 import json
-import operator
-from functools import reduce
 from common.file_model.variant_allele import VariantAllele
-from common.file_model.utils import minimise_allele
+from common.file_model.utils import minimise_allele, decode_population_name
 
 def reduce_allele_length(allele_list: List):
     """Returns the maximum length of allele values in the list.
@@ -160,7 +158,7 @@ class Variant():
                 variant_id = f"{self.chromosome}:{self.position}:{self.name}"
             
 
-        except Exception as e:
+        except Exception:
             return None 
 
         return {
@@ -391,11 +389,11 @@ class Variant():
         Returns:
             int: The index of the key in the CSQ field.
         """
-            info_field = self.header.get_info_field_info(info_id).description
-            csq_list = info_field.split("Format: ")[1].split("|")
-            for index, value in enumerate(csq_list):
-                if value == key:
-                    return index   
+        info_field = self.header.get_info_field_info(info_id).description
+        csq_list = info_field.split("Format: ")[1].split("|")
+        for index, value in enumerate(csq_list):
+            if value == key:
+                return index   
                 
     def traverse_population_info(self) -> Mapping:
         """Traverses the population mapping to extract allele frequency data.
@@ -408,7 +406,7 @@ class Variant():
             pop_mapping_all = json.load(pop_file)
             try:
                 pop_mapping = pop_mapping_all[self.genome_uuid]
-            except:
+            except Exception:
                 pop_mapping = {}
                 print(f"No population mapping for - {self.genome_uuid}")
 
@@ -423,15 +421,15 @@ class Variant():
                         if sub_pop["name"] in population_frequency_map[csq_record_list[allele_index]]:
                             continue
                         allele_count = allele_number = allele_frequency = None
-                        for freq_key, freq_val in sub_pop["frequencies"].items():
+                        for freq_key, freq_val in sub_pop["fields"].items():
                             col_index = self.get_info_key_index(freq_val)
                             if col_index and csq_record_list[col_index] is not None:
                                 if freq_key == "af":
-                                    allele_frequency = csq_record_list[col_index] or None
+                                    allele_frequency = csq_record_list[col_index].split("&")[0] or None
                                 elif freq_key == "an":
-                                    allele_number = csq_record_list[col_index] or None
+                                    allele_number = csq_record_list[col_index].split("&")[0] or None
                                 elif freq_key == "ac":
-                                    allele_count = csq_record_list[col_index] or None
+                                    allele_count = csq_record_list[col_index].split("&")[0] or None
                                 else:
                                     raise Exception('Frequency metric is not recognised')
   
@@ -439,12 +437,12 @@ class Variant():
                                 try:  
                                     # calculating allele frequency on fly
                                     allele_frequency = int(allele_count)/int(allele_number)
-                                except:
+                                except Exception:
                                     print(f"Cannot calculate AF using expression - {allele_count}/{allele_number}")
 
                         if allele_frequency is not None:
                             population_frequency = {
-                                            "population_name": sub_pop["name"],
+                                            "population_name": decode_population_name(sub_pop["name"]),
                                             "allele_frequency": float(allele_frequency),
                                             "allele_count": allele_count,
                                             "allele_number": allele_number,
@@ -454,20 +452,24 @@ class Variant():
                             population_frequency_map[csq_record_list[allele_index]][sub_pop["name"]] = population_frequency
         return population_frequency_map
     
-    def set_frequency_flags(self):
+    def parse_population_file(self) ->  dict:
+        directory = os.path.dirname(__file__)
+        pop_mapping = {}
+        with open(os.path.join(directory,'populations.json')) as pop_file:
+            pop_mapping_all = json.load(pop_file)
+            try:
+                pop_mapping = pop_mapping_all[self.genome_uuid]
+            except Exception:
+                print(f"No population mapping for - {self.genome_uuid}")
+        return pop_mapping
+        
+    def set_frequency_flags(self) -> Mapping:
         """Calculates minor allele frequency (MAF) and high population minor allele frequency (HPMAF) flags for each allele.
 
         Returns:
             Mapping: A mapping of allele frequency data with MAF and HPMAF flags applied.
         """
-        directory = os.path.dirname(__file__)
-        with open(os.path.join(directory,'populations.json')) as pop_file:
-            pop_mapping_all = json.load(pop_file)
-            try:
-                pop_mapping = pop_mapping_all[self.genome_uuid]
-            except:
-                pop_mapping = {}
-                print(f"No population mapping for - {self.genome_uuid}")
+        pop_mapping = self.parse_population_file()
         pop_names = []
         for pop in pop_mapping.values():
             pop_names.extend([sub_pop["name"] for sub_pop in pop])
@@ -555,7 +557,11 @@ class Variant():
         """
         alleles = [i.value for i in self.alts]
         statistics_info = {}
-        
+        RAF_exists = True
+        if not self.parse_population_file():
+            RAF_exists = False
+            print(f"No representative allele frequency for - {self.genome_uuid}")
+
         for index,allele in enumerate(alleles):
             statistics_info[allele] = {
                                         "count_transcript_consequences": self.info["NTCSQ"][index]  if "NTCSQ" in self.info else 0,
@@ -563,7 +569,7 @@ class Variant():
                                         "count_regulatory_consequences": self.info["NRCSQ"][index] if "NRCSQ" in self.info else 0,
                                         "count_variant_phenotypes": self.info["NVPHN"][index] if "NVPHN" in self.info else 0,
                                         "count_gene_phenotypes": self.info["NGPHN"][index] if "NGPHN" in self.info else 0,
-                                        "representative_population_allele_frequency": self.info["RAF"][index] if "RAF" in self.info else None
+                                        "representative_population_allele_frequency": self.info["RAF"][index] if "RAF" in self.info and RAF_exists else None
                                     }
         
         statistics_info[self.ref] = {
@@ -572,8 +578,7 @@ class Variant():
                                         "count_regulatory_consequences": 0,
                                         "count_variant_phenotypes": 0,
                                         "count_gene_phenotypes": 0,
-                                        "representative_population_allele_frequency": 1-float(sum(filter(None,self.info["RAF"]))) if "RAF" in self.info else None
+                                        "representative_population_allele_frequency": 1-float(sum(filter(None,self.info["RAF"]))) if "RAF" in self.info and RAF_exists else None
         }
+        
         return statistics_info
-
-

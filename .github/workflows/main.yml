@@ -1,0 +1,12 @@
+name: Lint with Ruff
+on: [pull_request]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: setup
+        run: docker build -t my-app -f ./Dockerfile.dev .
+      - name: linting
+        run: docker run -v "${{ github.workspace }}:/app" -w /app --rm my-app ruff check

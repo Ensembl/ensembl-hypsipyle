@@ -1,10 +1,17 @@
 type Query {
   version: Version
   variant(by_id: IdInput): Variant
+  structural_variant(by_id: StructuralVariantIdInput): StructuralVariant
   populations(genome_id: String!): [Population]
 }
 
 input IdInput {
   genome_id: String!
   variant_id: String!
+}
+
+input StructuralVariantIdInput {
+  genome_id: String!
+  variant_id: String!
+  source_name: String
 }

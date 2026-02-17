@@ -21,7 +21,12 @@ from starlette.requests import Request
 from graphql_service.resolver.variant_model import (
     QUERY_TYPE,
     VARIANT_TYPE,
-    VARIANT_ALLELE_TYPE
+    VARIANT_ALLELE_TYPE,
+)
+from graphql_service.resolver.structural_variant_model import (
+    QUERY_TYPE as STRUCTURAL_QUERY_TYPE,
+    STRUCTURAL_VARIANT_TYPE,
+    STRUCTURAL_VARIANT_ALLELE_TYPE,
 )
 
 
@@ -36,7 +41,7 @@ def prepare_executable_schema() -> GraphQLSchema:
     """
     schema = ariadne.load_schema_from_path("common/schemas")
     return ariadne.make_executable_schema(
-        schema, QUERY_TYPE, VARIANT_TYPE, VARIANT_ALLELE_TYPE
+        schema, QUERY_TYPE, STRUCTURAL_QUERY_TYPE, VARIANT_TYPE, VARIANT_ALLELE_TYPE, STRUCTURAL_VARIANT_TYPE, STRUCTURAL_VARIANT_ALLELE_TYPE
     )
 
 

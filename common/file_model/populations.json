@@ -63280,6 +63280,16 @@
         ]
     },
     "a73357ab-93e7-11ec-a39d-005056b38ce3": {
+        "MAGIC-16-Diversity": [
+            {
+                "name": "MAGIC-16-Diversity",
+                "fields": {
+                    "af": "MAGIC-16-Diversity_AF",
+                    "ac": "MAGIC-16-Diversity_AC",
+                    "an": "MAGIC-16-Diversity_AN"
+                }
+            }
+        ],
         "Axiom": [
             {
                 "name": "Axiom",

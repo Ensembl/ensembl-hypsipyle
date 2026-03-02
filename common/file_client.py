@@ -126,8 +126,19 @@ class FileClient:
             if not vcf_files:
                 print(f"No structural variation VCF files found in {sv_dir}")
                 return None
+
+            # If there is just one source file, prefer the single-file search implementation
+            # instead of invoking the more general multi-file scan.  This keeps behaviour
+            # consistent with consumers that pass a ``source_name`` and avoids building
+            # a bcftools command with a single path for no reason.
+            if len(vcf_files) == 1:
+                single = vcf_files[0]
+                datafile = os.path.join(sv_dir, single)
+                print(f"Only one structural variant file ({single}) found; using single-file lookup")
+                return self.sv_searcher.search_in_file(datafile, contig, pos, id, genome_uuid)
             
-            # Search all files at once using bcftools
+            # Search across all files at once using bcftools (this may consult the
+            # SQLite index internally, thanks to search_all_files implementation).
             variant = self.sv_searcher.search_all_files(sv_dir, vcf_files, contig, pos, id, genome_uuid)
             print("Searching variant across all sources using bcftools...")
             if variant:

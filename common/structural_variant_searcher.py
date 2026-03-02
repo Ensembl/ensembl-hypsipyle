@@ -53,10 +53,11 @@ class StructuralVariantSearcher:
     def search_all_files(
         self, sv_dir: str, vcf_files: list, contig: str, pos: int, id: str, genome_uuid: str
     ) -> StructuralVariant | None:
-        """Search for a structural variant across all VCF files using SQLite index.
+        """Search for a structural variant across all VCF files.
 
-        Uses the SQLite variants.db index for fast lookups to locate the correct file,
-        then extracts the full record from that file.
+        This helper tries to use an SQLite index (variants.db) for speed.  If the
+        database file is missing or the lookup returns no valid hit it falls back
+        to scanning the files via ``bcftools``.
 
         Args:
             sv_dir (str): Path to the structural-variation directory.
@@ -71,7 +72,36 @@ class StructuralVariantSearcher:
         """
         try:
             db_path = os.path.join(sv_dir, "variants.db")
-            return self._search_with_sqlite(db_path, sv_dir, contig, pos, id, genome_uuid)
+
+            # if only a single file is supplied, we can short-circuit into the
+            # single-file searcher rather than using the generic multi-file scan.
+            # however we still honour the SQLite index if one exists.
+            if len(vcf_files) == 1:
+                single_file = os.path.join(sv_dir, vcf_files[0])
+                # attempt sqlite-based lookup first if index exists
+                if os.path.exists(db_path):
+                    variant = self._search_with_sqlite(db_path, sv_dir, contig, pos, id, genome_uuid)
+                    if variant:
+                        return variant
+                    # index was present but gave no match; fall back to single-file search
+                    print("SQLite index search returned no matching record, falling back to single-file bcftools search")
+                else:
+                    print(f"SQLite index not found ({db_path}), using single-file search")
+                # perform the one-file search and return whatever we get
+                return self.search_in_file(single_file, contig, pos, id, genome_uuid)
+
+            # attempt sqlite-based lookup first if index exists
+            if os.path.exists(db_path):
+                variant = self._search_with_sqlite(db_path, sv_dir, contig, pos, id, genome_uuid)
+                if variant:
+                    return variant
+                # index was present but gave no match; fall back to bcftools
+                print("SQLite index search returned no matching record, falling back to bcftools scan")
+            else:
+                print(f"SQLite index not found ({db_path}), using bcftools scan")
+
+            # final fallback to bcftools scanning of all files
+            return self._search_with_bcftools_all_files(sv_dir, vcf_files, contig, pos, id, genome_uuid)
         except Exception as e:
             print(f"Error searching all structural variation files: {str(e)}")
             return None

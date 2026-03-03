@@ -76,14 +76,16 @@ class FileClient:
         except:
             # Return None when variant cannot be fetched
             return
-        
-    def get_structural_variant_record(self, genome_uuid: str, variant_id: str, source_name: str = None) -> StructuralVariant|None:
+
+    def get_structural_variant_record(
+        self, genome_uuid: str, variant_id: str, source_name: str = None
+    ) -> StructuralVariant | None:
         """Retrieves a structural variant entry using the specified variant identifier.
 
         This method loads the VCF file from the configured data root, genome UUID and source name,
         then attempts to fetch the structural variant record that matches the given structural_variant_id.
         The structural_variant_id should be formatted as 'contig:position:identifier'.
-        
+
         If source_name is not provided, searches across all available structural variation source files at once.
 
         Args:
@@ -99,13 +101,21 @@ class FileClient:
             [contig, pos, id] = self.split_variant_id(variant_id)
             pos = int(pos)
         except Exception as e:
-            print(f"Invalid variant_id format '{variant_id}': {str(e)}. Expected format: contig:position:identifier")
+            print(
+                f"Invalid variant_id format '{variant_id}': {str(e)}. Expected format: contig:position:identifier"
+            )
             return None
-        
+
         # If source_name is provided, search that specific file
         if source_name:
-            datafile = os.path.join(self.data_root, genome_uuid, f"structural-variation/variation_{source_name}.vcf.gz")
-            variant = self.sv_searcher.search_in_file(datafile, contig, pos, id, genome_uuid, source_name)
+            datafile = os.path.join(
+                self.data_root,
+                genome_uuid,
+                f"structural-variation/variation_{source_name}.vcf.gz",
+            )
+            variant = self.sv_searcher.search_in_file(
+                datafile, contig, pos, id, genome_uuid, source_name
+            )
             if variant:
                 return variant
             print(f"Structural variant not found in source '{source_name}'")
@@ -116,13 +126,16 @@ class FileClient:
             if not os.path.isdir(sv_dir):
                 print(f"Structural variation directory not found: {sv_dir}")
                 return None
-            
+
             # Get all valid VCF files
-            vcf_files = sorted([
-                f for f in os.listdir(sv_dir)
-                if f.startswith("variation_") and f.endswith(".vcf.gz")
-            ])
-            
+            vcf_files = sorted(
+                [
+                    f
+                    for f in os.listdir(sv_dir)
+                    if f.startswith("variation_") and f.endswith(".vcf.gz")
+                ]
+            )
+
             if not vcf_files:
                 print(f"No structural variation VCF files found in {sv_dir}")
                 return None
@@ -134,16 +147,22 @@ class FileClient:
             if len(vcf_files) == 1:
                 single = vcf_files[0]
                 datafile = os.path.join(sv_dir, single)
-                print(f"Only one structural variant file ({single}) found; using single-file lookup")
-                return self.sv_searcher.search_in_file(datafile, contig, pos, id, genome_uuid)
-            
+                print(
+                    f"Only one structural variant file ({single}) found; using single-file lookup"
+                )
+                return self.sv_searcher.search_in_file(
+                    datafile, contig, pos, id, genome_uuid
+                )
+
             # Search across all files at once using bcftools (this may consult the
             # SQLite index internally, thanks to search_all_files implementation).
-            variant = self.sv_searcher.search_all_files(sv_dir, vcf_files, contig, pos, id, genome_uuid)
+            variant = self.sv_searcher.search_all_files(
+                sv_dir, vcf_files, contig, pos, id, genome_uuid
+            )
             print("Searching variant across all sources using bcftools...")
             if variant:
                 return variant
-        
+
         return None
 
     def split_variant_id(self, variant_id: str):

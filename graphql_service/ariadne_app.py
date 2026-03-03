@@ -41,7 +41,13 @@ def prepare_executable_schema() -> GraphQLSchema:
     """
     schema = ariadne.load_schema_from_path("common/schemas")
     return ariadne.make_executable_schema(
-        schema, QUERY_TYPE, STRUCTURAL_QUERY_TYPE, VARIANT_TYPE, VARIANT_ALLELE_TYPE, STRUCTURAL_VARIANT_TYPE, STRUCTURAL_VARIANT_ALLELE_TYPE
+        schema,
+        QUERY_TYPE,
+        STRUCTURAL_QUERY_TYPE,
+        VARIANT_TYPE,
+        VARIANT_ALLELE_TYPE,
+        STRUCTURAL_VARIANT_TYPE,
+        STRUCTURAL_VARIANT_ALLELE_TYPE,
     )
 
 

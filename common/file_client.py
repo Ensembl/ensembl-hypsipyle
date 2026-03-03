@@ -14,7 +14,6 @@
 
 import vcfpy
 import os
-from pathlib import Path
 from common.file_model.variant import Variant
 from common.file_model.structural_variant import StructuralVariant
 from common.structural_variant_searcher import StructuralVariantSearcher
@@ -59,13 +58,12 @@ class FileClient:
         try:
             [contig, pos, id] = self.split_variant_id(variant_id)
             pos = int(pos)
-        except:
+        except Exception:
             # TODO: This needs to go to thoas logger
             # TODO: Exception needs to be caught appropriately
             print(
                 "Please check that the variant_id is in the format: contig:position:identifier"
             )
-        data = {}
         variant = None
         try:
             for rec in self.collection.fetch(contig, pos - 1, pos):
@@ -73,7 +71,7 @@ class FileClient:
                     variant = Variant(rec, self.header, genome_uuid)
                     break
             return variant
-        except:
+        except Exception:
             # Return None when variant cannot be fetched
             return
 

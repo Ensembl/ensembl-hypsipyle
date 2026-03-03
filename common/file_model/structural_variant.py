@@ -12,10 +12,7 @@
    limitations under the License.
 """
 
-from typing import Any, Mapping, List, Union
-import re
-import os
-import json
+from typing import Any
 
 from common.file_model.base_variant import BaseVariant
 

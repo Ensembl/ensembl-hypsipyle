@@ -438,7 +438,7 @@ class VariantAllele:
         ref_cdna_sequence = alt_cdna_sequence = None
         if cdna_position:
             cdna_start, cdna_end, cdna_length = self.parse_position(cdna_position)
-            if cdna_start != None and cdna_end != None:
+            if cdna_start is not None and cdna_end is not None:
                 if codons:
                     ref_cdna_sequence = re.sub("([a-z])", "", codons.split("/")[0])
                     alt_cdna_sequence = re.sub("([a-z])", "", codons.split("/")[1])
@@ -465,7 +465,7 @@ class VariantAllele:
         ref_cds_sequence = alt_cds_sequence = None
         if cds_position:
             cds_start, cds_end, cds_length = self.parse_position(cds_position)
-            if cds_start != None and cds_end != None:
+            if cds_start is not None and cds_end is not None:
                 ref_cds_sequence = codons.split("/")[0]
                 alt_cds_sequence = codons.split("/")[1]
             cds_location = {
@@ -484,7 +484,7 @@ class VariantAllele:
             protein_start, protein_end, protein_length = self.parse_position(
                 protein_position
             )
-            if protein_start != None and protein_end != None:
+            if protein_start is not None and protein_end is not None:
                 amino_acids_array = amino_acids.split("/")
                 ref_protein_sequence = amino_acids_array[0]
                 alt_protein_sequence = (
@@ -526,7 +526,7 @@ class VariantAllele:
         """
         try:
             (result, score) = re.split(r"[()]", output)[:2]
-        except:
+        except Exception:
             return (None, None)
 
         if result not in [
@@ -543,7 +543,7 @@ class VariantAllele:
 
         try:
             score = float(score)
-        except:
+        except Exception:
             # need to log something here
             score = None
 

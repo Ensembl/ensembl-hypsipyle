@@ -37,7 +37,7 @@ async def resolve_variant(
 ) -> Dict:
     "Load variants via variant id"
 
-    query = {
+    {
         "type": "Variant",
         "variant_id": by_id["variant_id"],
         "genome_id": by_id["genome_id"],

@@ -12,7 +12,6 @@
    limitations under the License.
 """
 
-import re
 import vcfpy
 import os
 import subprocess
@@ -185,7 +184,7 @@ class StructuralVariantSearcher:
                 result_pos = int(result_pos)
 
                 if result_chrom == contig and result_pos == pos:
-                    print(f"  ✓ Coordinates match!")
+                    print("  ✓ Coordinates match!")
                     # Found matching variant, load the full record
                     datafile = os.path.join(sv_dir, filename)
                     variant = self._get_full_record(
@@ -194,7 +193,7 @@ class StructuralVariantSearcher:
                     if variant:
                         return variant
                 else:
-                    print(f"  ✗ Coordinates don't match")
+                    print("  ✗ Coordinates don't match")
 
             print(f"Variant {id} found in index but no coordinates matched")
             return None
@@ -358,7 +357,7 @@ class StructuralVariantSearcher:
         except subprocess.TimeoutExpired:
             print(f"bcftools timeout for {source_name or datafile}")
             return None
-        except Exception as e:
+        except Exception:
             raise
 
     def _get_full_record(

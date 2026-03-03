@@ -16,6 +16,7 @@ from typing import Any, Mapping, List, Union
 import re
 import os
 import json
+from common.file_model.base_variant import BaseVariant
 from common.file_model.variant_allele import VariantAllele
 from common.file_model.utils import minimise_allele, decode_population_name
 
@@ -36,29 +37,18 @@ def reduce_allele_length(allele_list: List):
 
 
 
-class Variant():
-    variant_sources = {}  # used to cache source information, class attribute
+class Variant(BaseVariant):
 
     def __init__(self, record: Any, header: Any, genome_uuid: str) -> None:
-        """Initialises a Variant instance.
+        """Initialise a Variant and delegate shared setup to BaseVariant.
 
-        Args:
-            record (Any): The variant record.
-            header (Any): The header information.
-            genome_uuid (str): The genome UUID.
+        Variant-specific attributes (like `alts`) are set here.
         """
-        self.genome_uuid = genome_uuid
-        self.name = record.ID[0]
-        self.record = record 
-        self.header = header
-        self.chromosome = record.CHROM         ###TODO: convert the contig name in the file to match the chromosome id given in the payload 
-        self.position = record.POS
-        self.alts = record.ALT
-        self.ref = record.REF
-        self.info = record.INFO
+        super().__init__(record, header, genome_uuid)
+        # Variant-specific
+        self.alts = getattr(record, 'ALT', [])
+        self.ref = getattr(record, 'REF', None)
         self.type = "Variant"
-        self.vep_version = re.search("v\d+", self.header.get_lines("VEP")[0].value).group()
-        self.population_map = {}
     
     def get_alternative_names(self) -> List:
         """Returns alternative names for the variant.
@@ -67,26 +57,6 @@ class Variant():
             List: A list of alternative names.
         """
         return []
-    
-    def parse_source_from_header(self) -> Mapping:
-        """Parses source information from the header and caches it.
-
-        Returns:
-            Mapping: The updated mapping of source information.
-        """
-        genome_uuid = self.genome_uuid
-        if genome_uuid not in self.variant_sources:
-            self.variant_sources[genome_uuid] = {}
-
-        source_header_lines = self.header.get_lines("source")
-        for source_header_line in source_header_lines:
-            source, source_info_line = source_header_line.value.split("\" ", 1)
-            
-            source = source.strip('"').replace(" ", "_")
-            source_info = dict(re.findall('(.+?)="(.+?)"\s*', source_info_line))
-
-            ## overwrite is allowed
-            self.variant_sources[genome_uuid][source] = source_info
 
     def get_primary_source(self) -> Mapping:
         """Fetches the primary source information for the variant.
@@ -194,27 +164,7 @@ class Variant():
         Returns:
             tuple: A tuple containing the allele type and its SO term.
         """
-        match [alt_one_bp, ref_one_bp, ref_alt_equal_bp]:
-            case [True, True, True]: 
-                allele_type = "SNV" 
-                SO_term = "SO:0001483"
-
-            case [True, False, False]: 
-                allele_type = "deletion" 
-                SO_term = "SO:0000159"
-
-            case [False, True, False]: 
-                allele_type = "insertion"
-                SO_term = "SO:0000667"
-
-            case [False, False, False]: 
-                allele_type = "indel"
-                SO_term = "SO:1000032"
-
-            case [False, False, True]: 
-                allele_type = "substitution"
-                SO_term = "SO:1000002"   
-        return allele_type, SO_term
+        return super().set_allele_type(alt_one_bp, ref_one_bp, ref_alt_equal_bp)
     
     def get_allele_type(self, allele: Union[str, List]) -> Mapping :
         """Determines the allele type based on the provided allele.
@@ -225,27 +175,7 @@ class Variant():
         Returns:
             Mapping: A mapping containing allele type information and an associated URL.
         """
-        if isinstance(allele, str):
-            if allele == self.ref:
-                allele_type, SO_term = "biological_region","SO:0001411"
-            else:
-                allele_type, SO_term = self.set_allele_type(len(allele)<2, len(self.ref)<2, len(allele) == len(self.ref))
-        elif isinstance(allele, list):
-            alt_length = reduce_allele_length(allele)
-            allele_type, SO_term = self.set_allele_type(alt_length < 2 , len(self.ref)<2, alt_length == len(self.ref))
-
-        return {
-            "accession_id": allele_type,
-            "value": allele_type,
-            "url": f"http://sequenceontology.org/browser/current_release/term/{SO_term}",
-            "source": {
-                    "id": "",
-                    "name": "Sequence Ontology",
-                    "url": "www.sequenceontology.org",
-                    "description": "The Sequence Ontology..."
-                    }
-
-        }  
+        return super().get_allele_type(allele)
     
     def get_slice(self, allele: Union[str, List]) -> Mapping :
         """Computes the location slice for the variant based on the given allele.
@@ -261,32 +191,7 @@ class Variant():
             Mapping: A dictionary containing the 'location', 'region' and 'strand' details.
         """
 
-        start = self.position
-        length = len(self.ref)
-        end = start + length -1
-        if allele != self.ref:
-            allele_type = self.get_allele_type(allele)
-            if allele_type["accession_id"] == "insertion":
-                length = 0
-                end = start + 1
-        
-        return {
-            "location": {
-                "start": start,
-                "end": end,
-                "length": length
-            },
-            "region": {
-                "name": self.chromosome,
-                "code": "chromosome",
-                "topology": "linear",
-                "so_term": "SO:0001217"
-            },
-            "strand": {
-                "code": "forward",
-                "value": 1
-            }
-        }
+        return super().get_slice(allele)
     
     
     
@@ -536,18 +441,6 @@ class Variant():
                 elif hpmaf_pop[0] < hpmaf_frequency:
                     break
         return pop_frequency_map
-    
-    
-    def get_web_display_data(self) -> Mapping:
-        """Obtains data for web display of the variant.
-
-        Returns:
-            Mapping: A mapping containing web display data, such as citation counts.
-        """
-        n_citations = self.info["NCITE"] if "NCITE" in self.info else 0
-        return {
-            "count_citations": n_citations
-        }
     
     def get_statistics_info(self) -> Mapping:
         """Collects statistical information for each allele of the variant.

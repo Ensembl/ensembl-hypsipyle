@@ -43,7 +43,6 @@ class VariantAllele:
         Returns:
             Any: The allele type data.
         """
-        # TODO: change this to VariantAllele level
         return self.variant.get_allele_type(self.alt)
 
     def get_alternative_names(self):
@@ -60,7 +59,6 @@ class VariantAllele:
         Returns:
             Any: The sliced data.
         """
-        # TODO: review this to change to VariantAllele level
         return self.variant.get_slice(self.alt)
 
     def get_phenotype_assertions(self):

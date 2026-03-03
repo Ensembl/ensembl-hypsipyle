@@ -17,25 +17,28 @@ import re
 import os
 import json
 
+from common.file_model.base_variant import BaseVariant
 
-class StructuralVariant():
-    variant_sources = {}  # used to cache source information, class attribute
+
+class StructuralVariant(BaseVariant):
+    """StructuralVariant model – inherits shared behaviour from BaseVariant."""
 
     def __init__(self, record: Any, header: Any, genome_uuid: str) -> None:
-        """Initialises a Variant instance.
+        """Initialise SV-specific attributes and delegate shared setup.
 
-        Args:
-            record (Any): The variant record.
-            header (Any): The header information.
-            genome_uuid (str): The genome UUID.
+        The `length` attribute is derived from the VCF INFO `SVLEN` where
+        available; otherwise zero.
         """
-        self.genome_uuid = genome_uuid
-        self.name = record.ID[0]
-        self.record = record 
-        self.header = header
-        self.chromosome = record.CHROM         ###TODO: convert the contig name in the file to match the chromosome id given in the payload 
-        self.position = record.POS
-        self.info = record.INFO
+        super().__init__(record, header, genome_uuid)
         self.type = "StructuralVariant"
-        self.vep_version = re.search("v\d+", self.header.get_lines("VEP")[0].value).group()
-        self.population_map = {}
+        # SVLEN may be a list or integer depending on the generator; coerce to int
+        svlen = self.info.get("SVLEN") if isinstance(self.info, dict) else None
+        try:
+            if isinstance(svlen, (list, tuple)) and svlen:
+                self.length = int(svlen[0])
+            elif svlen is not None:
+                self.length = int(svlen)
+            else:
+                self.length = 0
+        except Exception:
+            self.length = 0

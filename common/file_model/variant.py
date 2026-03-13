@@ -105,6 +105,7 @@ class Variant():
                 source = self.header.get_lines("source")[0].value
 
             # Get source information from data file header header
+            source = source.strip('"').replace(" ", "_")
             genome_uuid = self.genome_uuid
             if genome_uuid not in self.variant_sources or source not in self.variant_sources[genome_uuid]:     
                 self.parse_source_from_header()

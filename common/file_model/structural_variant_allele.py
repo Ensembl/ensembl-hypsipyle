@@ -2,7 +2,7 @@
 Structural variant allele model.
 """
 
-from typing import Mapping
+from typing import Mapping, List
 
 
 class StructuralVariantAllele:

@@ -12,7 +12,7 @@
    limitations under the License.
 """
 
-from typing import Any, Iterable, List
+from typing import Any, List
 
 from common.file_model.base_variant import BaseVariant
 from common.file_model.structural_variant_allele import StructuralVariantAllele

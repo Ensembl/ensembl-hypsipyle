@@ -162,23 +162,23 @@ class StructuralVariantSearcher:
                 print(f"Variant {id} not found in DuckDB index")
                 return None
 
-            print(f"DuckDB lookup for {id}: found {len(results)} result(s)")
+            # print(f"DuckDB lookup for {id}: found {len(results)} result(s)")
 
             # Check if any result matches the contig and position
             for result_chrom, result_pos, filename in results:
-                print(
-                    f"  Checking: chrom={result_chrom} (type={type(result_chrom).__name__}), pos={result_pos} (type={type(result_pos).__name__}), file={filename}"
-                )
-                print(
-                    f"  Against:  contig={contig} (type={type(contig).__name__}), pos={pos} (type={type(pos).__name__})"
-                )
+                # print(
+                #     f"  Checking: chrom={result_chrom} (type={type(result_chrom).__name__}), pos={result_pos} (type={type(result_pos).__name__}), file={filename}"
+                # )
+                # print(
+                #     f"  Against:  contig={contig} (type={type(contig).__name__}), pos={pos} (type={type(pos).__name__})"
+                # )
 
                 # Convert to same types for comparison
                 result_chrom = str(result_chrom)
                 result_pos = int(result_pos)
 
                 if result_chrom == contig and result_pos == pos:
-                    print("  ✓ Coordinates match!")
+                    # print("  ✓ Coordinates match!")
                     # Found matching variant, load the full record
                     datafile = os.path.join(sv_dir, filename)
                     variant = self._get_full_record(

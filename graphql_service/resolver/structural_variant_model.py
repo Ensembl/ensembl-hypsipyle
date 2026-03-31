@@ -157,6 +157,16 @@ def resolve_phenotype_assertions_from_structural_variant_allele(
     return variant_allele.get_phenotype_assertions()
 
 
+@STRUCTURAL_VARIANT_ALLELE_TYPE.field("prediction_results")
+def resolve_prediction_results_from_structural_variant_allele(
+    variant_allele: Dict, info: GraphQLResolveInfo
+) -> Dict:
+    """
+    Load prediction results for variant allele
+    """
+    return variant_allele.get_prediction_results()
+
+
 @STRUCTURAL_VARIANT_ALLELE_TYPE.field("predicted_molecular_consequences")
 def resolve_predicted_molecular_consequences_from_structural_variant_allele(
     variant_allele: Dict, info: GraphQLResolveInfo

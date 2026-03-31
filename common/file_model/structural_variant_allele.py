@@ -72,3 +72,59 @@ class StructuralVariantAllele:
 
     def get_web_display_data(self) -> Mapping:
         return {}
+
+    def create_allele_prediction_results(
+        self,
+        current_prediction_results: Mapping,
+        csq_record: List,
+        prediction_index_map: dict,
+    ) -> list:
+        """Creates prediction results for the allele based on a CSQ record.
+
+        Args:
+            current_prediction_results (Mapping): Existing prediction results.
+            csq_record (List): The CSQ record split into fields.
+            prediction_index_map (dict): A mapping from annotation keys to their indices.
+
+        Returns:
+            list: A list of new prediction results.
+        """
+        prediction_results = []
+        if "cadd_phred" in prediction_index_map.keys():
+            if not self.prediction_result_already_exists(
+                current_prediction_results, "CADD"
+            ):
+                cadd_prediction_result = (
+                    {
+                        "score": csq_record[prediction_index_map["cadd_phred"]],
+                        "analysis_method": {
+                            "tool": "CADD",
+                            "qualifier": {"result_type": "CADD Phred score"},
+                            "reference_data": [],
+                        },
+                    }
+                    if csq_record[prediction_index_map["cadd_phred"]]
+                    else None
+                )
+                if cadd_prediction_result:
+                    prediction_results.append(cadd_prediction_result)
+
+        return prediction_results
+
+    def prediction_result_already_exists(
+        self, current_prediction_results: Mapping, tool: str
+    ) -> bool:
+        """Checks if a prediction result for a specific tool already exists.
+
+        Args:
+            current_prediction_results (Mapping): The current prediction results.
+            tool (str): The analysis tool name.
+
+        Returns:
+            bool: True if a result exists, False otherwise.
+        """
+        for prediction_result in current_prediction_results:
+            if prediction_result["analysis_method"]["tool"] == tool:
+                return True
+
+        return False

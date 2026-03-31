@@ -42,7 +42,6 @@ class StructuralVariant(BaseVariant):
             self.length = 0
 
     def get_primary_source(self) -> dict:
-        print(super())
         return super().get_primary_source()
 
     def get_alternative_names(self) -> list:

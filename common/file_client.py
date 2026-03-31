@@ -157,7 +157,7 @@ class FileClient:
             variant = self.sv_searcher.search_all_files(
                 sv_dir, vcf_files, contig, pos, id, genome_uuid
             )
-            print("Searching variant across all sources using bcftools...")
+
             if variant:
                 return variant
 

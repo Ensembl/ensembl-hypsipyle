@@ -16,13 +16,12 @@ import vcfpy
 import os
 import subprocess
 import shutil
-import sqlite3
 import io
 from common.file_model.structural_variant import StructuralVariant
 
 
 class StructuralVariantSearcher:
-    """Handles searching for structural variants across VCF files using bcftools."""
+    """Handles searching for structural variants across indexed VCF files."""
 
     def search_in_file(
         self,
@@ -68,9 +67,8 @@ class StructuralVariantSearcher:
     ) -> StructuralVariant | None:
         """Search for a structural variant across all VCF files.
 
-        This helper tries to use an SQLite index (variants.db) for speed.  If the
-        database file is missing or the lookup returns no valid hit it falls back
-        to scanning the files via ``bcftools``.
+        This helper uses a DuckDB index (variants.duckdb) for speed.
+
 
         Args:
             sv_dir (str): Path to the structural-variation directory.
@@ -84,54 +82,47 @@ class StructuralVariantSearcher:
             StructuralVariant or None: A StructuralVariant instance if found; otherwise, None.
         """
         try:
-            db_path = os.path.join(sv_dir, "variants.db")
+            db_path = os.path.join(sv_dir, "variants.duckdb")
 
             # if only a single file is supplied, we can short-circuit into the
             # single-file searcher rather than using the generic multi-file scan.
-            # however we still honour the SQLite index if one exists.
+            # however we still honour the DuckDB index if one exists.
             if len(vcf_files) == 1:
                 single_file = os.path.join(sv_dir, vcf_files[0])
-                # attempt sqlite-based lookup first if index exists
+                # attempt duckdb-based lookup first if index exists
                 if os.path.exists(db_path):
-                    variant = self._search_with_sqlite(
+                    variant = self._search_with_duckdb(
                         db_path, sv_dir, contig, pos, id, genome_uuid
                     )
                     if variant:
                         return variant
                     # index was present but gave no match; fall back to single-file search
                     print(
-                        "SQLite index search returned no matching record, falling back to single-file bcftools search"
+                        "DuckDB index search returned no matching record, falling back to single-file bcftools search"
                     )
                 else:
                     print(
-                        f"SQLite index not found ({db_path}), using single-file search"
+                        f"DuckDB index not found ({db_path}), using single-file search"
                     )
                 # perform the one-file search and return whatever we get
                 return self.search_in_file(single_file, contig, pos, id, genome_uuid)
 
-            # attempt sqlite-based lookup first if index exists
+            # attempt duckdb-based lookup first if index exists
             if os.path.exists(db_path):
-                variant = self._search_with_sqlite(
+                variant = self._search_with_duckdb(
                     db_path, sv_dir, contig, pos, id, genome_uuid
                 )
                 if variant:
                     return variant
-                # index was present but gave no match; fall back to bcftools
-                print(
-                    "SQLite index search returned no matching record, falling back to bcftools scan"
-                )
+                print("DuckDB index search returned no matching record")
             else:
-                print(f"SQLite index not found ({db_path}), using bcftools scan")
-
-            # final fallback to bcftools scanning of all files
-            return self._search_with_bcftools_all_files(
-                sv_dir, vcf_files, contig, pos, id, genome_uuid
-            )
+                print(f"DuckDB index not found ({db_path})")
+            return None
         except Exception as e:
             print(f"Error searching all structural variation files: {str(e)}")
             return None
 
-    def _search_with_sqlite(
+    def _search_with_duckdb(
         self,
         db_path: str,
         sv_dir: str,
@@ -140,10 +131,10 @@ class StructuralVariantSearcher:
         id: str,
         genome_uuid: str,
     ) -> StructuralVariant | None:
-        """Search for a structural variant using SQLite index.
+        """Search for a structural variant using DuckDB index.
 
         Args:
-            db_path (str): Path to the variants.db SQLite database.
+            db_path (str): Path to the variants.duckdb database.
             sv_dir (str): Path to the structural-variation directory.
             contig (str): The contig/chromosome name.
             pos (int): The position.
@@ -154,21 +145,24 @@ class StructuralVariantSearcher:
             StructuralVariant or None: A StructuralVariant instance if found; otherwise, None.
         """
         try:
-            conn = sqlite3.connect(db_path)
-            cursor = conn.cursor()
+            # Import lazily so environments without DuckDB can still use bcftools fallback.
+            import duckdb
+
+            conn = duckdb.connect(db_path, read_only=True)
 
             # Query the index by variant ID
-            cursor.execute(
-                "SELECT chrom, pos, filename FROM variants WHERE id = ?", (id,)
+            results = conn.execute(
+                "SELECT chr, start, source_file FROM variants WHERE id = ?",
+                [id],
             )
-            results = cursor.fetchall()
+            results = results.fetchall()
             conn.close()
 
             if not results:
-                print(f"Variant {id} not found in SQLite index")
+                print(f"Variant {id} not found in DuckDB index")
                 return None
 
-            print(f"SQLite lookup for {id}: found {len(results)} result(s)")
+            print(f"DuckDB lookup for {id}: found {len(results)} result(s)")
 
             # Check if any result matches the contig and position
             for result_chrom, result_pos, filename in results:
@@ -199,109 +193,10 @@ class StructuralVariantSearcher:
             return None
 
         except Exception as e:
-            print(f"Error searching SQLite index: {str(e)}")
+            print(f"Error searching DuckDB index: {str(e)}")
             import traceback
 
             traceback.print_exc()
-            return None
-
-    def _search_with_bcftools_all_files(
-        self,
-        sv_dir: str,
-        vcf_files: list,
-        contig: str,
-        pos: int,
-        id: str,
-        genome_uuid: str,
-    ) -> StructuralVariant | None:
-        """Fallback method to search using bcftools if SQLite index is unavailable.
-
-        Args:
-            sv_dir (str): Path to the structural-variation directory.
-            vcf_files (list): List of VCF filenames to search.
-            contig (str): The contig/chromosome name.
-            pos (int): The position.
-            id (str): The variant identifier.
-            genome_uuid (str): The genome UUID.
-
-        Returns:
-            StructuralVariant or None: A StructuralVariant instance if found; otherwise, None.
-        """
-        try:
-            # Build file paths for all VCF files
-            file_paths = [os.path.join(sv_dir, f) for f in vcf_files]
-            print(f"Searching for {id} in {len(file_paths)} files")
-
-            # Use bcftools to search all files at once with ID filter
-            cmd = [
-                "bcftools",
-                "query",
-                "-i",
-                f'ID="{id}"',
-                "-f",
-                "%CHROM\t%POS\t%ID\t%INFO/SOURCE\n",
-            ] + file_paths
-
-            print("bcftools path:", shutil.which("bcftools"))
-            print("running bcftools query...")
-
-            result = subprocess.run(
-                cmd, capture_output=True, text=True, timeout=30, check=False
-            )
-            print("stdout:", result.stdout)
-            print("stderr:", result.stderr)
-            print("returncode:", result.returncode)
-
-            # If bcftools returned success but no stdout, try a fallback without the surrounding quotes
-            output = result.stdout or ""
-            if result.returncode == 0 and not output.strip():
-                alt_cmd = [
-                    "bcftools",
-                    "query",
-                    "-i",
-                    f"ID={id}",
-                    "-f",
-                    "%CHROM\t%POS\t%ID\t%INFO/SOURCE\n",
-                ] + file_paths
-                print("No output with quoted filter; trying fallback...")
-                alt_result = subprocess.run(
-                    alt_cmd, capture_output=True, text=True, timeout=30, check=False
-                )
-                print("alt stdout:", alt_result.stdout)
-                print("alt stderr:", alt_result.stderr)
-                print("alt returncode:", alt_result.returncode)
-                if alt_result.returncode == 0 and alt_result.stdout.strip():
-                    result = alt_result
-
-            if result.returncode != 0 or not (result.stdout or "").strip():
-                return None
-
-            # Parse the output to find matching variant
-            for line in result.stdout.strip().split("\n"):
-                if not line:
-                    continue
-                parts = line.split("\t")
-                if len(parts) >= 4:
-                    query_chrom, query_pos, query_id, query_file = (
-                        parts[0],
-                        int(parts[1]),
-                        parts[2],
-                        parts[3],
-                    )
-                    if query_chrom == contig and query_pos == pos and query_id == id:
-                        # Found it, now load the full record
-                        variant = self._get_full_record(
-                            query_file, contig, pos, id, genome_uuid
-                        )
-                        if variant:
-                            return variant
-
-            return None
-        except subprocess.TimeoutExpired:
-            print("bcftools timeout searching all structural variation files")
-            return None
-        except Exception as e:
-            print(f"Error in bcftools fallback search: {str(e)}")
             return None
 
     def _search_with_bcftools(

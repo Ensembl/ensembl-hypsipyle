@@ -12,9 +12,10 @@
    limitations under the License.
 """
 
-from typing import Any
+from typing import Any, Iterable, List
 
 from common.file_model.base_variant import BaseVariant
+from common.file_model.structural_variant_allele import StructuralVariantAllele
 
 
 class StructuralVariant(BaseVariant):
@@ -39,3 +40,74 @@ class StructuralVariant(BaseVariant):
                 self.length = 0
         except Exception:
             self.length = 0
+
+    def get_primary_source(self) -> dict:
+        print(super())
+        return super().get_primary_source()
+
+    def get_alternative_names(self) -> list:
+        return []           
+
+    @staticmethod
+    def _build_allele_type_payload(allele_type: str, so_term: str) -> dict:
+        return {
+            "accession_id": allele_type,
+            "value": allele_type,
+            "url": f"http://sequenceontology.org/browser/current_release/term/{so_term}",
+            "source": {
+                "id": "",
+                "name": "Sequence Ontology",
+                "url": "www.sequenceontology.org",
+                "description": "The Sequence Ontology...",
+            },
+        }
+
+    def get_slice(self, allele=None) -> dict:
+        target_allele = self.alts if allele is None else allele
+        return super().get_slice(target_allele)
+
+    def get_allele_type(self) -> dict:
+        svtype = self.info.get("SVTYPE") if isinstance(self.info, dict) else None
+
+        svtype_to_term = {
+            "DEL": ("deletion", "SO:0000159"),
+            "INS": ("insertion", "SO:0000667"),
+            "DUP": ("duplication", "SO:1000035"),
+            "INV": ("inversion", "SO:1000036"),
+            "CNV": ("copy_number_variation", "SO:0001019"),
+            "BND": ("translocation", "SO:0000199"),
+        }
+
+        if isinstance(svtype, str):
+            normalized_svtype = svtype.upper()
+            if normalized_svtype in svtype_to_term:
+                allele_type, so_term = svtype_to_term[normalized_svtype]
+                return self._build_allele_type_payload(allele_type, so_term)
+
+        try:
+            return super().get_allele_type(self.alts)
+        except Exception:
+            # Keep GraphQL non-null contract even when ALT/SVTYPE is malformed.
+            return self._build_allele_type_payload("structural_variant", "SO:0001537")
+
+    def get_length(self) -> int:
+        return self.length
+
+    def get_alleles(self) -> List:
+        variant_allele_list = []
+        alts = self.alts or []
+        for index, alt in enumerate(alts):
+            alt_value = alt.value if hasattr(alt, "value") else str(alt)
+            variant_allele_list.append(StructuralVariantAllele(index + 1, alt_value, self))
+        if self.ref:
+            variant_allele_list.append(StructuralVariantAllele(0, self.ref, self))
+        return variant_allele_list
+
+    def get_prediction_results(self) -> list:
+        return []
+
+    def get_ensembl_website_display_data(self) -> dict:
+        return {}
+
+    def get_web_display_data(self) -> dict:
+        return {}

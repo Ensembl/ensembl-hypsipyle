@@ -61,12 +61,12 @@ def allele_type(structural_variant: Dict, info: GraphQLResolveInfo) -> Dict:
     return structural_variant.get_allele_type()
 
 
-# @STRUCTURAL_VARIANT_TYPE.field("alternative_names")
-# def alternative_names(variant: Dict, info: GraphQLResolveInfo) -> Dict:
-#     """
-#     Load alternative names for variant
-#     """
-#     return variant.get_alternative_names()
+@STRUCTURAL_VARIANT_TYPE.field("alternative_names")
+def alternative_names(variant: Dict, info: GraphQLResolveInfo) -> Dict:
+    """
+    Load alternative names for variant
+    """
+    return variant.get_alternative_names()
 
 
 @STRUCTURAL_VARIANT_TYPE.field("slice")

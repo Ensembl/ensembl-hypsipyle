@@ -16,6 +16,7 @@ import vcfpy
 import os
 from common.file_model.variant import Variant
 from common.file_model.structural_variant import StructuralVariant
+from common.structural_variant_index_client import StructuralVariantIndexClient
 from common.structural_variant_searcher import StructuralVariantSearcher
 
 
@@ -115,6 +116,8 @@ class FileClient:
                 datafile, contig, pos, id, genome_uuid, source_name
             )
             if variant:
+                index_client = StructuralVariantIndexClient(os.path.dirname(datafile))
+                index_client.load_structural_variant_synonyms(variant)
                 return variant
             print(f"Structural variant not found in source '{source_name}'")
             return None
@@ -138,6 +141,8 @@ class FileClient:
                 print(f"No structural variation VCF files found in {sv_dir}")
                 return None
 
+            index_client = StructuralVariantIndexClient(sv_dir)
+
             # If there is just one source file, prefer the single-file search implementation
             # instead of invoking the more general multi-file scan.  This keeps behaviour
             # consistent with consumers that pass a ``source_name`` and avoids building
@@ -148,19 +153,54 @@ class FileClient:
                 print(
                     f"Only one structural variant file ({single}) found; using single-file lookup"
                 )
+                variant = self.sv_searcher.search_in_file(
+                    datafile, contig, pos, id, genome_uuid
+                )
+                if variant:
+                    index_client.load_structural_variant_synonyms(variant)
+                return variant
+
+            variant = None
+            if index_client.exists():
+                variant = self._get_structural_variant_from_index(
+                    index_client, sv_dir, contig, pos, id, genome_uuid
+                )
+                if not variant:
+                    print("DuckDB index search returned no matching record")
+            else:
+                print(f"DuckDB index not found in {sv_dir}")
+                variant = self.sv_searcher.search_all_files(
+                    sv_dir, vcf_files, contig, pos, id, genome_uuid
+                )
+
+            if variant:
+                index_client.load_structural_variant_synonyms(variant)
+                return variant
+
+        return None
+
+    def _get_structural_variant_from_index(
+        self,
+        index_client: StructuralVariantIndexClient,
+        sv_dir: str,
+        contig: str,
+        pos: int,
+        id: str,
+        genome_uuid: str,
+    ) -> StructuralVariant | None:
+        results = index_client.get_variant_locations(id)
+        if not results:
+            print(f"Variant {id} not found in DuckDB index")
+            return None
+
+        for result in results:
+            if result["chr"] == contig and result["start"] == pos:
+                datafile = os.path.join(sv_dir, result["source_file"])
                 return self.sv_searcher.search_in_file(
                     datafile, contig, pos, id, genome_uuid
                 )
 
-            # Search across all files at once using bcftools (this may consult the
-            # SQLite index internally, thanks to search_all_files implementation).
-            variant = self.sv_searcher.search_all_files(
-                sv_dir, vcf_files, contig, pos, id, genome_uuid
-            )
-
-            if variant:
-                return variant
-
+        print(f"Variant {id} found in index but no coordinates matched")
         return None
 
     def split_variant_id(self, variant_id: str):

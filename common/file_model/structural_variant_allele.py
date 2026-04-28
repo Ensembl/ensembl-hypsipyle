@@ -53,7 +53,7 @@ class StructuralVariantAllele:
         return self.variant.get_allele_type()
 
     def get_alternative_names(self) -> list:
-        return self.variant.get_alternative_names()
+        return self.variant.get_alternative_names(self.name)
 
     def get_slice(self) -> Mapping:
         return self.variant.get_slice(self.alt)

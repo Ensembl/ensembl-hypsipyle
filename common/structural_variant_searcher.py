@@ -67,9 +67,6 @@ class StructuralVariantSearcher:
     ) -> StructuralVariant | None:
         """Search for a structural variant across all VCF files.
 
-        This helper uses a DuckDB index (variants.duckdb) for speed.
-
-
         Args:
             sv_dir (str): Path to the structural-variation directory.
             vcf_files (list): List of VCF filenames to search.
@@ -82,121 +79,17 @@ class StructuralVariantSearcher:
             StructuralVariant or None: A StructuralVariant instance if found; otherwise, None.
         """
         try:
-            db_path = os.path.join(sv_dir, "variants.duckdb")
-
-            # if only a single file is supplied, we can short-circuit into the
-            # single-file searcher rather than using the generic multi-file scan.
-            # however we still honour the DuckDB index if one exists.
-            if len(vcf_files) == 1:
-                single_file = os.path.join(sv_dir, vcf_files[0])
-                # attempt duckdb-based lookup first if index exists
-                if os.path.exists(db_path):
-                    variant = self._search_with_duckdb(
-                        db_path, sv_dir, contig, pos, id, genome_uuid
-                    )
-                    if variant:
-                        return variant
-                    # index was present but gave no match; fall back to single-file search
-                    print(
-                        "DuckDB index search returned no matching record, falling back to single-file bcftools search"
-                    )
-                else:
-                    print(
-                        f"DuckDB index not found ({db_path}), using single-file search"
-                    )
-                # perform the one-file search and return whatever we get
-                return self.search_in_file(single_file, contig, pos, id, genome_uuid)
-
-            # attempt duckdb-based lookup first if index exists
-            if os.path.exists(db_path):
-                variant = self._search_with_duckdb(
-                    db_path, sv_dir, contig, pos, id, genome_uuid
+            for vcf_file in vcf_files:
+                datafile = os.path.join(sv_dir, vcf_file)
+                variant = self.search_in_file(
+                    datafile, contig, pos, id, genome_uuid
                 )
                 if variant:
                     return variant
-                print("DuckDB index search returned no matching record")
-            else:
-                print(f"DuckDB index not found ({db_path})")
+
             return None
         except Exception as e:
             print(f"Error searching all structural variation files: {str(e)}")
-            return None
-
-    def _search_with_duckdb(
-        self,
-        db_path: str,
-        sv_dir: str,
-        contig: str,
-        pos: int,
-        id: str,
-        genome_uuid: str,
-    ) -> StructuralVariant | None:
-        """Search for a structural variant using DuckDB index.
-
-        Args:
-            db_path (str): Path to the variants.duckdb database.
-            sv_dir (str): Path to the structural-variation directory.
-            contig (str): The contig/chromosome name.
-            pos (int): The position.
-            id (str): The variant identifier.
-            genome_uuid (str): The genome UUID.
-
-        Returns:
-            StructuralVariant or None: A StructuralVariant instance if found; otherwise, None.
-        """
-        try:
-            # Import lazily so environments without DuckDB can still use bcftools fallback.
-            import duckdb
-
-            conn = duckdb.connect(db_path, read_only=True)
-
-            # Query the index by variant ID
-            results = conn.execute(
-                "SELECT chr, start, source_file FROM variants WHERE id = ?",
-                [id],
-            )
-            results = results.fetchall()
-            conn.close()
-
-            if not results:
-                print(f"Variant {id} not found in DuckDB index")
-                return None
-
-            # print(f"DuckDB lookup for {id}: found {len(results)} result(s)")
-
-            # Check if any result matches the contig and position
-            for result_chrom, result_pos, filename in results:
-                # print(
-                #     f"  Checking: chrom={result_chrom} (type={type(result_chrom).__name__}), pos={result_pos} (type={type(result_pos).__name__}), file={filename}"
-                # )
-                # print(
-                #     f"  Against:  contig={contig} (type={type(contig).__name__}), pos={pos} (type={type(pos).__name__})"
-                # )
-
-                # Convert to same types for comparison
-                result_chrom = str(result_chrom)
-                result_pos = int(result_pos)
-
-                if result_chrom == contig and result_pos == pos:
-                    # print("  ✓ Coordinates match!")
-                    # Found matching variant, load the full record
-                    datafile = os.path.join(sv_dir, filename)
-                    variant = self._get_full_record(
-                        datafile, contig, pos, id, genome_uuid
-                    )
-                    if variant:
-                        return variant
-                else:
-                    print("  ✗ Coordinates don't match")
-
-            print(f"Variant {id} found in index but no coordinates matched")
-            return None
-
-        except Exception as e:
-            print(f"Error searching DuckDB index: {str(e)}")
-            import traceback
-
-            traceback.print_exc()
             return None
 
     def _search_with_bcftools(

@@ -21,7 +21,13 @@ from common.file_model.structural_variant_allele import StructuralVariantAllele
 class StructuralVariant(BaseVariant):
     """StructuralVariant model – inherits shared behaviour from BaseVariant."""
 
-    def __init__(self, record: Any, header: Any, genome_uuid: str) -> None:
+    def __init__(
+        self,
+        record: Any,
+        header: Any,
+        genome_uuid: str,
+        synonyms_by_allele_id: dict | None = None,
+    ) -> None:
         """Initialise SV-specific attributes and delegate shared setup.
 
         The `length` attribute is derived from the VCF INFO `SVLEN` where
@@ -29,6 +35,7 @@ class StructuralVariant(BaseVariant):
         """
         super().__init__(record, header, genome_uuid)
         self.type = "StructuralVariant"
+        self.synonyms_by_allele_id = synonyms_by_allele_id or {}
         # SVLEN may be a list or integer depending on the generator; coerce to int
         svlen = self.info.get("SVLEN") if isinstance(self.info, dict) else None
         try:
@@ -44,8 +51,55 @@ class StructuralVariant(BaseVariant):
     def get_primary_source(self) -> dict:
         return super().get_primary_source()
 
-    def get_alternative_names(self) -> list:
-        return []           
+    def set_synonyms_by_allele_id(self, synonyms_by_allele_id: dict | None) -> None:
+        self.synonyms_by_allele_id = synonyms_by_allele_id or {}
+
+    def get_alternative_names(self, allele_id: str | None = None) -> list:
+        if allele_id:
+            return [
+                self._build_synonym(synonym["synonym"], synonym.get("source"))
+                for synonym in self.synonyms_by_allele_id.get(allele_id, [])
+            ]
+
+        synonyms = []
+        seen = set()
+        for allele_synonyms in self.synonyms_by_allele_id.values():
+            for synonym in allele_synonyms:
+                synonym_id = synonym["synonym"]
+                source = synonym.get("source")
+                key = (
+                    synonym_id,
+                    source,
+                )
+                if key not in seen:
+                    seen.add(key)
+                    synonyms.append(self._build_synonym(synonym_id, source))
+
+        return synonyms
+
+    @staticmethod
+    def _build_synonym(synonym: str, source: str) -> dict:
+        source = source or "dbVar"
+        return {
+            "accession_id": synonym,
+            "name": synonym,
+            "description": f"Structural variant synonym from {source}",
+            "assignment_method": {
+                "type": "DIRECT",
+                "description": (
+                    "A reference made by an external resource of annotation to an "
+                    "Ensembl feature that Ensembl imports without modification"
+                ),
+            },
+            "url": None,
+            "source": {
+                "id": source,
+                "name": source,
+                "description": "",
+                "url": None,
+                "release": None,
+            },
+        }
 
     @staticmethod
     def _build_allele_type_payload(allele_type: str, so_term: str) -> dict:

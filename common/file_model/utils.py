@@ -32,6 +32,35 @@ def minimise_allele(alt: str, ref: str) -> str:
         minimised_allele_string = alt[1:] if len(alt) > 1 else "-"
     return minimised_allele_string
 
-def decode_population_name(name: str):
-      return name.replace("$2C",",")
 
+def minimise_protein_sequence(ref: str, alt: str, start: int, end: int, length: int) -> tuple[str, str, int, int, int]:
+    """Minimise a protein sequence change 
+
+    Args:
+        ref (str): The reference amino acid sequence.
+        alt (str): The alternate amino acid sequence.
+        start (int): The start position of sequence.
+        end (int): The end position of sequence.
+        length (int): Length of sequence
+
+    Returns:
+        tuple[str, str, int, int, int]: The minimised reference and alternate protein sequences, positions and length.
+    """
+
+    # handling only protein deletion as this can be ambiguous in UI
+    if len(ref)<=len(alt) or ref=="-" or alt=="-":
+        return (ref,alt,start,end,length) 
+    i=0
+    min_length = min(len(ref),len(alt))
+    while i<min_length and ref[i]==alt[i]:
+        i+=1
+        start+=1 
+        length=length-1
+
+    min_ref = ref[i:] or "-"
+    min_alt = alt[i:] or "-"
+    return (min_ref, min_alt, start, end,length)
+
+
+def decode_population_name(name: str):
+    return name.replace("$2C", ",")

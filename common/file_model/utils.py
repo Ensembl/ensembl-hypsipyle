@@ -54,7 +54,7 @@ def minimise_protein_sequence(ref: str, alt: str, start: int, end: int, length: 
     min_length = min(len(ref),len(alt))
     while i<min_length and ref[i]==alt[i]:
         i+=1
-        start+=1 
+        start = int(start)+1
         length=length-1
 
     min_ref = ref[i:] or "-"

@@ -8,6 +8,7 @@ type Query {
 input IdInput {
   genome_id: String!
   variant_id: String!
+  source_name: String
 }
 
 input StructuralVariantIdInput {

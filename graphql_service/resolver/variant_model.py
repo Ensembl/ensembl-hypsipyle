@@ -43,7 +43,11 @@ async def resolve_variant(
         "genome_id": by_id["genome_id"],
     }
     file_client = info.context["file_client"]
-    result = file_client.get_variant_record(by_id["genome_id"], by_id["variant_id"])
+    result = file_client.get_variant_record(
+        by_id["genome_id"],
+        by_id["variant_id"],
+        by_id.get("source_name"),  # source_name is optional
+    )
     if not result:
         raise VariantNotFoundError(by_id["variant_id"])
     return result

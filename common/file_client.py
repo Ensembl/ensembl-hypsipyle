@@ -12,21 +12,21 @@
    limitations under the License.
 """
 
-import vcfpy
 import os
+from common.base_file_client import BaseFileClient
 from common.file_model.variant import Variant
 from common.file_model.structural_variant import StructuralVariant
 from common.structural_variant_index_client import StructuralVariantIndexClient
 from common.structural_variant_searcher import StructuralVariantSearcher
 
 
-class FileClient:
+class FileClient(BaseFileClient):
     """Client to load file into memory.
 
     This class provides methods to retrieve and process variant data from VCF files.
     """
 
-    def __init__(self, config):
+    def __init__(self, config) -> None:
         """Initialises a FileClient instance.
 
         Args:
@@ -35,7 +35,9 @@ class FileClient:
         self.data_root = config.get("data_root")
         self.sv_searcher = StructuralVariantSearcher()
 
-    def get_variant_record(self, genome_uuid: str, variant_id: str):
+    def get_variant_record(
+        self, genome_uuid: str, variant_id: str, source_name: str = None
+    ) -> Variant | None:
         """Retrieves a variant entry using the specified variant identifier.
 
         This method loads the VCF file from the configured data root and genome UUID,
@@ -45,36 +47,55 @@ class FileClient:
         Args:
             genome_uuid (str): The UUID for the genome.
             variant_id (str): The variant identifier in the format 'contig:position:identifier'.
+            source_name (str, optional): The name of the source for the variant.
+                                         If None, searches the default file first and
+                                         then any available source files.
 
         Returns:
             Variant or None: A Variant instance if a matching record is found; otherwise, None.
         """
-        datafile = os.path.join(self.data_root, genome_uuid, "variation.vcf.gz")
-        if datafile:
-            self.collection = vcfpy.Reader.from_path(datafile)
-            self.header = self.collection.header
-        else:
-            print("Please check the directory path for the given genome uuid")
-
         try:
             [contig, pos, id] = self.split_variant_id(variant_id)
             pos = int(pos)
-        except Exception:
+        except (TypeError, ValueError) as e:
             # TODO: This needs to go to thoas logger
-            # TODO: Exception needs to be caught appropriately
             print(
-                "Please check that the variant_id is in the format: contig:position:identifier"
+                f"Invalid variant_id format '{variant_id}': {str(e)}. Expected format: contig:position:identifier"
             )
-        variant = None
-        try:
-            for rec in self.collection.fetch(contig, pos - 1, pos):
-                if rec.ID[0] == id:
-                    variant = Variant(rec, self.header, genome_uuid)
-                    break
-            return variant
-        except Exception:
-            # Return None when variant cannot be fetched
-            return
+            return None
+
+        genome_dir = os.path.join(self.data_root, genome_uuid)
+        if source_name:
+            for datafile in self.get_variant_source_files(genome_dir, source_name):
+                variant = self.get_record_from_file(
+                    datafile, contig, pos, id, genome_uuid, Variant
+                )
+                if variant:
+                    return variant
+            print(f"Variant not found in source '{source_name}'")
+            return None
+
+        default_datafile = os.path.join(genome_dir, "variation.vcf.gz")
+        if os.path.exists(default_datafile):
+            variant = self.get_record_from_file(
+                default_datafile, contig, pos, id, genome_uuid, Variant
+            )
+            if variant:
+                return variant
+
+        source_files = self.get_variant_source_files(genome_dir)
+        if not source_files and not os.path.exists(default_datafile):
+            print(f"No variation VCF files found in {genome_dir}")
+            return None
+
+        for datafile in source_files:
+            variant = self.get_record_from_file(
+                datafile, contig, pos, id, genome_uuid, Variant
+            )
+            if variant:
+                return variant
+
+        return None
 
     def get_structural_variant_record(
         self, genome_uuid: str, variant_id: str, source_name: str = None
@@ -129,13 +150,7 @@ class FileClient:
                 return None
 
             # Get all valid VCF files
-            vcf_files = sorted(
-                [
-                    f
-                    for f in os.listdir(sv_dir)
-                    if f.startswith("variation_") and f.endswith(".vcf.gz")
-                ]
-            )
+            vcf_files = self.get_vcf_files(sv_dir)
 
             if not vcf_files:
                 print(f"No structural variation VCF files found in {sv_dir}")
@@ -202,16 +217,3 @@ class FileClient:
 
         print(f"Variant {id} found in index but no coordinates matched")
         return None
-
-    def split_variant_id(self, variant_id: str):
-        """Splits the variant identifier into its constituent parts.
-
-        The variant identifier is expected to be formatted as 'contig:position:identifier'.
-
-        Args:
-            variant_id (str): The variant identifier string.
-
-        Returns:
-            list: A list containing the contig, position, and identifier.
-        """
-        return variant_id.split(":")

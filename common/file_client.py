@@ -17,7 +17,6 @@ from common.base_file_client import BaseFileClient
 from common.file_model.variant import Variant
 from common.file_model.structural_variant import StructuralVariant
 from common.structural_variant_index_client import StructuralVariantIndexClient
-from common.structural_variant_searcher import StructuralVariantSearcher
 
 
 class FileClient(BaseFileClient):
@@ -26,6 +25,8 @@ class FileClient(BaseFileClient):
     This class provides methods to retrieve and process variant data from VCF files.
     """
 
+    record_class = Variant
+
     def __init__(self, config) -> None:
         """Initialises a FileClient instance.
 
@@ -33,7 +34,6 @@ class FileClient(BaseFileClient):
             config (dict): A configuration dictionary containing at least the "data_root" key.
         """
         self.data_root = config.get("data_root")
-        self.sv_searcher = StructuralVariantSearcher()
 
     def get_variant_record(
         self, genome_uuid: str, variant_id: str, source_name: str = None
@@ -66,36 +66,35 @@ class FileClient(BaseFileClient):
 
         genome_dir = os.path.join(self.data_root, genome_uuid)
         if source_name:
-            for datafile in self.get_variant_source_files(genome_dir, source_name):
-                variant = self.get_record_from_file(
-                    datafile, contig, pos, id, genome_uuid, Variant
-                )
-                if variant:
-                    return variant
+            datafile = os.path.join(
+                genome_dir,
+                f"variation/variation_{source_name}.vcf.gz",
+            )
+            variant = self.search_in_file(datafile, contig, pos, id, genome_uuid)
+            if variant:
+                return variant
             print(f"Variant not found in source '{source_name}'")
             return None
 
         default_datafile = os.path.join(genome_dir, "variation.vcf.gz")
         if os.path.exists(default_datafile):
-            variant = self.get_record_from_file(
-                default_datafile, contig, pos, id, genome_uuid, Variant
-            )
+            variant = self.search_in_file(default_datafile, contig, pos, id, genome_uuid)
             if variant:
                 return variant
 
-        source_files = self.get_variant_source_files(genome_dir)
-        if not source_files and not os.path.exists(default_datafile):
-            print(f"No variation VCF files found in {genome_dir}")
+        variation_dir = os.path.join(genome_dir, "variation")
+        if not os.path.isdir(variation_dir):
+            print(f"Variation directory not found: {variation_dir}")
             return None
 
-        for datafile in source_files:
-            variant = self.get_record_from_file(
-                datafile, contig, pos, id, genome_uuid, Variant
-            )
-            if variant:
-                return variant
+        vcf_files = self.get_vcf_files(variation_dir)
+        if not vcf_files:
+            print(f"No variation VCF files found in {variation_dir}")
+            return None
 
-        return None
+        return self.search_all_files(
+            variation_dir, vcf_files, contig, pos, id, genome_uuid
+        )
 
     def get_structural_variant_record(
         self, genome_uuid: str, variant_id: str, source_name: str = None
@@ -133,8 +132,15 @@ class FileClient(BaseFileClient):
                 genome_uuid,
                 f"structural-variation/variation_{source_name}.vcf.gz",
             )
-            variant = self.sv_searcher.search_in_file(
-                datafile, contig, pos, id, genome_uuid, source_name
+            variant = self.search_in_file(
+                datafile,
+                contig,
+                pos,
+                id,
+                genome_uuid,
+                source_name,
+                record_class=StructuralVariant,
+                use_bcftools=True,
             )
             if variant:
                 index_client = StructuralVariantIndexClient(os.path.dirname(datafile))
@@ -168,8 +174,14 @@ class FileClient(BaseFileClient):
                 print(
                     f"Only one structural variant file ({single}) found; using single-file lookup"
                 )
-                variant = self.sv_searcher.search_in_file(
-                    datafile, contig, pos, id, genome_uuid
+                variant = self.search_in_file(
+                    datafile,
+                    contig,
+                    pos,
+                    id,
+                    genome_uuid,
+                    record_class=StructuralVariant,
+                    use_bcftools=True,
                 )
                 if variant:
                     index_client.load_structural_variant_synonyms(variant)
@@ -184,8 +196,15 @@ class FileClient(BaseFileClient):
                     print("DuckDB index search returned no matching record")
             else:
                 print(f"DuckDB index not found in {sv_dir}")
-                variant = self.sv_searcher.search_all_files(
-                    sv_dir, vcf_files, contig, pos, id, genome_uuid
+                variant = self.search_all_files(
+                    sv_dir,
+                    vcf_files,
+                    contig,
+                    pos,
+                    id,
+                    genome_uuid,
+                    record_class=StructuralVariant,
+                    use_bcftools=True,
                 )
 
             if variant:
@@ -211,8 +230,14 @@ class FileClient(BaseFileClient):
         for result in results:
             if result["chr"] == contig and result["start"] == pos:
                 datafile = os.path.join(sv_dir, result["source_file"])
-                return self.sv_searcher.search_in_file(
-                    datafile, contig, pos, id, genome_uuid
+                return self.search_in_file(
+                    datafile,
+                    contig,
+                    pos,
+                    id,
+                    genome_uuid,
+                    record_class=StructuralVariant,
+                    use_bcftools=True,
                 )
 
         print(f"Variant {id} found in index but no coordinates matched")

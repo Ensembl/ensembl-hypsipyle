@@ -4,7 +4,6 @@ Shared file and index helpers for variant clients.
 
 import io
 import os
-import shutil
 import subprocess
 from common.file_model.variant import Variant
 from common.file_model.structural_variant import StructuralVariant
@@ -16,10 +15,50 @@ class BaseFileClient:
     """Common helpers for loading VCF records and locating related files."""
 
     INDEX_FILENAMES = ("variants.duckdb", "variants.db")
+    record_class = None
+    use_bcftools = False
 
     def split_variant_id(self, variant_id: str):
         """Splits a variant identifier in the form contig:position:identifier."""
         return variant_id.split(":")
+
+    def search_in_file(
+        self,
+        datafile: str,
+        contig: str,
+        pos: int,
+        id: str,
+        genome_uuid: str,
+        source_name: str = None,
+        record_class=None,
+        use_bcftools: bool = None,
+    ) -> None | Variant | StructuralVariant:
+        """Search for a variant in a specific VCF file."""
+        record_class = record_class or self.record_class
+        use_bcftools = self.use_bcftools if use_bcftools is None else use_bcftools
+
+        if not os.path.exists(datafile) or record_class is None:
+            return None
+
+        try:
+            if use_bcftools:
+                return self.get_record_with_bcftools(
+                    datafile,
+                    contig,
+                    pos,
+                    id,
+                    genome_uuid,
+                    record_class,
+                    source_name,
+                )
+
+            return self.get_record_from_file(
+                datafile, contig, pos, id, genome_uuid, record_class
+            )
+        except Exception as e:
+            backend = "bcftools" if use_bcftools else "VCF"
+            print(f"{backend} search failed for {source_name or datafile}: {str(e)}")
+            return None
 
     def get_record_from_file(
         self,
@@ -31,7 +70,7 @@ class BaseFileClient:
         record_class,
         fallback_to_iteration: bool = False,
         error_prefix: str = None,
-    ) -> None | Variant| StructuralVariant:
+    ) -> None | Variant | StructuralVariant:
         """Read a matching record from a VCF file using vcfpy."""
         if not os.path.exists(datafile):
             return None
@@ -69,9 +108,9 @@ class BaseFileClient:
         genome_uuid: str,
         record_class,
         source_name: str = None,
-    ) -> None | Variant | StructuralVariant :
+    ) -> None | Variant | StructuralVariant:
         """Read a matching record from a VCF file using bcftools view.
-        bcftools gives us raw VCF text, but the rest of this codebase 
+        bcftools gives us raw VCF text, but the rest of this codebase
         expects parsed VCF record objects
         """
         region = f"{contig}:{pos}-{pos}"
@@ -121,46 +160,6 @@ class BaseFileClient:
             print(f"Error fetching full record from {datafile}: {str(e)}")
             return None
 
-    def get_variant_source_files(
-        self, genome_dir: str, source_name: str = None
-    ) -> list[str]:
-        """Find small-variant source VCFs under supported genome layouts."""
-        bases = [genome_dir, os.path.join(genome_dir, "variation")]
-        candidates = []
-
-        if source_name:
-            source_names = [source_name]
-            lower_source = source_name.lower()
-            if lower_source != source_name:
-                source_names.append(lower_source)
-
-            for base in bases:
-                for name in source_names:
-                    candidates.append(os.path.join(base, name, "variation.vcf.gz"))
-                    candidates.append(os.path.join(base, f"variation_{name}.vcf.gz"))
-
-                if os.path.isdir(base):
-                    for entry in os.listdir(base):
-                        if entry.lower() == lower_source:
-                            candidates.append(
-                                os.path.join(base, entry, "variation.vcf.gz")
-                            )
-                        if entry.lower() == f"variation_{lower_source}.vcf.gz":
-                            candidates.append(os.path.join(base, entry))
-        else:
-            for base in bases:
-                if not os.path.isdir(base):
-                    continue
-
-                for entry in sorted(os.listdir(base)):
-                    path = os.path.join(base, entry)
-                    if entry.startswith("variation_") and entry.endswith(".vcf.gz"):
-                        candidates.append(path)
-                    elif os.path.isdir(path) and entry != "structural-variation":
-                        candidates.append(os.path.join(path, "variation.vcf.gz"))
-
-        return self.existing_paths(candidates)
-
     def get_vcf_files(
         self, directory: str, prefix: str = "variation_", suffix: str = ".vcf.gz"
     ) -> list[str]:
@@ -172,6 +171,38 @@ class BaseFileClient:
             for filename in os.listdir(directory)
             if filename.startswith(prefix) and filename.endswith(suffix)
         )
+
+    def search_all_files(
+        self,
+        directory: str,
+        vcf_files: list,
+        contig: str,
+        pos: int,
+        id: str,
+        genome_uuid: str,
+        record_class=None,
+        use_bcftools: bool = None,
+    ) -> None | Variant | StructuralVariant:
+        """Search for a variant across all supplied VCF files."""
+        try:
+            for vcf_file in vcf_files:
+                datafile = os.path.join(directory, vcf_file)
+                variant = self.search_in_file(
+                    datafile,
+                    contig,
+                    pos,
+                    id,
+                    genome_uuid,
+                    record_class=record_class,
+                    use_bcftools=use_bcftools,
+                )
+                if variant:
+                    return variant
+
+            return None
+        except Exception as e:
+            print(f"Error searching all variation files: {str(e)}")
+            return None
 
     def get_index_db_path(self, directory: str) -> str | None:
         for filename in self.INDEX_FILENAMES:
@@ -195,15 +226,6 @@ class BaseFileClient:
                 conn.close()
         except Exception:
             return []
-
-    def existing_paths(self, candidates: list[str]) -> list[str]:
-        existing = []
-        seen = set()
-        for path in candidates:
-            if path not in seen and os.path.exists(path):
-                existing.append(path)
-                seen.add(path)
-        return existing
 
     def record_matches(self, rec, contig: str, pos: int, id: str) -> bool:
         return rec.CHROM == contig and rec.POS == pos and rec.ID and rec.ID[0] == id

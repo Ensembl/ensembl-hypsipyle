@@ -1,0 +1,220 @@
+{
+  "data": {
+    "structural_variant": {
+      "name": "nsv4514092",
+      "length": 0,
+      "alternative_names": [
+        {
+          "name": "gnomAD-SV_v2.1_CNV_1_1_alt_1"
+        },
+        {
+          "name": "gnomAD-SV_v2.1_CNV_1_1_alt_2"
+        },
+        {
+          "name": "gnomAD-SV_v2.1_CNV_1_1_alt_3"
+        },
+        {
+          "name": "gnomAD-SV_v2.1_CNV_1_1_alt_4"
+        },
+        {
+          "name": "gnomAD-SV_v2.1_CNV_1_1_alt_5"
+        },
+        {
+          "name": "gnomAD-SV_v2.1_CNV_1_1_alt_6"
+        },
+        {
+          "name": "gnomAD-SV_v2.1_CNV_1_1_alt_7"
+        },
+        {
+          "name": "gnomAD-SV_v2.1_CNV_1_1_alt_8"
+        },
+        {
+          "name": "gnomAD-SV_v2.1_CNV_1_1_alt_9"
+        }
+      ],
+      "allele_type": {
+        "accession_id": "copy_number_variation",
+        "value": "copy_number_variation",
+        "url": "http://sequenceontology.org/browser/current_release/term/SO:0001019"
+      },
+      "alleles": [
+        {
+          "name": "nssv15780791",
+          "alternative_names": [
+            {
+              "name": "gnomAD-SV_v2.1_CNV_1_1_alt_1",
+              "source": {
+                "id": "nstd166"
+              }
+            }
+          ],
+          "type": "StructuralVariantAllele",
+          "allele_type": {
+            "accession_id": "copy_number_variation",
+            "value": "copy_number_variation",
+            "url": "http://sequenceontology.org/browser/current_release/term/SO:0001019"
+          },
+          "prediction_results": []
+        },
+        {
+          "name": "nssv15780792",
+          "alternative_names": [
+            {
+              "name": "gnomAD-SV_v2.1_CNV_1_1_alt_2",
+              "source": {
+                "id": "nstd166"
+              }
+            }
+          ],
+          "type": "StructuralVariantAllele",
+          "allele_type": {
+            "accession_id": "copy_number_variation",
+            "value": "copy_number_variation",
+            "url": "http://sequenceontology.org/browser/current_release/term/SO:0001019"
+          },
+          "prediction_results": []
+        },
+        {
+          "name": "nssv15780793",
+          "alternative_names": [
+            {
+              "name": "gnomAD-SV_v2.1_CNV_1_1_alt_3",
+              "source": {
+                "id": "nstd166"
+              }
+            }
+          ],
+          "type": "StructuralVariantAllele",
+          "allele_type": {
+            "accession_id": "copy_number_variation",
+            "value": "copy_number_variation",
+            "url": "http://sequenceontology.org/browser/current_release/term/SO:0001019"
+          },
+          "prediction_results": []
+        },
+        {
+          "name": "nssv15780794",
+          "alternative_names": [
+            {
+              "name": "gnomAD-SV_v2.1_CNV_1_1_alt_4",
+              "source": {
+                "id": "nstd166"
+              }
+            }
+          ],
+          "type": "StructuralVariantAllele",
+          "allele_type": {
+            "accession_id": "copy_number_variation",
+            "value": "copy_number_variation",
+            "url": "http://sequenceontology.org/browser/current_release/term/SO:0001019"
+          },
+          "prediction_results": []
+        },
+        {
+          "name": "nssv15780795",
+          "alternative_names": [
+            {
+              "name": "gnomAD-SV_v2.1_CNV_1_1_alt_5",
+              "source": {
+                "id": "nstd166"
+              }
+            }
+          ],
+          "type": "StructuralVariantAllele",
+          "allele_type": {
+            "accession_id": "copy_number_variation",
+            "value": "copy_number_variation",
+            "url": "http://sequenceontology.org/browser/current_release/term/SO:0001019"
+          },
+          "prediction_results": []
+        },
+        {
+          "name": "nssv15780796",
+          "alternative_names": [
+            {
+              "name": "gnomAD-SV_v2.1_CNV_1_1_alt_6",
+              "source": {
+                "id": "nstd166"
+              }
+            }
+          ],
+          "type": "StructuralVariantAllele",
+          "allele_type": {
+            "accession_id": "copy_number_variation",
+            "value": "copy_number_variation",
+            "url": "http://sequenceontology.org/browser/current_release/term/SO:0001019"
+          },
+          "prediction_results": []
+        },
+        {
+          "name": "nssv15780797",
+          "alternative_names": [
+            {
+              "name": "gnomAD-SV_v2.1_CNV_1_1_alt_7",
+              "source": {
+                "id": "nstd166"
+              }
+            }
+          ],
+          "type": "StructuralVariantAllele",
+          "allele_type": {
+            "accession_id": "copy_number_variation",
+            "value": "copy_number_variation",
+            "url": "http://sequenceontology.org/browser/current_release/term/SO:0001019"
+          },
+          "prediction_results": []
+        },
+        {
+          "name": "nssv15780798",
+          "alternative_names": [
+            {
+              "name": "gnomAD-SV_v2.1_CNV_1_1_alt_8",
+              "source": {
+                "id": "nstd166"
+              }
+            }
+          ],
+          "type": "StructuralVariantAllele",
+          "allele_type": {
+            "accession_id": "copy_number_variation",
+            "value": "copy_number_variation",
+            "url": "http://sequenceontology.org/browser/current_release/term/SO:0001019"
+          },
+          "prediction_results": []
+        },
+        {
+          "name": "nssv15780799",
+          "alternative_names": [
+            {
+              "name": "gnomAD-SV_v2.1_CNV_1_1_alt_9",
+              "source": {
+                "id": "nstd166"
+              }
+            }
+          ],
+          "type": "StructuralVariantAllele",
+          "allele_type": {
+            "accession_id": "copy_number_variation",
+            "value": "copy_number_variation",
+            "url": "http://sequenceontology.org/browser/current_release/term/SO:0001019"
+          },
+          "prediction_results": []
+        },
+        {
+          "name": "1:46000:1:0",
+          "alternative_names": [],
+          "type": "StructuralVariantAllele",
+          "allele_type": {
+            "accession_id": "copy_number_variation",
+            "value": "copy_number_variation",
+            "url": "http://sequenceontology.org/browser/current_release/term/SO:0001019"
+          },
+          "prediction_results": []
+        }
+      ]
+    }
+  },
+  "extensions": {
+    "execution_time_in_seconds": 0.19
+  }
+}

@@ -37,7 +37,9 @@ def parse_ini(ini_file: str, section: str = "database") -> dict:
         host = config[section]["host"]
         port = config[section]["port"]
         user = config[section]["user"]
-        database = config[section]["database"] if "database" in config[section] else None
+        database = (
+            config[section]["database"] if "database" in config[section] else None
+        )
 
     return {"host": host, "port": port, "user": user, "database": database}
 
@@ -61,10 +63,14 @@ def get_genome_uuids(server: dict, production_name: str) -> str:
     process = subprocess.run(
         [
             "mysql",
-            "--host",server["host"],
-            "--port",server["port"],
-            "--user",server["user"],
-            "--database",server["database"],
+            "--host",
+            server["host"],
+            "--port",
+            server["port"],
+            "--user",
+            server["user"],
+            "--database",
+            server["database"],
             "-N",
             "--execute",
             query,

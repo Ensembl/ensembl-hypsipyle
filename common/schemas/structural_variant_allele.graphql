@@ -1,0 +1,17 @@
+type StructuralVariantAllele {
+  """
+  Structural Variant Allele
+  """
+  name: String!
+  alternative_names: [ExternalReference]!
+  type: String!
+  allele_type: OntologyTermMetadata!
+  length: Int!
+  slice: Slice!
+  copy_number: Int
+  phenotype_assertions: [PhenotypeAssertion]!
+  prediction_results: [PredictionResult]!
+  population_frequencies: [PopulationAlleleFrequency]!
+  predicted_molecular_consequences: [PredictedMolecularConsequence]!
+  ensembl_website_display_data: VariantAlleleDisplayData
+}

@@ -1,0 +1,62 @@
+{
+    "data": {
+        "structural_variant": {
+            "name": "nsv3924689",
+            "type": "StructuralVariant",
+            "length": -7452369,
+            "alternative_names": [
+                {
+                    "accession_id": "RCV000450793_385893",
+                    "name": "RCV000450793_385893",
+                    "description": "Structural variant synonym from nstd102",
+                    "source": {
+                        "id": "nstd102",
+                        "name": "nstd102"
+                    }
+                }
+            ],
+            "allele_type": {
+                "accession_id": "copy_number_variation",
+                "value": "copy_number_variation"
+            },
+            "alleles": [
+                {
+                    "name": "nssv15124731",
+                    "type": "StructuralVariantAllele",
+                    "alternative_names": [
+                        {
+                            "accession_id": "RCV000450793_385893",
+                            "name": "RCV000450793_385893",
+                            "description": "Structural variant synonym from nstd102",
+                            "source": {
+                                "id": "nstd102",
+                                "name": "nstd102"
+                            }
+                        }
+                    ],
+                    "allele_type": {
+                        "accession_id": "copy_number_variation",
+                        "value": "copy_number_variation"
+                    },
+                    "phenotype_assertions": [],
+                    "prediction_results": [],
+                    "population_frequencies": [],
+                    "predicted_molecular_consequences": []
+                },
+                {
+                    "name": "1:14874:1:0",
+                    "type": "StructuralVariantAllele",
+                    "alternative_names": [],
+                    "allele_type": {
+                        "accession_id": "copy_number_variation",
+                        "value": "copy_number_variation"
+                    },
+                    "phenotype_assertions": [],
+                    "prediction_results": [],
+                    "population_frequencies": [],
+                    "predicted_molecular_consequences": []
+                }
+            ]
+        }
+    }
+}

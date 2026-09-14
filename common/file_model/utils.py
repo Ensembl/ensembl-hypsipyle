@@ -32,6 +32,52 @@ def minimise_allele(alt: str, ref: str) -> str:
         minimised_allele_string = alt[1:] if len(alt) > 1 else "-"
     return minimised_allele_string
 
-def decode_population_name(name: str):
-      return name.replace("$2C",",")
 
+def minimise_protein_sequence(
+    ref: str, alt: str, start: int, end: int, length: int
+) -> tuple[str, str, int, int, int]:
+    """Minimise a protein sequence change.
+
+    Args:
+        ref (str): The reference amino acid sequence.
+        alt (str): The alternate amino acid sequence.
+        start (int): The start position of sequence.
+        end (int): The end position of sequence.
+        length (int): Length of sequence
+
+    Returns:
+        tuple[str, str, int, int, int]: The minimised reference and alternate protein sequences, positions and length.
+    """
+
+    if ref == "-" or alt == "-" or ref == alt:
+        return (ref, alt, start, end, length)
+
+    prefix_length = 0
+    while (
+        prefix_length < len(ref)
+        and prefix_length < len(alt)
+        and ref[prefix_length] == alt[prefix_length]
+    ):
+        prefix_length += 1
+
+    min_ref = ref[prefix_length:]
+    min_alt = alt[prefix_length:]
+
+    suffix_length = 0
+    while min_ref and min_alt and min_ref[-1] == min_alt[-1]:
+        suffix_length += 1
+        min_ref = min_ref[:-1]
+        min_alt = min_alt[:-1]
+
+    if prefix_length or suffix_length:
+        start = int(start) + prefix_length
+        end = int(end) - suffix_length
+        length = max(length - prefix_length - suffix_length, 0)
+
+    min_ref = min_ref or "-"
+    min_alt = min_alt or "-"
+    return (min_ref, min_alt, start, end, length)
+
+
+def decode_population_name(name: str):
+    return name.replace("$2C", ",")

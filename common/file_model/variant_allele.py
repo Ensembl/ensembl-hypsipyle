@@ -14,7 +14,7 @@
 
 from typing import Mapping, List, Tuple
 import re
-from common.file_model.utils import minimise_allele
+from common.file_model.utils import minimise_allele, minimise_protein_sequence
 
 
 class VariantAllele:
@@ -488,11 +488,20 @@ class VariantAllele:
             )
             if protein_start != None and protein_end != None:
                 amino_acids_array = amino_acids.split("/")
-                ref_protein_sequence = amino_acids_array[0]
-                alt_protein_sequence = (
+                raw_ref_protein_sequence = amino_acids_array[0]
+                raw_alt_protein_sequence = (
                     amino_acids_array[1]
                     if len(amino_acids_array) > 1
                     else amino_acids_array[0]
+                )
+                (
+                    ref_protein_sequence,
+                    alt_protein_sequence,
+                    protein_start,
+                    protein_end,
+                    protein_length
+                ) = minimise_protein_sequence(
+                    raw_ref_protein_sequence, raw_alt_protein_sequence, protein_start, protein_end, protein_length
                 )
             protein_location = {
                 "start": protein_start,

@@ -2,13 +2,16 @@ DOCKER_CONTEXT ?= colima-hypsipyle
 IMAGE ?= hypsipyle:dev
 DOCKERFILE ?= Dockerfile.dev
 CONTAINER_NAME ?= hypsipyle-dev
+PYTHON ?= python3
+PYTEST_ARGS ?=
 PWD := $(shell pwd)
 PORTS := --publish 0.0.0.0:80:80/tcp --publish 0.0.0.0:8000:8000/tcp
 
-.PHONY: help context build rebuild run run-detach stop logs shell rm reset-colima
+.PHONY: help context build rebuild run run-detach stop logs shell rm reset-colima test
 
 help:
 	@echo "Available targets:"
+	@echo "  make test           # Run pytest in the running container (override PYTEST_ARGS as needed)"
 	@echo "  make context        # Set docker context"
 	@echo "  make build          # Build the image"
 	@echo "  make rebuild        # Build the image without cache"
@@ -18,6 +21,9 @@ help:
 	@echo "  make logs           # Follow container logs"
 	@echo "  make shell          # Exec a shell in running container"
 	@echo "  make reset-colima   # Delete and recreate the Colima profile"
+
+test:
+	docker container run --rm -v $(PWD):/app $(IMAGE) $(PYTHON) -m pytest $(PYTEST_ARGS)
 
 context:
 	docker context use $(DOCKER_CONTEXT)

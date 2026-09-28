@@ -119,32 +119,37 @@ class BaseVariant:
                 SO_term = "SO:1000002"
         return allele_type, SO_term
 
-    def get_allele_type(self, allele) -> Mapping:
-        """Determine type of the supplied allele.
+    def get_allele_type(self) -> Mapping:
+        """Classify the whole variant using its longest alternate allele."""
+        alt_length = max(len(alt.value) for alt in self.alts)
+        allele_type, so_term = self.set_allele_type(
+            alt_length < 2,
+            len(self.ref) < 2,
+            alt_length == len(self.ref),
+        )
+        return self._build_sequence_type_payload(allele_type, so_term)
 
-        The method is generic so that callers (including the GraphQL layer)
-        need not know which subclass they are dealing with.
-        """
-        if isinstance(allele, str):
-            if allele == self.ref:
-                allele_type = "biological_region"
-                SO_term = "SO:0001411"
-            else:
-                allele_type, SO_term = self.set_allele_type(
-                    len(allele) == 1,
-                    len(self.ref) == 1 if self.ref is not None else False,
-                    len(allele) == len(self.ref) if self.ref is not None else False,
-                )
-        else:
-            # allele is a list of objects with a `.value` attribute
-            alt_length = max(len(a.value) for a in allele)
-            allele_type, SO_term = self.set_allele_type(
-                alt_length < 2, len(self.ref) < 2, alt_length == len(self.ref)
+    def _classify_sequence_allele(self, allele: str) -> Mapping:
+        """Classify one sequence allele relative to the reference."""
+        if allele == self.ref:
+            return self._build_sequence_type_payload(
+                "biological_region", "SO:0001411"
             )
+
+        allele_type, so_term = self.set_allele_type(
+            len(allele) == 1,
+            len(self.ref) == 1 if self.ref is not None else False,
+            len(allele) == len(self.ref) if self.ref is not None else False,
+        )
+        return self._build_sequence_type_payload(allele_type, so_term)
+
+    @staticmethod
+    def _build_sequence_type_payload(allele_type: str, so_term: str) -> Mapping:
+        """Build ontology metadata for a sequence classification."""
         return {
             "accession_id": allele_type,
             "value": allele_type,
-            "url": f"http://sequenceontology.org/browser/current_release/term/{SO_term}",
+            "url": f"http://sequenceontology.org/browser/current_release/term/{so_term}",
             "source": {
                 "id": "",
                 "name": "Sequence Ontology",

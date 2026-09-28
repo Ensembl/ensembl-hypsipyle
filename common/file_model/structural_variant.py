@@ -13,9 +13,12 @@
 """
 
 from typing import Any, List
+
 from vcfpy import SymbolicAllele
+
 from common.file_model.base_variant import BaseVariant
 from common.file_model.structural_variant_allele import StructuralVariantAllele
+from common.file_model.utils import SVTYPE_TO_TERM
 
 
 class StructuralVariant(BaseVariant):
@@ -174,10 +177,13 @@ class StructuralVariant(BaseVariant):
             },
         }
 
-    def get_slice(self, allele=None) -> dict:
+    def get_slice(self) -> dict:
+        return self._get_slice_for_type(self.get_allele_type()["value"])
+
+    def _get_slice_for_type(self, allele_type: str) -> dict:
         start = self.position
         length = self.length
-        if self.get_allele_type(allele)["value"] == "insertion":
+        if allele_type == "insertion":
             length = 0
             end = start
         else:
@@ -193,56 +199,23 @@ class StructuralVariant(BaseVariant):
                     "strand": {"code": "forward", "value": 1},
                 }
 
-    def get_allele_type(self, allele: Any | None = None) -> dict:
-        is_var_symbolic_alt = any(isinstance(alt, SymbolicAllele) for alt in self.alts)
-        svtype_to_term = {
-            "DEL": ("deletion", "SO:0000159"),
-            "INS": ("insertion", "SO:0000667"),
-            "DUP": ("duplication", "SO:1000035"),
-            "INV": ("inversion", "SO:1000036"),
-            "CNV": ("copy_number_variation", "SO:0001019"),
-            "BND": ("translocation", "SO:0000199"),
-        }
-        if allele:
-            is_symbolic_alt = isinstance(allele, SymbolicAllele)
-            allele_str= allele.value if is_symbolic_alt else str(allele)
-            svtype = self.info.get("SVTYPE") or allele_str if (is_symbolic_alt  or allele_str in svtype_to_term.keys()) else None
-            if svtype:
-                if allele == self.ref:
-                    allele_type = "biological_region"
-                    so_term = "SO:0001411"
-                elif isinstance(svtype, str) :
-                    normalized_svtype = svtype.upper()
-                    if normalized_svtype in svtype_to_term:
-                        allele_type, so_term = svtype_to_term[normalized_svtype]
-                return self._build_allele_type_payload(allele_type, so_term)
- 
-        if is_var_symbolic_alt :
-            alts = [alt.value if isinstance(alt, SymbolicAllele) else str(alt) for alt in self.alts]
-            if "DUP" in alts and "DEL" in alts:
-                allele_type = "copy_number_variation"
-                so_term = "SO:0001019"
-            elif "DUP" in alts:
-                allele_type = "duplication"
-                so_term = "SO:1000035"
-            elif "DEL" in alts:
-                allele_type = "deletion"
-                so_term = "SO:0000159"
-            elif "INV" in alts:
-                allele_type = "inversion"
-                so_term = "SO:1000036"
-            elif "CNV" in alts:
-                allele_type = "copy_number_variation"
-                so_term = "SO:0001019"
-            elif "INS" in alts:
-                allele_type = "insertion"
-                so_term = "SO:0000667"
-            else:
-                allele_type = "structural_variant"
-                so_term = "SO:0001537"
-            return self._build_allele_type_payload(allele_type, so_term)
-        ## for non-symbolic alts, we can use the base class method to get the allele type
-        return super().get_allele_type(self.alts if allele is None else allele)
+    def get_allele_type(self) -> dict:
+        """Classify the whole variant across all alternate alleles."""
+        if any(isinstance(alt, SymbolicAllele) for alt in self.alts or []):
+            alts = {
+                alt.value if isinstance(alt, SymbolicAllele) else str(alt)
+                for alt in self.alts
+            }
+            if {"DUP", "DEL"} <= alts:
+                return self._build_allele_type_payload(*SVTYPE_TO_TERM["CNV"])
+            for svtype in ("DUP", "DEL", "INV", "CNV", "INS", "BND"):
+                if svtype in alts:
+                    return self._build_allele_type_payload(*SVTYPE_TO_TERM[svtype])
+            return self._build_allele_type_payload("structural_variant", "SO:0001537")
+
+        if not self.alts:
+            return self._build_allele_type_payload("structural_variant", "SO:0001537")
+        return super().get_allele_type()
 
     def get_length(self) -> int:
         return self.length

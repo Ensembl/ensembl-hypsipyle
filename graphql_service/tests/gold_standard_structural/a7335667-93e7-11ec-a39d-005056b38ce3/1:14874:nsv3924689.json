@@ -35,8 +35,8 @@
             }
           ],
           "allele_type": {
-            "accession_id": "copy_number_variation",
-            "value": "copy_number_variation"
+            "accession_id": "deletion",
+            "value": "deletion"
           },
           "phenotype_assertions": [],
           "prediction_results": [],
@@ -14517,8 +14517,8 @@
           "type": "StructuralVariantAllele",
           "alternative_names": [],
           "allele_type": {
-            "accession_id": "deletion",
-            "value": "deletion"
+            "accession_id": "biological_region",
+            "value": "biological_region"
           },
           "phenotype_assertions": [],
           "prediction_results": [],
@@ -14527,5 +14527,8 @@
         }
       ]
     }
+  },
+  "extensions": {
+    "execution_time_in_seconds": 0.3
   }
 }

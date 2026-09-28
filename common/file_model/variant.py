@@ -31,16 +31,18 @@ class Variant(BaseVariant):
         self.ref = getattr(record, "REF", None)
         self.type = "Variant"
 
-    def get_slice(self, allele) -> Mapping:
-        """Return a location slice for the variant given an allele value."""
+    def get_slice(self) -> Mapping:
+        """Return a location slice for the whole variant."""
+        return self._get_slice_for_type(self.get_allele_type()["value"])
+
+    def _get_slice_for_type(self, allele_type: str) -> Mapping:
+        """Build a location slice using the supplied classification."""
         start = self.position
         length = len(self.ref)
         end = start + length - 1
-        if allele != self.ref:
-            allele_type = self.get_allele_type(allele)
-            if allele_type["accession_id"] == "insertion":
-                end = start
-                length = 0
+        if allele_type == "insertion":
+            end = start
+            length = 0
         return {
             "location": {"start": start, "end": end, "length": length},
             "region": {

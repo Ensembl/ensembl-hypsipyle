@@ -55,10 +55,8 @@ def primary_source(variant: Dict, info: GraphQLResolveInfo) -> Dict:
 
 @VARIANT_TYPE.field("allele_type")
 def allele_type(variant: Dict, info: GraphQLResolveInfo) -> Dict:
-    """
-    Load allele_type for variant
-    """
-    return variant.get_allele_type(variant.alts)
+    """Return the classification of the whole variant."""
+    return variant.get_allele_type()
 
 
 @VARIANT_TYPE.field("alternative_names")
@@ -71,10 +69,8 @@ def alternative_names(variant: Dict, info: GraphQLResolveInfo) -> Dict:
 
 @VARIANT_TYPE.field("slice")
 def slice(variant: Dict, info: GraphQLResolveInfo) -> Dict:
-    """
-    Load slice for variant
-    """
-    return variant.get_slice(variant.alts)
+    """Return the location slice for the whole variant."""
+    return variant.get_slice()
 
 
 @VARIANT_TYPE.field("prediction_results")
@@ -202,4 +198,3 @@ def resolve_api(
     _: None, info: GraphQLResolveInfo
 ) -> Dict:  # the second argument must be named `info` to avoid a NameError
     return {"api": {"major": "0", "minor": "1", "patch": "0-beta"}}
-

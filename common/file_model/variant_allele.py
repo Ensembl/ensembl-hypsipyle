@@ -37,13 +37,13 @@ class VariantAllele:
         self.population_map = []
         self.info_map = self.traverse_csq_info()
 
-    def get_allele_type(self):
-        """Retrieves the allele type from the variant.
-
-        Returns:
-            Any: The allele type data.
-        """
-        return self.variant.get_allele_type(self.alt)
+    def get_allele_type(self) -> Mapping:
+        """Classify this allele independently of the other alleles."""
+        if self.allele_index == 0:
+            return self.variant._build_sequence_type_payload(
+                "biological_region", "SO:0001411"
+            )
+        return self.variant._classify_sequence_allele(self.alt)
 
     def get_alternative_names(self):
         """Retrieves alternative names for this allele.
@@ -53,13 +53,9 @@ class VariantAllele:
         """
         return self.variant.get_alternative_names()
 
-    def get_slice(self):
-        """Retrieves a slice of data for this allele.
-
-        Returns:
-            Any: The sliced data.
-        """
-        return self.variant.get_slice(self.alt)
+    def get_slice(self) -> Mapping:
+        """Return a location slice using this allele's classification."""
+        return self.variant._get_slice_for_type(self.get_allele_type()["value"])
 
     def get_phenotype_assertions(self):
         """Retrieves phenotype assertions for the allele.

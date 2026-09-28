@@ -2,7 +2,7 @@
   "data": {
     "structural_variant": {
       "name": "nsv4514092",
-      "length": 0,
+      "length": 65251,
       "alternative_names": [
         {
           "name": "gnomAD-SV_v2.1_CNV_1_1_alt_1"
@@ -201,13 +201,13 @@
           "prediction_results": []
         },
         {
-          "name": "1:46000:1:0",
+          "name": "1:46000:65251:65251",
           "alternative_names": [],
           "type": "StructuralVariantAllele",
           "allele_type": {
-            "accession_id": "copy_number_variation",
-            "value": "copy_number_variation",
-            "url": "http://sequenceontology.org/browser/current_release/term/SO:0001019"
+            "accession_id": "biological_region",
+            "value": "biological_region",
+            "url": "http://sequenceontology.org/browser/current_release/term/SO:0001411"
           },
           "prediction_results": []
         }
@@ -215,6 +215,6 @@
     }
   },
   "extensions": {
-    "execution_time_in_seconds": 0.19
+    "execution_time_in_seconds": 0.22
   }
 }

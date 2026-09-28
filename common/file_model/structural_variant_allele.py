@@ -4,13 +4,21 @@ Structural variant allele model.
 
 from typing import Any, List, Mapping, Optional
 
+from vcfpy import SymbolicAllele
+
+from common.file_model.utils import SVTYPE_TO_TERM
+
 
 class StructuralVariantAllele:
     def __init__(self, allele_index: int, alt: str, variant: dict) -> None:
         self.variant = variant
         self.allele_index = allele_index
         self.alt = alt
-        self.copy_number = self._get_copy_number_from_info(allele_index, variant)
+        self.allele_type = None
+        self.name = None
+        self.ref_len = 0
+        self.alt_len = 0
+        self.copy_number = None
         self.type = "StructuralVariantAllele"
 
     def get_name(self) -> str:
@@ -48,7 +56,33 @@ class StructuralVariantAllele:
 
 
     def get_allele_type(self) -> Mapping:
-        return self.variant.get_allele_type(self.alt)
+        """Classify this allele independently of the other alternate alleles."""
+        if self.allele_type is not None:
+            return self.allele_type
+
+        variant = self.variant
+        if self.allele_index == 0:
+            self.allele_type = variant._build_allele_type_payload(
+                "biological_region", "SO:0001411"
+            )
+        else:
+            # get_alleles stores strings; retain the original ALT's symbolic type.
+            original_alt = variant.alts[self.allele_index - 1]
+            allele_value = self.alt.value if isinstance(self.alt, SymbolicAllele) else self.alt
+            if allele_value in SVTYPE_TO_TERM:
+                self.allele_type = variant._build_allele_type_payload(
+                    *SVTYPE_TO_TERM[allele_value]
+                )
+            elif isinstance(original_alt, SymbolicAllele):
+                svtype = variant.info.get("SVTYPE")
+                term = SVTYPE_TO_TERM.get(
+                    svtype.upper() if isinstance(svtype, str) else "",
+                    ("structural_variant", "SO:0001537"),
+                )
+                self.allele_type = variant._build_allele_type_payload(*term)
+            else:
+                self.allele_type = variant._classify_sequence_allele(allele_value)
+        return self.allele_type
 
     def get_length(self) -> int:
         is_symbolic_alt = (
@@ -117,6 +151,7 @@ class StructuralVariantAllele:
             return None
 
     def get_copy_number(self) -> Optional[int]:
+        self.copy_number = self.copy_number or self._get_copy_number_from_info(self.allele_index, self.variant)
         return self.copy_number
 
     def get_alternative_names(self) -> list:
@@ -124,7 +159,7 @@ class StructuralVariantAllele:
         return self.variant.get_alternative_names(name)
 
     def get_slice(self) -> Mapping:
-        return self.variant.get_slice(self.alt)
+        return self.variant._get_slice_for_type(self.get_allele_type()["value"])
 
     def get_phenotype_assertions(self) -> list:
         return []

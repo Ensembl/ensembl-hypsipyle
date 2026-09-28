@@ -37,14 +37,13 @@ class VariantAllele:
         self.population_map = []
         self.info_map = self.traverse_csq_info()
 
-    def get_allele_type(self):
-        """Retrieves the allele type from the variant.
-
-        Returns:
-            Any: The allele type data.
-        """
-        # TODO: change this to VariantAllele level
-        return self.variant.get_allele_type(self.alt)
+    def get_allele_type(self) -> Mapping:
+        """Classify this allele independently of the other alleles."""
+        if self.allele_index == 0:
+            return self.variant._build_sequence_type_payload(
+                "biological_region", "SO:0001411"
+            )
+        return self.variant._classify_sequence_allele(self.alt)
 
     def get_alternative_names(self):
         """Retrieves alternative names for this allele.
@@ -54,14 +53,9 @@ class VariantAllele:
         """
         return self.variant.get_alternative_names()
 
-    def get_slice(self):
-        """Retrieves a slice of data for this allele.
-
-        Returns:
-            Any: The sliced data.
-        """
-        # TODO: review this to change to VariantAllele level
-        return self.variant.get_slice(self.alt)
+    def get_slice(self) -> Mapping:
+        """Return a location slice using this allele's classification."""
+        return self.variant._get_slice_for_type(self.get_allele_type()["value"])
 
     def get_phenotype_assertions(self):
         """Retrieves phenotype assertions for the allele.
@@ -440,7 +434,7 @@ class VariantAllele:
         ref_cdna_sequence = alt_cdna_sequence = None
         if cdna_position:
             cdna_start, cdna_end, cdna_length = self.parse_position(cdna_position)
-            if cdna_start != None and cdna_end != None:
+            if cdna_start is not None and cdna_end is not None:
                 if codons:
                     ref_cdna_sequence = re.sub("([a-z])", "", codons.split("/")[0])
                     alt_cdna_sequence = re.sub("([a-z])", "", codons.split("/")[1])
@@ -467,7 +461,7 @@ class VariantAllele:
         ref_cds_sequence = alt_cds_sequence = None
         if cds_position:
             cds_start, cds_end, cds_length = self.parse_position(cds_position)
-            if cds_start != None and cds_end != None:
+            if cds_start is not None and cds_end is not None:
                 ref_cds_sequence = codons.split("/")[0]
                 alt_cds_sequence = codons.split("/")[1]
             cds_location = {
@@ -486,7 +480,7 @@ class VariantAllele:
             protein_start, protein_end, protein_length = self.parse_position(
                 protein_position
             )
-            if protein_start != None and protein_end != None:
+            if protein_start is not None and protein_end is not None:
                 amino_acids_array = amino_acids.split("/")
                 ref_protein_sequence = amino_acids_array[0]
                 alt_protein_sequence = (
@@ -528,7 +522,7 @@ class VariantAllele:
         """
         try:
             (result, score) = re.split(r"[()]", output)[:2]
-        except:
+        except Exception:
             return (None, None)
 
         if result not in [
@@ -545,7 +539,7 @@ class VariantAllele:
 
         try:
             score = float(score)
-        except:
+        except Exception:
             # need to log something here
             score = None
 

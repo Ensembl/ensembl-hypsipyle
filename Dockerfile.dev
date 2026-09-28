@@ -7,6 +7,8 @@ COPY ./requirements-dev.txt /app/requirements-dev.txt
 COPY ./setup.py /app/setup.py
 COPY ./LICENSE /app/LICENSE
 
+RUN apt-get update && apt-get install -y --no-install-recommends bcftools
+
 RUN pip3 install -r /app/requirements-dev.txt -e /app/
 
 ENV PYTHONPATH=\$PYTHONPATH:/app

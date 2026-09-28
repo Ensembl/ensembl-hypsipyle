@@ -1,0 +1,43 @@
+{
+  "data": {
+    "structural_variant": {
+      "name": "chr21:45080951:0:124",
+      "length": 124,
+      "alternative_names": [],
+      "allele_type": {
+        "accession_id": "insertion",
+        "value": "insertion",
+        "url": "http://sequenceontology.org/browser/current_release/term/SO:0000667"
+      },
+      "alleles": [
+        {
+          "name": "21:45080951:0:124",
+          "alternative_names": [],
+          "length": 124,
+          "type": "StructuralVariantAllele",
+          "allele_type": {
+            "accession_id": "insertion",
+            "value": "insertion",
+            "url": "http://sequenceontology.org/browser/current_release/term/SO:0000667"
+          },
+          "prediction_results": []
+        },
+        {
+          "name": "21:45080951:0:0",
+          "alternative_names": [],
+          "length": 0,
+          "type": "StructuralVariantAllele",
+          "allele_type": {
+            "accession_id": "biological_region",
+            "value": "biological_region",
+            "url": "http://sequenceontology.org/browser/current_release/term/SO:0001411"
+          },
+          "prediction_results": []
+        }
+      ]
+    }
+  },
+  "extensions": {
+    "execution_time_in_seconds": 0.05
+  }
+}

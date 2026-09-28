@@ -1,0 +1,43 @@
+{
+  "data": {
+    "structural_variant": {
+      "name": "chr7_532610000_SV",
+      "length": 770000,
+      "alternative_names": [],
+      "allele_type": {
+        "accession_id": "deletion",
+        "value": "deletion",
+        "url": "http://sequenceontology.org/browser/current_release/term/SO:0000159"
+      },
+      "alleles": [
+        {
+          "name": "OZ075434.1:532610000:770000:0",
+          "alternative_names": [],
+          "length": 770000,
+          "type": "StructuralVariantAllele",
+          "allele_type": {
+            "accession_id": "deletion",
+            "value": "deletion",
+            "url": "http://sequenceontology.org/browser/current_release/term/SO:0000159"
+          },
+          "prediction_results": []
+        },
+        {
+          "name": "OZ075434.1:532610000:770000:770000",
+          "alternative_names": [],
+          "length": 0,
+          "type": "StructuralVariantAllele",
+          "allele_type": {
+            "accession_id": "biological_region",
+            "value": "biological_region",
+            "url": "http://sequenceontology.org/browser/current_release/term/SO:0001411"
+          },
+          "prediction_results": []
+        }
+      ]
+    }
+  },
+  "extensions": {
+    "execution_time_in_seconds": 0.08
+  }
+}

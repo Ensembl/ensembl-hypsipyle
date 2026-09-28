@@ -12,15 +12,17 @@
    limitations under the License.
 """
 
-from string import Template
-from ariadne import graphql
+import functools
 import os
+from string import Template
+
+from ariadne import graphql
+
 from common.file_client import FileClient
 from graphql_service.ariadne_app import (
     prepare_executable_schema,
     prepare_context_provider,
 )
-import functools
 
 
 def build_schema_context() -> tuple:
@@ -42,12 +44,12 @@ def get_test_case_ids(gold_std_dir: str, genome_id: str) -> list:
     Expected file naming: <variant_id>.json
     Uses the same genome_id for all test cases.
     """
-    cases = []
-    for filename in os.listdir(os.path.join(gold_std_dir, genome_id)):
-        if filename.endswith(".json"):
-            variant_id = filename.replace(".json", "")
-            cases.append((variant_id, genome_id))
-    return cases
+    gold_standard_dir = os.path.join(gold_std_dir, genome_id)
+    return sorted(
+        (filename.removesuffix(".json"), genome_id)
+        for filename in os.listdir(gold_standard_dir)
+        if filename.endswith(".json")
+    )
 
 
 @functools.lru_cache(maxsize=1)
@@ -167,21 +169,119 @@ def master_query_template() -> Template:
     return Template(query)
 
 
-async def execute_query(
-    schema_context: tuple, genome_id: str, variant_id: str
+@functools.lru_cache(maxsize=1)
+def structural_variant_query_template() -> Template:
+    """
+    Template for the structural variant query.
+    """
+
+    query = """{
+        structural_variant(
+            by_id: { genome_id: "$genome_id", variant_id: "$variant_id" }
+        ) {
+            name
+            type
+            length
+            alternative_names {
+                accession_id
+                name
+                description
+                source {
+                    id
+                    name
+                }
+            }
+            allele_type {
+                accession_id
+                value
+            }
+            alleles {
+                name
+                type
+                alternative_names {
+                    accession_id
+                    name
+                    description
+                    source {
+                        id
+                        name
+                    }
+                }
+                allele_type {
+                    accession_id
+                    value
+                }
+                phenotype_assertions {
+                    feature
+                }
+                prediction_results {
+                    score
+                    result
+                }
+                population_frequencies {
+                    population_name
+                    allele_frequency
+                    allele_count
+                    allele_number
+                    is_minor_allele
+                    is_hpmaf
+                }
+                predicted_molecular_consequences {
+                    allele_name
+                    stable_id
+                }
+            }
+        }
+    }"""
+    return Template(query)
+
+
+async def _execute_query_template(
+    schema_context: tuple,
+    template: Template,
+    genome_id: str,
+    variant_id: str,
+    variant_label: str,
 ) -> tuple:
-    """
-    Execute the query for a given variant_id and genome_id according to template
-    query, returning tne query string, success status, and result.
-    """
     executable_schema, context = schema_context
-    template = master_query_template()
     query = template.substitute(genome_id=genome_id, variant_id=variant_id)
     success, result = await graphql(
         executable_schema, {"query": query}, context_value=context(request={})
     )
 
     assert success is True, (
-        f"Query execution failed for variant {variant_id}.\nQuery: {query}\nResult: {result}"
+        f"Query execution failed for {variant_label} {variant_id}."
+        f"\nQuery: {query}\nResult: {result}"
     )
     return query, success, result
+
+
+async def execute_query(
+    schema_context: tuple, genome_id: str, variant_id: str
+) -> tuple:
+    """
+    Execute the query for a given variant_id and genome_id according to template
+    query, returning the query string, success status, and result.
+    """
+    return await _execute_query_template(
+        schema_context,
+        master_query_template(),
+        genome_id,
+        variant_id,
+        "variant",
+    )
+
+
+async def execute_structural_variant_query(
+    schema_context: tuple, genome_id: str, variant_id: str
+) -> tuple:
+    """
+    Execute the structural variant query for a given variant_id and genome_id.
+    """
+    return await _execute_query_template(
+        schema_context,
+        structural_variant_query_template(),
+        genome_id,
+        variant_id,
+        "structural variant",
+    )

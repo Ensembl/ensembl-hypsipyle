@@ -2,7 +2,7 @@ FROM python:3.10
 # Contains relevant basics for Python, like GCC and similar by default
 LABEL maintainer="ensembl-variation@ebi.ac.uk"
 
-RUN apt-get update && apt-get install -y --no-install-recommends git 
+RUN apt-get update && apt-get install -y --no-install-recommends git bcftools 
 
 COPY . /app
 

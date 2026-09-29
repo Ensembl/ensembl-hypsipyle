@@ -66,7 +66,7 @@ class BaseVariant:
         return self.variant_sources[genome_uuid]
 
     def get_primary_source(self) -> Mapping:
-        """Return the primary source for this variant."""
+        """Return the primary external reference, including its database."""
         try:
             if "SOURCE" in self.info:
                 source = self.info["SOURCE"]
@@ -88,11 +88,22 @@ class BaseVariant:
             if source in variant_sources:
                 info = variant_sources[source]
                 return {
-                    "id": info.get("ID", source),
-                    "name": source,
+                    "accession_id": self.name,
+                    "name": self.name,
                     "description": info.get("description"),
-                    "url": info.get("url"),
-                    "release": info.get("version"),
+                    "assignment_method": {"type": "DIRECT"},
+                    "url": (
+                        f"{info['accession_url']}{self.name}"
+                        if info.get("accession_url")
+                        else None
+                    ),
+                    "source": {
+                        "id": info.get("ID", source),
+                        "name": source,
+                        "description": info.get("description"),
+                        "url": info.get("url"),
+                        "release": info.get("version"),
+                    },
                 }
             return None
         except Exception:

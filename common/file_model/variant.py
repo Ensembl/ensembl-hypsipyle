@@ -44,13 +44,9 @@ class Variant(BaseVariant):
             end = start
             length = 0
         return {
+            "_genome_id": self.genome_uuid,
             "location": {"start": start, "end": end, "length": length},
-            "region": {
-                "name": self.chromosome,
-                "code": "chromosome",
-                "topology": "linear",
-                "so_term": "SO:0001217",
-            },
+            "region": {"name": self.chromosome},
             "strand": {"code": "forward", "value": 1},
         }
 

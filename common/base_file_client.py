@@ -5,10 +5,10 @@ Shared file and index helpers for variant clients.
 import io
 import os
 import subprocess
-from common.file_model.variant import Variant
-from common.file_model.structural_variant import StructuralVariant
 
-import vcfpy
+from common.file_model.structural_variant import StructuralVariant
+from common.file_model.variant import Variant
+from common.vcf_reader import read_vcf
 
 
 class BaseFileClient:
@@ -81,7 +81,7 @@ class BaseFileClient:
 
         reader = None
         try:
-            reader = vcfpy.Reader.from_path(datafile)
+            reader = read_vcf(datafile)
             try:
                 for rec in reader.fetch(contig, pos - 1, pos):
                     if self.record_matches(rec, contig, pos, id):
@@ -90,7 +90,7 @@ class BaseFileClient:
                 if not fallback_to_iteration:
                     return None
                 self.close_reader(reader)
-                reader = vcfpy.Reader.from_path(datafile)
+                reader = read_vcf(datafile)
                 for rec in reader:
                     if self.record_matches(rec, contig, pos, id):
                         return record_class(rec, reader.header, genome_uuid)
@@ -133,7 +133,7 @@ class BaseFileClient:
         if result.returncode != 0:
             return None
 
-        reader = vcfpy.Reader(io.StringIO(result.stdout))
+        reader = read_vcf(stream=io.StringIO(result.stdout))
         for rec in reader:
             if self.record_matches(rec, contig, pos, id):
                 return record_class(rec, reader.header, genome_uuid)

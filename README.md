@@ -18,6 +18,10 @@ The API can be queried against a single endpoint specifying the payload to be re
 ![alt text](assets/architecture.png)
 
 
+## Python version
+
+Use Python 3.12 for local development and Docker builds.
+
 
 ## Running the API using Docker
 

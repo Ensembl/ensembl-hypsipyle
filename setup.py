@@ -1,4 +1,5 @@
-"""
+"""Configure packaging for the Ensembl Variation GraphQL API.
+
 .. See the NOTICE file distributed with this work for additional information
    regarding copyright ownership.
    Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,8 +14,8 @@
 """
 
 from pathlib import Path
-from setuptools import setup, find_packages
 
+from setuptools import find_packages, setup
 
 with open(Path(__file__).parent / "LICENSE") as f:
     LICENSE_CT = f.read()
@@ -26,7 +27,7 @@ setup(
     version="0.1.0",
     packages=find_packages(),
     license=LICENSE_CT,
-    python_requires=">=3.8",
+    python_requires=">=3.12",
     package_data={
         # Make sure schema makes it to distro
         "common": ["*.graphql"]

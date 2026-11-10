@@ -12,34 +12,31 @@
    limitations under the License.
 """
 
-import pytest
-import json
 import difflib
-from .test_utils import get_test_case_ids, execute_query
+import json
+
+import pytest
+
+from .test_utils import (
+    execute_query,
+    execute_structural_variant_query,
+    get_test_case_ids,
+)
 
 GOLD_STD_QUERY_RESULTS_PATH = "/app/graphql_service/tests/gold_standard"
+STRUCTURAL_VARIANT_GOLD_STD_QUERY_RESULTS_PATH = (
+    "/app/graphql_service/tests/gold_standard_structural"
+)
 GENOME_ID = "a7335667-93e7-11ec-a39d-005056b38ce3"
 TEST_CASES = get_test_case_ids(GOLD_STD_QUERY_RESULTS_PATH, GENOME_ID)
+STRUCTURAL_VARIANT_TEST_CASES = get_test_case_ids(
+    STRUCTURAL_VARIANT_GOLD_STD_QUERY_RESULTS_PATH, GENOME_ID
+)
 
 
-# Run query for each test case, generating a new query result and comparing it against the stored gold standard
-@pytest.mark.asyncio
-@pytest.mark.parametrize("variant_id, genome_id", TEST_CASES)
-async def test_query_results_against_gold_std(
-    schema_context: tuple, gold_standard_loader, variant_id: str, genome_id: str
-):
-    """Test present query result for variant_id X, genome_id Y against
-    stored gold standard query result for variant_id X, genome_id Y."""
-
-    # Run live query
-    query, success, result = await execute_query(schema_context, genome_id, variant_id)
-
-    # Load gold standard result
-    gold_standard = gold_standard_loader(
-        GOLD_STD_QUERY_RESULTS_PATH, genome_id, variant_id
-    )
-
-    # Compare
+def _compare_to_gold_standard(
+    result: dict, gold_standard: dict, variant_id: str
+) -> None:
     result_str = json.dumps(result.get("data", {}), indent=4, sort_keys=True)
     gold_str = json.dumps(gold_standard.get("data", {}), indent=4, sort_keys=True)
     diff = "".join(
@@ -56,3 +53,44 @@ async def test_query_results_against_gold_std(
         print(f"Diff for variant {variant_id}:\n{diff}")
 
     assert result_str == gold_str
+
+
+# Run query for each test case, generating a new query result and comparing it
+# against the stored gold standard.
+@pytest.mark.asyncio
+@pytest.mark.parametrize("variant_id, genome_id", TEST_CASES)
+async def test_query_results_against_gold_std(
+    schema_context: tuple, gold_standard_loader, variant_id: str, genome_id: str
+):
+    """Test present query result for variant_id X, genome_id Y against
+    stored gold standard query result for variant_id X, genome_id Y."""
+
+    # Run live query
+    _, _, result = await execute_query(schema_context, genome_id, variant_id)
+
+    # Load gold standard result
+    gold_standard = gold_standard_loader(
+        GOLD_STD_QUERY_RESULTS_PATH, genome_id, variant_id
+    )
+
+    _compare_to_gold_standard(result, gold_standard, variant_id)
+
+
+@pytest.mark.asyncio
+@pytest.mark.parametrize("variant_id, genome_id", STRUCTURAL_VARIANT_TEST_CASES)
+async def test_structural_variant_query_results_against_gold_std(
+    schema_context: tuple, gold_standard_loader, variant_id: str, genome_id: str
+):
+    """Test structural variant query results against stored gold standard output."""
+
+    # Run live query
+    _, _, result = await execute_structural_variant_query(
+        schema_context, genome_id, variant_id
+    )
+
+    # Load gold standard result
+    gold_standard = gold_standard_loader(
+        STRUCTURAL_VARIANT_GOLD_STD_QUERY_RESULTS_PATH, genome_id, variant_id
+    )
+
+    _compare_to_gold_standard(result, gold_standard, variant_id)

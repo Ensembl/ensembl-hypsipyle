@@ -1,0 +1,37 @@
+query structural_variant_example {
+  structural_variant(
+    by_id: {genome_id: "a7335667-93e7-11ec-a39d-005056b38ce3", variant_id: "1:46000:nsv4514092"}
+  ) {
+    name
+    length
+    alternative_names
+    {
+      name
+    }
+    allele_type {
+      accession_id
+      value
+      url
+    }
+    alleles {
+      name
+      alternative_names
+      {
+        name
+        source
+        {
+          id
+        }
+      }
+      type
+      allele_type {
+        accession_id
+        value
+        url
+      }
+      prediction_results {
+        score
+      }
+    }
+  }
+}

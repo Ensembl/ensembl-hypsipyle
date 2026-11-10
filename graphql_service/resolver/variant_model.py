@@ -12,21 +12,18 @@
    limitations under the License.
 """
 
-from typing import Dict, List
-import json
-import os
+from typing import Dict
 from ariadne import QueryType, ObjectType
 from graphql import GraphQLResolveInfo
 
 from graphql_service.resolver.exceptions import VariantNotFoundError
 
 # Define Query types for GraphQL
-# Don't forget to import these into ariadne_app.py if you add a new type
+# Don't forget to import these into ariadne_app.py if you add a new type that use schema
 
 QUERY_TYPE = QueryType()
 VARIANT_TYPE = ObjectType("Variant")
 VARIANT_ALLELE_TYPE = ObjectType("VariantAllele")
-POPULATION_TYPE = ObjectType("Population")
 
 
 @QUERY_TYPE.field("variant")
@@ -37,13 +34,12 @@ async def resolve_variant(
 ) -> Dict:
     "Load variants via variant id"
 
-    query = {
-        "type": "Variant",
-        "variant_id": by_id["variant_id"],
-        "genome_id": by_id["genome_id"],
-    }
     file_client = info.context["file_client"]
-    result = file_client.get_variant_record(by_id["genome_id"], by_id["variant_id"])
+    result = file_client.get_variant_record(
+        by_id["genome_id"],
+        by_id["variant_id"],
+        by_id.get("source_name"),  # source_name is optional
+    )
     if not result:
         raise VariantNotFoundError(by_id["variant_id"])
     return result
@@ -59,10 +55,8 @@ def primary_source(variant: Dict, info: GraphQLResolveInfo) -> Dict:
 
 @VARIANT_TYPE.field("allele_type")
 def allele_type(variant: Dict, info: GraphQLResolveInfo) -> Dict:
-    """
-    Load allele_type for variant
-    """
-    return variant.get_allele_type(variant.alts)
+    """Return the classification of the whole variant."""
+    return variant.get_allele_type()
 
 
 @VARIANT_TYPE.field("alternative_names")
@@ -75,10 +69,8 @@ def alternative_names(variant: Dict, info: GraphQLResolveInfo) -> Dict:
 
 @VARIANT_TYPE.field("slice")
 def slice(variant: Dict, info: GraphQLResolveInfo) -> Dict:
-    """
-    Load slice for variant
-    """
-    return variant.get_slice(variant.alts)
+    """Return the location slice for the whole variant."""
+    return variant.get_slice()
 
 
 @VARIANT_TYPE.field("prediction_results")
@@ -206,16 +198,3 @@ def resolve_api(
     _: None, info: GraphQLResolveInfo
 ) -> Dict:  # the second argument must be named `info` to avoid a NameError
     return {"api": {"major": "0", "minor": "1", "patch": "0-beta"}}
-
-
-@QUERY_TYPE.field("populations")
-def resolve_populations(
-    _: None, info: GraphQLResolveInfo, genome_id: str = None
-) -> List:
-    current_directory = os.path.dirname(__file__)
-    population_metadata_file = (
-        f"{current_directory}/../../common/file_model/population_metadata.json"
-    )
-    with open(population_metadata_file) as pop_file:
-        population_metadata = json.load(pop_file)
-    return population_metadata.get(genome_id, [])

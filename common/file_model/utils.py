@@ -13,6 +13,17 @@
 """
 
 
+# Map structural variant codes to classification names and Sequence Ontology IDs.
+SVTYPE_TO_TERM = {
+    "DEL": ("deletion", "SO:0000159"),
+    "INS": ("insertion", "SO:0000667"),
+    "DUP": ("duplication", "SO:1000035"),
+    "INV": ("inversion", "SO:1000036"),
+    "CNV": ("copy_number_variation", "SO:0001019"),
+    "BND": ("translocation", "SO:0000199"),
+}
+
+
 def minimise_allele(alt: str, ref: str) -> str:
     """Converts a VCF allele string into a minimised SPDI format.
 
@@ -32,6 +43,6 @@ def minimise_allele(alt: str, ref: str) -> str:
         minimised_allele_string = alt[1:] if len(alt) > 1 else "-"
     return minimised_allele_string
 
-def decode_population_name(name: str):
-      return name.replace("$2C",",")
 
+def decode_population_name(name: str):
+    return name.replace("$2C", ",")

@@ -1,0 +1,15 @@
+type StructuralVariant {
+  """
+  Structural Variant
+  """
+  name: String!
+  alternative_names: [ExternalReference]!
+  primary_source: ExternalReference!
+  type: String!
+  allele_type: OntologyTermMetadata!
+  length: Int!
+  slice: Slice!
+  alleles: [StructuralVariantAllele]!
+  prediction_results: [PredictionResult]!
+  ensembl_website_display_data: VariantDisplayData
+}

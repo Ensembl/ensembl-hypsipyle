@@ -181,6 +181,7 @@ class StructuralVariant(BaseVariant):
         return self._get_slice_for_type(self.get_allele_type()["value"])
 
     def _get_slice_for_type(self, allele_type: str) -> dict:
+        """Build a slice with the genome identity needed to resolve its region."""
         start = self.position
         length = self.length
         if allele_type == "insertion":
@@ -189,15 +190,11 @@ class StructuralVariant(BaseVariant):
         else:
             end = start + length - 1
         return {
-                    "location": {"start": start, "end": end, "length": length},
-                    "region": {
-                        "name": self.chromosome,
-                        "code": "chromosome",
-                        "topology": "linear",
-                        "so_term": "SO:0001217",
-                    },
-                    "strand": {"code": "forward", "value": 1},
-                }
+            "_genome_id": self.genome_uuid,
+            "location": {"start": start, "end": end, "length": length},
+            "region": {"name": self.chromosome},
+            "strand": {"code": "forward", "value": 1},
+        }
 
     def get_allele_type(self) -> dict:
         """Classify the whole variant across all alternate alleles."""
